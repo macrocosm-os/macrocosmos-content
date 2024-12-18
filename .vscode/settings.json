@@ -2,5 +2,5 @@
     "frontMatter.framework.id": "next",
     "frontMatter.content.publicFolder": "public",
     "frontMatter.preview.host": "http://localhost:3000",
-    "frontMatter.git.enabled": true
+    "frontMatter.git.enabled": true,
 }
