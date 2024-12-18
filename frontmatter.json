@@ -45,5 +45,11 @@
         }
       ]
     }
+  ],
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "pages",
+      "path": "[[workspace]]/src/pages"
+    }
   ]
 }

@@ -2,11 +2,5 @@
     "frontMatter.framework.id": "next",
     "frontMatter.content.publicFolder": "public",
     "frontMatter.preview.host": "http://localhost:3000",
-    "frontMatter.content.pageFolders": [
-        {
-            "title": "content",
-            "path": "[[workspace]]/content"
-        }
-    ],
     "frontMatter.git.enabled": true
 }
