@@ -43,8 +43,12 @@
   * [Subnet 25: Roadmap](subnets/subnet-25-mainframe/subnet-25-roadmap.md)
 * [Subnet 37 - Finetuning](subnets/subnet-37-finetuning/README.md)
   * [Subnet 37: Getting Started](subnets/subnet-37-finetuning/subnet-37-getting-started.md)
+  * [Subnet 37: Miners](subnets/subnet-37-finetuning/subnet-37-miners.md)
+  * [Subnet 37: Validators](subnets/subnet-37-finetuning/subnet-37-validators.md)
   * [Subnet 37: Incentive Mechanism](subnets/subnet-37-finetuning/subnet-37-incentive-mechanism.md)
+  * [Subnet 37: Competitions](subnets/subnet-37-finetuning/subnet-37-competitions.md)
   * [Subnet 37: Roadmap](subnets/subnet-37-finetuning/subnet-37-roadmap.md)
+  
 
 ## Constellation
 
