@@ -1,0 +1,20 @@
+apiVersion: vendir.k14s.io/v1alpha1
+kind: Config
+
+directories:
+  - path: src/content
+    contents:
+      # take the contents of macrocosmos-content/src/pages and put it in ./content/macrocosmos-content
+      - path: ./macrocosmos-content
+        git:
+          url: https://github.com/macrocosm-os/macrocosmos-content
+          ref: main
+        includePaths:
+          - src/pages/**
+      # take the contents of folding/documentation and put it in ./content/folding
+      - path: ./folding
+        git:
+          url: https://github.com/macrocosm-os/folding
+          ref: GEN-459-prepare-docs
+        includePaths:
+          - docs/**
