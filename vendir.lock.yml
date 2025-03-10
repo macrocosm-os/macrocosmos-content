@@ -1,0 +1,11 @@
+apiVersion: vendir.k14s.io/v1alpha1
+directories:
+- contents:
+  - git:
+      commitTitle: 'Merge pull request #213 from macrocosm-os/dev...'
+      sha: 2d8980e5cf79e61c7ee015f1d9f61774be32848e
+      tags:
+      - v2.10.2
+    path: finetuning
+  path: temporary-content
+kind: LockConfig

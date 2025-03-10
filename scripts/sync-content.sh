@@ -7,11 +7,8 @@
 # Sync content from remote repository
 vendir sync
 
-# Move content files to the root of src/pages
-mv src/content/macrocosmos-content/src/pages/* src/pages/
-
 # Move folding files to src/pages/subnet-25
-mv src/content/folding/docs/* src/pages/subnet-25/
+mv temporary-content/finetuning/docs/* main-content/subnets/subnet-37-finetuning/
 
 # Clean up empty content directory
-rm -r src/content
+rm -r temporary-content
