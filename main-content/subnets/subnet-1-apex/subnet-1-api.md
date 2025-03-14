@@ -22,9 +22,9 @@ description: API endpoints available for Subnet 1
 
 ### Getting Started
 
-SN1 can run either in validator mode or in API mode. Both modes will require the validator hotkey.
+SN1 can run either in validator mode or in API mode. Both will require the validator hotkey.
 
-API Documentation is available at the [here](https://sn1.api.macrocosmos.ai/redoc).
+API documentation is available [here](https://sn1.api.macrocosmos.ai/redoc).
 
 As a validator, you MUST be running one instance in validator mode and be able to launch an arbitrary number of API instances. These will proxy the responses from miners to the validator for scoring.
 
@@ -194,7 +194,7 @@ Web Retrieval
 
 * **search\_query** (str): The search term you'd like to look up
 * **n\_miners** (int, optional): How many miners to query
-* **uids**: (list\[int], optional): which specific uids to query (Deprecated)
+* **uids**: (list\[int], optional): which specific UIDs to query (Deprecated)
 
 ***
 
