@@ -1,5 +1,5 @@
 ---
-description: The guide to the subnet 1
+description: Subnet 1 guide
 ---
 
 # Subnet 1: Getting Started
