@@ -1,5 +1,5 @@
 ---
-description: The guide to the subnet 9
+description: Subnet 9 guide
 ---
 
 # Subnet 9: Getting Started
