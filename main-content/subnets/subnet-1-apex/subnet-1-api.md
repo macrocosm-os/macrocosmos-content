@@ -4,8 +4,6 @@ description: API endpoints available for Subnet 1
 
 # Subnet 1 API
 
-API Documentation is available at the link here: [https://sn1.api.macrocosmos.ai/redoc](https://sn1.api.macrocosmos.ai/redoc).
-
 ### Table of Contents
 
 * [Getting Started](subnet-1-api.md#getting-started)
@@ -26,7 +24,9 @@ API Documentation is available at the link here: [https://sn1.api.macrocosmos.ai
 
 SN1 can run either in validator mode or in API mode. Both modes will require the validator hotkey.
 
-As a validator, you MUST be running one instance in validator mode and can launch an arbitrary number of API instances. These API instances will proxy the responses from miners to the validator for scoring.
+API Documentation is available at the [here](https://sn1.api.macrocosmos.ai/redoc).
+
+As a validator, you MUST be running one instance in validator mode and be able to launch an arbitrary number of API instances. These will proxy the responses from miners to the validator for scoring.
 
 To set up and run the API server:
 
@@ -188,7 +188,7 @@ Web Retrieval
 
 **Endpoint:** `GET /web_retrieval`
 
-**Description:** Retrieves a list websites about a search query
+**Description:** Retrieves a list of websites about a search query
 
 **Parameters:**
 
