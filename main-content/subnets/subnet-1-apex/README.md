@@ -4,11 +4,11 @@ description: Bittensor can build the best agents
 
 # Subnet 1 - Apex
 
-Subnet 1’s objective is the creation of state of the art open-source intelligence, and performing the technical work that is necessary to make it competitive in a decentralized system. Bittensor requires persistent research and innovation to compete with leading proprietary models for it to continue to be a truly viable solution to closed alternatives, and other open-source protocols. Without a plausible path to creating state of the art AI within Bittensor, establishing a decentralised alternative in the development of intelligence will not come to pass.
+Subnet 1’s objective is the creation of state-of-the-art (SOTA) open-source intelligence, through the use of deentralized competitions. Bittensor requires persistent research and innovation to compete with leading proprietary models for it to continue being a viable solution to closed-soruce and centralized alternatives.&#x20;
 
 <figure><img src="../../.gitbook/assets/Apex overview.png" alt=""><figcaption></figcaption></figure>
 
-Today’s leading research suggests that specialisation is the key mechanism to enabling open-source models to compete with leading proprietary models. Therefore, the purpose of subnet 1 today is as follows:
+Today’s leading research suggests that specialisation is the key mechanism in enabling open-source models to compete with their leading proprietary counterparts. Therefore, the purpose of subnet 1 today is as follows:
 
 * Produce agentic workflows in conjunction with LLMs that surpass the capabilities of proprietary models at specific tasks.
 * Develop enhanced inference techniques such as ensembling and o1-style reasoning.
@@ -36,7 +36,7 @@ Subnet 1 enhances the Bittensor environment by:
 
 [Subnet 1's Dashboard](https://www.macrocosmos.ai/sn1/dashboard) provides a variety of metrics for the competition and the models performance quality.
 
-For more details about the subnet 1 R\&D work, have a look our Substack articles:
+For more details about the subnet 1 R\&D work have a look at our Substack articles:
 
 * [Chain-of-thought: SN1 enhanced with multi-step reasoning](https://macrocosmosai.substack.com/p/chain-of-thought-sn1-enhanced-with)
 * [Mixture-of-Miners: improving SN1’s performance](https://macrocosmosai.substack.com/p/mixture-of-miners-improving-sn1s)

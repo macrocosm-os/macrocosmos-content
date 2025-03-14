@@ -1,7 +1,7 @@
 ---
 description: >-
-  Macrocosmos subnet status update reports for the last 6 months can be found on
-  this page. The new reports are coming at the end of each month.
+  Macrocosmos subnet status update reports for the last 6 months can be found
+  here. New reports come out at the end of each month.
 ---
 
 # Subnet Status Update
