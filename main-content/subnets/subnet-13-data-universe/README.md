@@ -1,5 +1,5 @@
 ---
-description: Bittensor absorbs  the most data
+description: Bittensor absorbs the most data
 ---
 
 # Subnet 13 - Data Universe
