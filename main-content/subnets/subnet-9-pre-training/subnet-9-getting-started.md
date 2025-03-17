@@ -8,4 +8,4 @@ Before starting collaboration with subnet 9, you should familiarize yourself wit
 
 You can find [**mining** instructions here](https://github.com/macrocosm-os/pretraining/blob/main/docs/miner.md), and [**validating** instructions here](https://github.com/macrocosm-os/pretraining/blob/main/docs/validator.md).
 
-If you have any questions or require support, please message us in the [Bittensor Discord](https://discord.com/channels/799672011265015819/1162768567821930597) channel for subnet 9, or our own [Macrocosmos Discord](https://discord.gg/vRTaAXpRcd) server..
+If you have any questions or require support, please message us in the [Bittensor Discord](https://discord.com/channels/799672011265015819/1162768567821930597) channel for subnet 9, or our own [Macrocosmos Discord](https://discord.gg/vRTaAXpRcd) server.
