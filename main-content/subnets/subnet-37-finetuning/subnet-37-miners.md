@@ -1,3 +1,7 @@
+---
+description: Mining on subnet 37
+---
+
 # Subnet 37: Miners
 
 ## Miner
