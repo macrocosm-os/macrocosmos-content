@@ -4,19 +4,19 @@ description: Bittensor can train the best models
 
 # Subnet 37 - Finetuning
 
-Subnet 37 ambition is to bring the entire AI development pipeline into Bittensor, and we see fine-tuning as a critical step in the path to reaching this goal. We believe that this will strongly support Bittensor’s founding vision which is that AI can be built in an economical, safe and decentralized way.
+The drive behind subnet 37 is to bring the entire AI development pipeline into Bittensor, with finetuning as a critical step in the path towards this. We believe it will strongly support Bittensor’s founding vision - that AI can be built in an _economical, safe and decentralized way_.
 
-Fine-tuning is costly, time consuming and highly limited by expertise. It requires hundreds of GPU hours, typically requiring SOTA hardware but, perhaps most importantly, it requires expert engineers with the know-how to do it well, who are hard to find.&#x20;
+Finetuning is costly, time consuming and highly limited by expertise. It requires hundreds of GPU hours, typically requiring SOTA hardware. But perhaps most importantly, it requires expert engineers, who are often scarce.&#x20;
 
-We address these challenges by creating a subnet which outsources the procurement process of the necessary computational resources and incentivises the best AI developers in the world to monetise their skills and experience by competing to produce the best models in collaboration with subnet 9 Pre-training.
+Subnet 37 addresses these challenges by outsourcing the procurement process of computational resources and incentivising the best AI developers in the world to monetise their skills by competing to produce top models. This is also in collaboration with subnet 9, [Pre-training](../subnet-9-pre-training/).
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-03-05 at 18.13.57.png" alt=""><figcaption></figcaption></figure>
 
-This subnet is a general-purpose platform for running multiple fine-tuning competitions in parallel. Our vision is to build an open-sourced catalog of models, each optimised for specialised tasks such as chatbots, math-solvers, programming assistants, and recommendation bots. Models in the catalog are already available on Hugging Face for download and will soon be powering apps (e.g. Macrocosmos, opentensor.ai).
+This subnet is a general-purpose platform for running multiple finetuning competitions in parallel. Our vision is to build an open-sourced catalog of models, each optimised for specialised tasks such as chatbots, math-solvers, programming assistants, recommendation bots, and more. Models in the catalog are already available to download on HuggingFace and will soon power several apps.
 
-Furthermore, we aim to integrate the models we create into subnet 1 as base models for future agentic assistants. We see subnets 37 and 1 evolving together to produce ever-improving AI assistants. This will provide the additional benefit of real user feedback through subnet 1’s chat application, which will be used to continuously refine the models and their capabilities.
+We aim to integrate the models we create into subnet 1 as base models for future agentic assistants. We see subnets 37 and [subnet 1](../subnet-1-apex/) evolving in tandem to produce ever-improving AI assistants. This will provide the additional benefit of user-feedback through subnet 1’s chat application, which will be used to continuously refine the models and their capabilities.
 
-For more details about the subnet 37 R\&D work have a look our substack articles:
+For more details about the subnet 37 R\&D work, take a look at our Substack articles:
 
 * [Fine-tuning, finely tuned: How SN37 is delivering SOTA fine-tuning on Bittensor](https://macrocosmosai.substack.com/p/fine-tuning-finely-tuned-how-sn37)
 * [Fine-tuning, harmonized: Taoverse and Macrocosmos team up on SN37](https://macrocosmosai.substack.com/p/fine-tuning-harmonized-macrocosmos)
