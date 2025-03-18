@@ -1,5 +1,5 @@
 ---
-description: Subnet 1 incentive system overview
+description: Subnet 1 incentive overview
 ---
 
 # Subnet 1: Incentive Mechanism

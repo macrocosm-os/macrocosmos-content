@@ -1,5 +1,5 @@
 ---
-description: About SN37's competition system
+description: Subnet 37's competition system
 ---
 
 # Subnet 37: Competitions

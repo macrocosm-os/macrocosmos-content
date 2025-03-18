@@ -1,5 +1,5 @@
 ---
-description: Subnet 9 incentive system overview
+description: Subnet 9 incentive overview
 ---
 
 # Subnet 9: Incentive Mechanism

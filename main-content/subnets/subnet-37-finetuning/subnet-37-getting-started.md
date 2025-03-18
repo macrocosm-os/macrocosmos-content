@@ -1,5 +1,5 @@
 ---
-description: Subnet 37 guide
+description: Beginning with subnet 37
 ---
 
 # Subnet 37: Getting Started

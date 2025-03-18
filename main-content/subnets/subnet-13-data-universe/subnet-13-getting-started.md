@@ -1,5 +1,5 @@
 ---
-description: Subnet 13 guide
+description: Beginning with subnet 13
 ---
 
 # Subnet 13: Getting Started

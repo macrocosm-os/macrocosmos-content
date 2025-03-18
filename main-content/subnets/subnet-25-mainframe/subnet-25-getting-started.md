@@ -1,5 +1,5 @@
 ---
-description: Subnet 25 guide
+description: Beginning with subnet 25
 ---
 
 # Subnet 25: Getting Started

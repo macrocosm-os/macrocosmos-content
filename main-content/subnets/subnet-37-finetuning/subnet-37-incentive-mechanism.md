@@ -1,5 +1,5 @@
 ---
-description: Subnet 37 incentive system overview
+description: Subnet 37 incentive overview
 ---
 
 # Subnet 37: Incentive Mechanism

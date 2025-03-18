@@ -1,5 +1,5 @@
 ---
-description: Subnet 25 incentive system overview
+description: Subnet 25 incentive overview
 ---
 
 # Subnet 25: Incentive Mechanism
