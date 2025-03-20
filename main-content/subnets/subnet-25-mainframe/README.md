@@ -6,15 +6,17 @@ description: Bittensor can solve science’s hardest problems
 
 Mainframe is a decentralised science subnet on Bittensor. It provides computing power and community talent to solve scientific problems.
 
-The subnet started from by looking into protein folding molecular dynamic simulations.
+Subnet 25 currently tackles decentalized protein folding using molecular dynamics (MD) a method for simulating the physical movements of atoms and molecules.&#x20;
 
-Protein folding is one of the most computationally complex problems in academia. It’s also the gateway to novel drug discovery and promising medical breakthroughs. Protein engineering is already a $2.6bn market, and set to grow significantly. It’s also technically challenging. It can take days or weeks to fully simulate complex structures, making it typically only accessible to the large corporations.
+Protein folding is a complex and computationally expensive problem. Despite its challenges, it holds the key to novel drug discovery and promising medical breakthroughs. Protein engineering is already a $2.6bn market and is set to grow significantly, but the technical barriers remain high, with full simulations often taking days or weeks, making it typically only accessible to the large corporations([Protein engineering market size and share report](https://www.grandviewresearch.com/industry-analysis/protein-engineering-market)).
 
-This combination of computational complexity and cost has attracted the world’s best AI researchers and entrepreneurs. However, while programs like AlphaFold offer state-of-the-art protein folding, their centralised model entails high costs for computing and for researchers, who are often limited to a fixed number of queries per day.&#x20;
+This combination of computational complexity and cost has attracted the world’s best AI researchers and entrepreneurs. However, while models like AlphaFold offer SOTA protein folding inference, this centralised model entails high costs for computing and for researchers, who are often limited to a fixed number of queries per day.&#x20;
 
-Subnet 25 was Bittensor’s first venture into academic use cases, providing a competitive, distributed marketplace for protein folding using molecular dynamics (MD), at a more cost-effective rate than centralised rivals. In doing so, subnet 25 demonstrates the network’s efficacy and flexibility, proving that we can tackle computationally rich problems with significant market value.
+Subnet 25 was Bittensor’s first venture into academic use cases, providing a competitive, distributed marketplace for protein folding using molecular dynamics (MD), By offering MD at a more cost-effective rate than centralised rivals, Subnet 25 demonstrates the network’s efficacy and flexibility, proving that we can tackle computationally rich problems with significant market value.
 
-Using, [OpenMM](https://openmm.org/), an industry standard for protein folding, subnet 25 incentivises miners to simulate the molecular dynamics of proteins whose configurations coincide with the lowest energy (analogous to loss). This aligns with the desired outcome of biologically stable structures, while also being pseudo-deterministic and transparent. The molecular dynamics simulation takes an initial 3D protein structure, puts it in a cell-like environment, and models its systematic evolution in time. When it's run successfully, the simulation can accurately predict the final (or native) 3D structure. This allows researchers to understand the protein’s biological function.
+Using [OpenMM](https://openmm.org/), a widely used open-source package for molecular dynamics, Subnet 25 incentivises miners to simulate the folding of proteins into low-energy configurations (analogous to minimizing loss). This aligns with the desired outcome of biologically stable structures, while also being pseudo-deterministic and transparent. The simulation starts with an initial 3D protein structure, places it in a cell-like environment, and models its evolution over time.  When it's run successfully, the simulation can accurately predict the final (or native) 3D structure. This allows researchers to understand the protein’s biological function.
+
+
 
 Since launching in June 2024, subnet 25 has already completed over 400,000 protein-folding jobs using GROMACS and [150,000 jobs on OpenMM](https://www.macrocosmos.ai/sn25/dashboard).&#x20;
 
