@@ -32,7 +32,7 @@ This subnet is designed to empower researchers to conduct world-class drug disco
 * Optimize compounds: Use MD-guided filters to refine and rank ligands.
 * Reduce R\&D costs: Mitigate the need for trial-and-error screening.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-03-05 at 18.04.27.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2025-03-20 at 17.05.12.png" alt=""><figcaption></figcaption></figure>
 
 For biotechnology and pharmaceutical companies, MD simulations represent a solid strategy for prioritizing projects and focusing experimental resources where they are most likely to succeed.
 

@@ -48,10 +48,19 @@
   * [Subnet 37: Incentive Mechanism](subnets/subnet-37-finetuning/subnet-37-incentive-mechanism.md)
   * [Subnet 37: Competitions](subnets/subnet-37-finetuning/subnet-37-competitions.md)
   * [Subnet 37: Roadmap](subnets/subnet-37-finetuning/subnet-37-roadmap.md)
-  
 
 ## Constellation
 
 * [Gravity](constellation/gravity.md)
 * [Nebula](constellation/nebula.md)
 * [Apex](constellation/apex.md)
+
+## API Reference&#x20;
+
+* [Introduction](api-reference/introduction.md)
+* [SN1 - Apex](api-reference/sn1-apex/README.md)
+  * [GPT Endpoints](api-reference/sn1-apex/gpt-endpoints.md)
+  * [Agentic Tasks](api-reference/sn1-apex/agentic-tasks.md)
+  * [Supported Models](api-reference/sn1-apex/supported-models.md)
+* [SN13 - Gravity](api-reference/sn13-gravity/README.md)
+  * [Quickstart](api-reference/sn13-gravity/quickstart.md)
