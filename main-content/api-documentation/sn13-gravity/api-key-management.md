@@ -68,7 +68,7 @@ except Exception as e:
 
 If you have any questions or run into issues, you can reach out in:
 
-* The **Macrocosmos Discord** → Join here
+* The [**Macrocosmos Discord**](https://discord.gg/sXJPmGTnVR) and drop a message in the #SN13 channel
 
 
 
