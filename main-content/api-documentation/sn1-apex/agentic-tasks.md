@@ -4,7 +4,7 @@
 
 The `task` parameter in the `/v1/chat/completions` endpoint allows you direct miners toward specific agentic behaviors.&#x20;
 
-Validator creates a variety of tasks, which include a "challenge" for the miner to solve, and sends them to 100 miners, scoring all the completions they send back.
+Validator creates a variety of tasks, which include a "challenge" for the miner to solve, scoring all the completions they send back.
 
 ***
 
@@ -15,7 +15,7 @@ Validator creates a variety of tasks, which include a "challenge" for the miner 
 **Purpose:** Measures grounding in source context.\
 **task parameter:** `"task": "QA"`\
 **Behavior:** Miner fetches relevant passage and answers using it.\
-&#x20;✍️ Best for factual QA with citations.
+&#x20;✍️ Best for factual QA
 
 ***
 
@@ -27,7 +27,7 @@ Validator creates a variety of tasks, which include a "challenge" for the miner 
 **Purpose:** Measures reasoning accuracy based on limited info.\
 **task parameter:** `"task": "Inference"`\
 **Behavior:** Produces deterministic outputs influenced by seed.\
-🧪 Good for hypothesis testing, logic chaining.
+🧪 Good for hypothesis testing
 
 ***
 
@@ -38,8 +38,7 @@ Validator creates a variety of tasks, which include a "challenge" for the miner 
 \
 **Purpose:** Tests search + selection capabilities.\
 **task parameter:** `"task": "MultiChoice"`\
-**Behavior:** Searches Wikipedia, returns A/B/C/D.\
-📈 Use for MCQ-style benchmarking.
+**Behavior:** Searches Wikipedia, returns A/B/C/D.
 
 ***
 

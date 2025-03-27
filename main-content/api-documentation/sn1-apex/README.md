@@ -6,7 +6,7 @@ description: Getting started -  LLM Prompting on Macrocosmos
 
 Welcome to **APEX** , the first live Large Language Model application on the [Bittensor network](https://bittensor.com/)  and the heart of the Macrocosmos Constellation platform.&#x20;
 
-### ✨How does it work?
+## What is APEX?
 
 APEX is a specialized LLM app focused on high-quality language model inference. Powered by validators and a constantly evolving pool of miners, it allows users:
 
@@ -20,7 +20,7 @@ Try the visual interface at [**Mission Command**](https://app.macrocosmos.ai/mis
 
 ***
 
-### 🧭 How the APEX API Works
+## How the APEX API Works
 
 At its core, the APEX API has two main endpoints:
 
@@ -31,7 +31,7 @@ Each request is routed to miners across the subnet based on task requirements, m
 
 ***
 
-### 🧠 Models Available
+## Models Available
 
 SN1 currently supports the following open-source models:
 
@@ -44,6 +44,6 @@ For more details, see our [supported-models.md](supported-models.md "mention")pa
 
 ***
 
-### 🤝 Need Help?
+### Need Help?
 
 If you have any questions or require support, please message us in our official [**Macrocosmos Discord**](https://discord.gg/sXJPmGTnVR) server . You can drop a message in the `#apex-sn1` channel.

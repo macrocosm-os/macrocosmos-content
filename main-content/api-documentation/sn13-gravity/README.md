@@ -8,7 +8,7 @@ description: Getting started - Data Scraping on Macrocosms
 
 ***
 
-### ✨ How does it work?
+## What is Gravity?
 
 **SN13 - Gravity** is designed for real-time data retrieval. You can:
 
@@ -21,7 +21,7 @@ Try the visual interface at [**Mission Command**](https://app.macrocosmos.ai/mis
 
 ***
 
-### 🧭 Gravity's APIs
+## Gravity's APIs
 
 The SN13 API is organized around a few endpoints:
 
@@ -34,6 +34,6 @@ The SN13 API is organized around a few endpoints:
 
 ***
 
-### 🤝 Need Help?
+### Need Help?
 
 Join the [**Macrocosmos Discord**](https://discord.gg/sXJPmGTnVR) and drop into the `#sn13-data-universe` channel — we’re happy to help you get started.
