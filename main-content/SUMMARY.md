@@ -24,10 +24,10 @@
 ## Subnets
 
 * [Subnet 1 - Apex](subnets/subnet-1-apex/README.md)
-  * [Subnet 1: Getting Started](subnets/subnet-1-apex/subnet-1-getting-started.md)
   * [Subnet 1: Incentive Mechanism](subnets/subnet-1-apex/subnet-1-incentive-mechanism.md)
   * [Subnet 1: Roadmap](subnets/subnet-1-apex/subnet-1-roadmap.md)
   * [Subnet 1 API](subnets/subnet-1-apex/subnet-1-api.md)
+  * [Subnet 1: Getting Started](subnets/subnet-1-apex/subnet-1-getting-started.md)
 * [Subnet 9 - Pre-training](subnets/subnet-9-pre-training/README.md)
   * [Subnet 9: Getting Started](subnets/subnet-9-pre-training/subnet-9-getting-started.md)
   * [Subnet 9: Incentive Mechanism](subnets/subnet-9-pre-training/subnet-9-incentive-mechanism.md)
@@ -55,12 +55,15 @@
 * [Nebula](constellation/nebula.md)
 * [Apex](constellation/apex.md)
 
-## API Reference&#x20;
+## API Documentation
 
-* [Introduction](api-reference/introduction.md)
-* [SN1 - Apex](api-reference/sn1-apex/README.md)
-  * [GPT Endpoints](api-reference/sn1-apex/gpt-endpoints.md)
-  * [Agentic Tasks](api-reference/sn1-apex/agentic-tasks.md)
-  * [Supported Models](api-reference/sn1-apex/supported-models.md)
-* [SN13 - Gravity](api-reference/sn13-gravity/README.md)
-  * [Quickstart](api-reference/sn13-gravity/quickstart.md)
+* [Introduction](api-documentation/introduction.md)
+* [SN1 - APEX](api-documentation/sn1-apex/README.md)
+  * [Endpoints](api-documentation/sn1-apex/endpoints.md)
+  * [Agentic Tasks](api-documentation/sn1-apex/agentic-tasks.md)
+  * [Supported Models](api-documentation/sn1-apex/supported-models.md)
+  * [Examples](api-documentation/sn1-apex/examples.md)
+* [SN13 - Gravity](api-documentation/sn13-gravity/README.md)
+  * [Endpoints](api-documentation/sn13-gravity/endpoints.md)
+  * [API Key management](api-documentation/sn13-gravity/api-key-management.md)
+  * [Examples](api-documentation/sn13-gravity/examples.md)

@@ -1,2 +1,0 @@
-# SN13 - Gravity
-
