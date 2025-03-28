@@ -4,7 +4,7 @@ description: Bittensor can build the best agents
 
 # Subnet 1 - Apex
 
-Subnet 1’s objective is the creation of state-of-the-art (SOTA) open-source intelligence, through the use of deentralized competitions. Bittensor requires persistent research and innovation to compete with leading proprietary models for it to continue being a viable solution to closed-source and centralized alternatives.&#x20;
+Subnet 1’s objective is the creation of state-of-the-art (SOTA) open-source intelligence, through the use of decentralized competitions. Bittensor requires persistent research and innovation to compete with leading proprietary models for it to continue being a viable solution to closed-source and centralized alternatives.&#x20;
 
 <figure><img src="../../../.gitbook/assets/Apex overview.png" alt=""><figcaption></figcaption></figure>
 
