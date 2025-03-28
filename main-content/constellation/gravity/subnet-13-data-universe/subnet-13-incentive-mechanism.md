@@ -6,7 +6,7 @@ description: Subnet 13 incentive overview
 
 Subnet 13's incentive mechanism rewards miners for providing successfully validated, non-duplicate, fresh data. There are two main parts that make up a miner’s total scaled score: their raw score and their credibility.&#x20;
 
-To maximise their raw scores, miners either scrape data according to their own preferences (with a value equal to our default scale factor, which is currently set 0.5), or scrape data from dynamically specified labels that validators can submit with the [validator API](https://github.com/macrocosm-os/data-universe/tree/main/vali_utils/api).&#x20;
+To maximise their raw scores, miners either scrape data according to their own preferences (with a value equal to our default scale factor, which is currently set 0.3), or scrape data from dynamically specified labels that validators can submit with the [validator API](https://github.com/macrocosm-os/data-universe/tree/main/vali_utils/api).&#x20;
 
 Validator voting power is proportional to the amount they have currently staked on subnet 13, and indicates the amount the custom label will be incentivised for. From this incentivised list, miners can choose labels to scrape and a receive significantly higher reward for returning data with said labels. This mechanism allows validators with significant subnet stake to leverage their bandwidth and request large amounts of fresh data for use in analytics, training, and more.&#x20;
 
