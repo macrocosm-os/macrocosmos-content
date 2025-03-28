@@ -19,7 +19,7 @@ We run five subnets:
 * [Subnet 1 - Apex](constellation/apex/subnet-1-apex/)
 * [Subnet 9 - Pre-Training](constellation/subnet-9-pre-training/)
 * [Subnet 13 - Data-Universe](constellation/gravity/subnet-13-data-universe/)
-* [Subnet 25 - Mainframe](subnet-25-mainframe/)
+* [Subnet 25 - Mainframe](constellation/subnet-25-mainframe/)
 * [Subnet 37 - Finetuning](subnet-37-finetuning/)
 
 {% embed url="https://x.com/MacrocosmosAI/status/1889046770233364873/video/1" %}

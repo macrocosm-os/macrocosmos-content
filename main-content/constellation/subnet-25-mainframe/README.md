@@ -20,11 +20,11 @@ Using [OpenMM](https://openmm.org/), a widely used open-source package for molec
 
 Since launching in June 2024, subnet 25 has already completed over 400,000 protein-folding jobs using GROMACS and [150,000 jobs on OpenMM](https://www.macrocosmos.ai/sn25/dashboard).&#x20;
 
-<figure><img src="../.gitbook/assets/Screenshot 2025-03-05 at 17.51.22.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2025-03-05 at 17.51.22.png" alt=""><figcaption></figcaption></figure>
 
 Our ambition is to produce a decentralized and specialized supercomputer, optimizing the study of proteins and other molecules making it more efficient and accessible, whilst opening us to the scientific research and drug discovery market.
 
-<figure><img src="../.gitbook/assets/Screenshot 2025-03-05 at 17.52.35.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2025-03-05 at 17.52.35.png" alt=""><figcaption></figcaption></figure>
 
 This subnet is designed to empower researchers to conduct world-class drug discovery research utilising deep-learning and molecular dynamics. This allows researchers to:
 
@@ -32,7 +32,7 @@ This subnet is designed to empower researchers to conduct world-class drug disco
 * Optimize compounds: Use MD-guided filters to refine and rank ligands.
 * Reduce R\&D costs: Mitigate the need for trial-and-error screening.
 
-<figure><img src="../.gitbook/assets/Screenshot 2025-03-20 at 17.05.12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2025-03-20 at 17.05.12.png" alt=""><figcaption></figcaption></figure>
 
 For biotechnology and pharmaceutical companies, MD simulations represent a solid strategy for prioritizing projects and focusing experimental resources where they are most likely to succeed.
 
