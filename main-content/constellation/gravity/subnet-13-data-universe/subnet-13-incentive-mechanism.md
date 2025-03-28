@@ -10,13 +10,13 @@ To maximise their raw scores, miners either scrape data according to their own p
 
 Validator voting power is proportional to the amount they have currently staked on subnet 13, and indicates the amount the custom label will be incentivised for. From this incentivised list, miners can choose labels to scrape and a receive significantly higher reward for returning data with said labels. This mechanism allows validators with significant subnet stake to leverage their bandwidth and request large amounts of fresh data for use in analytics, training, and more.&#x20;
 
-Miners will also be rewarded for their uploads to our data hub, currently set to HuggingFace (HF), which contributes to their raw score. These uploads enable Subnet 13 to have reliable, reputable and publicly accessible open source data. HF rewards, which are programmed [to activate on Jan 27, 2025](#user-content-fn-1)[^1], comprise an upto 5 million score boost based on HF validation results. HF validation works similarly to local validation, in which miners are given a reward based on the percentage of randomly chosen HF rows that are successfully re-scraped and validated. See the current [HF Scoring Update document](https://docs.google.com/document/d/1NzQy0DTuDsh2u_TgVhN_Qb2XXShROXKk9yp1c7cius8/edit?tab=t.0) for the latest status on planned changes.&#x20;
+Miners will also be rewarded for their uploads to our data hub, currently set to HuggingFace (HF), which contributes to their raw score. These uploads enable Subnet 13 to have reliable, reputable and publicly accessible open source data. HF rewards, which are programmed [to activate on Jan 27, 2025](#user-content-fn-1)[^1], comprise an up-to 10 million score boost based on HF validation results. HF validation works similarly to local validation, in which miners are given a reward based on the percentage of randomly chosen HF rows that are successfully re-scraped and validated. See the current [HF Scoring Update document](https://docs.google.com/document/d/1NzQy0DTuDsh2u_TgVhN_Qb2XXShROXKk9yp1c7cius8/edit?tab=t.0) for the latest status on planned changes.&#x20;
 
 To maximise their credibility, miners must provide data that matches a real-time scrape. This is determined by an exponential moving average based on the percentage of successfully validated bytes. The scaled score is heavily reliant on credibility– raw scores are multiplied by credibility of 2.5, so this is key to miner success on the network. Credibility is such an important mechanism on the network because unreliable data is worthless. Keeping miners accountable for failed validation keeps data on SN13 fresh and trustworthy.&#x20;
 
 Subnet 13’s reward mechanism is based on the source, type and age of scraped data. This is separated into 2 parts, the scoring system and the credibility system.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-03-05 at 17.29.15.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2025-03-05 at 17.29.15.png" alt="" width="375"><figcaption></figcaption></figure>
 
 Where:
 
@@ -33,7 +33,7 @@ This total is then multiplied by the miner’s credibility to the power of 2.5, 
 
 This is calculated as:
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-03-05 at 17.29.21.png" alt="" width="360"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2025-03-05 at 17.29.21.png" alt="" width="360"><figcaption></figcaption></figure>
 
 Where:
 

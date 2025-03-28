@@ -20,7 +20,7 @@ User can pick the model based on their goals:
 * Apex Chain of Thought
 * Apex Reasoning
 
-<figure><img src="../.gitbook/assets/Apex models (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Apex models (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Apex Beta Demo
 

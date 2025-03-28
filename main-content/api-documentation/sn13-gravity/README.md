@@ -34,6 +34,13 @@ The SN13 API is organized around a few endpoints:
 
 ***
 
+## **Rate limits**&#x20;
+
+Regular API keys: Limited to 100 requests per hour\
+Validator key: Limited to 1000 requests per hour
+
+
+
 ### Need Help?
 
 Join the [**Macrocosmos Discord**](https://discord.gg/sXJPmGTnVR) and drop into the `#sn13-data-universe` channel — we’re happy to help you get started.

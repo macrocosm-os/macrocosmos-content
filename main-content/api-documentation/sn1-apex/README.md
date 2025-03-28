@@ -44,6 +44,15 @@ For more details, see our [supported-models.md](supported-models.md "mention")pa
 
 ***
 
+
+
+## **Rate limits**&#x20;
+
+Regular API keys: Limited to 100 requests per hour\
+Validator key: Limited to 1000 requests per hour
+
+
+
 ### Need Help?
 
 If you have any questions or require support, please message us in our official [**Macrocosmos Discord**](https://discord.gg/sXJPmGTnVR) server . You can drop a message in the `#apex-sn1` channel.

@@ -6,7 +6,7 @@ description: Bittensor can build the best agents
 
 Subnet 1’s objective is the creation of state-of-the-art (SOTA) open-source intelligence, through the use of deentralized competitions. Bittensor requires persistent research and innovation to compete with leading proprietary models for it to continue being a viable solution to closed-source and centralized alternatives.&#x20;
 
-<figure><img src="../../.gitbook/assets/Apex overview.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Apex overview.png" alt=""><figcaption></figcaption></figure>
 
 Today’s leading research suggests that specialisation is the key mechanism in enabling open-source models to compete with their leading proprietary counterparts. Therefore, the purpose of subnet 1 today is to:
 
@@ -26,7 +26,7 @@ Subnet 1 enhances the Bittensor environment by:
 
 * Creating an [arena for miners ](https://www.macrocosmos.ai/sn1/dashboard)to relentlessly build innovative agents designed to compete with proprietary models.
 * Producing highly specialised, targeted intelligence as a digital commodity for users.
-* Providing chat interfaces, APIs, and other mechanisms for users and businesses to interact with the intelligent hivemind. At present, subnet 1 powers multiple user-facing products, one of which being [Apex](../../constellation/apex.md), part of our Constellation platform.
+* Providing chat interfaces, APIs, and other mechanisms for users and businesses to interact with the intelligent hivemind. At present, subnet 1 powers multiple user-facing products, one of which being [Apex](../), part of our Constellation platform.
 * Subnet 1 additionally allows [Validators to spin up their own api endpoints with 1 line,](https://github.com/macrocosm-os/prompting/blob/main/validator_api/API_docs.md) using OpenAI standard endpoints for seamless streaming to front-ends and plug-ins.
 * Expanding Bittensor's incentive landscape and framework, building on its legacy as the protocol's flagship subnet, and continuing to push the boundaries of mechanism design.
 * Providing a wide range of opportunities to interlock with other subnets such as:

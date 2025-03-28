@@ -77,11 +77,11 @@ The mining script has a shell that does some initial setup, _but isn't fully imp
 
 As of Oct 1st, 2024, the subnet works with models matching the [subnet 9](https://github.com/macrocosm-os/pretraining/) outputs and evaluates them against synthetic data from [subnet 1](https://github.com/macrocosm-os/prompting).
 
-The specific requirements for each competition can be found [here](../constants/__init__.py).
+The specific requirements for each competition can be found [here](../subnets/constants/__init__.py).
 
-The `finetune/mining.py` file has several methods that you may find useful. See the [examples](examples.ipynb) Jupyter notebook for ideas.
+The `finetune/mining.py` file has several methods that you may find useful. See the [examples](../subnets/subnet-37-finetuning/examples.ipynb) Jupyter notebook for ideas.
 
-See the [Validator Psuedocode](docs/validator.md#validator) for more information on how the evaluation occurs.
+See the [Validator Psuedocode](../subnets/subnet-37-finetuning/docs/validator.md#validator) for more information on how the evaluation occurs.
 
 ### Env File
 
