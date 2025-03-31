@@ -16,7 +16,7 @@ To maximise their credibility, miners must provide data that matches a real-time
 
 Subnet 13’s reward mechanism is based on the source, type and age of scraped data. This is separated into 2 parts, the scoring system and the credibility system.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2025-03-05 at 17.29.15.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2025-03-05 at 17.29.15.png" alt="" width="375"><figcaption></figcaption></figure>
 
 Where:
 
@@ -33,7 +33,7 @@ This total is then multiplied by the miner’s credibility to the power of 2.5, 
 
 This is calculated as:
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2025-03-05 at 17.29.21.png" alt="" width="360"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2025-03-05 at 17.29.21.png" alt="" width="360"><figcaption></figcaption></figure>
 
 Where:
 

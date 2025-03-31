@@ -10,11 +10,11 @@ Gravity is a dataset delivery product built with subnet 13, Data-Universe. It is
 
 In a world where consumer preferences shift overnight, businesses battle to stay relevant— outdated, incomplete data is no longer an option.&#x20;
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-03-05 at 16.59.27.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-03-05 at 16.59.27.png" alt=""><figcaption></figcaption></figure>
 
 Gravity addresses the problem and provides the opportunity to receive the up to date data in short amount of time.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-03-05 at 16.57.29.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-03-05 at 16.57.29.png" alt=""><figcaption></figcaption></figure>
 
 Gravity Beta Demo
 

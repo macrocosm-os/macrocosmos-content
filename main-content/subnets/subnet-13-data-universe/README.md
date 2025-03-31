@@ -15,9 +15,9 @@ Currently, miners are incentivised to collect fresh content from Reddit and X.&#
 
 In a world where consumer preferences shift overnight, businesses battle to stay relevant— outdated, incomplete data is no longer an option. Therefore, fresh data is more important than ever before.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2025-03-05 at 16.59.27 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2025-03-05 at 16.59.27 (1).png" alt=""><figcaption></figcaption></figure>
 
-Data provided by subnet 13's product, [Gravity, ](../)allows businesses to:
+Data provided by subnet 13's product, [Gravity, ](../../constellation/gravity.md)allows businesses to:
 
 * Track brand performance and identify emerging market shifts in real time,
 * Make data-driven decisions based on the latest information,
@@ -25,7 +25,7 @@ Data provided by subnet 13's product, [Gravity, ](../)allows businesses to:
 
 With subnet 13, we’re building the world's most directable mechanism for data acquisition - magnetically drawing in masses of data and transmitting it in an accessible, directable, and targetable way to the whole Bittensor community.&#x20;
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2025-03-05 at 16.57.29 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2025-03-05 at 16.57.29 (1).png" alt=""><figcaption></figcaption></figure>
 
 Dataset selection shapes the quality of models. As the marketplace for machine learning models grows more competitive, datasets will increasingly become a key differentiating factor. Our goal is to make data one of Bittensor's strongest commodities.
 
