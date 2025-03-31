@@ -10,9 +10,7 @@ Finetuning is costly, time consuming and highly limited by expertise. It require
 
 Subnet 37 addresses these challenges by outsourcing the procurement process of computational resources and incentivising the best AI developers in the world to monetise their skills by competing to produce top models. This is also in collaboration with subnet 9, [Pre-training](../constellation/subnet-9-pre-training/).
 
-<figure><img src="../.gitbook/assets/Screenshot 2025-03-05 at 18.13.57.png" alt=""><figcaption></figcaption></figure>
-
-This subnet is a general-purpose platform for running multiple finetuning competitions in parallel. Our vision is to build an open-sourced catalog of models, each optimised for specialised tasks such as chatbots, math-solvers, programming assistants, recommendation bots, and more. Models in the catalog are already available to download on HuggingFace and will soon power several apps.
+Our vision is to build an open-sourced catalog of models, each optimised for specialised tasks such as chatbots, math-solvers, programming assistants, recommendation bots, and more. Models in the catalog are already available to download on HuggingFace and will soon power several apps.
 
 We aim to integrate the models we create into subnet 1 as base models for future agentic assistants. We see subnets 37 and [subnet 1](../constellation/apex/subnet-1-apex/) evolving in tandem to produce ever-improving AI assistants. This will provide the additional benefit of user-feedback through subnet 1’s chat application, which will be used to continuously refine the models and their capabilities.
 
