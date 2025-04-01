@@ -4,7 +4,15 @@ description: Resources to read and watch about Macrocosmos
 
 # Macromedia
 
-Hash Rate - Ep 98: A Tour of Five TAO Subnets
+
+
+#### Venture Labs EP. 32&#x20;
+
+{% embed url="https://x.com/VenturaLabs/status/1904174249792733619" %}
+
+
+
+#### Hash Rate - Ep 98: A Tour of Five TAO Subnets
 
 {% embed url="https://youtu.be/Tr5HSsg8pEg?feature=shared" %}
 

@@ -1,7 +1,3 @@
----
-description: Beginning with subnet 1
----
-
 # Subnet 1: Getting Started
 
 Before working with subnet 1, you should familiarize yourself with the [Bittensor documentation](https://docs.bittensor.com/), describing the ecosystem and relationships between network participants.
