@@ -8,7 +8,9 @@ description: Resources to read and watch about Macrocosmos
 
 #### Venture Labs EP. 32&#x20;
 
-{% embed url="https://x.com/VenturaLabs/status/1904174249792733619" %}
+{% embed url="https://x.com/MacrocosmosAI/status/1904252349352194309" %}
+
+
 
 
 
@@ -17,6 +19,20 @@ description: Resources to read and watch about Macrocosmos
 {% embed url="https://youtu.be/Tr5HSsg8pEg?feature=shared" %}
 
 ***
+
+
+
+**How do you choose subnets? Learn from the best here 👇**
+
+{% embed url="https://x.com/MacrocosmosAI/status/1889729367846297642" %}
+
+
+
+***
+
+
+
+
 
 Our CTO, Steffen Cruz, discusses #DeepSeek, the future of open-source models, Bittensor’s opportunity to push the AI landscape, and how Subnet 9 utilizes dataset mixing to trigger SOTA pre-training results.
 

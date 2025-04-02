@@ -31,7 +31,7 @@ Subnet 1 enhances the Bittensor environment by:
 * Creating an [arena for miners ](https://www.macrocosmos.ai/sn1/dashboard)to relentlessly build innovative agents designed to compete with proprietary models.
 * Producing highly specialised, targeted intelligence as a digital commodity for users.
 * Providing chat interfaces, APIs, and other mechanisms for users and businesses to interact with the intelligent hivemind. At present, subnet 1 powers multiple user-facing products, one of which being [Apex](../../constellation/apex.md), part of our Constellation platform.
-* Subnet 1 additionally allows [Validators to spin up their own api endpoints with 1 line,](https://github.com/macrocosm-os/prompting/blob/main/validator_api/API_docs.md) using OpenAI standard endpoints for seamless streaming to front-ends and plug-ins.
+* Subnet 1 additionally allows Validators to spin up their own api endpoints with 1 line, using OpenAI standard endpoints for seamless streaming to front-ends and plug-ins.
 * Expanding Bittensor's incentive landscape and framework, building on its legacy as the protocol's flagship subnet, and continuing to push the boundaries of mechanism design.
 
 

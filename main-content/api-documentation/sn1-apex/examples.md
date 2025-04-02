@@ -4,25 +4,12 @@
 
 ```python
 import asyncio
-import time
-
 import openai
-start = time.time()
 
 STREAM = True
-# PUT YOUR API KEY HERE.
-API_KEY = ""
-VALIDATOR_KEY = ""
+API_KEY = "..."
 
-
-def make_header(api_key: str, validator_key: str):
-    return {
-        "api-key": f"{api_key}",
-        "validator-key": f"{validator_key}",
-        "Content-Type": "application/json",
-    }
-
-async def call(year):
+async def main():
     try:
         client = openai.AsyncOpenAI(
             base_url="https://sn1.api.macrocosmos.ai/v1",
@@ -32,15 +19,10 @@ async def call(year):
         )
 
         payload = {
-            "uids": [1, 2, 3],
             "messages": [
-                {"role": "user", "content": "List 5 popular places in London"}
+                {"role": "user", "content": "List 5 popular places in Hawaii"}
             ],
             "seed": 42,
-            "task": "InferenceTask",
-            "model": "hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4",
-            "test_time_inference": False,
-            "mixture": False,
             "sampling_parameters": {
                 "do_sample": True,
                 "max_new_tokens": 512,
@@ -49,16 +31,13 @@ async def call(year):
                 "top_p": 0.95
             },
             "inference_mode": "Reasoning-Fast",
-            "json_format": True,
-            "stream": STREAM
         }
 
         result = await client.chat.completions.create(
-            model="hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4",
+            model="Default",
             messages=payload["messages"],
             stream=STREAM,
             extra_body=payload,
-            extra_headers=make_header(API_KEY, VALIDATOR_KEY)
         )
 
         if not STREAM:
@@ -69,22 +48,13 @@ async def call(year):
                 if chunk.choices[0].delta.content:
                     chunks.append(chunk.choices[0].delta.content)
             print("".join(chunks))
-        print(time.time() - start)
 
-    except openai.NotFoundError as e:
-        print(f"API endpoint not found: {e}")
-    except openai.AuthenticationError as e:
-        print(f"Authentication failed: {e}")
     except Exception as e:
         print(f"An error occurred: {e}")
 
 
 if __name__ == "__main__":
-    """Call API and get response."""
-    timer_s = time.perf_counter()
-    asyncio.run(call(0))  # The year parameter isn't used anymore, so we can pass any value
-    timer = time.perf_counter() - timer_s
-    print(f"Response time: {timer:.2f} seconds")
+    asyncio.run(main())
 ```
 
 
