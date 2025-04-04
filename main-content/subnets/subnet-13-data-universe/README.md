@@ -21,7 +21,7 @@ Currently, miners are incentivized to scrap data from platforms like **Reddit** 
 
 ## Why It Matters
 
-In fast-moving markets, **up-to-date data** is critical. Data provided by subnet 13's product, [Gravity, ](../../constellation/gravity.md)allows businesses to:
+In fast-moving markets, **up-to-date data** is critical. Data provided by subnet 13's product, [Gravity, ](../../constellation/gravity/)allows businesses to:
 
 * Track brand sentiment and market shifts in real time
 * Make data-driven decisions based on the latest insights
@@ -41,7 +41,7 @@ Alongside Gravity is [Nebula](https://app.gitbook.com/o/eu9Z3qt7ycTIHIJGObFB/s/J
 
 ## Architecture
 
-Subnet 13's decentralized design allows data to be distributed across miners and queried by validators, showcasing Bittensor's scalability. Macrocosmos is expanding data sources, developing a queryable API ([endpoints.md](../../api-documentation/sn13-gravity/endpoints.md "mention")), and is currently the largest open source data provider on HuggingFace with over 17 billion scraped posts and comments (as of January 2025). By providing the raw material for pre-training and inference, subnet 13 is poised to supercharge the next stage of AI model development within the Bittensor ecosystem.
+Subnet 13's decentralized design allows data to be distributed across miners and queried by validators, showcasing Bittensor's scalability. Macrocosmos is expanding data sources, developing a queryable API ([endpoints.md](../../developers/api-documentation/sn13-gravity/endpoints.md "mention")), and is currently the largest open source data provider on HuggingFace with over 17 billion scraped posts and comments (as of January 2025). By providing the raw material for pre-training and inference, subnet 13 is poised to supercharge the next stage of AI model development within the Bittensor ecosystem.
 
 
 
