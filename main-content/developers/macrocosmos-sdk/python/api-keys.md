@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # API Keys
 
 To get started with the Macrocosmos SDK, developers need to generate an API key by visiting [https://cloud.macrocosmos.ai/](https://cloud.macrocosmos.ai/). You'll be prompted to sign in with your email address.
