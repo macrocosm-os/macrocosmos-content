@@ -12,7 +12,7 @@ Use `ApexClient` to send prompts to open-source language models like LLaMA and M
 
 
 
-## Chat Completions&#x20;
+### Chat Completions&#x20;
 
 Send a prompt to an LLM on the Apex subnet.
 
@@ -66,7 +66,7 @@ object: "chat.completion"
 
 
 
-## Web Search
+### Web Search
 
 Use Apex's integrated web retriever to fetch relevant content.
 

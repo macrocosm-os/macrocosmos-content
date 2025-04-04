@@ -22,7 +22,7 @@ More platforms will be supported as subnet capabilities expand.
 
 
 
-## Create a task for Data Collection
+### Create a task for Data Collection
 
 Each task gets registered on the network. Miners begin work right away. The task stays live for 7 days. After that, the dataset gets built automatically. You’ll get an email with a download link.\
 Use any email you like.
@@ -133,7 +133,7 @@ print(response)
 
 
 
-## Build dataset&#x20;
+### Build dataset&#x20;
 
 No need to wait 7 days. You can request your dataset early. Add a notification to get alerted when it's ready. Or just watch it with `GetDataset()`. Once built, the task gets de-registered. Use `CancelDataset()` to stop a build. If it's done, that call will purge the dataset.
 
