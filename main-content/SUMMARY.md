@@ -51,13 +51,18 @@
   * [Subnet 37: Competitions](subnet-37-finetuning/subnet-37-competitions.md)
   * [Subnet 37: Roadmap](subnet-37-finetuning/subnet-37-roadmap.md)
 
-## CONSTELLATION&#x20;
+## CONSTELLATION  - USER GUIDES
 
-* [Apex](constellation/apex.md)
-* [Gravity](constellation/gravity/README.md)
-  * [Getting started](constellation/gravity/getting-started.md)
-  * [FAQs](constellation/gravity/faqs.md)
-* [Nebula](constellation/nebula.md)
+* [Apex](constellation-user-guides/apex/README.md)
+  * [Navigating Apex](constellation-user-guides/apex/navigating-apex.md)
+  * [FAQs](constellation-user-guides/apex/faqs.md)
+* [Gravity](constellation-user-guides/gravity/README.md)
+  * [Scraping data](constellation-user-guides/gravity/scraping-data.md)
+  * [Managing and Collecting your data](constellation-user-guides/gravity/managing-and-collecting-your-data.md)
+  * [FAQs](constellation-user-guides/gravity/faqs.md)
+* [Nebula](constellation-user-guides/nebula/README.md)
+  * [Explore Nebula](constellation-user-guides/nebula/explore-nebula.md)
+  * [Analyzing data](constellation-user-guides/nebula/analyzing-data.md)
 
 ## Developers
 

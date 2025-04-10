@@ -47,3 +47,5 @@ _Details:_
 _More Information:_ [Gemma 3 27B - Hugging Face](https://huggingface.co/google/gemma-3-27b-it)
 
 ***
+
+To learn more about our Language Models please visit our [Substack](https://macrocosmosai.substack.com/t/language-models)

@@ -21,7 +21,7 @@ Currently, miners are incentivized to scrap data from platforms like **Reddit** 
 
 ## Why It Matters
 
-In fast-moving markets, **up-to-date data** is critical. Data provided by subnet 13's product, [Gravity, ](../../constellation/gravity/)allows businesses to:
+In fast-moving markets, **up-to-date data** is critical. Data provided by subnet 13's product, [Gravity, ](../../constellation-user-guides/gravity/)allows businesses to:
 
 * Track brand sentiment and market shifts in real time
 * Make data-driven decisions based on the latest insights
