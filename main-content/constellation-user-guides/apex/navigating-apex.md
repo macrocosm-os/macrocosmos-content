@@ -46,3 +46,6 @@ Click the regenerate response button 🔄 to run your prompt through the model y
 
 
 
+
+
+**You can also interact with Apex using our APIs . Click here to access** [api-documentation](../../developers/api-documentation/ "mention")

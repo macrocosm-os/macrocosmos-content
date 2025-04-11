@@ -55,4 +55,6 @@ Once you’re happy with the request and the label setup, hit **"Launch data col
 
 
 
-#### Learn more by watching our video tutorials [here](https://macrocosmosai.substack.com/p/0cb3c240-5f5e-48fb-bd33-17b216ee52d0?postPreview=paid\&updated=2025-04-03T11%3A29%3A18.787Z\&audience=everyone\&free_preview=false\&freemail=true)
+**Learn more by watching our video tutorials** [**here**](https://macrocosmosai.substack.com/p/0cb3c240-5f5e-48fb-bd33-17b216ee52d0?postPreview=paid\&updated=2025-04-03T11%3A29%3A18.787Z\&audience=everyone\&free_preview=false\&freemail=true)
+
+**You can also interact with Gravity using our APIs . Click here to access** [api-documentation](../../developers/api-documentation/ "mention")

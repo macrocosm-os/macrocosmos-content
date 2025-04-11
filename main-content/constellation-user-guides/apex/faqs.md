@@ -1,3 +1,7 @@
+---
+description: Frequently asked Questions on APEX
+---
+
 # FAQs
 
 **Is Apex free? -** Yes, during the Beta phase.
@@ -12,4 +16,4 @@
 
 
 
-**How can I share feedback or report bugs? -** You can share feedback directly in our Macrocosmos Discord or submit and issue [here](https://github.com/macrocosm-os/macrocosmos-content/issues)
+**How can I share feedback or report bugs? -** You can share feedback directly in our Macrocosmos Discord or submit an issue [here](https://github.com/macrocosm-os/macrocosmos-content/issues)

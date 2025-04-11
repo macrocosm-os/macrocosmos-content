@@ -1,3 +1,7 @@
+---
+description: Frequently asked Questions on Gravity
+---
+
 # FAQs
 
 #### **How much data can I collect?**
