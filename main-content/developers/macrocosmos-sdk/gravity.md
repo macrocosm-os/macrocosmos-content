@@ -27,6 +27,31 @@ More platforms will be supported as subnet capabilities expand.
 Each task gets registered on the network. Miners begin work right away. The task stays live for 7 days. After that, the dataset gets built automatically. You’ll get an email with a download link.\
 Use any email you like.
 
+{% tabs %}
+{% tab title="Typescript" %}
+{% code overflow="wrap" %}
+```javascript
+import { GravityClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new GravityClient({ apiKey: 'your-api-key' });
+
+// Create a new gravity task
+const task = await client.createGravityTask({
+  name: 'My Data Collection Task',
+  gravityTasks: [
+    { platform: 'x', topic: '#ai' },
+    { platform: 'reddit', topic: 'r/ai' }
+  ],
+  notificationRequests: [
+    { type: 'email', address: 'user@example.com', redirectUrl: 'https://example.com/datasets' }
+  ]
+});
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Python" %}
 ```python
 import macrocosmos as mc
 
@@ -50,6 +75,12 @@ response =  client.gravity.CreateGravityTask(
 # Print the gravity task ID
 print(response)
 ```
+{% endtab %}
+{% endtabs %}
+
+
+
+
 
 **Body**
 
@@ -85,10 +116,33 @@ print(response)
 
 
 
-## Get status of task
+### Get status of task
 
 If you wish to get further information about the crawlers, you can use the `include_crawlers` flag or make separate `GetCrawler()` calls since returning in bulk can be slow.
 
+{% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+import { GravityClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new GravityClient({ apiKey: 'your-api-key' });
+
+/ List all gravity tasks
+const tasks = await client.getGravityTasks({
+  includeCrawlers: true
+});
+
+// Get a specific crawler
+const crawler = await client.getCrawler({
+  crawlerId: 'crawler-id'
+});
+
+```
+{% endtab %}
+
+{% tab title="Python" %}
+{% code overflow="wrap" %}
 ```python
 import macrocosmos as mc
 
@@ -99,8 +153,9 @@ response = client.gravity.GetGravityTasks(gravity_task_id="<your-gravity-task-id
 # Print the details about the gravity task and crawler IDs
 print(response)
 ```
-
-
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 **Body**
 
@@ -135,8 +190,28 @@ print(response)
 
 ### Build dataset&#x20;
 
-No need to wait 7 days. You can request your dataset early. Add a notification to get alerted when it's ready. Or just watch it with `GetDataset()`. Once built, the task gets de-registered. Use `CancelDataset()` to stop a build. If it's done, that call will purge the dataset.
+No need to wait 7 days. You can request your dataset early. Add a notification to get alerted when it's ready.&#x20;
 
+{% tabs %}
+{% tab title="TypeScript" %}
+```javascript
+import { GravityClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new GravityClient({ apiKey: 'your-api-key' });
+
+
+// Build a dataset from a crawler
+const dataset = await client.buildDataset({
+  crawlerId: 'crawler-id',
+  notificationRequests: [
+    { type: 'email', address: 'user@example.com' }
+  ]
+});
+```
+{% endtab %}
+
+{% tab title="Python" %}
 ```python
 import macrocosmos as mc
 
@@ -155,8 +230,8 @@ response = client.gravity.BuildDataset(
 # Print the dataset ID
 print(response)
 ```
-
-
+{% endtab %}
+{% endtabs %}
 
 **Body**
 
@@ -191,9 +266,82 @@ print(response)
 
 
 
+### Get status of a build
+
+Watch your dataset build with `GetDataset()`. Once built, the task gets de-registered.&#x20;
+
+{% tabs %}
+{% tab title="TypeScript" %}
+```javascript
+import { GravityClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new GravityClient({ apiKey: 'your-api-key' });
+
+
+// Get a dataset
+const datasetStatus = await client.getDataset({
+  datasetId: 'dataset-id'
+});
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import macrocosmos as mc
+
+client = mc.GravityClient(api_key="<your-api-key>")
+
+response = client.gravity.GetDataset(datasetId: 'dataset-id')
+
+# Print the details about the gravity task and crawler IDs
+print(response)
+```
+{% endtab %}
+{% endtabs %}
 
 
 
+### Cancel requests
+
+Use `CancelDataset()` to stop a build. If it's done, that call will purge the dataset.
+
+{% tabs %}
+{% tab title="TypeScript" %}
+```javascript
+import { GravityClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new GravityClient({ apiKey: 'your-api-key' });
+
+
+// Cancel a gravity task
+const cancelResult = await client.cancelGravityTask({
+  gravityTaskId: 'task-id'
+});
+
+// Cancel a dataset build
+const cancelDataset = await client.cancelDataset({
+  datasetId: 'dataset-id'
+});
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import macrocosmos as mc
+
+client = mc.GravityClient(api_key="<your-api-key>")
+
+response = client.gravity.CancelDataset(
+    datasetId: 'dataset-id'
+)
+
+# Print the dataset ID
+print(response)
+```
+{% endtab %}
+{% endtabs %}
 
 
 

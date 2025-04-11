@@ -16,6 +16,26 @@ Use `ApexClient` to send prompts to open-source language models like LLaMA and M
 
 Send a prompt to an LLM on the Apex subnet.
 
+{% tabs %}
+{% tab title="Typescript" %}
+```typescript
+import { ApexClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new ApexClient({ apiKey: 'your-api-key' });
+
+// Chat completions
+const response = await client.chat.completions.create({
+  messages: [
+    { role: 'system', content: 'You are a helpful assistant.' },
+    { role: 'user', content: 'Hello, how are you?' }
+  ],
+  stream: true
+});
+```
+{% endtab %}
+
+{% tab title="Python" %}
 ```python
 import macrocosmos as mc
 
@@ -26,6 +46,8 @@ response = client.chat.completions.create(
 
 print(response)
 ```
+{% endtab %}
+{% endtabs %}
 
 
 
@@ -70,6 +92,22 @@ object: "chat.completion"
 
 Use Apex's integrated web retriever to fetch relevant content.
 
+{% tabs %}
+{% tab title="Typescript" %}
+```javascript
+import { ApexClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new ApexClient({ apiKey: 'your-api-key' });
+
+// Web retrieval
+const webResults = await client.webRetrieval({
+  query: 'latest news about AI'
+});
+```
+{% endtab %}
+
+{% tab title="Python" %}
 ```python
 import macrocosmos as mc
 
@@ -82,8 +120,8 @@ response = client.web_search.search(
 
 print(response)
 ```
-
-
+{% endtab %}
+{% endtabs %}
 
 **Body**
 
