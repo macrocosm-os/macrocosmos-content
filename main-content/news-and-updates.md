@@ -4,6 +4,12 @@ description: The last updates from Macrocosmos
 
 # News and updates
 
+2025-04-11
+
+User guides for Constellation have been added , you can access them on [Broken link](broken-reference "mention") . [macrocosmos-sdk](developers/macrocosmos-sdk/ "mention") has also been updated with the release of our Typescript SDK
+
+***
+
 2025-02-31
 
 The new Macrocosmos Subnet Status Report is published. Have a look at [2025-03-31 Macrocosmos Subnets Status Updates Q1 2025](https://docs.google.com/presentation/d/1XOP41h56v9PXNnz7KbcQdrtpw9KUY1SFLujU36fUgfc/edit?slide=id.p#slide=id.p) and [Macrocosmos Telegram](https://t.me/macrocosmosai) . We've also added  [Broken link](broken-reference "mention") for developer reference and a recording to Steffen Cruz and Will Squires interview with venture labs , available on [macromedia.md](macromedia.md "mention").&#x20;

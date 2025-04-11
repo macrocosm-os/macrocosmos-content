@@ -6,7 +6,7 @@ description: The Macrocosmos SDK - Integrating your AI Applications with our Sub
 
 ## Overview
 
-This SDK enables developers integrate AI applications with [Constellation](https://app.macrocosmos.ai/mission-command) - a network of decentralized subnets running on Bittensor.&#x20;
+This SDK (available in python and typescript) enables developers integrate AI applications with [Constellation](https://app.macrocosmos.ai/mission-command) - a network of decentralized subnets running on Bittensor.&#x20;
 
 ### 🚀 Why Build with Macrocosmos?
 
@@ -18,5 +18,9 @@ Macrocosmos makes it easy to:
 
 
 
-Check out the [github repository](https://github.com/macrocosm-os/macrocosmos-py?tab=readme-ov-file)
+For feedback and reporting issues , please refer to the following repositories:\
+\
+[Macrocosmos Typescript](https://github.com/macrocosm-os/macrocosmos-ts)
+
+[Macrocosmos Python](https://github.com/macrocosm-os/macrocosmos-py)
 
