@@ -103,20 +103,21 @@ code ~/Library/Application\ Support/Claude/claude_desktop_config.json
 {
     "mcpServers": {
         "macrocosmos": {
-            "command": "FULL_PATH_TO_UV",  # Replace with output from "which uv"
+            "command": "FULL_PATH_TO_UV",  // Replace with output from `which uv`
             "args": [
                 "--directory",
-                "/Users/victorkanu/Desktop/Macro_mcp/macrocosmos-mcp",
+                "/path/to/macrocosmos-mcp",  // Replace with the path to your local clone of macrocosmos-mcp
                 "run",
                 "src/macrocosmos_mcp.py"
             ],
             "env": {
-                "SN1_API_KEY": "xxxxxx555xxxx",
-                "SN13_API_KEY": "xxxxxx555xxxx"
+                "SN1_API_KEY": "your-sn1-api-key",
+                "SN13_API_KEY": "your-sn13-api-key"
             }
         }
     }
 }
+
 ```
 
 Replace "FULL\_PATH\_TO\_UV" with the full path you got from `which uv`.
@@ -168,20 +169,21 @@ For instance:
 {
     "mcpServers": {
         "macrocosmos": {
-            "command": "FULL_PATH_TO_UV",  # Replace with output from "which uv"
+            "command": "FULL_PATH_TO_UV",  // Replace with output from `which uv`
             "args": [
                 "--directory",
-                "/Users/victorkanu/Desktop/Macro_mcp/macrocosmos-mcp",
+                "/path/to/macrocosmos-mcp",  // Replace with the path to your local clone of macrocosmos-mcp
                 "run",
                 "src/macrocosmos_mcp.py"
             ],
             "env": {
-                "SN1_API_KEY": "xxxxxx555xxxx",
-                "SN13_API_KEY": "xxxxxx555xxxx"
+                "SN1_API_KEY": "your-sn1-api-key",
+                "SN13_API_KEY": "your-sn13-api-key"
             }
         }
     }
 }
+
 ```
 
 
