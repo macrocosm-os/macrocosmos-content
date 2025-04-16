@@ -82,3 +82,5 @@
   * [APEX](developers/macrocosmos-sdk/apex.md)
   * [Gravity](developers/macrocosmos-sdk/gravity.md)
   * [API Keys](developers/macrocosmos-sdk/api-keys.md)
+* [Tools](developers/tools/README.md)
+  * [Macrocosmos MCP](developers/tools/macrocosmos-mcp.md)
