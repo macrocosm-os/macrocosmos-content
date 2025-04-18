@@ -1,10 +1,10 @@
 ---
-description: This guide will help you set up the Macrocosmos MCP environment.
+description: Using Macrocosmos MCP with Claude Desktop or Cursor
 ---
 
 # Macrocosmos MCP
 
-**Macrocosmos MCP** lets you integrate **SN13** and **SN1** APIs directly into **Claude for Desktop** or **Cursor**. Instantly tap into social data, perform live web searches, and explore Hugging Face models — all from your AI environment.
+**Macrocosmos MCP** (Model Context Protocol) lets you integrate **SN13** and **SN1** APIs directly into **Claude for Desktop** or **Cursor**. Instantly tap into social data, perform live web searches, and explore Hugging Face models — all from your AI environment.
 
 ### Features
 
@@ -41,45 +41,61 @@ pip3 install uv
 
 
 
-### Server setup instructions
+## Server setup instructions
 
-1\. Clone the Repo and Navigate to the project director
+This step is **required for both Claude Desktop and Cursor** — the server is what enables access to the SN1 and SN13 tools.
+
+**1. Clone the Repo and Navigate to your project directory**
 
 ```
 git clone https://github.com/macrocosm-os/macrocosmos-mcp.git
 cd macrocosmos-mcp/src
 ```
 
-2. Create and activate virtual environment
+
+
+2. **Create and activate a virtual environment**
 
 ```bash
 uv venv
 source .venv/bin/activate
 ```
 
-3. Initialize the project directory (src)
+
+
+3. **Initialize the project directory (src)**
 
 ```bash
 uv init
 ```
 
-4. Install required dependencies
+
+
+4. **Install required dependencies**
 
 ```bash
 uv add "mcp[cli]" httpx
 ```
 
-5. Run the application (Test run the server with uv)
+
+
+5. **Test your MCP server**
+
+While it's not required to run the server continuously, performing a quick test ensures that your setup is correct.​
+
+To test your server, execute the following command:​
 
 ```bash
 uv run macrocosmos_mcp.py
 ```
 
-The script should start and wait for connections. Press Ctrl+C to exit once you've confirmed it works.
+This command starts the server and waits for connections. Once you've confirmed it's running correctly, you can stop it by pressing `Ctrl+C`.​
+
+After this verification, you don't need to run the server manually. As long as the necessary files are present on your local machine, your MCP client (such as Claude Desktop or Cursor) will handle starting the server as needed.
 
 
 
-6. Get the full path to your `uv` executable:
+6. **Get the full path to your `uv` executable:**
 
 ```bash
 which uv
@@ -87,13 +103,13 @@ which uv
 
 
 
-Now, please update your Claude Desktop configuration file by running the following command
+## Configure **Claude Desktop**
+
+**Run the following command , this will open your Claude configuration file**&#x20;
 
 ```bash
 code ~/Library/Application\ Support/Claude/claude_desktop_config.json
 ```
-
-
 
 
 
@@ -130,13 +146,11 @@ For instance:
 
 
 
-##
+**Open Claude desktop**
 
-## Claude Desktop
+<figure><img src="../../.gitbook/assets/canva .png" alt=""><figcaption></figcaption></figure>
 
-1. Completely quit Claude Desktop
-2. Reopen Claude Desktop
-3. Look for the hammer icon to confirm your MCP servers are available . You will find a list of available MCP tools&#x20;
+**Look for the hammer icon — this confirms your MCP server is running. You’ll now see SN1 and SN13 tools available inside Claude.**
 
 <figure><img src="../../.gitbook/assets/canva mcp.png" alt=""><figcaption></figcaption></figure>
 
@@ -150,20 +164,35 @@ For instance:
 
 
 
-##
+## Configure **Cursor**
 
-## Cursor
+You can either update the config file manually or use the built-in UI.
 
-1. Navigate to your Cursor settings and select `add new global MCP server`&#x20;
+**Option 1: Via UI (Recommended)**
+
+* Go to **Cursor Settings**
+* Navigate to your Cursor settings and select `add new global MCP server`&#x20;
 
 <figure><img src="../../.gitbook/assets/canva10.png" alt=""><figcaption></figcaption></figure>
 
 
 
+**Option 2: Manual JSON**&#x20;
+
+```bash
+code ~/Library/Application\ Support/Cursor/cursor_mcp_config.json
+```
+
+Paste the same config block (updated with your paths and API keys).
+
+> ⚠️ Note: In some cases, manually editing this file doesn't activate the MCP server in Cursor. If this happens, use the UI method above for best results.
 
 
-2. **Update your `mcp.json` file**\
-   Add the following configuration to your `mcp.json`. This will let you access the available tools.
+
+**Update your `mcp.json` file**
+
+\
+Add the following configuration to your `mcp.json`. This will let you access the available tools.            (Same values as shown in the Claude config above.)
 
 ```
 {
@@ -194,8 +223,9 @@ For instance:
 
 
 
-3. **Enable Agent Mode in Chat**\
-   Make sure you're using **Agent Mode** in the chat. Agents are capable of using a wide range of tools — both custom-built and MCP-provided.
+**Use Agent Mode**
+
+In Cursor, make sure you're using **Agent Mode** in the chat. Agents have the ability to use any MCP tool — including custom ones and those from SN1/SN13. You can ask it questions like:
 
 <figure><img src="../../.gitbook/assets/canva13.png" alt=""><figcaption></figcaption></figure>
 
@@ -203,10 +233,10 @@ You can now ask questions or give prompts. Be sure to **specify when you want th
 
 
 
+**Tool Usage in Action**\
 
 
-4. **Tool Usage in Action**\
-   When the agent responds, you’ll see it indicate which **MCP tool** it’s using, along with a coherent and context-aware reply.
+When the agent responds, you’ll see it indicate which **MCP tool** it’s using, along with a coherent and context-aware reply.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-04-16 at 04.38.41.png" alt=""><figcaption></figcaption></figure>
 
