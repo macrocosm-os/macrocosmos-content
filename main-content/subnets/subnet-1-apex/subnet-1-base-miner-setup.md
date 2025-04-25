@@ -5,7 +5,7 @@ description: >-
   should not be used on mainnnet
 ---
 
-# Subnet 1 Base Miner Setup
+# Subnet 1: Base Miner Setup
 
 ### ⚠️ Disclaimer
 
@@ -36,7 +36,7 @@ cd prompting
 2. **Run the Installation Script:**
 
 ```bash
-install.sh
+scripts/install.sh
 ```
 
 Before running the miner, you need to set up miner environment variables
@@ -144,7 +144,9 @@ The process includes:​
 
 The implementation is located in `neurons/miners/epistula_miner/miner.py`. The `self.llm` attribute loads the LLaMA 3B model.​
 
-_Note: The 3B model is suitable for testnet but not for mainnet, where larger models like 70B are prevalent._
+_Note:_ The 3B model is suitable only for testnet but not for mainnet, where state-of-the-art models are prevalent, like: `mrfakename/mistral-small-3.1-24b-instruct-2503-hf`  and `hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4`&#x20;
+
+To check for the latest required models, go to:  [https://github.com/macrocosm-os/prompting/blob/main/shared/settings.py#L141](https://github.com/macrocosm-os/prompting/blob/main/shared/settings.py#L141)
 
 
 

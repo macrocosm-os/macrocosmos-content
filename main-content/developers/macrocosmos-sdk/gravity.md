@@ -95,11 +95,7 @@ print(response)
 {% tabs %}
 {% tab title="200" %}
 ```json
-{
-  "id": 1,
-  "name": "John",
-  "age": 30
-}
+gravity_task_id: "multicrawler-53ba1f6e-e31b-437c-9033-956e1e756198"
 ```
 {% endtab %}
 
