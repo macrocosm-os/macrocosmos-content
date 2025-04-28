@@ -46,6 +46,19 @@ Subnet 1 works closely with other subnets to expand its capabilities:
 
 
 
+## Apex Client - Macrocosmos SDK
+
+**(SN1)** runs open-source language models like LLaMA and Mistral, and you can interact with it easily using the [macrocosmos-sdk](../../developers/macrocosmos-sdk/ "mention")\
+With the `ApexClient`, you can send prompts, run chat completions, and perform live web searches — all decentralized and miner-powered.\
+
+
+To get started, you'll need an **API key**.\
+Contact **@victork\_1** on [**Discord**](https://discord.gg/sXJPmGTnVR) or **@victor\_ck0** on [**Telegram**](https://t.me/MacrocosmosAI) and we'll get you set up quickly 🚀.
+
+
+
+
+
 #### TLDR
 
 Subnet 1 plays a key role in Bittensor’s mission to compete with closed-source models by focusing on **specialization, innovation, and usability**. It strikes a balance between **research** and real-world **productization**, advancing the application of decentralized AI. Check out  [Subnet 1's Dashboard](https://www.macrocosmos.ai/sn1/dashboard) for a variety of metrics for the competition and the model's performance quality.

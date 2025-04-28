@@ -49,6 +49,17 @@ Subnet 13's [interactive dashboard](https://www.macrocosmos.ai/sn13/dashboard) n
 
 
 
+## Gravity Client - Macrocosmos SDK
+
+The **Gravity subnet (SN13)** specializes in decentralized web scraping and data collection across platforms like Reddit and X.\
+Using the `GravityClient` in the **Macrocosmos SDK**, you can easily launch scraping tasks and get structured datasets built by miners.\
+
+
+To get started, you'll need an **API key**.\
+Contact **@victork\_1** on [**Discord**](https://discord.gg/sXJPmGTnVR) or **@victor\_ck0** on [**Telegram**](https://t.me/MacrocosmosAI) and we'll get you set up quickly 🚀.
+
+
+
 ## Want a deeper dive?
 
 For more details about the subnet 13 R\&D work, take a look at our Substack articles:
