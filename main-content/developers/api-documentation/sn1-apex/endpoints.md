@@ -1,5 +1,7 @@
 # Endpoints
 
+## Base URL: `https://sn1.api.macrocosmos.ai`
+
 We provide two primary API endpoints:
 
 * `POST /v1/chat/completions`

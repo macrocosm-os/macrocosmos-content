@@ -6,6 +6,8 @@ description: Getting started -  LLM Prompting on Macrocosmos
 
 Welcome to **APEX** , the first live Large Language Model application on the [Bittensor network](https://bittensor.com/)  and the heart of the Macrocosmos Constellation platform.&#x20;
 
+
+
 ## What is APEX?
 
 APEX is a specialized LLM app focused on high-quality language model inference. Powered by validators and a constantly evolving pool of miners, it allows users:
@@ -17,6 +19,12 @@ APEX is a specialized LLM app focused on high-quality language model inference. 
 
 
 Try the visual interface at [**Mission Command**](https://app.macrocosmos.ai/mission-command) — a control center for LLM testing and prompting.&#x20;
+
+***
+
+## Base URL: `https://sn1.api.macrocosmos.ai`
+
+The SN1 APEX API serves as access point for interacting with Macrocosmos's advanced language model inference capabilities. It performs chat completions and decentralized web searches through its primary endpoints: `POST /v1/chat/completions` and `POST /web_retrieval`. This API leverages a decentralized network of miners and validators to process requests, ensuring high-quality and reliable outputs. Developers can utilize the [macrocosmos-sdk](../../macrocosmos-sdk/ "mention"), specifically the `ApexClient`, to integrate these capabilities into their applications.
 
 ***
 

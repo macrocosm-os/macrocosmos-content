@@ -6,11 +6,17 @@ description: Resources to read and watch about Macrocosmos
 
 
 
+Macrocosmos SDK Introduction
+
+{% embed url="https://x.com/MacrocosmosAI/status/1916885593826668613" %}
+
+***
+
 #### Venture Labs EP. 32&#x20;
 
 {% embed url="https://x.com/MacrocosmosAI/status/1904252349352194309" %}
 
-
+***
 
 
 

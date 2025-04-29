@@ -1,5 +1,7 @@
 # Endpoints
 
+#### Base URL: `https://sn13.api.macrocosmos.ai`
+
 We provide three primary API endpoints for SN13:
 
 * **`POST /api/v1/on_demand_data_request`**
