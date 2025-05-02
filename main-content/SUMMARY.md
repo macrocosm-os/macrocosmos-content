@@ -88,7 +88,7 @@
   * [Installation](developers/macrocosmos-sdk/installation.md)
   * [API Keys](developers/macrocosmos-sdk/api-keys.md)
   * [APEX](developers/macrocosmos-sdk/apex/README.md)
-    * [Developer Projects](developers/macrocosmos-sdk/apex/developer-projects.md)
+    * [Dev Projects](developers/macrocosmos-sdk/apex/dev-projects.md)
   * [Gravity](developers/macrocosmos-sdk/gravity.md)
 * [Tools](developers/tools/README.md)
   * [Macrocosmos MCP](developers/tools/macrocosmos-mcp.md)
