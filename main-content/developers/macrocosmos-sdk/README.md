@@ -18,9 +18,15 @@ Macrocosmos makes it easy to:
 
 
 
-For feedback and reporting issues , please refer to the following repositories:\
-\
-[Macrocosmos Typescript](https://github.com/macrocosm-os/macrocosmos-ts)
+### Watch the Demo here
 
-[Macrocosmos Python](https://github.com/macrocosm-os/macrocosmos-py)
+{% embed url="https://x.com/MacrocosmosAI/status/1916885593826668613" %}
+
+
+
+#### For feedback and reporting issues , please refer to the following repositories:
+
+#### [Macrocosmos Python](https://github.com/macrocosm-os/macrocosmos-py) [Macrocosmos Typescript](https://github.com/macrocosm-os/macrocosmos-ts)
+
+
 
