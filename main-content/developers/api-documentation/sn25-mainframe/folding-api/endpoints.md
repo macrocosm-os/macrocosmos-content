@@ -2,10 +2,6 @@
 
 The Folding API provides several categories of endpoints:
 
-{% openapi-operation spec="macrocosmos-folding-api" path="/metrics" method="get" %}
-[Broken link](broken-reference)
-{% endopenapi-operation %}
-
 ## Core Folding Endpoints
 
 {% openapi-operation spec="macrocosmos-folding-api" path="/fold" method="post" %}

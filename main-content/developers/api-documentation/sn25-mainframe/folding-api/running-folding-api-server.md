@@ -2,19 +2,23 @@
 
 The Folding API provides protein folding capabilities through the Bittensor network. This API allows users to submit protein sequences for folding, query the status of folding jobs, and retrieve results. The service is designed to work with NVIDIA GPUs for optimal performance in protein folding computations.
 
-#### Requirements
+#### **Requirements**
 
-* **GPU**: NVIDIA GPU with CUDA support (required for protein folding operations)
-* **Python**: Version 3.11 (required for Bittensor and OpenMM compatibility)
-* **conda**: For environment management
-* **poetry**: For dependency management
+To ensure reliable and efficient MD simulations, please make sure your environment meets the following requirements:
+
+* **GPU**: **NVIDIA RTX 4090** (recommended)\
+  Required for protein folding workloads due to its high number of CUDA cores and strong performance with molecular dynamics tasks.\
+  See our [reproducibility guidelines](https://github.com/macrocosm-os/mainframe/blob/main/documentation/molecular_dynamics/reproducibility.md) for more details on why this specific GPU is recommended.
+* **Python**: Version **3.11** (for compatibility with Bittensor and OpenMM)
+* **Conda**: For managing Python environments
+* **Poetry**: For managing project dependencies
 
 #### Installation&#x20;
 
 1\. Clone the Repository
 
 ```bash
-git clone https://github.com/macrocosm-os/folding.git
+git clone https://github.com/macrocosm-os/mainframe.git
 cd folding
 ```
 
@@ -53,19 +57,27 @@ poetry install --with api
 pip install -e .
 ```
 
-###
 
-### Running the API
 
-1\. Start the API Server
 
-```bash
+
+### Running the API&#x20;
+
+{% tabs %}
+{% tab title="Testnet" %}
+```javascript
 python3.11 main.py --netuid 141 --subtensor.network test --wallet.name your_wallet_name --wallet.hotkey your_hotkey --gjp-address 167.99.209.27:4001
 ```
+{% endtab %}
+
+{% tab title="Mainnet" %}
+```python
+python3.11 main.py --netuid 25 --subtensor.network finney --wallet.name your_wallet_name --wallet.hotkey your_hotkey --gjp-address 167.99.209.27:4001
+```
+{% endtab %}
+{% endtabs %}
 
 Replace `your_wallet_name` and `your_hotkey` with your Bittensor wallet credentials.
-
-
 
 ### Global Job Pool (GJP) <a href="#global-job-pool-gjp" id="global-job-pool-gjp"></a>
 
@@ -105,7 +117,7 @@ Once the API is running, you can access:
 
 ### Additional Notes
 
-* The API requires an NVIDIA GPU with CUDA support for protein folding operations
+* The API requires an NVIDIA GPU with CUDA support for MD simulations&#x20;
 * Regular system updates and proper CUDA configuration are essential
 * Monitor system resources during folding operations
 * Keep your API key secure and never share it publicly

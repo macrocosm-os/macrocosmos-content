@@ -10,11 +10,9 @@ We provide three primary API endpoints for SN13:
 
 ***
 
-{% openapi src="../../../.gitbook/assets/openapi.sn13.json" path="/api/v1/on_demand_data_request" method="post" %}
-[openapi.sn13.json](../../../.gitbook/assets/openapi.sn13.json)
-{% endopenapi %}
-
-
+{% openapi-operation spec="scraping" path="/api/v1/on_demand_data_request" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 `POST /api/v1/on_demand_data_request`
 

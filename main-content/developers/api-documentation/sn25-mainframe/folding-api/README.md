@@ -1,6 +1,6 @@
 # Folding API
 
-The Folding API provides a HTTP interface for external clients to interact with the Bittensor Folding Subnet (Subnet 25). It enables programmatic submission of protein folding jobs, querying job status, and retrieving results from the network of validators and miners that perform protein folding simulations. It is implemented using FastAPI and integrates with several core components of the subnet system.
+The Folding API provides a HTTP interface for external clients to interact with Mainframe (Subnet 25). It enables programmatic submission of protein folding jobs, querying job status, and retrieving results from the network of validators and miners that perform protein folding simulations. It is implemented using FastAPI and integrates with several core components of the subnet system.
 
 ### Core components&#x20;
 

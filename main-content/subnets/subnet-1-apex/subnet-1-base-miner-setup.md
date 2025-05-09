@@ -19,6 +19,9 @@ description: >-
 * **vCPU:** 8 cores
 * **RAM:** 8 GB
 * **Storage:** 80 GB
+* Set up your testnet [Bittensor Wallet ](https://docs.bittensor.com/working-with-keys)
+* testTAO - please reach out in the Bittensor discord to acquire some&#x20;
+* **Python version 3.11** (the miner fails on Python < 3.10)
 
 
 
@@ -35,17 +38,32 @@ cd prompting
 
 2. **Run the Installation Script:**
 
+Giving the files executable rights to run on your local machine
+
 ```bash
-scripts/install.sh
+chmod +x scripts/install.sh
+sudo ./scripts/install.sh
 ```
+
+
+
+**Installation Dependencies**
+
+Incase the install script doesn’t cover all Python dependencies. You’ll likely need to run:
+
+```bash
+pip3.11 install pydantic-settings loguru python-dotenv httpx vllm trafilatura lxml_html_clean duckduckgo-search substrateinterface
+```
+
+
 
 Before running the miner, you need to set up miner environment variables
 
-
-
-#### Configure \`.env.miner\` file&#x20;
+Configure \`.env.miner\` file&#x20;
 
 1. **Create a `.env.miner` File:**
+
+Note: This would most likely be hidden , search out hidden files from your cli to locate this&#x20;
 
 ```bash
 cp .env.miner.example .env.miner
@@ -162,7 +180,11 @@ If a miner determines it is unsuitable for a task, it sets the corresponding fla
 
 
 
-Relevant repository: [https://github.com/macrocosm-os/prompting](https://github.com/macrocosm-os/prompting)
+Relevant repository: [https://github.com/macrocosm-os/apex](https://github.com/macrocosm-os/apex)
 
 
+
+**Note: WSL Compatibility**
+
+Installation also works smoothly on **WSL Ubuntu** with sufficient memory and space (16GB RAM, 60.2GB free disk space).&#x20;
 
