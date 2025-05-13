@@ -4,7 +4,9 @@ description: Resources to read and watch about Macrocosmos
 
 # Macromedia
 
+Partnering between Rowan and Macrocosmos to Accelerate Next-Generation NNP Development
 
+[<mark style="color:blue;">Neural network potentials (NNPs) are revolutionizing molecular simulation. Starting today, Rowan is teaming up with Macrocosmos, an open-source AI research lab building on Bittensor, to accelerate the development of the next generation of NNPs through Subnet 25 - Mainframe.</mark>](https://www.rowansci.com/blog/partnering-with-macrocosmos?utm_source=substack\&utm_medium=email)
 
 Macrocosmos SDK Introduction
 
