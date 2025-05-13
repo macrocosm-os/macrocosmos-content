@@ -52,10 +52,7 @@ Subnet 1 works closely with other subnets to expand its capabilities:
 With the `ApexClient`, you can send prompts, run chat completions, and perform live web searches — all decentralized and miner-powered.\
 
 
-To get started, you'll need an **API key**.\
-Contact **@victork\_1** on [**Discord**](https://discord.gg/sXJPmGTnVR) or **@victor\_ck0** on [**Telegram**](https://t.me/MacrocosmosAI) and we'll get you set up quickly 🚀.
-
-
+**You'll also need an API key. Visit** [api-documentation](../../developers/api-documentation/ "mention") to get started.
 
 
 

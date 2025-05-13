@@ -2,9 +2,9 @@
 description: Getting started - Data Scraping on Macrocosms
 ---
 
-# SN13 - Gravity
+# SN13 - Data Universe
 
-**Gravity** is an on-demand data scraping application, allowing developers and business owners to access timely, relevant, and decentralized data from various sources like Twitter (X), Reddit, and Hugging Face repositories.
+**Gravity** is an on-demand data scraping application, allowing developers and business owners to access timely, relevant, and decentralized data from various sources like Twitter (X), Reddit, Youtube and Hugging Face repositories.
 
 ***
 

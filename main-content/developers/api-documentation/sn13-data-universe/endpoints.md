@@ -28,7 +28,7 @@ You can retrieve posts from public accounts like **Elon Musk** , specifying a ke
 To search Reddit, simply change the `source` to `"reddit"` and use subreddit-style keywords like `"/bittensor"`.
 
 \
-Example usag&#x65;**:** [#on-demand-api-script](examples.md#on-demand-api-script "mention")
+Example usag&#x65;**:** [#on-demand-api-script](example-usage.md#on-demand-api-script "mention")
 
 
 
@@ -53,4 +53,4 @@ This endpoint allows you to define **scraping tasks** that direct miners to focu
 SN13 miners contribute to the open-source ecosystem by publishing models on Hugging Face. This endpoint returns a list of all repositories deployed by SN13 miners, enabling you to explore the tools and models built on the subnet.
 
 \
-Example usage: [#list-hugging-face-repositories](examples.md#list-hugging-face-repositories "mention")
+Example usage: [#list-hugging-face-repositories](example-usage.md#list-hugging-face-repositories "mention")

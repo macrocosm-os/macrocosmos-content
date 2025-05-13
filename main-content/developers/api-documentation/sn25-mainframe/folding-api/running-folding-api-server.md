@@ -64,15 +64,15 @@ pip install -e .
 ### Running the API&#x20;
 
 {% tabs %}
-{% tab title="Testnet" %}
-```javascript
-python3.11 main.py --netuid 141 --subtensor.network test --wallet.name your_wallet_name --wallet.hotkey your_hotkey --gjp-address 167.99.209.27:4001
-```
-{% endtab %}
-
 {% tab title="Mainnet" %}
 ```python
 python3.11 main.py --netuid 25 --subtensor.network finney --wallet.name your_wallet_name --wallet.hotkey your_hotkey --gjp-address 167.99.209.27:4001
+```
+{% endtab %}
+
+{% tab title="Testnet" %}
+```javascript
+python3.11 main.py --netuid 141 --subtensor.network test --wallet.name your_wallet_name --wallet.hotkey your_hotkey --gjp-address 167.99.209.27:4001
 ```
 {% endtab %}
 {% endtabs %}

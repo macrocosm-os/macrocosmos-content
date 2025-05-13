@@ -41,7 +41,7 @@ Alongside Gravity is [Nebula](https://app.gitbook.com/o/eu9Z3qt7ycTIHIJGObFB/s/J
 
 ## Architecture
 
-Subnet 13's decentralized design allows data to be distributed across miners and queried by validators, showcasing Bittensor's scalability. Macrocosmos is expanding data sources, developing a queryable API ([endpoints.md](../../developers/api-documentation/sn13-gravity/endpoints.md "mention")), and is currently the largest open source data provider on HuggingFace with over 17 billion scraped posts and comments (as of January 2025). By providing the raw material for pre-training and inference, subnet 13 is poised to supercharge the next stage of AI model development within the Bittensor ecosystem.
+Subnet 13's decentralized design allows data to be distributed across miners and queried by validators, showcasing Bittensor's scalability. Macrocosmos is expanding data sources, developing a queryable API ([endpoints.md](../../developers/api-documentation/sn13-data-universe/endpoints.md "mention")), and is currently the largest open source data provider on HuggingFace with over 17 billion scraped posts and comments (as of January 2025). By providing the raw material for pre-training and inference, subnet 13 is poised to supercharge the next stage of AI model development within the Bittensor ecosystem.
 
 
 
@@ -55,8 +55,7 @@ The **Gravity subnet (SN13)** specializes in decentralized web scraping and data
 Using the `GravityClient` in the **Macrocosmos SDK**, you can easily launch scraping tasks and get structured datasets built by miners.\
 
 
-To get started, you'll need an **API key**.\
-Contact **@victork\_1** on [**Discord**](https://discord.gg/sXJPmGTnVR) or **@victor\_ck0** on [**Telegram**](https://t.me/MacrocosmosAI) and we'll get you set up quickly 🚀.
+**You'll also need an API key. Visit** [api-documentation](../../developers/api-documentation/ "mention") to get started.
 
 
 

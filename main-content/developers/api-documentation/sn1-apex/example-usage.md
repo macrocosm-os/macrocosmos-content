@@ -1,4 +1,10 @@
-# Examples
+---
+description: >-
+  Simply copy and paste any of the following scripts in your coding environments
+  to interact with SN1 - Please ensure you have an API Key.
+---
+
+# Example Usage
 
 ## **Chat Completions Script**&#x20;
 

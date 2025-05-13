@@ -4,7 +4,7 @@
 
 The API uses an API key authentication system. Clients must include the `X-API-Key` header with every request.
 
-<figure><img src="../../../../.gitbook/assets/Screenshot 2025-05-02 at 07.52.49.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2025-05-02 at 07.52.49.png" alt=""><figcaption></figcaption></figure>
 
 
 
