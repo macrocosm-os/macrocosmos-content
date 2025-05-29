@@ -10,7 +10,6 @@
 ## Getting Started
 
 * [Quickstart](getting-started/quickstart.md)
-* [Publish your docs](getting-started/publish-your-docs.md)
 
 ## Basics
 
@@ -80,7 +79,7 @@
     * [API Key management](developers/api-documentation/sn13-data-universe/api-key-management.md)
     * [Scraping Youtube Data](developers/api-documentation/sn13-data-universe/scraping-youtube-data.md)
 * [Macrocosmos SDK](developers/macrocosmos-sdk/README.md)
-  * [Installation](developers/macrocosmos-sdk/installation.md)
+  * [Get Started](developers/macrocosmos-sdk/get-started.md)
   * [API Keys](developers/macrocosmos-sdk/api-keys.md)
   * [Subnet 1 APEX](developers/macrocosmos-sdk/apex.md)
   * [Subnet 13 Gravity](developers/macrocosmos-sdk/gravity.md)
