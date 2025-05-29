@@ -1,4 +1,4 @@
-# SN25 - Mainframe
+# Subnet 25 Mainframe
 
 The Protein Folding API provides endpoints for submitting and managing protein folding jobs on the Bittensor network (Subnet 25). The API consists of two main components:
 

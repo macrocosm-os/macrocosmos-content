@@ -21,7 +21,7 @@ Help power the subnet by contributing compute and serving LLM responses. Start h
 
 ### Build with the Macrocosmos SDK
 
-* Integrate Apex directly into your Python applications using the SDK - [subnet-1-apex.md](../../developers/macrocosmos-sdk/subnet-1-apex.md "mention")
+* Integrate Apex directly into your Python applications using the SDK - [apex.md](../../developers/macrocosmos-sdk/apex.md "mention")
 
 #### Explore Constellation
 
