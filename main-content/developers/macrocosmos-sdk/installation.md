@@ -28,13 +28,19 @@ The **Client** classes — like `ApexClient` and `GravityClient` , serve as the 
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
+// Import the client
+import { ApexClient } from 'macrocosmos';
+
 // Initialize the client
 const client = new ApexClient({ apiKey: 'your-api-key' });
 ```
 {% endtab %}
 
 {% tab title="Python" %}
-<pre class="language-python"><code class="lang-python">// Initialize the client
+<pre class="language-python"><code class="lang-python"># Import the client
+import macrocosmos as mc
+
+# Initialize the client
 <strong>client = mc.ApexClient(api_key="")
 </strong></code></pre>
 {% endtab %}
