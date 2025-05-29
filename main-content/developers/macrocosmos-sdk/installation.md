@@ -74,9 +74,7 @@ npm install macrocosmos
 {% endtab %}
 {% endtabs %}
 
-> ###
-
-### Client
+### Client Setup
 
 The **Client** classes — such as `ApexClient` and `GravityClient` , serve as the **primary interface** between your application and a specific Macrocosmos subnet.
 

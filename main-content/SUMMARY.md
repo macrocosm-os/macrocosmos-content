@@ -79,7 +79,7 @@
     * [API Key management](developers/api-documentation/sn13-data-universe/api-key-management.md)
     * [Scraping Youtube Data](developers/api-documentation/sn13-data-universe/scraping-youtube-data.md)
 * [Macrocosmos SDK](developers/macrocosmos-sdk/README.md)
-  * [Get Started](developers/macrocosmos-sdk/get-started.md)
+  * [Get Started](developers/macrocosmos-sdk/installation.md)
   * [API Keys](developers/macrocosmos-sdk/api-keys.md)
   * [Subnet 1 APEX](developers/macrocosmos-sdk/apex.md)
   * [Subnet 13 Gravity](developers/macrocosmos-sdk/gravity.md)
