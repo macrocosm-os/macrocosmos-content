@@ -10,7 +10,9 @@ Whether you're building cutting-edge Artificial Intelligence (AI) products, conn
 
 Macrocosmos SDK provides developers with a robust API for integrating Macrocosmos’s advanced AI and data infrastructure into applications, services, and research pipelines. Its extensive documentation, built-in support for authentication ensure a smooth experience from prototyping to production.
 
-### Why Build with Macrocosmos?
+<figure><img src="../../.gitbook/assets/MC_logo_Toro_White@4x (1).png" alt="" width="284"><figcaption></figcaption></figure>
+
+## Why Build with Macrocosmos?
 
 Macrocosmos makes it accessible to:
 
