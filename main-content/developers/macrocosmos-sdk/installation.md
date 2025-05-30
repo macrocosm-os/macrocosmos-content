@@ -7,7 +7,7 @@ To get started using Macrocosmos Software Development Kit (SDK) you should:
 
 <details>
 
-<summary>How to setup a simple project using python in Cursor to run SDK</summary>
+<summary>How to setup a simple project to run SDK using python in Cursor</summary>
 
 1. Install [Cursor](https://www.cursor.com/) - the basic version is free
 2.  From the top menu choose File -> Open and create a new folder for your project.&#x20;
@@ -104,7 +104,3 @@ When you initialize a client - `ApexClient` or `GravityClient`, you're creating 
 ### Watch the Demo here
 
 {% embed url="https://x.com/MacrocosmosAI/status/1916885593826668613" %}
-
-### Usage
-
-Once you have created a `Client` instance, you can call API methods as shown in the examples below.
