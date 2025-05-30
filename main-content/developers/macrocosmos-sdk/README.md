@@ -6,27 +6,25 @@ description: The Macrocosmos SDK - Integrating your AI Applications with our Sub
 
 ## Overview
 
-This SDK (available in python and typescript) enables developers integrate AI applications with [Constellation](https://app.macrocosmos.ai/mission-command) - a network of decentralized subnets running on Bittensor.&#x20;
+This Software Development Kit (SDK) provides developers with a robust, modular, and intuitive interface for integrating Macrocosmos’s advanced AI and data infrastructure into applications, services, and research pipelines. It enables developers to integrate AI applications with [Constellation](https://app.macrocosmos.ai/mission-command) - a service platform built over decentralised subnets running on Bittensor.&#x20;
+
+Whether you're building cutting-edge Artificial Intelligence (AI) products, connecting to Bittensor-based subnets, or orchestrating large-scale data flows, the Macrocosmos SDK simplifies access to the powerful tools and systems behind the Macrocosmos Constellation platform. Its extensive documentation, built-in support for authentication and data formatting ensure a smooth experience from prototyping to production.
 
 ### 🚀 Why Build with Macrocosmos?
 
 Macrocosmos makes it easy to:
 
-* **Interact with AI models on-chain**: Use the Apex (SN1) subnet to send prompts to open source LLMs running in a decentralized way.
-* **Access real-time social data**: Query Reddit and Twitter/X through Gravity (SN13), powered by validator-coordinated scraping infrastructure.
+* **Interact with AI models on-chain**: Use the Apex subnet 1 to send prompts to open source LLMs running in a decentralized way.
+* **Access real-time social media data**: Query Reddit and Twitter/X through Gravity subnet 13, powered by validator-coordinated scraping infrastructure.
 * **Extend and monetize**: Interact with Constellation for real-time data feeds, and even propose new subnet features.
 
+### Key Capabilities
+
+#### Apex subnet 1
+
+<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Chat Completions</strong></td><td>Send a prompt to an LLM on the Apex subnet to enable your applications such as chatbots, agents, copilots, and autonomous systems.</td></tr><tr><td><strong>Web Search</strong></td><td>Use Apex's integrated web retriever to fetch relevant content to support research assistants, news summarisers and real-time content generators.</td></tr><tr><td><strong>Deep Researcher</strong></td><td>Connect to the Deep Researcher to enhance deep-dive competitive intelligence tools and uncover emerging and actionable insights.</td></tr></tbody></table>
 
 
-### Watch the Demo here
-
-{% embed url="https://x.com/MacrocosmosAI/status/1916885593826668613" %}
-
-
-
-#### For feedback and reporting issues , please refer to the following repositories:
-
-#### [Macrocosmos Python](https://github.com/macrocosm-os/macrocosmos-py) [Macrocosmos Typescript](https://github.com/macrocosm-os/macrocosmos-ts)
 
 
 

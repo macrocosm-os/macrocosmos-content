@@ -1,13 +1,13 @@
 # Get Started
 
-To get started using Macrocosmos SDK you should:
+To get started using Macrocosmos Software Development Kit (SDK) you should:
 
 1. Generate your API key using the instruction from the [API Keys](api-keys.md) page
 2. Ensure that you are using Python 3.9+ or Typescript
 
 <details>
 
-<summary>How to setup a simple project on python in Cursor to run SDK</summary>
+<summary>How to setup a simple project using python in Cursor to run SDK</summary>
 
 1. Install [Cursor](https://www.cursor.com/) - the basic version is free
 2.  From the top menu choose File -> Open and create a new folder for your project.&#x20;
@@ -100,6 +100,10 @@ const client = new ApexClient({ apiKey: 'your-api-key' });
 {% endtabs %}
 
 When you initialize a client - `ApexClient` or `GravityClient`, you're creating a scoped connection to that subnet. This setup manages authentication via your API key.
+
+### Watch the Demo here
+
+{% embed url="https://x.com/MacrocosmosAI/status/1916885593826668613" %}
 
 ### Usage
 
