@@ -6,9 +6,9 @@ description: The Macrocosmos SDK - Bridge to decentralised AI services
 
 ## Overview
 
-This Software Development Kit (SDK) provides developers with a robust, modular, and intuitive interface for integrating Macrocosmos’s advanced AI and data infrastructure into applications, services, and research pipelines. It enables developers to integrate AI applications with [Constellation](https://app.macrocosmos.ai/mission-command) - a service platform built over decentralised subnets running on Bittensor.&#x20;
+Whether you're building cutting-edge Artificial Intelligence (AI) products, connecting to Bittensor-based subnets, or orchestrating large-scale data flows, the Macrocosmos Software Development Kit (SDK) simplifies access to the powerful tools and systems behind the Macrocosmos [Constellation platform](https://app.macrocosmos.ai/mission-command).&#x20;
 
-Whether you're building cutting-edge Artificial Intelligence (AI) products, connecting to Bittensor-based subnets, or orchestrating large-scale data flows, the Macrocosmos SDK simplifies access to the powerful tools and systems behind the Macrocosmos Constellation platform. Its extensive documentation, built-in support for authentication and data formatting ensure a smooth experience from prototyping to production.
+Macrocosmos SDK provides developers with a robust API for integrating Macrocosmos’s advanced AI and data infrastructure into applications, services, and research pipelines. Its extensive documentation, built-in support for authentication ensure a smooth experience from prototyping to production.
 
 ### Why Build with Macrocosmos?
 
