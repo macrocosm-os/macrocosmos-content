@@ -22,7 +22,7 @@ Macrocosmos makes it easy to:
 
 #### Apex subnet 1
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Chat Completions</strong></td><td>Send a prompt to an LLM on the Apex subnet to enable your applications such as chatbots, agents, copilots, and autonomous systems.</td></tr><tr><td><strong>Web Search</strong></td><td>Use Apex's integrated web retriever to fetch relevant content to support research assistants, news summarisers and real-time content generators.</td></tr><tr><td><strong>Deep Researcher</strong></td><td>Connect to the Deep Researcher to enhance deep-dive competitive intelligence tools and uncover emerging and actionable insights.</td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/fa6-solid--mountain-sun-icon.png" alt="">   <strong>Chat Completions</strong></td><td>Send a prompt to an LLM on the Apex subnet to enable your applications such as chatbots, agents, copilots, and autonomous systems.</td></tr><tr><td><img src="../../.gitbook/assets/web-icon.png" alt="">  <strong>Web Search</strong></td><td>Use Apex's integrated web retriever to fetch relevant content to support research assistants, news summarisers and real-time content generators.</td></tr><tr><td><img src="../../.gitbook/assets/deep-researcher-icon (1).png" alt="">  <strong>Deep Researcher</strong></td><td>Connect to the Deep Researcher to enhance deep-dive competitive intelligence tools and uncover emerging and actionable insights.</td></tr></tbody></table>
 
 
 
