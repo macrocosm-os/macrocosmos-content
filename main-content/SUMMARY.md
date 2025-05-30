@@ -83,7 +83,7 @@
   * [API Keys](developers/macrocosmos-sdk/api-keys.md)
   * [Subnet 1 APEX](developers/macrocosmos-sdk/apex.md)
   * [Subnet 13 GRAVITY](developers/macrocosmos-sdk/gravity.md)
-  * [Subnet 25 Mainframe](developers/api-documentation/sn25-mainframe/README.md)
+  * [Subnet 25 MAINFRAME](developers/api-documentation/sn25-mainframe/README.md)
     * [Running Folding API](developers/api-documentation/sn25-mainframe/running-folding-api.md)
     * [API Keys](developers/api-documentation/sn25-mainframe/api-keys.md)
     * [Folding API](developers/api-documentation/sn25-mainframe/folding-api/README.md)
