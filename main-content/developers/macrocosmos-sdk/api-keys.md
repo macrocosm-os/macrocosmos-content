@@ -36,10 +36,9 @@ You can now use this key to interact with **all Macrocosmos subnets** from your 
 
 ### Step 3: Get API Credits
 
-Before you can start making calls:
+In case of support required:
 
-* Reach out to **Victor** via [Discord](https://discord.gg/sXJPmGTnVR) or [Telegram.](https://t.me/MacrocosmosAI)
-* He’ll help authorize your account and top it up with **credits**.
+* Reach out to us via [Discord](https://discord.gg/sXJPmGTnVR) or [Telegram.](https://t.me/MacrocosmosAI) We’ll help authorize your account and top it up with **credits**.
 
 ### You’re Ready!
 
