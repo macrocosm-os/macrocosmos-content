@@ -51,9 +51,9 @@ You can now:
 
     <pre class="language-python"><code class="lang-python"><strong>#activate the virtual environment directory
     </strong><strong>source venv/bin/activate
-    </strong><strong>#ativate python
-    </strong>python
-    </code></pre>
+    </strong><strong>#activate python
+    </strong><strong>python
+    </strong></code></pre>
 
 Congratulations! 🎉 You have setup the basic project and now can start to use Macrocosmos SDK through the terminal starting from **pip install macrocosmos** and activating clients for Apex and Gravity, as it described in the document below.\
 
