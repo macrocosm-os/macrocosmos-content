@@ -1,5 +1,5 @@
 ---
-description: The Macrocosmos SDK - Integrating your AI Applications with our Subnets
+description: The Macrocosmos SDK - Bridge to decentralised AI services
 ---
 
 # Macrocosmos SDK
@@ -32,7 +32,11 @@ Subnet 13 Gravity
 
 <table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/collection-icon.png" alt="">  <strong>Data Collection</strong></td><td>Request filtered data to collect relevant insights, structured information, real-time updates, hidden patterns, and competitive signals across multiple sources.</td></tr><tr><td><img src="../../.gitbook/assets/dataset-icon.png" alt="">  <strong>Build Dataset</strong></td><td>Build comprehensive datasets to enable precise retrieval, targeted analysis and intelligent automation, driving smarter decisions and scalable AI-driven capabilities.</td></tr><tr><td><img src="../../.gitbook/assets/stream2.png" alt=""> <strong>Streaming API</strong></td><td>Create a data flow for real-time updates and identify predictive signals to drive timely decisions, automation, and strategic forecasting across operations.</td></tr></tbody></table>
 
+#### Subnet 25 Mainframe
 
+<a href="../api-documentation/sn25-mainframe/" class="button secondary">Mainframe API</a>
+
+<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/Protein-icon.png" alt="">  <strong>Folding API</strong></td><td>The Folding API provides the HTTP interface to enable programmatic submission of protein folding jobs to perform protein folding simulations in order to generate datasets for scientific AI model training.</td></tr><tr><td><img src="../../.gitbook/assets/organics-icon.png" alt="">  <strong>Organic API</strong></td><td>The Organic API provides an interface for submitting real-world protein folding tasks for MD simulation, enabling genuine scientific studies and advanced analysis of specific protein structures.</td></tr></tbody></table>
 
 
 
