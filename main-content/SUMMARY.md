@@ -31,6 +31,7 @@
   * [Subnet 9: How to use Pre-training](subnets/subnet-9-pre-training/subnet-9-getting-started.md)
   * [Subnet 9: Incentive Mechanism](subnets/subnet-9-pre-training/subnet-9-incentive-mechanism.md)
   * [Subnet 9: Roadmap](subnets/subnet-9-pre-training/subnet-9-roadmap.md)
+  * [Subnet 9 IOTA Mining Setup Guide](subnets/subnet-9-pre-training/subnet-9-iota-mining-setup-guide.md)
 * [Subnet 13 - Data Universe](subnets/subnet-13-data-universe/README.md)
   * [Subnet 13: How to use Data Universe](subnets/subnet-13-data-universe/subnet-13-getting-started.md)
   * [Subnet 13: Incentive Mechanism](subnets/subnet-13-data-universe/subnet-13-incentive-mechanism.md)
