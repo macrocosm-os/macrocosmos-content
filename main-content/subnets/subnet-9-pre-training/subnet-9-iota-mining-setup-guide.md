@@ -10,7 +10,7 @@ In a SWARM-based decentralized LLM-training system, miners are the workers that 
 
 IOTA incentive mechanism continuously scores miners on throughput, data quality, and update fidelity, rewarding high-performing nodes with subnet 9 tokens and reallocating tasks away from unreliable participants. The result is a self-optimising, permissionless fabric that scales LLM training to global levels, democratising access to state-of-the-art models without sacrificing security or provenance.
 
-Operations explained
+## Operations explained
 
 At unknown, random intervals in the future, miners are able to register onto the network. While registered, the miner is initialized with the orchestrator and assigned a model layer to train. From this point, the cadence of the miner-orchestrator communication is critical, and can be simply broken down into two major pieces, the training phase, and the merging phase.
 
