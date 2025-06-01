@@ -117,13 +117,13 @@ S3\_BUCKET="swarm-mvp"
 
 HF\_TOKEN="hf\_token
 
-AWS\_ACCESS\_KEY
+AWS\_ACCESS\_KEY??
 
 ```python
 #Edit miners file with required values
 vim .env
 
-# For Terminal - use a ky combination Ctrl + Shift + V (Cmd + V)
+# For Terminal - use a key combination to paste the miner values: Ctrl + Shift + V (Cmd + V)
 :wq
 
 #For the UI enabled tools just change the values in the miner's .env file
@@ -134,6 +134,8 @@ python launch_miner.py
 ```
 
 Expected output:
+
+<figure><img src="../../.gitbook/assets/Screenshot 2025-06-01 at 20.22.01.png" alt=""><figcaption></figcaption></figure>
 
 #### Register on Testnet
 
@@ -164,8 +166,6 @@ BITTENSOR=True
 S3\_BUCKET="swarm-mvp"
 
 HF\_TOKEN="hf\_token"??
-
-AWS\_ACCESS\_KEY??
 
 ```python
 #Edit miners file with required values
