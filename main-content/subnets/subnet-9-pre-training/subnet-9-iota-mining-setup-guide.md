@@ -16,7 +16,9 @@ At unknown, random intervals in the future, miners are able to register onto the
 
 Figure 1 below illustrates the training loop.
 
-<img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXchK1fl8OljpzMosnmdSgpDC9V0eimk58o24An7BI0cmwnVV092ec1tUp8SNgvnrmm0UMH96j8aLkmor7ZGXpt1aExqSLLpQ4Eh-e3yJlumT12OfqD5V06DGSpDcfXpWd1Amfd3?key=AwwdJzWEYS6KGt6pohXAWw" alt="" data-size="original">
+<img src="../../.gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
+
+
 
 While inside the training loop, the miner is responsible for performing forward and backward passes while uploading their activations to the dedicated storage bucket. In the forward direction, miners receive activations from the previous layer, compute transformed outputs, and propagate them downstream. During the backward pass, they consume gradients, compute local weight updates, and send gradients upstream. Importantly, the number of forward and backward passes per training loop is controlled via an orchestrator level hyperparameter called BATCHES\_BEFORE\_MERGING.
 
