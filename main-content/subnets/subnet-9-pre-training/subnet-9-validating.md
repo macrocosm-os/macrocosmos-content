@@ -12,11 +12,9 @@ Validators will periodically reproduce an epoch’s worth of work of a randomly 
 
 Validators share information via the orchestrator by design. This means that validators submit the miner scores that they produce in their spot check, and all the miner scores are pooled together to give a total consensus score. Periodically, validators request the miner scores from the orchestrator, normalize and set weights. This guarantees that validators agree with each other, sustaining very high validator trust.
 
-Installation
+#### Installation
 
-To install the validator:Clone the repo:
-
-\
+To install the validator:Clone the repo:\
 `git clone` [`https://github.com/macrocosm-os/iota.git`](https://github.com/macrocosm-os/iota.git)\
 Enter the folder:\
 `cd iota`\
