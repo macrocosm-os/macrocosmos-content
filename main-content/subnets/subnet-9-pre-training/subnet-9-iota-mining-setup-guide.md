@@ -171,7 +171,4 @@ Expected output:
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-06-01 at 20.22.01.png" alt=""><figcaption></figcaption></figure>
 
-🎉Congratulations! You have set up the miner and are able to contribute to the world of breaking edge innovation!\
-
-
-\
+🎉Welcome to the Cosmos!
