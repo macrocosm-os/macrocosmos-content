@@ -25,6 +25,10 @@ Various solutions attempt to solve key technical hurdles regarding distributed t
 The technical primer doc [INCENTIVISED ORCHESTRATED TRAINING ARCHITECTURE\
 (IOTA)](https://www.macrocosmos.ai/research/iota_primer.pdf) provides a detailed view of our pre-training efforts.
 
+Have a look at the [Miners Dashboard](https://iota.macrocosmos.ai/) to get the updates on the training process.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2025-06-02 at 16.57.25.png" alt=""><figcaption><p>Miners Dashboard</p></figcaption></figure>
+
 For more details on how to contribute you can have a looks at [**mining instructions**](https://app.gitbook.com/o/eu9Z3qt7ycTIHIJGObFB/s/JDlWdmSC3GnzBPSkAiBM/~/changes/165/subnets/subnet-9-pre-training/subnet-9-iota-mining-setup-guide), and [**validating** **instructions**](https://app.gitbook.com/o/eu9Z3qt7ycTIHIJGObFB/s/JDlWdmSC3GnzBPSkAiBM/~/changes/165/subnets/subnet-9-pre-training/subnet-9-validating).
 
 If you have any questions or require support, please message us in the [Bittensor Discord](https://discord.com/channels/799672011265015819/1162768567821930597) channel for subnet 9, or our own [Macrocosmos Discord](https://discord.gg/vRTaAXpRcd) server.
@@ -32,7 +36,7 @@ If you have any questions or require support, please message us in the [Bittenso
 Other related resources
 
 * [Website](https://www.macrocosmos.ai/sn9)
-* Dashboard
+* [Dashboard](https://iota.macrocosmos.ai/)
 * [GitHub](https://github.com/macrocosm-os/iota)
 * [Substack](https://macrocosmosai.substack.com/t/pre-training)
 * [Bittensor Discord](https://discord.com/channels/799672011265015819/1162768567821930597)
