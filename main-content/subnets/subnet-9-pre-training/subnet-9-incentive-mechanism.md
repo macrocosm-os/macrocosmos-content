@@ -6,6 +6,12 @@ description: Subnet 9 incentive overview
 
 Subnet 9 encourages miners to develop the best-performing pre-trained models at a given maximum parameter size for each competition on the subnet. Each model generates a probability distribution over possible responses to a given prompt \[see [code](https://github.com/macrocosm-os/pretraining/blob/52962cf006952b9df42488194165225bc1b8d667/pretrain/validation.py#L142)], for example predicting the next word in a sentence. The quality of the model is measured by perplexity, a loss function based on cross-entropy.
 
+## System Architecture
+
+Diagram of architecture. Introduce all the parts; orchestrator, S3 bucket, mongoDB , validators, miners.
+
+## Subnet Operation
+
 Cross entropy measures the difference between the ground truth distribution P and the predicted distribution _Q_, and is defined as:
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-03-05 at 16.35.16.png" alt="" width="375"><figcaption></figcaption></figure>

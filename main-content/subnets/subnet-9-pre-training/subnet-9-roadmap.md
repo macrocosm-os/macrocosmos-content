@@ -1,5 +1,6 @@
 ---
 description: Development roadmap for Q1 2025
+hidden: true
 ---
 
 # Subnet 9: Roadmap

@@ -2,9 +2,9 @@
 description: Beginning with subnet 9
 ---
 
-# Subnet 9: Getting Started
+# Subnet 9: How to use IOTA
 
-Before starting collaboration with subnet 9, you should familiarize yourself with the [Bittensor documentation](https://docs.bittensor.com/), describing the ecosystem and relationships between network participants.
+Before participating in subnet 9, you should familiarize yourself with the [Bittensor documentation](https://docs.bittensor.com/), describing the ecosystem and relationships between network participants.
 
 You can find [**mining** instructions here](https://github.com/macrocosm-os/pretraining/blob/main/docs/miner.md), and [**validating** instructions here](https://github.com/macrocosm-os/pretraining/blob/main/docs/validator.md).
 
