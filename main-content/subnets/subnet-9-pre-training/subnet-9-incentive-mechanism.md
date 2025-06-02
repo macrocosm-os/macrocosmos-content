@@ -39,6 +39,8 @@ This mechanism draws inspiration from centralised training practices—where $$B
 
 Miners may register to the subnetwork at any time. Upon registration, the orchestrator assigns each miner a model layer to train. The miner will wait until the next full synchronization period to start actively participating. During the full synchronisation, it will update its weights and optimizer states to align with the rest of the network, and can then proceed to processing forward and backward activations in the training stage.
 
+More details on mining on the subnet you can get from the primer doc [INCENTIVISED ORCHESTRATED TRAINING ARCHITECTURE(IOTA)](https://www.macrocosmos.ai/research/iota_primer.pdf) and [IOTA Mining Setup Guide](https://docs.macrocosmos.ai/subnets/subnet-9-pre-training/subnet-9-iota-mining-setup-guide).
+
 ### Incentivisation
 
 The design of the incentive landscape for the network participants should consider the trade-offs between optimisation and reproducibility, and has significant impact on the dynamics of the system. As discussed above, validation hinges on the validator’s ability to reproduce sections of training to a chosen threshold. Given this condition, the design does not give power to the miner to innovate algorithmically at this time.
