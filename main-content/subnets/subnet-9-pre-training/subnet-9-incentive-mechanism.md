@@ -14,7 +14,7 @@ Overall system architecture. The orchestrator facilitates the training process b
 
 This architecture allows a system-level orchestrator to manage how participants on the network will operate at different stages of the training process. All data that is created and handled by these three entities is pushed to a globally accessible database, making it easy to trace the movement of information.
 
-### Orchestrator
+#### Orchestrator
 
 The orchestrator’s primary responsibility is to monitor the training progress of each miner over all discrete layers and initiate weight-merging events accordingly. Given the heterogeneous nature of miner hardware and their unreliability, it is impractical to wait for all miners to complete an equal number of batches B. Instead, we define a minimum batch threshold, $$B_{min}$$, that a miner must complete for its contribution to be considered in the merging process. Once at least a specified fraction of miners have trained for at least $$B_{min}$$ batches, the orchestrator prompts all qualifying miners to upload their weights.
 
@@ -35,11 +35,16 @@ This mechanism draws inspiration from centralised training practices—where $$B
 * Supports asynchronous and layer-wise updates, and
 * Reduces communication overhead by focusing on the most informative coordinate updates locally.
 
-### Miners
+#### Miners
 
 Miners may register to the subnetwork at any time. Upon registration, the orchestrator assigns each miner a model layer to train. The miner will wait until the next full synchronization period to start actively participating. During the full synchronisation, it will update its weights and optimizer states to align with the rest of the network, and can then proceed to processing forward and backward activations in the training stage.
 
 More details on mining on the subnet you can get from the primer doc [INCENTIVISED ORCHESTRATED TRAINING ARCHITECTURE(IOTA)](https://www.macrocosmos.ai/research/iota_primer.pdf) and [IOTA Mining Setup Guide](https://docs.macrocosmos.ai/subnets/subnet-9-pre-training/subnet-9-iota-mining-setup-guide).
+
+Validators
+
+Within the system, validators play a core role in determining if the work completed by the miner was honest. Primarily, the validator relies on computational reproducibility to achieve this validation signal. As the validator is tracking a specific miner, a portion of the miner’s training is completely rerun on the validator side. Forward and backwards passes are checked against the submitted miner activations using a cosine similarity. However, there are many complications when it comes to reliable validation, and we explore them in the remainder of the paper. We formalize incentivization in\
+the next section, and add additional exploratory techniques leveraging Shapley values for anomaly detection and adversarial robustness in Section 6 of the primer doc [INCENTIVISED ORCHESTRATED TRAINING ARCHITECTURE(IOTA)](https://www.macrocosmos.ai/research/iota_primer.pdf).
 
 ### Incentivisation
 
