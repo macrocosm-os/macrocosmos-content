@@ -1,20 +1,60 @@
 # Subnet 9 IOTA Mining Setup Guide
 
+## Introduction
+
+IOTA (Incentivized Orchestrated Training Architecture) is a data- and pipeline-parallel training algorithm designed to operate on a network of heterogeneous, unreliable devices in adversarial and trustless environments.&#x20;
+
 ## Miners purpose in IOTA
 
-In a SWARM-based decentralized LLM-training system, miners are the workers that supply GPU compute, memory, and bandwidth to collaboratively train and refine model checkpoints. Each miner downloads its assigned parameter shard, runs forward-backward passes on locally streamed data, and submits encrypted gradient updates or low-rank deltas to the coordination layer, where they are aggregated and verified. By dispersing workloads across thousands of independent miners, the network achieves massive parallelism, fault tolerance, and censorship resistance while eliminating single-point infrastructure costs.&#x20;
+In a decentralized LLM-training network, miners are the workers that supply GPU compute, memory, and bandwidth to collaboratively train models. IOTA utilizes data- and pipeline-parallelism, meaning that miners run sections of the model rather than its entirety. This reduces the hardware requirement for participation. Each miner downloads its assigned section of the model, runs forwards and backward passes of activations and periodically sync their weights with peers in the same layer via a merging process. By distributing workloads across a large number of independent miners, the network achieves massive parallelism, fault tolerance, and censorship resistance while eliminating single-point infrastructure costs.&#x20;
 
-IOTA incentive mechanism continuously scores miners on throughput, data quality, and update fidelity, rewarding high-performing nodes with subnet 9 tokens and reallocating tasks away from unreliable participants. The result is a self-optimising, permissionless fabric that scales LLM training to global levels, democratising access to state-of-the-art models without sacrificing security or provenance.
+The IOTA incentive mechanism continuously scores miners on throughput and the quality of their work during the training and merging processes. In turn, they are rewarded with subnet 9 alpha tokens based on the quality of their contributions.
 
 ## Operations explained
 
-At unknown, random intervals in the future, miners are able to register onto the network. While registered, the miner is initialized with the orchestrator and assigned a model layer to train. From this point, the cadence of the miner-orchestrator communication is critical, and can be simply broken down into two major pieces, the training phase, and the merging phase.
+### Joining the network
+
+Miners join the network and get registered with the orchestrator using their API client, which assigns them to a training layer. Up to 50 miners operate per layer. Miners download the current global weights for their layer and begin processing activations.
+
+### Activations
+
+There are two activation types: forward and backward.
+
+* Forwards activations propagate samples through the model to produce losses.
+* Backwards activations propagate the samples in the opposite direction to produce gradients for training their layer weights.
+
+Backwards activations are given precedence over forwards activations as they provide the learning signal.
+
+If a miner fails to process an activation that it has been assigned, it is penalized. This is like an assembly line, where workers pass between adjacent stages in the process. An important part of the design is that samples propagate through the pipeline in random and stochastic paths.
+
+Activation processing happens in all layers at once, but miners process samples and train asynchronously. Miners must process as many activations as possible in each epoch — their score is based on throughput.
+
+### Merging
+
+Once the orchestrator signals that enough samples have been processed in the network, the state of the system changes from training mode to merging mode.&#x20;
+
+In merging mode, the miners perform a multi-stage process which is a modified version of Butterfly All-Reduce.&#x20;
+
+1. Miners upload their local weights and optimiser states to the s3 bucket.&#x20;
+2. They are assigned a set of random weight partitions.&#x20;
+
+Importantly, multiple miners are assigned to the same partitions which provides redundant measurement of results for improved fault tolerance and robustness!&#x20;
+
+3. Miners then must download their partitions, perform a local merge (currently the element-wise geometric mean) and then upload their merged partitions.&#x20;
+
+This design is tolerant to miner failures, so merging is not blocked if some miners do not successfully complete this stage.&#x20;
+
+5. Finally, miners download the complete set of merged weights and optimiser states. The merging stage is currently the slowest, so we amortise this by running the training stage for longer and effectively training on larger batch sizes.
+
+Once merging is complete, the orchestrator state returns to training mode and the miners continue processing activations. The miners cycle between training mode and merging mode in perpetuity.
 
 Figure 1 below illustrates the training loop.
 
 <img src="../../.gitbook/assets/file.excalidraw.svg" alt="Figure 1 The training loop process" class="gitbook-drawing">
 
-While inside the training loop, the miner is responsible for performing forward and backward passes while uploading their activations to the dedicated storage bucket. In the forward direction, miners receive activations from the previous layer, compute transformed outputs, and propagate them downstream. During the backward pass, they consume gradients, compute local weight updates, and send gradients upstream. Importantly, the number of forward and backward passes per training loop is controlled via an orchestrator level hyperparameter called BATCHES\_BEFORE\_MERGING.
+Figure 1 Explanation - While inside the training loop, the miner is responsible for performing forward and backward passes while uploading their activations to the dedicated storage bucket. In the forward direction, miners receive activations from the previous layer, compute transformed outputs, and propagate them downstream. During the backward pass, they consume gradients, compute local weight updates, and send gradients upstream. Importantly, the number of forward and backward passes per training loop is controlled via an orchestrator level hyperparameter called BATCHES\_BEFORE\_MERGING.
+
+For the details on validating, please follow the link -> Validation
 
 ## Setting Up Mining
 
