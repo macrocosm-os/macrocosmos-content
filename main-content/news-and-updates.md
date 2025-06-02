@@ -4,6 +4,12 @@ description: The last updates from Macrocosmos
 
 # News and updates
 
+2025-06-02
+
+New Subnet 9 Launch! Have a look at the overview at [Subnet 9 -IOTA](subnets/subnet-9-pre-training/) and at the "[Swarm Intelligence Is Reshaping How AI Gets Trained](https://www.forbes.com/sites/torconstantino/2025/06/02/swarm-intelligence-is-reshaping-how-ai-gets-trained/)" Forbes article" for the inspiration.
+
+
+
 2025-04-11
 
 User guides for Constellation have been added , you can access them on [Broken link](broken-reference "mention") . [macrocosmos-sdk](developers/macrocosmos-sdk/ "mention") has also been updated with the release of our Typescript SDK
