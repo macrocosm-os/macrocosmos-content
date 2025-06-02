@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Subnet 9 IOTA Mining Setup Guide
 
 ## Miners purpose in IOTA
