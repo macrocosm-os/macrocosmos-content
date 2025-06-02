@@ -14,6 +14,31 @@ Overall system architecture. The orchestrator facilitates the training process b
 
 This architecture allows a system-level orchestrator to manage how participants on the network will operate at different stages of the training process. All data that is created and handled by these three entities is pushed to a globally accessible database, making it easy to trace the movement of information.
 
+### Orchestrator
+
+The orchestrator’s primary responsibility is to monitor the training progress of each miner over all discrete layers and initiate weight-merging events accordingly. Given the heterogeneous nature of miner hardware and their unreliability, it is impractical to wait for all miners to complete an equal number of batches B. Instead, we define a minimum batch threshold, $$B_{min}$$, that a miner must complete for its contribution to be considered in the merging process. Once at least a specified fraction of miners have trained for at least $$B_{min}$$ batches, the orchestrator prompts all qualifying miners to upload their weights.
+
+$$
+B_{\text{eff}}
+   \;=\;
+   \sum_{m=1}^{M}
+   \begin{cases}
+      B_{m} & \text{if } B_{m} \ge B_{\min} \\
+      0     & \text{if } B_{m} <  B_{\min}
+   \end{cases}
+$$
+
+where _M_ is the total number of miners and $$B_{min}$$ is the number of batches completed by miner _m_.\
+This mechanism draws inspiration from centralised training practices—where $$B_{eff}$$ mimics the behavior of global batch sizes in typical LLM training—but in the decentralised setting it is coupled with DiLoCo, which enables miners to perform local optimisation steps independently before synchronization. DiLoCo is particularly well suited for this paradigm, as it:
+
+* Embraces partial participation from miners,
+* Supports asynchronous and layer-wise updates, and
+* Reduces communication overhead by focusing on the most informative coordinate updates locally.
+
+### Miners
+
+Miners may register to the subnetwork at any time. Upon registration, the orchestrator assigns each miner a model layer to train. The miner will wait until the next full synchronization period to start actively participating. During the full synchronisation, it will update its weights and optimizer states to align with the rest of the network, and can then proceed to processing forward and backward activations in the training stage.
+
 ### Incentivisation
 
 The design of the incentive landscape for the network participants should consider the trade-offs between optimisation and reproducibility, and has significant impact on the dynamics of the system. As discussed above, validation hinges on the validator’s ability to reproduce sections of training to a chosen threshold. Given this condition, the design does not give power to the miner to innovate algorithmically at this time.
