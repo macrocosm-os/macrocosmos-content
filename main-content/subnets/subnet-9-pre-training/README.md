@@ -27,7 +27,7 @@ The technical primer doc [INCENTIVISED ORCHESTRATED TRAINING ARCHITECTURE\
 
 Have a look at the [Miners Dashboard](https://iota.macrocosmos.ai/) to get the updates on the training process.
 
-<figure><img src="../../.gitbook/assets/Miners-dashboard copy.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Miners-dashboard copy 2.png" alt=""><figcaption></figcaption></figure>
 
 For more details on how to contribute you can have a looks at [**mining instructions**](https://app.gitbook.com/o/eu9Z3qt7ycTIHIJGObFB/s/JDlWdmSC3GnzBPSkAiBM/~/changes/165/subnets/subnet-9-pre-training/subnet-9-iota-mining-setup-guide), and [**validating** **instructions**](https://app.gitbook.com/o/eu9Z3qt7ycTIHIJGObFB/s/JDlWdmSC3GnzBPSkAiBM/~/changes/165/subnets/subnet-9-pre-training/subnet-9-validating).
 
