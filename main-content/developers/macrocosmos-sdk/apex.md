@@ -27,10 +27,8 @@ const client = new ApexClient({ apiKey: 'your-api-key' });
 // Chat completions
 const response = await client.chat.completions.create({
   messages: [
-    { role: 'system', content: 'You are a helpful assistant.' },
-    { role: 'user', content: 'Hello, how are you?' }
-  ],
-  stream: true
+    { role: 'user', content: 'Write a short story about a cosmonaut learning to paint.' }
+    ],
 });
 ```
 {% endtab %}
@@ -39,12 +37,35 @@ const response = await client.chat.completions.create({
 ```python
 import macrocosmos as mc
 
-client = mc.ApexClient(api_key="api-key")
+client = mc.ApexClient(api_key="your-api-key")
 response = client.chat.completions.create(
-    messages=[{"role": "user", "content": "Write a short story about a cosmonaut learning to paint."}],
+    messages=[{"role": "user", "content": "Write a short story about a cosmonaut learning to paint."}
+    ]
 )
 
 print(response)
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a short story about a cosmonaut learning to paint."
+      }
+    ],
+    "sampling_parameters": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_new_tokens": 256,
+      "do_sample": true
+    }
+  }' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  apex.v1.ApexService/ChatCompletion
 ```
 {% endtab %}
 {% endtabs %}
@@ -102,7 +123,10 @@ const client = new ApexClient({ apiKey: 'your-api-key' });
 
 // Web retrieval
 const webResults = await client.webRetrieval({
-  query: 'latest news about AI'
+    searchQuery: "What is Bittensor?",
+    nMiners: 3,
+    nResults: 2,
+    maxResponseTime: 30,
 });
 ```
 {% endtab %}
@@ -111,25 +135,41 @@ const webResults = await client.webRetrieval({
 ```python
 import macrocosmos as mc
 
-client = mc.ApexClient(api_key="api-key")
+client = mc.ApexClient(api_key="your-api-key")
 response = client.web_search.search(
     search_query="What is Bittensor?",
-    n_results=3,
-    max_response_time=20,
+    n_miners=3,
+    n_results=2,
+    max_response_time=30
 )
 
 print(response)
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{
+    "search_query": "What is Bittensor?",
+    "n_miners": 3,
+    "n_results": 2,
+    "max_response_time": 30
+  }' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  apex.v1.ApexService/WebRetrieval
 ```
 {% endtab %}
 {% endtabs %}
 
 **Body**
 
-| Name                | Type   | Description                                                                     |
-| ------------------- | ------ | ------------------------------------------------------------------------------- |
-| `search_query`      | string | The search term or natural language query.                                      |
-| `n_results`         | int    | Number of search results to retrieve. Defaults to `3`                           |
-| `max_response time` | int    | Maximum time (in seconds) to wait for subnet miner responses. Defaults to `20`. |
+| Name              | Type   | Description                                                                                                                                                                                    |
+| ----------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `searchQuery`     | string | The search term or natural language query.                                                                                                                                                     |
+| `nMiners`         | int    | <p><code>[Optional]</code><br><br>Default: <code>3</code> </p><p></p><p>Number of miners to use for the search query</p>                                                                       |
+| `nResults`        | int    | <p><code>[Optional]</code></p><p></p><p>Default: <code>1</code><br><br>Maximum number of results to return per miner (maximum possible response results = <code>nMiners x nResults</code>)</p> |
+| `maxResponseTime` | int    | <p><code>[Optional]</code></p><p></p><p>Default: <code>20</code><br><br>Maximum time (in seconds) to wait for subnet miner responses. .</p>                                                    |
 
 **Response**
 
@@ -137,16 +177,19 @@ print(response)
 {% tab title="200" %}
 ```json
 {
-  url: "https://bittensor.com/intro"
-  content: "Bittensor Explained\nThere is no greater story than people\'s relentless and dogged endeavor to overcome repressive regimes. Whether we notice it or not, centralized firms, markets and authorities are engaged in a never-ending disempowerment of human people\'s autonomy. Bittensor is creating a new future for humanity, where new economies and new commodities are decentralized by design and where no single entity is a sole authority.\nAt the core of the Bittensor ecosystem is the production, marketing and selling of digital commodities. At the expanding periphery of this ecosystem are the entire internet geographies of ecosystems.\nEverything is decentralized. Digital commodities like compute, data, storage, predictions, and models are transformed into intelligence. When digital commodities are recast as intelligence, then new architectures are discovered, new commodities are produced and surprisingly cheaper ways to achieve innovations are being revealed—the possibilities are turning out to be limitless.\nTAO, the decentralized currency, fuels the production of this intelligence in subnets.These intelligence-producing subnets are then innovatively connected in productive and profitable ways, feeding one intelligence into another.\nEntrepreneurs with skills and ideas will use Bittensor when they are deprived of investments from traditional sources of capital. And most important, any such entrepreneur can participate profitably and thrive in the Bittensor ecosystem.\nYou can be a consumer of a subnet\'s digital commodity. Or if you are a subject-matter expert, for example an ML practitioner, then be a subnet miner, produce best predictions for your customer and earn TAO. Or, you can be a subnet validator, find markets, enterprises, small-businesses, application developers or end-users, for these digital products, generate revenue and earn TAO. Or you can just be a subnet owner and create fertile grounds for the growth of your subnet validators and subnet miners and earn TAO.\nCome join us and write your own decentralized economies into existence."
-  relevant: "Bittensor Explained\nThere is no greater story than people\'s relentless and dogged endeavor to overcome repressive regimes. Whether we notice it or not, centralized firms, markets and authorities are engaged in a never-ending disempowerment of human people\'s autonomy. Bittensor is creating a new future for humanity, where new economies and new commodities are decentralized by design and where no single entity is a sole authority.\nAt the core of the Bittensor ecosystem is the production, marketing and selling of digital commodities. At the expanding periphery of this ecosystem are the entire internet geographies of ecosystems.\nEverything is decentralized. Digital commodities like compute, data, storage, predictions, and models are transformed into intelligence. When digital commodities are recast as intelligence, then new architectures are discovered, new commodities are produced and surprisingly cheaper ways to achieve innovations are being revealed—the possibilities are turning out to be limitless.\nTAO, the decentralized currency, fuels the production of this intelligence in subnets.These intelligence-producing subnets are then innovatively connected in productive and profitable ways, feeding one intelligence into another.\nEntrepreneurs with skills and ideas will use Bittensor when they are deprived of investments from traditional sources of capital. And most important, any such entrepreneur can participate profitably and thrive in the Bittensor ecosystem.\nYou can be a consumer of a subnet\'s digital commodity. Or if you are a subject-matter expert, for example an ML practitioner, then be a subnet miner, produce best predictions for your customer and earn TAO. Or, you can be a subnet validator, find markets, enterprises, small-businesses, application developers or end-users, for these digital products, generate revenue and earn TAO. Or you can just be a subnet owner and create fertile grounds for the growth of your subnet validators and subnet miners and earn TAO.\nCome join us and write your own decentralized economies into existence."
+  "results": [
+    {
+      "url": "https://docs.bittensor.com/",
+      "content": "Bittensor Documentation\nBittensor is an open source platform where participants produce best-in-class digital commodities, including compute power, storage space, artificial intelligence (AI) inference and training, protein folding, financial markets prediction, and many more.\nBittensor is composed of distinct subnets . Each subnet is an independent community of miners (who produce the commodity), and validators (who evaluate the miners' work).\nThe Bittensor network constantly emits liquidity, in the form of its token, TAO (τ \\tau τ ), to participants in proportion to the value of their contributions. Participants include:\nMiners —Work to produce digital commodities. See mining in Bittensor .\nValidators —Evaluate the quality of miners' work. See validating in Bittensor\nSubnet Creators —Manage the incentive mechanisms that specify the work miners and validate must perform and evaluate, respectively. See Create a Subnet\nStakers —TAO holders can support specific validators by staking TAO to them. See Staking .\nBrowse the subnets and explore links to their code repositories on TAO.app 's subnets listings.\nBittensor frequently asked questions (FAQ)\nEverything you were afraid to ask about Bittensor.\nREAD MORE Subnet Listings on TAO.app\nDiscover the subnets that power Bittensor and browse real-time tokenomic data and analytics.\nREAD MORE BTCLI Live Coding Playground\nTry out some BTCLI functionality right in the browser.\nREAD MORE Introduction to Bittensor\nLearn fundamental Bittensor concepts\nREAD MORE Guide to Bittensor tools\nOpentensor Foundation maintains open source tools for the Bittensor ecosystem, including the Python SDK and `btcli`.\nREAD MORE Bittensor media assets\nMedia assets\nParticipate\nYou can participate in an existing subnet as either a subnet validator or a subnet miner, or by staking your TAO to running validators.\nStaking and Delegation\nGet to know how staking and delegating in the Bittensor network.\nREAD MORE Mining in Bittensor\nGet ready to mine on Bittensor subnets\nREAD MORE Mining in Bittensor\nGet ready to validate on Bittensor subnets\nREAD MORE Emissions\nLearn how emissions are calculated.\nREAD MORE Governance\nLearn how the Bittensor governance works as it transitions into full community-ownership over time.\nREAD MORE Senate\nUnderstand what Senate is, requirements to participate in a Senate and how voting works.\nREAD MORE\nRunning a subnet\nReady to run your own subnet? Follow the below links.\nBasic subnet tutorials\nLearn how to run a simple subnet locally or on testchain or mainchain.\nREAD MORE Create a subnet\nStep-by-step instructions for creating a local subnet or a subnet on testchain or mainchain.\nREAD MORE OCR subnet tutorial\nShows how to convert your Python notebook containing validated code for an incentive mechanism into a working subnet.\nREAD MORE Subnet hyperparameters\nGet to know subnet hyperparameters and how to use them effectively. As a subnet creator, your success depends on this knowledge.\nREAD MORE\nBittensor CLI, SDK, Wallet SDK\nUse the Bittensor CLI and SDK and Wallet SDK to develop and participate in the Bittensor network.\nlooking for legacy bittensor 7.4.0 docs?",
+      "relevant": "Bittensor Documentation\nBittensor is an open source platform where participants produce best-in-class digital commodities, including compute power, storage space, artificial intelligence (AI) inference and training, protein folding, financial markets prediction, and many more.\nBittensor is composed of distinct subnets . Each subnet is an independent community of miners (who produce the commodity), and validators (who evaluate the miners' work).\nThe Bittensor network constantly emits liquidity, in the form of its token, TAO (τ \\tau τ ), to participants in proportion to the value of their contributions. Participants include:\nMiners —Work to produce digital commodities. See mining in Bittensor .\nValidators —Evaluate the quality of miners' work. See validating in Bittensor\nSubnet Creators —Manage the incentive mechanisms that specify the work miners and validate must perform and evaluate, respectively. See Create a Subnet\nStakers —TAO holders can support specific validators by staking TAO to them. See Staking .\nBrowse the subnets and explore links to their code repositories on TAO.app 's subnets listings.\nBittensor frequently asked questions (FAQ)\nEverything you were afraid to ask about Bittensor.\nREAD MORE Subnet Listings on TAO.app\nDiscover the subnets that power Bittensor and browse real-time tokenomic data and analytics.\nREAD MORE BTCLI Live Coding Playground\nTry out some BTCLI functionality right in the browser.\nREAD MORE Introduction to Bittensor\nLearn fundamental Bittensor concepts\nREAD MORE Guide to Bittensor tools\nOpentensor Foundation maintains open source tools for the Bittensor ecosystem, including the Python SDK and `btcli`.\nREAD MORE Bittensor media assets\nMedia assets\nParticipate\nYou can participate in an existing subnet as either a subnet validator or a subnet miner, or by staking your TAO to running validators.\nStaking and Delegation\nGet to know how staking and delegating in the Bittensor network.\nREAD MORE Mining in Bittensor\nGet ready to mine on Bittensor subnets\nREAD MORE Mining in Bittensor\nGet ready to validate on Bittensor subnets\nREAD MORE Emissions\nLearn how emissions are calculated.\nREAD MORE Governance\nLearn how the Bittensor governance works as it transitions into full community-ownership over time.\nREAD MORE Senate\nUnderstand what Senate is, requirements to participate in a Senate and how voting works.\nREAD MORE\nRunning a subnet\nReady to run your own subnet? Follow the below links.\nBasic subnet tutorials\nLearn how to run a simple subnet locally or on testchain or mainchain.\nREAD MORE Create a subnet\nStep-by-step instructions for creating a local subnet or a subnet on testchain or mainchain.\nREAD MORE OCR subnet tutorial\nShows how to convert your Python notebook containing validated code for an incentive mechanism into a working subnet.\nREAD MORE Subnet hyperparameters\nGet to know subnet hyperparameters and how to use them effectively. As a subnet creator, your success depends on this knowledge.\nREAD MORE\nBittensor CLI, SDK, Wallet SDK\nUse the Bittensor CLI and SDK and Wallet SDK to develop and participate in the Bittensor network.\nlooking for legacy bittensor 7.4.0 docs?"
+    },
+    {
+      "url": "https://www.bittensor.ai/what-is-bittensor",
+      "content": "What is Bittensor?\nWe understand that Bittensor can seem complex, so we’re here to make it simple and help you unlock its potential.\nAt its core, Bittensor is a decentralized network where AI models compete, collaborate and improve. Bittensor provides pathways for these models to be commercialized as AI services. Bittensor allows anyone to invest in and contribute to the network and earn TAO based on their financial or technical contributions.\nBlockchain\nA secure, digital record of transactions across many computers.\nDecentralized\nA system where control is shared, not owned by one entity.\nMiners\nA participant who provides computing power to train AI and earns rewards.\nValidators\nSomeone who checks and verifies network work for accuracy.\nSubnets\nSpecialized sections of the network that handle specific AI tasks.\nTao\nDigital currency you earn for contributing to the Bittensor network.\nHow Does Bittensor Work?\nBittensor is a decentralized, blockchain-powered network that enables open participation in artificial intelligence (AI) development. Unlike traditional AI platforms controlled by large companies, Bittensor allows individuals and organizations to contribute computational power to train, validate, and improve AI models while earning rewards through TAO, the network’s native cryptocurrency.\nThe network operates through a collaborative infrastructure where miners provide computational resources, and validators ensure the accuracy of AI outputs. This decentralized model fosters global innovation and makes AI development more accessible, removing control from a few big companies and allowing anyone to contribute and benefit.\nBy using blockchain technology, Bittensor guarantees transparency and trust, as all contributions and transactions are recorded on-chain. For newcomers, Bittensor represents a shift in how AI is built, offering opportunities for anyone with resources to participate in a scalable, transparent, and open AI ecosystem.\nBitcoin vs Bittensor (TAO)\nUnlike traditional AI models managed by giants like Google and OpenAI, Bittensor’s decentralized approach ensures that the AI ecosystem remains unbiased, transparent, and driven by the community.\nJoin Bittensor.ai to experience a model where freedom of speech and innovation are prioritized, providing a platform where everyone can contribute and benefit equally.\nDigital currency and store of value\nProof of Work (PoW)\nFinancial Transactions\nBlockchain\nEnergy Intensive\nDecentralized Network for AI\nProof of Intelligence (POI)\nCreation and Management of AI\nBlockchain + Variety of AI Models\nEnergy Efficient\nBittensor uses Blockchain technology to create Artificial intelligence\nThe tokenomics of Bittensor (TAO) are very similar to Bitcoin, with the additional benefit of being coupled to intelligence and AI.\nDecentralized AI\nTraditional AI development is dominated by a few large corporations, but Bittensor is changing the game by creating a decentralized AI network. In this open ecosystem, anyone can contribute to training, validating, and utilizing AI models. This shift puts power into the hands of individuals and communities, driving innovation and collaboration while ensuring transparency and fairness.\nBittensor decentralizes AI by distributing the development and training of models across a global network. Instead of one entity controlling the process, contributors like validators and miners help verify and power AI models. Validators ensure data integrity, miners provide computational power, and all participants are rewarded with TAO tokens for their efforts.\nCentralized\nDecentralized\nDecentralized also means security-Bittensor's decentralized nature ensures that your data and contributions are safe.\nJoin a cutting-edge decentralized network powered by secure technology, offering unparalleled security and transparency by eliminating single points of failure and protecting your contributions.\nWhy Decentralized AI Matters\n1. Breaking Centralized Control\nBittensor democratizes AI by allowing anyone to contribute, breaking the monopoly of large corporations.\n2. Fostering Innovation\nOpen collaboration across a diverse network of contributors drives faster, broader AI advancements.\n3. Incentives\nParticipants are rewarded with TAO tokens, creating a fair ecosystem where contributions are recognized and compensated.\n4. Transparency\nBuilt on blockchain, Bittensor ensures transparent and verifiable AI development, fostering trust in the process.\n5. Scalable Intelligence\nDecentralized AI allows for infinite scaling, with contributions from around the world forming a continuously improving system.\nBittensor makes AI development open, transparent, and accessible. By decentralizing the process, Bittensor accelerates AI innovation and ensures everyone has a chance to contribute—and be rewarded. Join the Bittensor network and shape the future of decentralized AI.",
+      "relevant": "What is Bittensor?\nWe understand that Bittensor can seem complex, so we’re here to make it simple and help you unlock its potential.\nAt its core, Bittensor is a decentralized network where AI models compete, collaborate and improve. Bittensor provides pathways for these models to be commercialized as AI services. Bittensor allows anyone to invest in and contribute to the network and earn TAO based on their financial or technical contributions.\nBlockchain\nA secure, digital record of transactions across many computers.\nDecentralized\nA system where control is shared, not owned by one entity.\nMiners\nA participant who provides computing power to train AI and earns rewards.\nValidators\nSomeone who checks and verifies network work for accuracy.\nSubnets\nSpecialized sections of the network that handle specific AI tasks.\nTao\nDigital currency you earn for contributing to the Bittensor network.\nHow Does Bittensor Work?\nBittensor is a decentralized, blockchain-powered network that enables open participation in artificial intelligence (AI) development. Unlike traditional AI platforms controlled by large companies, Bittensor allows individuals and organizations to contribute computational power to train, validate, and improve AI models while earning rewards through TAO, the network’s native cryptocurrency.\nThe network operates through a collaborative infrastructure where miners provide computational resources, and validators ensure the accuracy of AI outputs. This decentralized model fosters global innovation and makes AI development more accessible, removing control from a few big companies and allowing anyone to contribute and benefit.\nBy using blockchain technology, Bittensor guarantees transparency and trust, as all contributions and transactions are recorded on-chain. For newcomers, Bittensor represents a shift in how AI is built, offering opportunities for anyone with resources to participate in a scalable, transparent, and open AI ecosystem.\nBitcoin vs Bittensor (TAO)\nUnlike traditional AI models managed by giants like Google and OpenAI, Bittensor’s decentralized approach ensures that the AI ecosystem remains unbiased, transparent, and driven by the community.\nJoin Bittensor.ai to experience a model where freedom of speech and innovation are prioritized, providing a platform where everyone can contribute and benefit equally.\nDigital currency and store of value\nProof of Work (PoW)\nFinancial Transactions\nBlockchain\nEnergy Intensive\nDecentralized Network for AI\nProof of Intelligence (POI)\nCreation and Management of AI\nBlockchain + Variety of AI Models\nEnergy Efficient\nBittensor uses Blockchain technology to create Artificial intelligence\nThe tokenomics of Bittensor (TAO) are very similar to Bitcoin, with the additional benefit of being coupled to intelligence and AI.\nDecentralized AI\nTraditional AI development is dominated by a few large corporations, but Bittensor is changing the game by creating a decentralized AI network. In this open ecosystem, anyone can contribute to training, validating, and utilizing AI models. This shift puts power into the hands of individuals and communities, driving innovation and collaboration while ensuring transparency and fairness.\nBittensor decentralizes AI by distributing the development and training of models across a global network. Instead of one entity controlling the process, contributors like validators and miners help verify and power AI models. Validators ensure data integrity, miners provide computational power, and all participants are rewarded with TAO tokens for their efforts.\nCentralized\nDecentralized\nDecentralized also means security-Bittensor's decentralized nature ensures that your data and contributions are safe.\nJoin a cutting-edge decentralized network powered by secure technology, offering unparalleled security and transparency by eliminating single points of failure and protecting your contributions.\nWhy Decentralized AI Matters\n1. Breaking Centralized Control\nBittensor democratizes AI by allowing anyone to contribute, breaking the monopoly of large corporations.\n2. Fostering Innovation\nOpen collaboration across a diverse network of contributors drives faster, broader AI advancements.\n3. Incentives\nParticipants are rewarded with TAO tokens, creating a fair ecosystem where contributions are recognized and compensated.\n4. Transparency\nBuilt on blockchain, Bittensor ensures transparent and verifiable AI development, fostering trust in the process.\n5. Scalable Intelligence\nDecentralized AI allows for infinite scaling, with contributions from around the world forming a continuously improving system.\nBittensor makes AI development open, transparent, and accessible. By decentralizing the process, Bittensor accelerates AI innovation and ensures everyone has a chance to contribute—and be rewarded. Join the Bittensor network and shape the future of decentralized AI."
+    }
+  ]
 }
-results {
-  url: "https://docs.bittensor.com/"
-  content: "Bittensor Documentation\nBittensor is an open source platform where participants produce best-in-class digital commodities, including compute power, storage space, artificial intelligence (AI) inference and training, protein folding, financial markets prediction, and many more.\nBittensor is composed of distinct subnets. Each subnet is an independent community of miners (who produce the commodity), and validators (who evaluate the miners\' work).\nThe Bittensor network constantly emits liquidity, in the form of its token, TAO (), to participants in proportion to the value of their contributions. Participants include:\n- Miners—Work to produce digital commodities. See mining in Bittensor.\n- Validators—Evaluate the quality of miners\' work. See validating in Bittensor\n- Subnet Creators—Manage the incentive mechanisms that specify the work miners and validate must perform and evaluate, respectively. See Create a Subnet\n- Stakers—TAO holders can support specific validators by staking TAO to them. See Staking.\nBrowse the subnets and explore links to their code repositories on Taostats\' subnets listings.\nParticipate\nYou can participate in an existing subnet as either a subnet validator or a subnet miner, or by staking your TAO to running validators.\nRunning a subnet\nReady to run your own subnet? Follow the below links.\nBittensor CLI, SDK, Wallet SDK\nUse the Bittensor CLI and SDK and Wallet SDK to develop and participate in the Bittensor network."
-  relevant: "Bittensor Documentation\nBittensor is an open source platform where participants produce best-in-class digital commodities, including compute power, storage space, artificial intelligence (AI) inference and training, protein folding, financial markets prediction, and many more.\nBittensor is composed of distinct subnets. Each subnet is an independent community of miners (who produce the commodity), and validators (who evaluate the miners\' work).\nThe Bittensor network constantly emits liquidity, in the form of its token, TAO (), to participants in proportion to the value of their contributions. Participants include:\n- Miners—Work to produce digital commodities. See mining in Bittensor.\n- Validators—Evaluate the quality of miners\' work. See validating in Bittensor\n- Subnet Creators—Manage the incentive mechanisms that specify the work miners and validate must perform and evaluate, respectively. See Create a Subnet\n- Stakers—TAO holders can support specific validators by staking TAO to them. See Staking.\nBrowse the subnets and explore links to their code repositories on Taostats\' subnets listings.\nParticipate\nYou can participate in an existing subnet as either a subnet validator or a subnet miner, or by staking your TAO to running validators.\nRunning a subnet\nReady to run your own subnet? Follow the below links.\nBittensor CLI, SDK, Wallet SDK\nUse the Bittensor CLI and SDK and Wallet SDK to develop and participate in the Bittensor network."
-}
-
 ```
 {% endtab %}
 
@@ -159,5 +202,210 @@ results {
 {% endtab %}
 {% endtabs %}
 
+### Deep Research
 
+Apex’s Deep Researcher leverages advanced reasoning to synthesize vast volumes of online information, executing complex, multi-step research tasks to deliver insightful and well-considered responses to user prompts.
 
+#### Submit a deep researcher Job
+
+{% tabs %}
+{% tab title="Typescript" %}
+```typescript
+import { ApexClient, DeepResearch } from 'macrocosmos';
+
+// Initialize the client
+const client = new ApexClient({ apiKey: 'your-api-key' });
+
+// Create DeepResearch instance
+const deepResearch = new DeepResearch(client);
+
+// Submit a deep research job
+const submittedResponse = await deepResearch.createJob({
+      messages: [
+      { role: "user",
+        content: `Can you propose a mechanism by which a decentralized network 
+        of AI agents could achieve provable alignment on abstract ethical principles 
+        without relying on human-defined ontologies or centralized arbitration?`},
+    ],
+      seed: 42,
+      uids: [1, 2, 3],
+      model: "Default",
+      samplingParameters: {
+        temperature: 0.7,
+        topP: 0.95,
+        maxNewTokens: 100,
+        doSample: false,
+      },
+    }); // produces a unique jobId
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import macrocosmos as mc
+
+client = mc.AsyncApexClient(api_key="your-api-key")
+submitted_response = await client.deep_research.create_job(
+        messages=[
+            {
+                "role": "user",
+                "content": """Can you propose a mechanism by which a decentralized network 
+                of AI agents could achieve provable alignment on abstract ethical principles 
+                without relying on human-defined ontologies or centralized arbitration?""",
+            }
+        ],
+        seed: 42,
+        uids: [1, 2, 3],
+        model: "Default",
+        samplingParameters: {
+          temperature: 0.7,
+          topP: 0.95,
+          maxNewTokens: 100,
+          doSample: false,
+        },
+    ) # produces a unique job_id
+
+print(submitted_response) 
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you propose a mechanism by which a decentralized network of AI agents could achieve provable alignment on abstract ethical principles without relying on human-defined ontologies or centralized arbitration?"
+      }
+    ],
+    "seed": 42,
+    "uids": [1, 2, 3],
+    "model": "Default",
+    "sampling_parameters": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_new_tokens": 8192,
+      "do_sample": false
+    },
+    "stream": true,
+    "task": "InferenceTask",
+    "mixture": false,
+    "inference_mode": "Chain-of-Thought"
+  }' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  apex.v1.ApexService/SubmitDeepResearcherJob
+```
+{% endtab %}
+{% endtabs %}
+
+#### Body
+
+| Name                 | Type                         | Description                                                                                                                                                                                             |
+| -------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `messages`           | Array of `Messages` objects  | List of message objects with 'role' and 'content' keys. Roles can be 'system', 'user', or 'assistant'.                                                                                                  |
+| `seed`               | int                          | <p><code>[Optional]</code> </p><p></p><p>Default: <code>Random int between [0, 1000000]</code></p><p></p><p>Random seed for reproducible results. If not provided, a random seed will be generated.</p> |
+| `uids`               | Array of int                 | <p><code>[Optional]</code> </p><p></p><p>Default: <code>[]</code></p><p></p><p>List of specific miner UIDs to query. If not provided (default), miners will be selected automatically.</p>              |
+| `model`              | string                       | <p><code>[Optional]</code> </p><p></p><p>Default: <code>"Default"</code> </p><p></p><p>Model identifier to filter available miners.</p>                                                                 |
+| `samplingParameters` | `SamplingParameters` object  | <p>Example: <code>{"temperature":0.7,"top_p":0.95,"top_k":50,"max_new_tokens":1024,"do_sample":true}</code> </p><p></p><p>Parameters to control text generation, such as temperature, top_p, etc.</p>   |
+
+#### Response
+
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+  "jobId": "6eb69148-xxxx-xxxx-xxxx-b6dd81120377",
+  "status": "pending",
+  "createdAt": "2025-05-30T14:32:05.758727Z",
+  "updatedAt": "2025-05-30T14:32:05.758727Z"
+}
+```
+{% endtab %}
+
+{% tab title="400" %}
+```json
+{
+  "error": "Invalid request"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+#### Retrieve the results of a deep researcher job
+
+{% tabs %}
+{% tab title="Typescript" %}
+```typescript
+import { ApexClient, DeepResearch } from 'macrocosmos';
+
+// Initialize the client
+const client = new ApexClient({ apiKey: 'your-api-key' });
+
+// Create DeepResearch instance
+const deepResearch = new DeepResearch(client);
+
+// Get the results of a deep research job using a job_id from submittedResponse
+const polledResponse = await deepResearch.getJobResults('your-job-id');
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import macrocosmos as mc
+
+client = mc.AsyncApexClient(api_key="your-api-key")
+
+# Get the results of a deep research job using a job_id from submitted_response
+polled_response = await client.deep_research.get_job_results(job_id="your-job-id")
+
+print(polled_response)
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{
+    "job_id": "your_job_id"
+  }' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  apex.v1.ApexService/GetDeepResearcherJob
+```
+{% endtab %}
+{% endtabs %}
+
+#### Body
+
+| Name    | Type   | Description                                                               |
+| ------- | ------ | ------------------------------------------------------------------------- |
+| `jobId` | string | The unique Deep Researcher `jobId` , produced by `deepResearch.createJob` |
+
+#### Response
+
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+  "jobId": "6eb69148-xxx-xxx-xxx-b6dd81120377",
+  "status": "running",
+  "createdAt": "2025-05-30T14:32:05.758727Z",
+  "updatedAt": "2025-05-30T14:35:33.985242Z",
+  "result": [
+    {
+      "seqId": "1",
+      "chunk": "[{\"content\": \"## Generating Research Plan\\n\"}]"
+    }
+  ]
+}
+```
+{% endtab %}
+
+{% tab title="400" %}
+```json
+{
+  "error": "Invalid request"
+}
+```
+{% endtab %}
+{% endtabs %}

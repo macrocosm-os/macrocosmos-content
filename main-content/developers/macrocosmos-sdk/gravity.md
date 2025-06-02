@@ -4,9 +4,9 @@ description: >-
   Universe) on the Bittensor network.
 ---
 
-# Subnet 13 Gravity
+# Subnet 13 GRAVITY
 
-## Quickstart
+Quickstart
 
 Choose `GravityClient` for sync tasks. Use `AsyncGravityClient` if async fits better.\
 Check [examples/gravity\_workflow\_example.py](https://github.com/macrocosm-os/macrocosmos-py/blob/main/examples/gravity_workflow_example.py) for a complete working example of a data collection CLI you can use for your next big project or to plug right into your favorite data product.
@@ -38,11 +38,11 @@ const client = new GravityClient({ apiKey: 'your-api-key' });
 
 // Create a new gravity task
 const task = await client.createGravityTask({
-  name: 'My Data Collection Task',
   gravityTasks: [
-    { platform: 'x', topic: '#ai' },
-    { platform: 'reddit', topic: 'r/ai' }
-  ],
+      { platform: 'x', topic: '#ai' },
+      { platform: 'reddit', topic: 'r/MachineLearning' }
+    ],
+  name: 'My Data Collection Task',
   notificationRequests: [
     { type: 'email', address: 'user@example.com', redirectUrl: 'https://example.com/datasets' }
   ]
@@ -58,13 +58,13 @@ import macrocosmos as mc
 client = mc.GravityClient(api_key="<your-api-key>")
 
 gravity_tasks = [
-    {"topic": "#ai", "platform": "x"},
-    {"topic": "r/MachineLearning", "platform": "reddit"},
+    {"platform": "x", "topic": "#ai"},
+    {"platform": "reddit", "topic": "r/MachineLearning"},
 ]
 
 notification = {
     "type": "email",
-    "address": "<your-email-address>",
+    "address": "user@example.com",
     "redirect_url": "https://app.macrocosmos.ai/",
 }
 
@@ -76,26 +76,52 @@ response =  client.gravity.CreateGravityTask(
 print(response)
 ```
 {% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{
+    "gravity_tasks": [
+      {
+        "topic": "#ai",
+        "platform": "x"
+      },
+      {
+        "topic": "r/MachineLearning",
+        "platform": "reddit"
+      }
+    ],
+    "name": "My First Gravity Task",
+    "notification_requests": [
+      {
+        "type": "email",
+        "address": "user@example.com",
+        "redirect_url": "https://app.macrocosmos.ai/"
+      }
+    ]
+  }' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  gravity.v1.GravityService/CreateGravityTask
+```
+{% endtab %}
 {% endtabs %}
-
-
-
-
 
 **Body**
 
-| Name             | Type   | Description                                                                              |
-| ---------------- | ------ | ---------------------------------------------------------------------------------------- |
-| `gravity_tasks`  | string | List of task objects. Each must include a `topic` and a `platform` (`x`, `reddit`, etc.) |
-| `name`           | string | Optional name for the Gravity task. Helpful for organizing jobs.                         |
-| `notification`   | string | List of notification configs. Supports `type`, `address`, and `redirect_url`.            |
+| Name                   | Type                                  | Description                                                                              |
+| ---------------------- | ------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `gravityTasks`         | List of `GravityTask` objects         | List of task objects. Each must include a `topic` and a `platform` (`x`, `reddit`, etc.) |
+| `name`                 | string                                | Optional name for the Gravity task. Helpful for organizing jobs.                         |
+| `notificationRequests` | List of `NotificationRequest` objects | List of notification configs. Supports `type`, `address`, and `redirect_url`.            |
 
 **Response**
 
 {% tabs %}
 {% tab title="200" %}
 ```json
-gravity_task_id: "multicrawler-53ba1f6e-e31b-437c-9033-956e1e756198"
+{
+  "gravityTaskId": "multicrawler-9f518ae4-xxxx-xxxx-xxxx-8b73d7cd4c49"
+}
 ```
 {% endtab %}
 
@@ -117,7 +143,7 @@ gravity_task_id: "multicrawler-53ba1f6e-e31b-437c-9033-956e1e756198"
 If you wish to get further information about the crawlers, you can use the `include_crawlers` flag or make separate `GetCrawler()` calls since returning in bulk can be slow.
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="Typescript" %}
 ```javascript
 import { GravityClient } from 'macrocosmos';
 
@@ -144,12 +170,24 @@ import macrocosmos as mc
 
 client = mc.GravityClient(api_key="<your-api-key>")
 
-response = client.gravity.GetGravityTasks(gravity_task_id="<your-gravity-task-id>", include_crawlers=False)
+response = client.gravity.GetGravityTasks(gravity_task_id="your-gravity-task-id", include_crawlers=False)
 
 # Print the details about the gravity task and crawler IDs
 print(response)
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{
+    "gravity_task_id": "your-gravity-task-id",
+    "include_crawlers": false
+  }' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  gravity.v1.GravityService/GetGravityTasks
+```
 {% endtab %}
 {% endtabs %}
 
@@ -166,7 +204,18 @@ print(response)
 {% tab title="200" %}
 ```json
 {
- 
+  "gravityTaskStates": [
+    {
+      "gravityTaskId": "multicrawler-9f518ae4-xxxx-xxxx-xxxx-8b73d7cd4c49",
+      "name": "My First Gravity Task",
+      "status": "Running",
+      "startTime": "2025-05-30T15:56:20.201500586Z",
+      "crawlerIds": [
+        "crawler-0-multicrawler-9f518ae4-xxxx-xxxx-xxxx-8b73d7cd4c49",
+        "crawler-1-multicrawler-9f518ae4-xxxx-xxxx-xxxx-8b73d7cd4c49"
+      ]
+    }
+  ]
 }
 ```
 {% endtab %}
@@ -179,8 +228,6 @@ print(response)
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
 
 
@@ -196,13 +243,16 @@ import { GravityClient } from 'macrocosmos';
 // Initialize the client
 const client = new GravityClient({ apiKey: 'your-api-key' });
 
-
 // Build a dataset from a crawler
 const dataset = await client.buildDataset({
-  crawlerId: 'crawler-id',
+  crawlerId: 'your-crawler-id',
   notificationRequests: [
-    { type: 'email', address: 'user@example.com' }
-  ]
+    { type: 'email', 
+      address: 'user@example.com', 
+      redirect_url: 'https://app.macrocosmos.ai/'
+      }
+  ],
+  maxRows: 100,
 });
 ```
 {% endtab %}
@@ -215,26 +265,48 @@ client = mc.GravityClient(api_key="<your-api-key>")
 
 notification = {
     "type": "email",
-    "address": "<your-email-address>",
-    "redirect_url": "https://app.macrocosmos.ai/",
+    "address": "user@example.com",
+    "redirect_url": "https://app.macrocosmos.ai/"
 }
 
 response = client.gravity.BuildDataset(
-    crawler_id="<your-crawler-id>", notification_requests=[notification]
+    crawler_id="your-crawler-id", 
+    notification_requests=[notification],
+    max_rows=100
 )
 
 # Print the dataset ID
 print(response)
 ```
 {% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{
+    "crawler_id": "your-crawler-id",
+    "notification_requests": [
+      {
+        "type": "email",
+        "address": "user@example.com",
+        "redirect_url": "https://app.macrocosmos.ai/"
+      }
+    ],
+    "max_rows": 100
+  }' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  gravity.v1.GravityService/BuildDataset
+```
+{% endtab %}
 {% endtabs %}
 
 **Body**
 
-| Name           | Type   | Description                                                                                              |
-| -------------- | ------ | -------------------------------------------------------------------------------------------------------- |
-| `notification` | string | A list of notification objects (e.g., email or webhook). Includes `type`, `address`, and `redirect_url`. |
-| `crawler_id`   |        | The ID of the completed crawler job you want to convert into a dataset.                                  |
+| Name                   | Type                                  | Description                                                                                              |
+| ---------------------- | ------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `crawlerId`            | string                                | The ID of the completed crawler job you want to convert into a dataset.                                  |
+| `notificationRequests` | List of `NotificationRequest` objects | A list of notification objects (e.g., email or webhook). Includes `type`, `address`, and `redirect_url`. |
+| `maxRows`              | int                                   | The maximum number of rows to include in the dataset                                                     |
 
 **Response**
 
@@ -242,7 +314,47 @@ print(response)
 {% tab title="200" %}
 ```json
 {
-
+  "dataset_id": "ds_123456789",
+  "dataset": {
+    "crawler_workflow_id": "cw_987654321",
+    "create_date": "2024-03-20T10:00:00.000Z",
+    "expire_date": "2024-04-20T10:00:00.000Z",
+    "files": [
+      {
+        "file_name": "dataset_20240320.csv",
+        "file_size_bytes": "1024000",
+        "last_modified": "2024-03-20T10:05:00.000Z",
+        "num_rows": "1000",
+        "s3_key": "datasets/ds_123456789/dataset_20240320.csv",
+        "url": "https://storage.example.com/datasets/ds_123456789/dataset_20240320.csv"
+      }
+    ],
+    "status": "completed",
+    "status_message": "Dataset build completed successfully",
+    "steps": [
+      {
+        "progress": 1.0,
+        "step": 1,
+        "step_name": "Initializing dataset build"
+      },
+      {
+        "progress": 1.0,
+        "step": 2,
+        "step_name": "Collecting data from crawler"
+      },
+      {
+        "progress": 1.0,
+        "step": 3,
+        "step_name": "Processing and formatting data"
+      },
+      {
+        "progress": 1.0,
+        "step": 4,
+        "step_name": "Generating dataset files"
+      }
+    ],
+    "total_steps": 4
+  }
 }
 ```
 {% endtab %}
@@ -255,10 +367,6 @@ print(response)
 ```
 {% endtab %}
 {% endtabs %}
-
-
-
-
 
 
 
@@ -277,7 +385,7 @@ const client = new GravityClient({ apiKey: 'your-api-key' });
 
 // Get a dataset
 const datasetStatus = await client.getDataset({
-  datasetId: 'dataset-id'
+  datasetId: 'your-dataset-id'
 });
 ```
 {% endtab %}
@@ -286,12 +394,88 @@ const datasetStatus = await client.getDataset({
 ```python
 import macrocosmos as mc
 
-client = mc.GravityClient(api_key="<your-api-key>")
+client = mc.GravityClient(api_key="your-api-key")
 
-response = client.gravity.GetDataset(datasetId: 'dataset-id')
+response = client.gravity.GetDataset(datasetId: 'your-dataset-id')
 
 # Print the details about the gravity task and crawler IDs
 print(response)
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{
+    "dataset_id": "your-dataset-id"
+  }' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  gravity.v1.GravityService/GetDataset
+```
+{% endtab %}
+{% endtabs %}
+
+#### Body
+
+| Name        | Type   | Description           |
+| ----------- | ------ | --------------------- |
+| `datasetId` | string | The ID of the dataset |
+
+#### Response
+
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+  "dataset": {
+    "crawler_workflow_id": "cw_987654321",
+    "create_date": "2024-03-20T10:00:00.000Z",
+    "expire_date": "2024-04-20T10:00:00.000Z",
+    "files": [
+      {
+        "file_name": "dataset_20240320.csv",
+        "file_size_bytes": "1024000",
+        "last_modified": "2024-03-20T10:05:00.000Z",
+        "num_rows": "1000",
+        "s3_key": "datasets/ds_123456789/dataset_20240320.csv",
+        "url": "https://storage.example.com/datasets/ds_123456789/dataset_20240320.csv"
+      }
+    ],
+    "status": "completed",
+    "status_message": "Dataset build completed successfully",
+    "steps": [
+      {
+        "progress": 1.0,
+        "step": 1,
+        "step_name": "Initializing dataset build"
+      },
+      {
+        "progress": 1.0,
+        "step": 2,
+        "step_name": "Collecting data from crawler"
+      },
+      {
+        "progress": 1.0,
+        "step": 3,
+        "step_name": "Processing and formatting data"
+      },
+      {
+        "progress": 1.0,
+        "step": 4,
+        "step_name": "Generating dataset files"
+      }
+    ],
+    "total_steps": 4
+  }
+}
+```
+{% endtab %}
+
+{% tab title="400" %}
+```json
+{ 
+"error": "Invalid request"
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -310,16 +494,15 @@ import { GravityClient } from 'macrocosmos';
 // Initialize the client
 const client = new GravityClient({ apiKey: 'your-api-key' });
 
-
 // Cancel a gravity task
 const cancelResult = await client.cancelGravityTask({
-  gravityTaskId: 'task-id'
+  gravityTaskId: 'your-gravity-task-id'
 });
 
 // Cancel a dataset build
-const cancelDataset = await client.cancelDataset({
-  datasetId: 'dataset-id'
-});
+// const cancelDataset = await client.cancelDataset({
+//   datasetId: 'your-dataset-id'
+// });
 ```
 {% endtab %}
 
@@ -329,23 +512,244 @@ import macrocosmos as mc
 
 client = mc.GravityClient(api_key="<your-api-key>")
 
-response = client.gravity.CancelDataset(
-    datasetId: 'dataset-id'
+# Cancel a gravity task
+response_grav = client.gravity.CancelGravityTask(
+    gravity_task_id: 'your-gravity-task-id'
 )
 
+# Cancel a dataset
+# response_data = client.gravity.CancelDataset(
+#     datasetId: 'your-dataset-id'
+#)
+
 # Print the dataset ID
-print(response)
+print(response_grav)
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{
+    "gravity_task_id": "your-gravity-task-id"
+  }' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  gravity.v1.GravityService/CancelGravityTask
 ```
 {% endtab %}
 {% endtabs %}
 
+#### Body
 
+| Name                           | Type   | Description               |
+| ------------------------------ | ------ | ------------------------- |
+| `gravityTaskId` (`datasetId`)  | string | Gravity task (dataset) Id |
 
+#### Response
 
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+  "message": "success"
+}
+```
+{% endtab %}
 
+{% tab title="400" %}
+```json
+{ 
+"error": "Invalid request"
+}
+```
+{% endtab %}
+{% endtabs %}
 
+### On demand data
 
+Run precise, real-time queries against platforms like X (Twitter) and Reddit (YouTube forthcoming), using the synchronous `Sn13Client` to query historical or current data based on users, keywords, and time range
 
+{% tabs %}
+{% tab title="Typescript" %}
+```typescript
+import { Sn13Client } from 'macrocosmos';
 
+// Initialize the client
+const client = new Sn13Client({apiKey: 'your-api-key'});
 
+// Get the onDemandData response
+const response = await client.onDemandData({
+    source: 'X',                           // or 'Reddit'
+    usernames: ['nasa', 'spacex'],         // Optional, up to 5 users
+    keywords: ['photo', 'space', 'mars'],  // Optional, up to 5 keywords
+    startDate: '2024-04-01',               // Defaults to 24h range if not specified
+    endDate: '2025-04-25',                 // Defaults to current time if not specified
+    limit: 3                               // Optional, up to 1000 results
+});
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import macrocosmos as mc
+
+client = mc.Sn13Client(api_key="your-api-key")
+
+response = client.sn13.OnDemandData(
+    source='X',                           # or 'Reddit'
+    usernames=["nasa", "spacex"],         # Optional, up to 5 users
+    keywords=["photo", "space", "mars"],  # Optional, up to 5 keywords
+    start_date='2024-04-01',              # Defaults to 24h range if not specified
+    end_date='2025-04-25',                # Defaults to current time if not specified
+    limit=3                               # Optional, up to 1000 results
+)
+
+print(response)
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{
+    "source": "X",
+    "usernames": ["nasa", "spacex"],
+    "keywords": ["photo", "space", "mars"],
+    "start_date": "2024-04-01",
+    "end_date": "2025-04-25",
+    "limit": 3
+  }' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  sn13.v1.Sn13Service/OnDemandData
+```
+{% endtab %}
+{% endtabs %}
+
+#### Body
+
+| Name        | Type              | Description                                                                                                                                                                           |
+| ----------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `source`    | string            | Data source (`X` or `Reddit`).                                                                                                                                                        |
+| `usernames` | Array of strings  | <p>Default: <code>[]</code></p><p></p><p>Number of items: <code>&#x3C;= 10 items</code></p><p></p><p>List of usernames to fetch data from. If Default, random usernames selected.</p> |
+| `keywords`  | Array of strings  | <p>Default: <code>[]</code><br></p><p>Number of items: <code>&#x3C;= 5 items</code></p><p></p><p>List of keywords to search for. If Default, random keywords are selected.</p>        |
+| `startDate` | string            | <p><code>[Optional]</code></p><p></p><p>Start date (ISO format).</p>                                                                                                                  |
+| `endDate`   | string            | <p><code>[Optional]</code></p><p></p><p>End date (ISO format).</p>                                                                                                                    |
+| `limit`     | integer           | <p><code>[Optional]</code></p><p></p><p>Default: <code>100</code></p><p></p><p>Options: <code>[1,...,1000]</code></p><p></p><p>Maximum number of items to return.</p>                 |
+
+#### Response
+
+{% tabs %}
+{% tab title="200" %}
+{% code fullWidth="false" %}
+```json
+{
+  "status": "success",
+  "data": [
+    {
+      "content": "Falcon 9 launches the Bandwagon-3 rideshare mission to orbit from Florida",
+      "datetime": "2025-04-22T03:00:38+00:00",
+      "label": null,
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/GpG2kuBagAADw92.jpg"
+        },
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/GpG2kuDa4AEr1RV.jpg"
+        },
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/GpG2kuBbUAAU7Rd.jpg"
+        },
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/1914512114154409984/img/lD1axdjW7cRnRol6.jpg"
+        }
+      ],
+      "source": "X",
+      "tweet": {
+        "conversation_id": "1914514653763584254",
+        "hashtags": [],
+        "id": "1914514653763584254",
+        "is_quote": false,
+        "is_reply": false,
+        "is_retweet": false,
+        "like_count": 10689,
+        "quote_count": 76,
+        "reply_count": 677,
+        "retweet_count": 2058
+      },
+      "uri": "https://x.com/SpaceX/status/1914514653763584254",
+      "user": {
+        "display_name": "SpaceX",
+        "followers_count": 39073448,
+        "following_count": 121,
+        "id": "34743251",
+        "username": "@SpaceX",
+        "verified": false
+      }
+    },
+    {
+      "content": "Falcon 9 launches NROL-145 from California, completing our first of the new national security missions awarded in October 2024",
+      "datetime": "2025-04-20T17:05:09+00:00",
+      "label": null,
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/Go_mYDJbIAA9mbK.jpg"
+        },
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/1914001831661084672/img/ydKPVd7KoS6B6U_l.jpg"
+        }
+      ],
+      "source": "X",
+      "tweet": {
+        "conversation_id": "1914002408545615936",
+        "hashtags": [],
+        "id": "1914002408545615936",
+        "is_quote": false,
+        "is_reply": false,
+        "is_retweet": false,
+        "like_count": 8190,
+        "quote_count": 71,
+        "reply_count": 495,
+        "retweet_count": 1802
+      },
+      "uri": "https://x.com/SpaceX/status/1914002408545615936",
+      "user": {
+        "display_name": "SpaceX",
+        "followers_count": 39073448,
+        "following_count": 121,
+        "id": "34743251",
+        "username": "@SpaceX",
+        "verified": false
+      }
+    }
+  ],
+  "meta": {
+    "consistent_miners": 2,
+    "inconsistent_miners": 0,
+    "items_returned": 2,
+    "miner_hotkey": "5CacbhmQxhAVGWgrYvCypqhR3n3mNmmWEA8JYzAVghmTDYZy",
+    "miner_uid": 179,
+    "miners_queried": 5,
+    "miners_responded": 5,
+    "source": "consistent",
+    "validated_miners": 0
+  }
+}
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="400" %}
+```bash
+{
+  "error": "Invalid request"
+}
+```
+{% endtab %}
+{% endtabs %}
 
