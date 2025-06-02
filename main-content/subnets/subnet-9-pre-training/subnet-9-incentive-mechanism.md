@@ -8,9 +8,9 @@ description: Subnet 9 incentive overview
 
 IOTA is structured around three core roles: the Orchestrator, Miners, and Validators. The simplified design of the system is illustrated in Figure 1. Rather than adopting a fully peer-to-peer topology, IOTA follows a hub-and-spoke architecture centred around the Orchestrator. This design choice ensures global visibility and enables comprehensive monitoring of all interactions between participants, which is critical for enforcing incentives, auditing behavior, and maintaining system integrity.
 
-<img src="../../.gitbook/assets/file.excalidraw.svg" alt="Figure 1: Overall system architecture" class="gitbook-drawing">
+<figure><img src="../../.gitbook/assets/IOTA-architecture.png" alt=""><figcaption><p>Figure 1 - Overall system architecture</p></figcaption></figure>
 
-Overall system architecture. The orchestrator facilitates the training process by triggering miners to work on specific layers of the model, further triggering when validation should occur based on the progress of the miners.
+The orchestrator facilitates the training process by triggering miners to work on specific layers of the model, further triggering when validation should occur based on the progress of the miners.
 
 This architecture allows a system-level orchestrator to manage how participants on the network will operate at different stages of the training process. All data that is created and handled by these three entities is pushed to a globally accessible database, making it easy to trace the movement of information.
 
@@ -41,7 +41,7 @@ Miners may register to the subnetwork at any time. Upon registration, the orches
 
 More details on mining on the subnet you can get from the primer doc [INCENTIVISED ORCHESTRATED TRAINING ARCHITECTURE(IOTA)](https://www.macrocosmos.ai/research/iota_primer.pdf) and [IOTA Mining Setup Guide](https://docs.macrocosmos.ai/subnets/subnet-9-pre-training/subnet-9-iota-mining-setup-guide).
 
-Validators
+#### Validators
 
 Within the system, validators play a core role in determining if the work completed by the miner was honest. Primarily, the validator relies on computational reproducibility to achieve this validation signal. As the validator is tracking a specific miner, a portion of the miner’s training is completely rerun on the validator side. Forward and backwards passes are checked against the submitted miner activations using a cosine similarity. However, there are many complications when it comes to reliable validation, and we explore them in the remainder of the paper. We formalize incentivization in\
 the next section, and add additional exploratory techniques leveraging Shapley values for anomaly detection and adversarial robustness in Section 6 of the primer doc [INCENTIVISED ORCHESTRATED TRAINING ARCHITECTURE(IOTA)](https://www.macrocosmos.ai/research/iota_primer.pdf).
