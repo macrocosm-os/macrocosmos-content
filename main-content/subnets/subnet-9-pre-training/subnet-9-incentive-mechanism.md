@@ -39,7 +39,7 @@ This mechanism draws inspiration from centralised training practices—where $$B
 
 Miners may register to the subnetwork at any time. Upon registration, the orchestrator assigns each miner a model layer to train. The miner will wait until the next full synchronization period to start actively participating. During the full synchronisation, it will update its weights and optimizer states to align with the rest of the network, and can then proceed to processing forward and backward activations in the training stage.
 
-More details on mining on the subnet you can get from the primer doc [INCENTIVISED ORCHESTRATED TRAINING ARCHITECTURE(IOTA)](https://www.macrocosmos.ai/research/iota_primer.pdf) and [IOTA Mining Setup Guide](https://docs.macrocosmos.ai/subnets/subnet-9-pre-training/subnet-9-iota-mining-setup-guide).
+More details on mining on the subnet you can get from the  [IOTA Mining Setup Guide](https://docs.macrocosmos.ai/subnets/subnet-9-pre-training/subnet-9-iota-mining-setup-guide).
 
 #### Validators
 
