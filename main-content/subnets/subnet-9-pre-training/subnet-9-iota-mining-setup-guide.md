@@ -151,9 +151,7 @@ BITTENSOR=True
 
 S3\_BUCKET="swarm-mvp"
 
-HF\_TOKEN="hf\_token
-
-AWS\_ACCESS\_KEY??
+HF\_TOKEN="hf\_token"
 
 ```python
 #Edit miners file with required values
@@ -173,51 +171,7 @@ Expected output:
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-06-01 at 20.22.01.png" alt=""><figcaption></figcaption></figure>
 
-#### Register on Testnet
 
-To request the test TAO, follow the [instructions on Discord channel](https://discord.com/channels/799672011265015819/1331693251589312553/1331694633822060544).
-
-```python
-# Activate virtual environment
-source .venv/bin/activate
-
-# Register on the mainnet (finney)
-btcli s register --netuid 141 --wallet.name [wallet_name] --wallet.hotkey [wallet.hotkey] –subtensor.network test
-```
-
-**Change miner values, where necessary, and copy them:**
-
-wallet\_name="wallet\_name" #change the wallet\_name to your wallet name (coldkey name)
-
-wallet\_hotkey="wallet\_hotkey" #change the wallet\_hotkey to your hotkey name
-
-netuid=141
-
-network="test"
-
-MOCK=False
-
-BITTENSOR=True
-
-S3\_BUCKET="swarm-mvp"
-
-HF\_TOKEN="hf\_token"??
-
-```python
-#Edit miners file with required values
-vim .env
-
-# For Terminal - use a ky combination Ctrl + Shift + V (Cmd + V)
-:wq
-
-#For the UI enabled tools just change the values in the miner's .env file
-
-#Launch the miner
-source .venv/bin/activate
-python launch_miner.py
-```
-
-Expected output:
 
 🎉Congratulations! You have set up the miner and are able to contribute to the world of breaking edge innovation!\
 
