@@ -145,7 +145,7 @@ MOCK=False
 
 BITTENSOR=True
 
-HF\_TOKEN="hf\_token"
+HF\_TOKEN="hf\_token" #change to your HugfingFace Access token
 
 ORCHESTRATOR\_HOST="iota.api.macrocosmos.ai"
 
