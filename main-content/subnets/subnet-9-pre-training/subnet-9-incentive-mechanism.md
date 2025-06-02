@@ -8,6 +8,8 @@ description: Subnet 9 incentive overview
 
 IOTA is structured around three core roles: the Orchestrator, Miners, and Validators. The simplified design of the system is illustrated in Figure 1. Rather than adopting a fully peer-to-peer topology, IOTA follows a hub-and-spoke architecture centred around the Orchestrator. This design choice ensures global visibility and enables comprehensive monitoring of all interactions between participants, which is critical for enforcing incentives, auditing behavior, and maintaining system integrity.
 
+This architecture allows a system-level orchestrator to manage how participants on the network will operate at different stages of the training process. All data that is created and handled by these three entities is pushed to a globally accessible database, making it easy to trace the movement of information. Figure 2 illustrates the temporal relationship between model training, validator-miner tracking, data sharing, and model sync, which are all triggered by the orchestrator.
+
 
 
 ### Incentivization

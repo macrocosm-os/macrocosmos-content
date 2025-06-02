@@ -50,7 +50,7 @@ Once merging is complete, the orchestrator state returns to training mode and th
 
 Figure 1 below illustrates the training loop.
 
-<img src="../../.gitbook/assets/file.excalidraw.svg" alt="Figure 1 The training loop process" class="gitbook-drawing">
+<img src="../../.gitbook/assets/file.excalidraw (1).svg" alt="Figure 1 The training loop process" class="gitbook-drawing">
 
 Figure 1 Explanation - While inside the training loop, the miner is responsible for performing forward and backward passes while uploading their activations to the dedicated storage bucket. In the forward direction, miners receive activations from the previous layer, compute transformed outputs, and propagate them downstream. During the backward pass, they consume gradients, compute local weight updates, and send gradients upstream. Importantly, the number of forward and backward passes per training loop is controlled via an orchestrator level hyperparameter called BATCHES\_BEFORE\_MERGING.
 
