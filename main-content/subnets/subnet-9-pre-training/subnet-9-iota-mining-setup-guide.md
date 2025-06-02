@@ -121,10 +121,6 @@ btcli wallets balance
 
 ### Miner Registration and Launch
 
-{% hint style="info" %}
-A registration fee in TAO can be expensive. Any expenses incurred during registration or infrastructure setup will not be reimbursed by Macrocosmos. So first run your miner on the testnet to avoid deregistration caused by technical issues or underperformance before moving to mainnet.
-{% endhint %}
-
 #### Register on Mainnet
 
 ```python
