@@ -147,7 +147,11 @@ BITTENSOR=True
 
 HF\_TOKEN="hf\_token"
 
+ORCHESTRATOR\_HOST="iota.api.macrocosmos.ai"
 
+ORCHESTRATOR\_PORT=443
+
+ORCHESTRATOR\_SCHEME=https
 
 ```python
 #Edit miners file with required values
