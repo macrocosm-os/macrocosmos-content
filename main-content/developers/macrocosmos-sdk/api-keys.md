@@ -8,7 +8,7 @@ To interact with Macrocosmos subnets programmatically, you'll need a personal AP
 
 ### Step 1: Access the API Key Dashboard
 
-1. Head to [**Constellation**](https://constellation.macrocosmos.ai/).
+1. Head to [**Constellation**](https://app.macrocosmos.ai/mission-command).
 2. Click your **profile picture** (bottom-left corner).
 3. In the dropdown menu, select **`API Keys`.**
 4. You’ll be redirected to a login page — simply **sign in with your Gmail account.**
