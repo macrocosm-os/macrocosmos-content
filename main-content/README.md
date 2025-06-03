@@ -17,7 +17,7 @@ Macrocosmos was formed in March 2024. Evolving out of the launch of "Revolution"
 We run five subnets:
 
 * [Subnet 1 - Apex](subnets/subnet-1-apex/)
-* [Subnet 9 - Pre-Training](subnets/subnet-9-pre-training/)
+* [Subnet 9 - Pre-Training](subnets/subnet-9-pre-training.md)
 * [Subnet 13 - Data-Universe](subnets/subnet-13-data-universe/)
 * [Subnet 25 - Mainframe](subnets/subnet-25-mainframe/)
 * [Subnet 37 - Finetuning](subnet-37-finetuning/)

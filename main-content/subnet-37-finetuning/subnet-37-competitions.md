@@ -37,6 +37,6 @@ The evaluation tasks are the same as the B7\_MULTICHOICE competition
 
 This was the competition for the finetuning subnet.
 
-Its purpose was to finetune the top models from [subnet 9](../subnets/subnet-9-pre-training/) to produce a chatbot.
+Its purpose was to finetune the top models from [subnet 9](../subnets/subnet-9-pre-training.md) to produce a chatbot.
 
 Models submitted to this competition were evaluated using a synthetic Q\&A dataset from the [cortex subnet](https://github.com/Datura-ai/cortex.t). Specifically, models were evaluated based on their average loss of their generated answers.

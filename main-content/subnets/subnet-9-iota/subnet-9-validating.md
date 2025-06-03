@@ -1,5 +1,7 @@
 # Subnet 9 Validating
 
+Within the system, validators play a core role in determining if the work completed by the miner was honest. Primarily, the validator relies on computational reproducibility to achieve this validation signal. As the validator is tracking a specific miner, a portion of the miner’s training is completely rerun on the validator side. Forward and backwards passes are checked against the submitted miner activations using a cosine similarity. However, there are many complications when it comes to reliable validation, and we explore them in the remainder of the paper.
+
 #### Joining the network
 
 Validators join the network and get registered with the orchestrator using their API client.
