@@ -8,7 +8,7 @@ The drive behind subnet 37 is to bring the entire AI development pipeline into B
 
 Finetuning is costly, time consuming and highly limited by expertise. It requires hundreds of GPU hours, typically requiring SOTA hardware. But perhaps most importantly, it requires expert engineers, who are often scarce.&#x20;
 
-Subnet 37 addresses these challenges by outsourcing the procurement process of computational resources and incentivising the best AI developers in the world to monetise their skills by competing to produce top models. This is also in collaboration with subnet 9, [Pre-training](../subnets/subnet-9-pre-training.md).
+Subnet 37 addresses these challenges by outsourcing the procurement process of computational resources and incentivising the best AI developers in the world to monetise their skills by competing to produce top models. This is also in collaboration with subnet 9, [Pre-training](broken-reference).
 
 Our vision is to build an open-sourced catalog of models, each optimised for specialised tasks such as chatbots, math-solvers, programming assistants, recommendation bots, and more. Models in the catalog are already available to download on HuggingFace and will soon power several apps.
 
