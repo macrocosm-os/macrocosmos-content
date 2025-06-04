@@ -10,6 +10,85 @@ description: >-
 
 Use `ApexClient` to send prompts to open-source language models like LLaMA and Mistral, or perform web-augmented completions using subnet-based retrieval.
 
+### Get Stored Chat Completions
+
+Get the stored chat completions for the given chat. The input to this endpoint is a unique chat id.
+
+{% tabs %}
+{% tab title="Typescript" %}
+```typescript
+import { ApexClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new ApexClient({ apiKey: 'your-api-key' });
+
+// Get Stored chat completions
+const result = await client.getStoredChatCompletions({ chatId });
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{"chat_id": "a-unique-chat-id"}' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  apex.v1.ApexService/GetStoredChatCompletions
+```
+{% endtab %}
+{% endtabs %}
+
+
+
+**Body**
+
+| Name      | Type   | Description                                   |
+| --------- | ------ | --------------------------------------------- |
+| `chat_id` | string | The id of the chat this completion belongs to |
+
+**Response**
+
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+  "chatCompletions": [
+    {
+      "id": "000f172b-479e-4272-aff5-8f87d5bfe5af",
+      "chatId": "d90a4724-2dc4-4058-82d1-c95120eee777",
+      "completionType": "chain-of-thought",
+      "createdAt": "2025-05-22T11:09:33.153507Z",
+      "completedAt": "2025-05-22T11:09:33.153507Z",
+      "userPromptText": "tell me a neural networks",
+      "completionText": "Researching",
+      "metadata": {
+        "deep-researcher": {
+          "createdAt": "2025-05-22T11:09:34.179781Z",
+          "jobId": "ee724a2b-70c8-4f95-8147-62b3512cc614",
+          "status": "completed"
+        },
+        "status": {
+          "content": "Done.",
+          "status": "in-progress"
+        },
+        "thoughts": [
+          "undefined Neural networks are a series of algorithms modeled after the human brain that are designed to recognize patterns. They interpret sensory data through a kind of machine perception, labeling or clustering raw input. The patterns they recognize are numerical, contained in vectors, into which all real-world data, be it images, sound, text or time series, must be translated. Neural networks can adapt to changing input so that they learn to perform tasks better over time. They are used in a wide variety of applications, including image and speech recognition, natural language processing, and predictive analytics."
+        ]
+      }
+    }
+  ]
+}
+```
+{% endtab %}
+
+{% tab title="400" %}
+```json
+{
+  "error": "Invalid request"
+}
+```
+{% endtab %}
+{% endtabs %}
+
 
 
 ### Chat Completions&#x20;
@@ -84,7 +163,68 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 {% tab title="200" %}
 ```json
 {
+ id: "bdb39416-aac3-45b5-af90-c40197ff819b"Chat Completions 
+Send a prompt to an LLM on the Apex subnet.
+import { ApexClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new ApexClient({ apiKey: 'your-api-key' });
+
+// Chat completions
+const response = await client.chat.completions.create({
+  messages: [
+    { role: 'user', content: 'Write a short story about a cosmonaut learning to paint.' }
+    ],
+});
+import macrocosmos as mc
+
+client = mc.ApexClient(api_key="your-api-key")
+response = client.chat.completions.create(
+    messages=[{"role": "user", "content": "Write a short story about a cosmonaut learning to paint."}
+    ]
+)
+
+print(response)
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a short story about a cosmonaut learning to paint."
+      }
+    ],
+    "sampling_parameters": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_new_tokens": 256,
+      "do_sample": true
+    }
+  }' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  apex.v1.ApexService/ChatCompletion
+
+Body
+
+messages
+string
+A list of messages in chat format (role, content).
+Response
+{
  id: "bdb39416-aac3-45b5-af90-c40197ff819b"
+choices {
+  finish_reason: "stop"
+  message {
+    content: "**The Starlight Brush**\n\nAs the Soyuz spacecraft soared through the cosmos, Cosmonaut Sergei gazed out the window at the endless expanse of stars. The weightlessness of space made his body feel free, but his mind was trapped in a world of calculations and routine checks. He longed for a creative outlet, something to express the beauty he witnessed every day.\n\nOne evening, while reviewing the ship\'s inventory, Sergei stumbled upon a forgotten art kit. The box was dusty, but the paints and brushes inside seemed untouched. He couldn\'t resist the urge to try. As he floated in front of the window, he dipped a brush into a vibrant shade of blue and began to paint.\n\nAt first, the strokes were clumsy, and the colors clashed. Sergei\'s lack of experience showed in every splatter. But he persisted, entranced by the way the paint danced in mid-air. With each passing day, his skills improved, and his art took on a life of its own.\n\nSergei\'s crewmates, Anatoly and Elena, were amazed by his transformation. They\'d never seen him so carefree, lost in the world of art. As they floated around him, they\'d offer words of encouragement, and Sergei would share his latest creations. The spacecraft became a studio, with canvases attached to the walls and paint-splattered brushes drifting through the air.\n\nOne night, as the stars aligned in a perfect crescent, Sergei set out to capture their beauty on canvas. He mixed shades of gold, silver, and purple, creating a palette that shimmered like the cosmos. The brushstrokes flowed effortlessly, as if guided by the celestial bodies themselves. When he finished, the painting glowed with an otherworldly light.\n\nAnatoly and Elena gasped as they beheld the masterpiece. \"Sergei, this is incredible!\" Anatoly exclaimed. Elena nodded, her eyes shining with tears. \"You\'ve captured the essence of our journey.\"\n\nThe painting, titled \"Stellar Odyssey,\" became a symbol of the crew\'s shared experience. As they gazed at the stars, they saw not just a sea of light, but a universe of possibility. Sergei\'s art had unlocked a new dimension, one that transcended the boundaries of space and time.\n\nWhen the Soyuz returned to Earth, Sergei\'s paintings were met with acclaim. The cosmonaut-turned-artist had discovered a new way to share the beauty of the cosmos with the world. As he looked up at the night sky, now a reminder of his time in space, Sergei smiled, knowing that the stars would forever be his muse.\n\n---\n\nI hope you enjoyed this short story about a cosmonaut learning to paint."
+    role: "assistant"
+  }
+}
+created: 1743701513
+object: "chat.completion"
+}
+{
+  "error": "Invalid request"
+}
+
 choices {
   finish_reason: "stop"
   message {
