@@ -55,7 +55,7 @@ const task = await client.createGravityTask({
 ```python
 import macrocosmos as mc
 
-client = mc.GravityClient(api_key="<your-api-key>")
+client = mc.GravityClient(api_key="your-api-key")
 
 gravity_tasks = [
     {"platform": "x", "topic": "#ai"},
@@ -74,6 +74,35 @@ response =  client.gravity.CreateGravityTask(
 
 # Print the gravity task ID
 print(response)
+```
+{% endtab %}
+
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "gravity_tasks": [
+      {
+        "topic": "#ai",
+        "platform": "x"
+      },
+      {
+        "topic": "r/MachineLearning",
+        "platform": "reddit"
+      }
+    ],
+    "name": "My First Gravity Task",
+    "notification_requests": [
+      {
+        "type": "email",
+        "address": "user@example.com",
+        "redirect_url": "https://app.macrocosmos.ai/"
+      }
+    ]
+  }' \
+  https://constellation.api.cloud.macrocosmos.ai\
+/gravity.v1.GravityService/CreateGravityTask
 ```
 {% endtab %}
 
@@ -178,6 +207,19 @@ print(response)
 {% endcode %}
 {% endtab %}
 
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "gravity_task_id": "your-gravity-task-id",
+    "include_crawlers": false
+  }' \
+  https://constellation.api.cloud.macrocosmos.ai\
+/gravity.v1.GravityService/GetGravityTasks
+```
+{% endtab %}
+
 {% tab title="Constellation API: grpcurl" %}
 ```bash
 grpcurl -H "Authorization: Bearer your-api-key" \
@@ -280,6 +322,26 @@ print(response)
 ```
 {% endtab %}
 
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "crawler_id": "your-crawler-id",
+    "notification_requests": [
+      {
+        "type": "email",
+        "address": "user@example.com",
+        "redirect_url": "https://app.macrocosmos.ai/"
+      }
+    ],
+    "max_rows": 100
+  }' \
+  https://constellation.api.cloud.macrocosmos.ai\
+/gravity.v1.GravityService/BuildDataset
+```
+{% endtab %}
+
 {% tab title="Constellation API: grpcurl" %}
 ```bash
 grpcurl -H "Authorization: Bearer your-api-key" \
@@ -314,46 +376,12 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 {% tab title="200" %}
 ```json
 {
-  "dataset_id": "ds_123456789",
+  "datasetId": "dataset-71e97cfa-xxxx-xxxx-xxxx-33cd91be9028",
   "dataset": {
-    "crawler_workflow_id": "cw_987654321",
-    "create_date": "2024-03-20T10:00:00.000Z",
-    "expire_date": "2024-04-20T10:00:00.000Z",
-    "files": [
-      {
-        "file_name": "dataset_20240320.csv",
-        "file_size_bytes": "1024000",
-        "last_modified": "2024-03-20T10:05:00.000Z",
-        "num_rows": "1000",
-        "s3_key": "datasets/ds_123456789/dataset_20240320.csv",
-        "url": "https://storage.example.com/datasets/ds_123456789/dataset_20240320.csv"
-      }
-    ],
-    "status": "completed",
-    "status_message": "Dataset build completed successfully",
-    "steps": [
-      {
-        "progress": 1.0,
-        "step": 1,
-        "step_name": "Initializing dataset build"
-      },
-      {
-        "progress": 1.0,
-        "step": 2,
-        "step_name": "Collecting data from crawler"
-      },
-      {
-        "progress": 1.0,
-        "step": 3,
-        "step_name": "Processing and formatting data"
-      },
-      {
-        "progress": 1.0,
-        "step": 4,
-        "step_name": "Generating dataset files"
-      }
-    ],
-    "total_steps": 4
+    "crawlerWorkflowId": "crawler-0-multicrawler-b56179b1-xxxx-xxxx-xxxx-0ffd616ad830",
+    "status": "Running",
+    "statusMessage": "Initializing",
+    "totalSteps": "10"
   }
 }
 ```
@@ -403,6 +431,18 @@ print(response)
 ```
 {% endtab %}
 
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset_id": "your-dataset-id"
+  }' \
+  https://constellation.api.cloud.macrocosmos.ai\
+/gravity.v1.GravityService/GetDataset
+```
+{% endtab %}
+
 {% tab title="Constellation API: grpcurl" %}
 ```bash
 grpcurl -H "Authorization: Bearer your-api-key" \
@@ -428,44 +468,78 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 ```json
 {
   "dataset": {
-    "crawler_workflow_id": "cw_987654321",
-    "create_date": "2024-03-20T10:00:00.000Z",
-    "expire_date": "2024-04-20T10:00:00.000Z",
+    "crawlerWorkflowId": "crawler-0-multicrawler-b56179b1-xxxx-xxxx-xxxx-0ffd616ad830",
+    "createDate": "2025-06-04T10:31:38.747918Z",
+    "expireDate": "2025-07-04T10:31:38.747933Z",
     "files": [
       {
-        "file_name": "dataset_20240320.csv",
-        "file_size_bytes": "1024000",
-        "last_modified": "2024-03-20T10:05:00.000Z",
-        "num_rows": "1000",
-        "s3_key": "datasets/ds_123456789/dataset_20240320.csv",
-        "url": "https://storage.example.com/datasets/ds_123456789/dataset_20240320.csv"
+        "fileName": "x_ai_0.parquet",
+        "fileSizeBytes": "261100",
+        "lastModified": "2025-06-04T10:31:28.770Z",
+        "numRows": "478",
+        "s3Key": "example-s3-key",
+        "url": "example-url"
       }
     ],
-    "status": "completed",
-    "status_message": "Dataset build completed successfully",
+    "status": "Completed",
+    "statusMessage": "Dataset ready for download",
     "steps": [
       {
-        "progress": 1.0,
-        "step": 1,
-        "step_name": "Initializing dataset build"
+        "progress": 1,
+        "step": "1",
+        "stepName": "Registering dataset"
       },
       {
-        "progress": 1.0,
-        "step": 2,
-        "step_name": "Collecting data from crawler"
+        "progress": 1,
+        "step": "2",
+        "stepName": "Collecting crawler information"
       },
       {
-        "progress": 1.0,
-        "step": 3,
-        "step_name": "Processing and formatting data"
+        "progress": 1,
+        "step": "3",
+        "stepName": "Collecting available data sources"
       },
       {
-        "progress": 1.0,
-        "step": 4,
-        "step_name": "Generating dataset files"
+        "progress": 1,
+        "step": "4",
+        "stepName": "Validating data sources"
+      },
+      {
+        "progress": 1,
+        "step": "5",
+        "stepName": "Collating data"
+      },
+      {
+        "progress": 1,
+        "step": "6",
+        "stepName": "Creating dataset path"
+      },
+      {
+        "progress": 1,
+        "step": "7",
+        "stepName": "Extracting data"
+      },
+      {
+        "progress": 1,
+        "step": "8",
+        "stepName": "Consolidate dataset"
+      },
+      {
+        "progress": 1,
+        "step": "9",
+        "stepName": "Publish dataset"
+      },
+      {
+        "progress": 1,
+        "step": "10",
+        "stepName": "Cleaning up"
       }
     ],
-    "total_steps": 4
+    "totalSteps": "10",
+    "nebula": {
+      "fileSizeBytes": "795061",
+      "url": "example-url"
+    }
   }
 }
 ```
@@ -524,6 +598,18 @@ response_grav = client.gravity.CancelGravityTask(
 
 # Print the dataset ID
 print(response_grav)
+```
+{% endtab %}
+
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "gravity_task_id": "your-gravity-task-id"
+  }' \
+  https://constellation.api.cloud.macrocosmos.ai\
+/gravity.v1.GravityService/CancelGravityTask
 ```
 {% endtab %}
 
@@ -605,6 +691,23 @@ response = client.sn13.OnDemandData(
 )
 
 print(response)
+```
+{% endtab %}
+
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source": "X",
+    "usernames": ["nasa", "spacex"],
+    "keywords": ["photo", "space", "mars"],
+    "start_date": "2024-04-01",
+    "end_date": "2025-04-25",
+    "limit": 3
+  }' \
+  https://constellation.api.cloud.macrocosmos.ai\
+/sn13.v1.Sn13Service/OnDemandData
 ```
 {% endtab %}
 

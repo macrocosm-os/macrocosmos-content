@@ -10,7 +10,7 @@ description: >-
 
 Use `ApexClient` to send prompts to open-source language models like LLaMA and Mistral, or perform web-augmented completions using subnet-based retrieval.
 
-### Get Stored Chat Completions
+### Get Stored Chat Completions (Coming Soon)
 
 Get the stored chat completions for the given chat. The input to this endpoint is a unique chat id.
 
@@ -24,6 +24,18 @@ const client = new ApexClient({ apiKey: 'your-api-key' });
 
 // Get Stored chat completions
 const result = await client.getStoredChatCompletions({ chatId });
+```
+{% endtab %}
+
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "chat_id": "a-unique-chat-id"
+  }' \
+  https://constellation.api.cloud.macrocosmos.ai\
+/apex.v1.ApexService/GetStoredChatCompletions
 ```
 {% endtab %}
 
@@ -126,6 +138,29 @@ print(response)
 ```
 {% endtab %}
 
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a short story about a cosmonaut learning to paint."
+      }
+    ],
+    "sampling_parameters": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_new_tokens": 256,
+      "do_sample": true
+    }
+  }' \
+  https://constellation.api.cloud.macrocosmos.ai\
+/apex.v1.ApexService/ChatCompletion
+```
+{% endtab %}
+
 {% tab title="Constellation API: grpcurl" %}
 ```bash
 grpcurl -H "Authorization: Bearer your-api-key" \
@@ -163,77 +198,19 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 {% tab title="200" %}
 ```json
 {
- id: "bdb39416-aac3-45b5-af90-c40197ff819b"Chat Completions 
-Send a prompt to an LLM on the Apex subnet.
-import { ApexClient } from 'macrocosmos';
-
-// Initialize the client
-const client = new ApexClient({ apiKey: 'your-api-key' });
-
-// Chat completions
-const response = await client.chat.completions.create({
-  messages: [
-    { role: 'user', content: 'Write a short story about a cosmonaut learning to paint.' }
-    ],
-});
-import macrocosmos as mc
-
-client = mc.ApexClient(api_key="your-api-key")
-response = client.chat.completions.create(
-    messages=[{"role": "user", "content": "Write a short story about a cosmonaut learning to paint."}
-    ]
-)
-
-print(response)
-grpcurl -H "Authorization: Bearer your-api-key" \
-  -d '{
-    "messages": [
-      {
-        "role": "user",
-        "content": "Write a short story about a cosmonaut learning to paint."
+  "id": "e1e94d9d-xxxx-xxxx-xxxx-c25d44b22e8a",
+  "choices": [
+    {
+      "finishReason": "stop",
+      "message": {
+        "content": "In the quiet hum of the Mir space station, cosmonaut Ivan Kovalenko floated through the modules, his mind a million miles away from the routine tasks he had completed for the day. He had always been a man of science, of precision and logic, but lately, he found himself yearning for something more—something creative.\n\nBack on Earth, Ivan had seen an exhibition of space-themed art. The vibrant colors and sweeping brushstrokes had stirred something within him. He wanted to capture the beauty he saw every day from his unique vantage point, but he had no idea where to start.\n\nIvan decided to write a letter to his old friend, Marina, an artist who lived in Moscow. He described his newfound interest and asked if she could send him some art supplies and perhaps some guidance. Marina, always eager to support her friends, quickly assembled a package of paints, brushes, and a small canvas board, along with a detailed letter on how to begin.\n\nA few weeks later, a resupply mission delivered the package to Ivan. He eagerly opened it, his heart pounding with a mix of excitement and nervousness. He had never held a paintbrush before, let alone tried to create something with it.\n\nIvan started with the basics",
+        "role": "assistant"
       }
-    ],
-    "sampling_parameters": {
-      "temperature": 0.7,
-      "top_p": 0.95,
-      "max_new_tokens": 256,
-      "do_sample": true
     }
-  }' \
-  constellation.api.cloud.macrocosmos.ai:443 \
-  apex.v1.ApexService/ChatCompletion
-
-Body
-
-messages
-string
-A list of messages in chat format (role, content).
-Response
-{
- id: "bdb39416-aac3-45b5-af90-c40197ff819b"
-choices {
-  finish_reason: "stop"
-  message {
-    content: "**The Starlight Brush**\n\nAs the Soyuz spacecraft soared through the cosmos, Cosmonaut Sergei gazed out the window at the endless expanse of stars. The weightlessness of space made his body feel free, but his mind was trapped in a world of calculations and routine checks. He longed for a creative outlet, something to express the beauty he witnessed every day.\n\nOne evening, while reviewing the ship\'s inventory, Sergei stumbled upon a forgotten art kit. The box was dusty, but the paints and brushes inside seemed untouched. He couldn\'t resist the urge to try. As he floated in front of the window, he dipped a brush into a vibrant shade of blue and began to paint.\n\nAt first, the strokes were clumsy, and the colors clashed. Sergei\'s lack of experience showed in every splatter. But he persisted, entranced by the way the paint danced in mid-air. With each passing day, his skills improved, and his art took on a life of its own.\n\nSergei\'s crewmates, Anatoly and Elena, were amazed by his transformation. They\'d never seen him so carefree, lost in the world of art. As they floated around him, they\'d offer words of encouragement, and Sergei would share his latest creations. The spacecraft became a studio, with canvases attached to the walls and paint-splattered brushes drifting through the air.\n\nOne night, as the stars aligned in a perfect crescent, Sergei set out to capture their beauty on canvas. He mixed shades of gold, silver, and purple, creating a palette that shimmered like the cosmos. The brushstrokes flowed effortlessly, as if guided by the celestial bodies themselves. When he finished, the painting glowed with an otherworldly light.\n\nAnatoly and Elena gasped as they beheld the masterpiece. \"Sergei, this is incredible!\" Anatoly exclaimed. Elena nodded, her eyes shining with tears. \"You\'ve captured the essence of our journey.\"\n\nThe painting, titled \"Stellar Odyssey,\" became a symbol of the crew\'s shared experience. As they gazed at the stars, they saw not just a sea of light, but a universe of possibility. Sergei\'s art had unlocked a new dimension, one that transcended the boundaries of space and time.\n\nWhen the Soyuz returned to Earth, Sergei\'s paintings were met with acclaim. The cosmonaut-turned-artist had discovered a new way to share the beauty of the cosmos with the world. As he looked up at the night sky, now a reminder of his time in space, Sergei smiled, knowing that the stars would forever be his muse.\n\n---\n\nI hope you enjoyed this short story about a cosmonaut learning to paint."
-    role: "assistant"
-  }
-}
-created: 1743701513
-object: "chat.completion"
-}
-{
-  "error": "Invalid request"
-}
-
-choices {
-  finish_reason: "stop"
-  message {
-    content: "**The Starlight Brush**\n\nAs the Soyuz spacecraft soared through the cosmos, Cosmonaut Sergei gazed out the window at the endless expanse of stars. The weightlessness of space made his body feel free, but his mind was trapped in a world of calculations and routine checks. He longed for a creative outlet, something to express the beauty he witnessed every day.\n\nOne evening, while reviewing the ship\'s inventory, Sergei stumbled upon a forgotten art kit. The box was dusty, but the paints and brushes inside seemed untouched. He couldn\'t resist the urge to try. As he floated in front of the window, he dipped a brush into a vibrant shade of blue and began to paint.\n\nAt first, the strokes were clumsy, and the colors clashed. Sergei\'s lack of experience showed in every splatter. But he persisted, entranced by the way the paint danced in mid-air. With each passing day, his skills improved, and his art took on a life of its own.\n\nSergei\'s crewmates, Anatoly and Elena, were amazed by his transformation. They\'d never seen him so carefree, lost in the world of art. As they floated around him, they\'d offer words of encouragement, and Sergei would share his latest creations. The spacecraft became a studio, with canvases attached to the walls and paint-splattered brushes drifting through the air.\n\nOne night, as the stars aligned in a perfect crescent, Sergei set out to capture their beauty on canvas. He mixed shades of gold, silver, and purple, creating a palette that shimmered like the cosmos. The brushstrokes flowed effortlessly, as if guided by the celestial bodies themselves. When he finished, the painting glowed with an otherworldly light.\n\nAnatoly and Elena gasped as they beheld the masterpiece. \"Sergei, this is incredible!\" Anatoly exclaimed. Elena nodded, her eyes shining with tears. \"You\'ve captured the essence of our journey.\"\n\nThe painting, titled \"Stellar Odyssey,\" became a symbol of the crew\'s shared experience. As they gazed at the stars, they saw not just a sea of light, but a universe of possibility. Sergei\'s art had unlocked a new dimension, one that transcended the boundaries of space and time.\n\nWhen the Soyuz returned to Earth, Sergei\'s paintings were met with acclaim. The cosmonaut-turned-artist had discovered a new way to share the beauty of the cosmos with the world. As he looked up at the night sky, now a reminder of his time in space, Sergei smiled, knowing that the stars would forever be his muse.\n\n---\n\nI hope you enjoyed this short story about a cosmonaut learning to paint."
-    role: "assistant"
-  }
-}
-created: 1743701513
-object: "chat.completion"
+  ],
+  "created": "1749034638",
+  "model": "mrfakename/mistral-small-3.1-24b-instruct-2503-hf",
+  "object": "chat.completion"
 }
 ```
 {% endtab %}
@@ -284,6 +261,21 @@ response = client.web_search.search(
 )
 
 print(response)
+```
+{% endtab %}
+
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "search_query": "What is Bittensor?",
+    "n_miners": 3,
+    "n_results": 2,
+    "max_response_time": 30
+  }' \
+  https://constellation.api.cloud.macrocosmos.ai\
+/apex.v1.ApexService/WebRetrieval
 ```
 {% endtab %}
 
@@ -405,7 +397,37 @@ submitted_response = await client.deep_research.create_job(
         },
     ) # produces a unique job_id
 
-print(submitted_response) 
+print(submitted_response) curl -H "Authorization: Bearer your-api-key" \
+```
+{% endtab %}
+
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you propose a mechanism by which a decentralized network of AI agents could achieve provable alignment on abstract ethical principles without relying on human-defined ontologies or centralized arbitration?"
+      }
+    ],
+    "seed": 42,
+    "uids": [1, 2, 3],
+    "model": "Default",
+    "sampling_parameters": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_new_tokens": 8192,
+      "do_sample": false
+    },
+    "stream": true,
+    "task": "InferenceTask",
+    "mixture": false,
+    "inference_mode": "Chain-of-Thought"
+  }' \
+  https://constellation.api.cloud.macrocosmos.ai\
+/apex.v1.ApexService/SubmitDeepResearcherJob
 ```
 {% endtab %}
 
@@ -500,6 +522,18 @@ client = mc.AsyncApexClient(api_key="your-api-key")
 polled_response = await client.deep_research.get_job_results(job_id="your-job-id")
 
 print(polled_response)
+```
+{% endtab %}
+
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "job_id": "your-job-id"
+  }' \
+  https://constellation.api.cloud.macrocosmos.ai\
+/apex.v1.ApexService/GetDeepResearcherJob
 ```
 {% endtab %}
 
