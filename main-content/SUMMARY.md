@@ -24,7 +24,7 @@
   * [Subnet 1 Base Miner Setup](subnets/subnet-1-apex/subnet-1-base-miner-setup.md)
   * [Subnet 1 Incentive Mechanism](subnets/subnet-1-apex/subnet-1-incentive-mechanism.md)
   * [Subnet 1: Roadmap](subnets/subnet-1-apex/subnet-1-roadmap.md)
-* [Subnet 9 - IOTA](subnets/subnet-9-iota/README.md)
+* [Subnet 9 IOTA](subnets/subnet-9-iota/README.md)
   * [Subnet 9 Incentive Mechanism](subnets/subnet-9-pre-training/subnet-9-incentive-mechanism.md)
   * [Subnet 9 IOTA Mining Setup Guide](subnets/subnet-9-pre-training/subnet-9-iota-mining-setup-guide.md)
   * [Subnet 9 Validating](subnets/subnet-9-pre-training/subnet-9-validating.md)
