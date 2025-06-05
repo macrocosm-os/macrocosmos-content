@@ -40,12 +40,12 @@
 
 * [Subnet 1 Apex](subnets/subnet-1-apex/README.md)
   * [Subnet 1 Getting Started](subnets/subnet-1-apex/subnet-1-getting-started.md)
-  * [Subnet 1 Base Miner Setup](subnets/subnet-1-apex/subnet-1-base-miner-setup.md)
+  * [Subnet 1 Mining Setup Guide](subnets/subnet-1-apex/subnet-1-mining-setup-guide.md)
   * [Subnet 1 Incentive Mechanism](subnets/subnet-1-apex/subnet-1-incentive-mechanism.md)
   * [Subnet 1: Roadmap](subnets/subnet-1-apex/subnet-1-roadmap.md)
 * [Subnet 9 IOTA](subnets/subnet-9-iota/README.md)
   * [Subnet 9 Incentive Mechanism](subnets/subnet-9-pre-training/subnet-9-incentive-mechanism.md)
-  * [Subnet 9 IOTA Mining Setup Guide](subnets/subnet-9-pre-training/subnet-9-iota-mining-setup-guide.md)
+  * [Subnet 9 Mining Setup Guide](subnets/subnet-9-iota/subnet-9-mining-setup-guide.md)
   * [Subnet 9 Validating](subnets/subnet-9-pre-training/subnet-9-validating.md)
 * [Subnet 13 Data Universe](subnets/subnet-13-data-universe/README.md)
   * [Subnet 13 Getting Started](subnets/subnet-13-data-universe/subnet-13-getting-started.md)
@@ -69,7 +69,7 @@
 
 * [Subnet 37 Finetuning](subnet-37-finetuning/README.md)
   * [Subnet 37 Getting Started](subnet-37-finetuning/subnet-37-getting-started.md)
-  * [Subnet 37 Miners Guide](subnet-37-finetuning/subnet-37-miners.md)
+  * [Subnet 37 Mining Setup Guide](subnet-37-finetuning/subnet-37-miners.md)
   * [Subnet 37 Validators Guide](subnet-37-finetuning/subnet-37-validators.md)
   * [Subnet 37 Incentive Mechanism](subnet-37-finetuning/subnet-37-incentive-mechanism.md)
   * [Subnet 37 Competitions](subnet-37-finetuning/subnet-37-competitions.md)

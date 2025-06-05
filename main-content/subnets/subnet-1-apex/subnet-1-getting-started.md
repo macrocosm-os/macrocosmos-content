@@ -13,7 +13,7 @@ Help power the subnet by contributing compute and serving LLM responses. Start h
 * [OpenAI Bittensor Miner Guide](https://github.com/macrocosm-os/apex/blob/main/docs/epistula_miner.md) – for spinning up a general-purpose miner.
 * [Stream Miner Walkthrough](https://github.com/macrocosm-os/apex/blob/main/docs/stream_miner_template.md) – for low-latency, streaming-style mining.
 * For validation, follow [SN1's Validation](https://github.com/macrocosm-os/prompting/blob/main/docs/SN1_validation.md) guide and [Validator](https://github.com/macrocosm-os/prompting/blob/main/docs/validator.md) instructions.
-* SN1 base miner setup guide - [subnet-1-base-miner-setup.md](subnet-1-base-miner-setup.md "mention")
+* SN1 base miner setup guide - [subnet-1-mining-setup-guide.md](subnet-1-mining-setup-guide.md "mention")
 
 ### Prompt via the API (LLM-as-a-Service)
 
