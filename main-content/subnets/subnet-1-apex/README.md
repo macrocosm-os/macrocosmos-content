@@ -48,7 +48,7 @@ Subnet 1 works closely with other subnets to expand its capabilities:
 
 ## Apex Client - Macrocosmos SDK
 
-**(SN1)** runs open-source language models like LLaMA and Mistral, and you can interact with it easily using the [macrocosmos-sdk](../../developers/macrocosmos-sdk/ "mention")\
+**(SN1)** runs open-source language models like LLaMA and Mistral, and you can interact with it easily using the [..](../../ "mention")\
 With the `ApexClient`, you can send prompts, run chat completions, and perform live web searches — all decentralized and miner-powered.\
 
 

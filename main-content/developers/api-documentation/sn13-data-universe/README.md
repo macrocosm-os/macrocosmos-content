@@ -23,7 +23,7 @@ Try the visual interface at [**Mission Command**](https://app.macrocosmos.ai/mis
 
 ## Base URL: `https://sn13.api.macrocosmos.ai`
 
-The SN13 Gravity API is designed for data collection across social platforms, including Reddit and Twitter (X). You can create data collection tasks, monitor their progress, build and retrieve structured datasets upon completion. Each task is registered on the network and remains active for seven days, after which the compiled dataset becomes available for download. You can access these operations through the `GravityClient` in the [macrocosmos-sdk](../../macrocosmos-sdk/ "mention").
+The SN13 Gravity API is designed for data collection across social platforms, including Reddit and Twitter (X). You can create data collection tasks, monitor their progress, build and retrieve structured datasets upon completion. Each task is registered on the network and remains active for seven days, after which the compiled dataset becomes available for download. You can access these operations through the `GravityClient` in the [..](../../../ "mention").
 
 ***
 

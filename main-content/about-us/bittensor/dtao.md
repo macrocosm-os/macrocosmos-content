@@ -6,7 +6,7 @@ description: Dynamic TAO - ‘doubling down’ on decentralisation
 
 The introduction of dTAO is an important moment for Bittensor. For the first time, TAO holders, rather than validators, will be responsible for determining TAO emissions on the nework. In the process, they will also be exposed to a new system of risk and reward in holding ‘_subnet tokens_’.
 
-<figure><img src="../.gitbook/assets/Screenshot 2025-03-05 at 19.50.09.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2025-03-05 at 19.50.09.png" alt=""><figcaption></figcaption></figure>
 
 We've been educating both our community and the wider Bittensor ecosystem with a range of dTAO articles and conversations. Take a look at these to get acquainted with it.
 

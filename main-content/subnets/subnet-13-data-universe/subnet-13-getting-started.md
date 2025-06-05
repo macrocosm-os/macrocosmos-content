@@ -20,7 +20,7 @@ Before working with subnet 13, you should familiarize yourself with the [Bittens
 
 ### Integrate via the SDK
 
-* Use the [macrocosmos-sdk](../../developers/macrocosmos-sdk/ "mention") to plug into Subnet 13 directly
+* Use the [..](../../ "mention") to plug into Subnet 13 directly
 
 ### Explore Constellation
 
