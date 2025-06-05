@@ -1,7 +1,3 @@
----
-icon: hand-wave
----
-
 # About Macrocosmos
 
 At Macrocosmos, we believe **artificial intelligence is too important to be locked behind closed doors**. Our mission is to create a democratised AI ecosystem that benefits everyone.
