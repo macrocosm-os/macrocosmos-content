@@ -1,4 +1,4 @@
-# Subnet 1: How to use APEX
+# Subnet 1 Getting Started
 
 Before working with subnet 1, you should familiarize yourself with the [Bittensor documentation](https://docs.bittensor.com/), describing the ecosystem and relationships between network participants.
 
@@ -21,7 +21,7 @@ Help power the subnet by contributing compute and serving LLM responses. Start h
 
 ### Build with the Macrocosmos SDK
 
-* Integrate Apex directly into your Python applications using the SDK - [apex.md](../../developers/macrocosmos-sdk/apex.md "mention")
+* Integrate Apex directly into your Python applications using the SDK - [subnet-1-apex-api.md](../../developers/macrocosmos-sdk/subnet-1-apex-api.md "mention")
 
 #### Explore Constellation
 
