@@ -24,7 +24,7 @@ Try the visual interface at [**Mission Command**](https://app.macrocosmos.ai/mis
 
 ## Base URL: `https://sn1.api.macrocosmos.ai`
 
-The SN1 APEX API serves as access point for interacting with Macrocosmos's advanced language model inference capabilities. It performs chat completions and decentralized web searches through its primary endpoints: `POST /v1/chat/completions` and `POST /web_retrieval`. This API leverages a decentralized network of miners and validators to process requests, ensuring high-quality and reliable outputs. Developers can utilize the [macrocosmos-sdk](../../macrocosmos-sdk/ "mention"), specifically the `ApexClient`, to integrate these capabilities into their applications.
+The SN1 APEX API serves as access point for interacting with Macrocosmos's advanced language model inference capabilities. It performs chat completions and decentralized web searches through its primary endpoints: `POST /v1/chat/completions` and `POST /web_retrieval`. This API leverages a decentralized network of miners and validators to process requests, ensuring high-quality and reliable outputs. Developers can utilize the [..](../../../ "mention"), specifically the `ApexClient`, to integrate these capabilities into their applications.
 
 ***
 

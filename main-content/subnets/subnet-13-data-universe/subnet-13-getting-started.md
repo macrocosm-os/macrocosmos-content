@@ -1,4 +1,4 @@
-# Subnet 13: How to use Data Universe
+# Subnet 13 Getting Started
 
 Before working with subnet 13, you should familiarize yourself with the [Bittensor documentation](https://docs.bittensor.com/), describing the ecosystem and relationships between network participants.
 
@@ -20,7 +20,7 @@ Before working with subnet 13, you should familiarize yourself with the [Bittens
 
 ### Integrate via the SDK
 
-* Use the [macrocosmos-sdk](../../developers/macrocosmos-sdk/ "mention") to plug into Subnet 13 directly
+* Use the [..](../../ "mention") to plug into Subnet 13 directly
 
 ### Explore Constellation
 

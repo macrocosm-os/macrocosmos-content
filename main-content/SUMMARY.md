@@ -1,6 +1,34 @@
 # Table of contents
 
-* [About Macrocosmos](README.md)
+## Developers
+
+* [Macrocosmos SDK](README.md)
+  * [Get Started](developers/macrocosmos-sdk/installation.md)
+  * [API Keys](developers/macrocosmos-sdk/api-keys.md)
+  * [Subnet 1 Apex API](developers/macrocosmos-sdk/apex.md)
+  * [Subnet 13 Gravity API](developers/macrocosmos-sdk/gravity.md)
+* [API Documentation](developers/api-documentation/README.md)
+  * [Accessing API Keys](developers/api-documentation/accessing-api-keys.md)
+  * [SN1 - APEX](developers/api-documentation/sn1-apex/README.md)
+    * [Endpoints](developers/api-documentation/sn1-apex/endpoints.md)
+    * [Example Usage](developers/api-documentation/sn1-apex/example-usage.md)
+    * [Agentic Tasks](developers/api-documentation/sn1-apex/agentic-tasks.md)
+    * [Supported Models](developers/api-documentation/sn1-apex/supported-models.md)
+  * [SN13 - Data Universe](developers/api-documentation/sn13-data-universe/README.md)
+    * [Endpoints](developers/api-documentation/sn13-data-universe/endpoints.md)
+    * [Example usage](developers/api-documentation/sn13-data-universe/example-usage.md)
+    * [API Key management](developers/api-documentation/sn13-data-universe/api-key-management.md)
+    * [Scraping Youtube Data](developers/api-documentation/sn13-data-universe/scraping-youtube-data.md)
+* [Tools](developers/tools/README.md)
+  * [Macrocosmos MCP](developers/tools/macrocosmos-mcp.md)
+  * [Developer Projects](developers/tools/developer-projects.md)
+* [News and updates](news-and-updates.md)
+* [Subnet Status Update](subnet-status-update.md)
+* [Macromedia](macromedia.md)
+
+***
+
+* [About Macrocosmos](<README (1).md>)
 * [Bittensor](bittensor/README.md)
   * [DTAO](bittensor/dtao.md)
 
@@ -68,29 +96,3 @@
 * [Nebula User Guide](constellation-user-guides/nebula/README.md)
   * [Explore Nebula](constellation-user-guides/nebula/explore-nebula.md)
   * [Analyzing data](constellation-user-guides/nebula/analyzing-data.md)
-
-## Developers
-
-* [Macrocosmos SDK](developers/macrocosmos-sdk/README.md)
-  * [Get Started](developers/macrocosmos-sdk/installation.md)
-  * [API Keys](developers/macrocosmos-sdk/api-keys.md)
-  * [Subnet 1 Apex API](developers/macrocosmos-sdk/apex.md)
-  * [Subnet 13 Gravity API](developers/macrocosmos-sdk/gravity.md)
-* [API Documentation](developers/api-documentation/README.md)
-  * [Accessing API Keys](developers/api-documentation/accessing-api-keys.md)
-  * [SN1 - APEX](developers/api-documentation/sn1-apex/README.md)
-    * [Endpoints](developers/api-documentation/sn1-apex/endpoints.md)
-    * [Example Usage](developers/api-documentation/sn1-apex/example-usage.md)
-    * [Agentic Tasks](developers/api-documentation/sn1-apex/agentic-tasks.md)
-    * [Supported Models](developers/api-documentation/sn1-apex/supported-models.md)
-  * [SN13 - Data Universe](developers/api-documentation/sn13-data-universe/README.md)
-    * [Endpoints](developers/api-documentation/sn13-data-universe/endpoints.md)
-    * [Example usage](developers/api-documentation/sn13-data-universe/example-usage.md)
-    * [API Key management](developers/api-documentation/sn13-data-universe/api-key-management.md)
-    * [Scraping Youtube Data](developers/api-documentation/sn13-data-universe/scraping-youtube-data.md)
-* [Tools](developers/tools/README.md)
-  * [Macrocosmos MCP](developers/tools/macrocosmos-mcp.md)
-  * [Developer Projects](developers/tools/developer-projects.md)
-* [News and updates](news-and-updates.md)
-* [Subnet Status Update](subnet-status-update.md)
-* [Macromedia](macromedia.md)
