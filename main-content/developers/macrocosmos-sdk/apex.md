@@ -502,7 +502,7 @@ import { ApexClient } from 'macrocosmos';
 const client = new ApexClient({ apiKey: 'your-api-key' });
 
 // Get the results of a deep research job using a job_id from submittedResponse
-const polledResponse = await client.getDeepResearcherJob('your-job-id');
+const polledResponse = await client.getDeepResearcherJob({jobId: 'your-job-id'});
 ```
 {% endtab %}
 
