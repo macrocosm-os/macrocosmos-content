@@ -343,16 +343,13 @@ Apex’s Deep Researcher leverages advanced reasoning to synthesize vast volumes
 {% tabs %}
 {% tab title="Typescript" %}
 ```typescript
-import { ApexClient, DeepResearch } from 'macrocosmos';
+import { ApexClient } from 'macrocosmos';
 
 // Initialize the client
 const client = new ApexClient({ apiKey: 'your-api-key' });
 
-// Create DeepResearch instance
-const deepResearch = new DeepResearch(client);
-
 // Submit a deep research job
-const submittedResponse = await deepResearch.createJob({
+const submittedResponse = await client.submitDeepResearcherJob({
       messages: [
       { role: "user",
         content: `Can you propose a mechanism by which a decentralized network 
@@ -499,16 +496,13 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 {% tabs %}
 {% tab title="Typescript" %}
 ```typescript
-import { ApexClient, DeepResearch } from 'macrocosmos';
+import { ApexClient } from 'macrocosmos';
 
 // Initialize the client
 const client = new ApexClient({ apiKey: 'your-api-key' });
 
-// Create DeepResearch instance
-const deepResearch = new DeepResearch(client);
-
 // Get the results of a deep research job using a job_id from submittedResponse
-const polledResponse = await deepResearch.getJobResults('your-job-id');
+const polledResponse = await client.getDeepResearcherJob('your-job-id');
 ```
 {% endtab %}
 

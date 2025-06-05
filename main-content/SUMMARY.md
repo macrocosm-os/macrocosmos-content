@@ -94,6 +94,6 @@
 
 ## Media and Status Updates
 
-* [News and updates](media-and-status-updates/news-and-updates.md)
+* [News and updates](news-and-updates.md)
 * [Macromedia](media-and-status-updates/macromedia.md)
 * [Subnet Status Update](media-and-status-updates/subnet-status-update.md)
