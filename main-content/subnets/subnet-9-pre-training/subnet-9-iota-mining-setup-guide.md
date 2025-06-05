@@ -1,4 +1,4 @@
-# Subnet 9 IOTA Mining Setup Guide
+# Subnet 9 Mining Setup Guide
 
 ## Introduction
 

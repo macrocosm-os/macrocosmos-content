@@ -5,7 +5,7 @@ description: >-
   should not be used on mainnnet
 ---
 
-# Subnet 1: Base Miner Setup
+# Subnet 1 Mining Setup Guide
 
 ### ⚠️ Disclaimer
 
