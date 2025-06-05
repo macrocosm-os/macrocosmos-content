@@ -1,44 +1,35 @@
 ---
-description: The Macrocosmos SDK - the bridge to decentralised AI services
+hidden: true
+icon: hand-wave
 ---
 
-# Macrocosmos SDK
+# About Macrocosmos
 
-## Overview
+At Macrocosmos, we believe **artificial intelligence is too important to be locked behind closed doors**. Our mission is to create a democratised AI ecosystem that benefits everyone.
 
-Whether you're building cutting-edge Artificial Intelligence (AI) products, connecting to Bittensor subnets, or orchestrating large-scale data flows, the Macrocosmos Software Development Kit (SDK) simplifies access to the powerful tools and systems behind the Macrocosmos [Constellation platform](https://app.macrocosmos.ai/mission-command).&#x20;
+By leveraging distributed networks, we aim to build the world's largest decentralised supercomputer, fostering an open, competitive marketplace for intelligence.
 
-Macrocosmos SDK provides developers with a robust API for integrating Macrocosmos’s advanced AI and data infrastructure into applications, services, and research pipelines. Its extensive documentation, built-in support for authentication ensure a smooth experience from prototyping to production.
+This is your opportunity to be part of a ground-breaking journey where you can innovate, solve complex problems, and contribute to a mission that aligns with the greater good.
 
-<figure><img src=".gitbook/assets/MC_logo_Toro_White@4x (1).png" alt="" width="284"><figcaption></figcaption></figure>
+Macrocosmos was formed in March 2024. Evolving out of the launch of "Revolution" on Bittensor, which led to the subnet epoch in the network, in which individual teams could build their own intelligence profile. The Macrocosmos team was part of the original team that built Bittensor, and our code sits at the heart of every subnet on the network.
 
-## Why Build with Macrocosmos?
+<figure><img src=".gitbook/assets/Screenshot 2025-03-07 at 11.28.14.png" alt=""><figcaption></figcaption></figure>
 
-Macrocosmos makes it accessible to:
+We run five subnets:
 
-* **Interact with AI models on-chain**: Use the Apex subnet 1 to send prompts to open source LLMs running in a decentralised way.
-* **Access real-time social media data**: Query Reddit and Twitter/X through Gravity subnet 13, powered by validator-coordinated scraping infrastructure.
-* **Streamline the scientific research**: Leverage powerful Molecular Dynamic Simulation engine using Mainframe on subnet 25 to increase accuracy and speed of protein folding or drug discovery research.
+* [Subnet 1 Apex](subnets/subnet-1-apex/)
+* [Subnet 9 IOTA](subnets/subnet-9-iota/)
+* [Subnet 13 Data-Universe](subnets/subnet-13-data-universe/)
+* [Subnet 25 Mainframe](subnets/subnet-25-mainframe/)
+* [Subnet 37 Finetuning](subnet-37-finetuning/)
 
-## Key Capabilities
+Listen to our CEO Will Squires speak about how Macrocosmos shaped the ecosystem - [video link](https://x.com/MacrocosmosAI/status/1889046770233364873).
 
-### Subnet 1 APEX
+Resources for more details
 
-<a href="developers/macrocosmos-sdk/apex.md" class="button secondary">APEX API</a>
-
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><img src=".gitbook/assets/fa6-solid--mountain-sun-icon.png" alt="">   <strong>Chat Completions</strong></td><td>Send a prompt to an LLM on the Apex subnet to enable your applications such as chatbots, agents, copilots, and autonomous systems.</td></tr><tr><td><img src=".gitbook/assets/web-icon.png" alt="">  <strong>Web Search</strong></td><td>Use Apex's integrated web retriever to fetch relevant content to support research assistants, news summarisers and real-time content generators.</td></tr><tr><td><img src=".gitbook/assets/deep-researcher-icon (1).png" alt="">  <strong>Deep Researcher</strong></td><td>Connect to the Deep Researcher to enhance deep-dive competitive intelligence tools and uncover emerging and actionable insights.</td></tr></tbody></table>
-
-### Subnet 13 Gravity
-
-<a href="developers/macrocosmos-sdk/gravity.md" class="button secondary">Gravity API</a>
-
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><img src=".gitbook/assets/collection-icon.png" alt="">  <strong>Data Collection</strong></td><td>Request filtered data to collect relevant insights, structured information, real-time updates, hidden patterns, and competitive signals across multiple sources.</td></tr><tr><td><img src=".gitbook/assets/dataset-icon.png" alt="">  <strong>Build Dataset</strong></td><td>Build comprehensive datasets to enable precise retrieval, targeted analysis and intelligent automation, driving smarter decisions and scalable AI-driven capabilities.</td></tr><tr><td><img src=".gitbook/assets/stream2.png" alt=""> <strong>Streaming API</strong></td><td>Create a data flow for real-time updates and identify predictive signals to drive timely decisions, automation, and strategic forecasting across operations.</td></tr></tbody></table>
-
-### Subnet 25 Mainframe
-
-<a href="developers/api-documentation/sn25-mainframe/" class="button secondary">Mainframe API</a>
-
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><img src=".gitbook/assets/ph--dna copy.png" alt="">  <strong>Folding API</strong></td><td>The Folding API provides the HTTP interface to enable programmatic submission of protein folding jobs to perform protein folding simulations in order to generate datasets for scientific AI model training.</td></tr><tr><td><img src=".gitbook/assets/organics-icon.png" alt="">  <strong>Organic API</strong></td><td>The Organic API provides an interface for submitting real-world protein folding tasks for MD simulation, enabling genuine scientific studies and advanced analysis of specific protein structures.</td></tr></tbody></table>
-
-
+* [Macrocosmos.ai](https://www.macrocosmos.ai/)
+* [Substack](https://macrocosmosai.substack.com/)
+* [Macrocosmos Discord](https://discord.com/channels/1238450997848707082)
+* [Cosmonauts - Macrocosmos Telegram](https://t.me/macrocosmosai)
+* [Macrocosmos X](https://x.com/MacrocosmosAI)
 

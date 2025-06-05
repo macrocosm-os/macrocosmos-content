@@ -1,8 +1,12 @@
 # Table of contents
 
+* [About Macrocosmos](README.md)
+* [Bittensor](bittensor/README.md)
+  * [DTAO](bittensor/dtao.md)
+
 ## Developers
 
-* [Macrocosmos SDK](README.md)
+* [Macrocosmos SDK](developers/macrocosmos-sdk/README.md)
   * [Get Started](developers/macrocosmos-sdk/installation.md)
   * [API Keys](developers/macrocosmos-sdk/api-keys.md)
   * [Subnet 1 Apex API](developers/macrocosmos-sdk/apex.md)
@@ -22,15 +26,6 @@
 * [Tools](developers/tools/README.md)
   * [Macrocosmos MCP](developers/tools/macrocosmos-mcp.md)
   * [Developer Projects](developers/tools/developer-projects.md)
-* [News and updates](news-and-updates.md)
-* [Subnet Status Update](subnet-status-update.md)
-* [Macromedia](macromedia.md)
-
-***
-
-* [About Macrocosmos](<README (1).md>)
-* [Bittensor](bittensor/README.md)
-  * [DTAO](bittensor/dtao.md)
 
 ## Getting Started
 
@@ -96,3 +91,9 @@
 * [Nebula User Guide](constellation-user-guides/nebula/README.md)
   * [Explore Nebula](constellation-user-guides/nebula/explore-nebula.md)
   * [Analyzing data](constellation-user-guides/nebula/analyzing-data.md)
+
+## Media and Status Updates
+
+* [News and updates](media-and-status-updates/news-and-updates.md)
+* [Macromedia](media-and-status-updates/macromedia.md)
+* [Subnet Status Update](media-and-status-updates/subnet-status-update.md)
