@@ -2,11 +2,11 @@
 icon: hand-wave
 ---
 
-# Welcome
+# About Macrocosmos
 
-At Macrocosmos, we believe **artificial intelligence is too important to be locked behind closed doors**. Our mission is to create a democratized AI ecosystem that benefits everyone.
+At Macrocosmos, we believe **artificial intelligence is too important to be locked behind closed doors**. Our mission is to create a democratised AI ecosystem that benefits everyone.
 
-By leveraging distributed networks, we aim to build the world's largest decentralized supercomputer, fostering an open, competitive marketplace for intelligence.
+By leveraging distributed networks, we aim to build the world's largest decentralised supercomputer, fostering an open, competitive marketplace for intelligence.
 
 This is your opportunity to be part of a ground-breaking journey where you can innovate, solve complex problems, and contribute to a mission that aligns with the greater good.
 
@@ -16,13 +16,13 @@ Macrocosmos was formed in March 2024. Evolving out of the launch of "Revolution"
 
 We run five subnets:
 
-* [Subnet 1 - Apex](subnets/subnet-1-apex/)
-* [Subnet 9 - Pre-Training](broken-reference)
-* [Subnet 13 - Data-Universe](subnets/subnet-13-data-universe/)
-* [Subnet 25 - Mainframe](subnets/subnet-25-mainframe/)
-* [Subnet 37 - Finetuning](subnet-37-finetuning/)
+* [Subnet 1 Apex](subnets/subnet-1-apex/)
+* [Subnet 9 IOTA](subnets/subnet-9-iota/)
+* [Subnet 13 Data-Universe](subnets/subnet-13-data-universe/)
+* [Subnet 25 Mainframe](subnets/subnet-25-mainframe/)
+* [Subnet 37 Finetuning](subnet-37-finetuning/)
 
-{% embed url="https://x.com/MacrocosmosAI/status/1889046770233364873/video/1" %}
+Listen to our CEO Will Squires speak about how Macrocosmos shaped the ecosystem - [video link](https://x.com/MacrocosmosAI/status/1889046770233364873).
 
 Resources for more details
 

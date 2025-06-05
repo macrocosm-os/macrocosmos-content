@@ -4,7 +4,7 @@ description: >-
   web-retrieved responses.
 ---
 
-# Subnet 1 APEX
+# Subnet 1 Apex API
 
 ## Quickstart
 

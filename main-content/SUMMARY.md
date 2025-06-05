@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome](README.md)
+* [About Macrocosmos](README.md)
 * [Bittensor](bittensor/README.md)
   * [DTAO](bittensor/dtao.md)
 
@@ -49,11 +49,11 @@
 ***
 
 * [Subnet 37 Finetuning](subnet-37-finetuning/README.md)
-  * [Subnet 37: How to use Fine-Tuning](subnet-37-finetuning/subnet-37-getting-started.md)
-  * [Subnet 37: Miners](subnet-37-finetuning/subnet-37-miners.md)
-  * [Subnet 37: Validators](subnet-37-finetuning/subnet-37-validators.md)
-  * [Subnet 37: Incentive Mechanism](subnet-37-finetuning/subnet-37-incentive-mechanism.md)
-  * [Subnet 37: Competitions](subnet-37-finetuning/subnet-37-competitions.md)
+  * [Subnet 37 Getting Started](subnet-37-finetuning/subnet-37-getting-started.md)
+  * [Subnet 37 Miners Guide](subnet-37-finetuning/subnet-37-miners.md)
+  * [Subnet 37 Validators Guide](subnet-37-finetuning/subnet-37-validators.md)
+  * [Subnet 37 Incentive Mechanism](subnet-37-finetuning/subnet-37-incentive-mechanism.md)
+  * [Subnet 37 Competitions](subnet-37-finetuning/subnet-37-competitions.md)
   * [Subnet 37: Roadmap](subnet-37-finetuning/subnet-37-roadmap.md)
 
 ## CONSTELLATION  - USER GUIDES
@@ -74,8 +74,8 @@
 * [Macrocosmos SDK](developers/macrocosmos-sdk/README.md)
   * [Get Started](developers/macrocosmos-sdk/installation.md)
   * [API Keys](developers/macrocosmos-sdk/api-keys.md)
-  * [Subnet 1 Apex API](developers/macrocosmos-sdk/subnet-1-apex-api.md)
-  * [Subnet 13 Gravity API](developers/macrocosmos-sdk/subnet-13-gravity-api.md)
+  * [Subnet 1 Apex API](developers/macrocosmos-sdk/apex.md)
+  * [Subnet 13 Gravity API](developers/macrocosmos-sdk/gravity.md)
 * [API Documentation](developers/api-documentation/README.md)
   * [Accessing API Keys](developers/api-documentation/accessing-api-keys.md)
   * [SN1 - APEX](developers/api-documentation/sn1-apex/README.md)

@@ -4,7 +4,7 @@ description: >-
   Universe) on the Bittensor network.
 ---
 
-# Subnet 13 GRAVITY
+# Subnet 13 Gravity API
 
 Quickstart
 
