@@ -386,10 +386,10 @@ submitted_response = await client.deep_research.create_job(
         seed: 42,
         uids: [1, 2, 3],
         model: "Default",
-        samplingParameters: {
+        sampling_parameters: {
           temperature: 0.7,
           topP: 0.95,
-          maxNewTokens: 100,
+          max_new_tokens: 100,
           doSample: false,
         },
     ) # produces a unique job_id
