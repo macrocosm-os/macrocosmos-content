@@ -394,7 +394,7 @@ submitted_response = await client.deep_research.create_job(
         },
     ) # produces a unique job_id
 
-print(submitted_response) curl -H "Authorization: Bearer your-api-key" \
+print(submitted_response)
 ```
 {% endtab %}
 
