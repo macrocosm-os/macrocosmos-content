@@ -383,14 +383,14 @@ submitted_response = await client.deep_research.create_job(
                 without relying on human-defined ontologies or centralized arbitration?""",
             }
         ],
-        seed: 42,
-        uids: [1, 2, 3],
-        model: "Default",
-        sampling_parameters: {
-          temperature: 0.7,
-          topP: 0.95,
-          max_new_tokens: 100,
-          doSample: false,
+        seed=42,
+        uids=[1, 2, 3],
+        model="Default",
+        sampling_parameters={
+            "temperature": 0.7,
+            "top_p": 0.95,
+            "max_new_tokens": 100,
+            "do_sample": False
         },
     ) # produces a unique job_id
 
