@@ -4,13 +4,12 @@ description: Using Macrocosmos MCP with Claude Desktop or Cursor
 
 # Macrocosmos MCP
 
-**Macrocosmos MCP** (Model Context Protocol) lets you integrate **SN13** APIs directly into **Claude for Desktop** or **Cursor**. Instantly tap into social data, perform live web searches, and explore Hugging Face models — all from your AI environment.
+**Macrocosmos MCP** (Model Context Protocol) lets you integrate **SN13** APIs directly into **Claude for Desktop,** **Cursor,** or **your custom LLM pipeline**. Instantly tap into social data, perform live web searches, and explore Hugging Face models — all from your AI environment.
 
 ### Features
 
 * 🔍 Query **X** (Twitter) and **Reddit** data on demand
 * 🌐 Perform live **web search** using SN1 miners ( coming soon)
-* 📚 Explore **SN13 Hugging Face** repositories and datasets
 
 ###
 
