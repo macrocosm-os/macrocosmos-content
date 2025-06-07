@@ -10,99 +10,6 @@ description: >-
 
 Use `ApexClient` to send prompts to open-source language models like LLaMA and Mistral, or perform web-augmented completions using subnet-based retrieval.
 
-### Get Stored Chat Completions (Coming Soon)
-
-Get the stored chat completions for the given chat. The input to this endpoint is a unique chat id.
-
-{% tabs %}
-{% tab title="Typescript" %}
-```typescript
-import { ApexClient } from 'macrocosmos';
-
-// Initialize the client
-const client = new ApexClient({ apiKey: 'your-api-key' });
-
-// Get Stored chat completions
-const result = await client.getStoredChatCompletions({ chatId });
-```
-{% endtab %}
-
-{% tab title="Constellation API: curl" %}
-```bash
-curl -H "Authorization: Bearer your-api-key" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "chat_id": "a-unique-chat-id"
-  }' \
-  https://constellation.api.cloud.macrocosmos.ai\
-/apex.v1.ApexService/GetStoredChatCompletions
-```
-{% endtab %}
-
-{% tab title="Constellation API: grpcurl" %}
-```bash
-grpcurl -H "Authorization: Bearer your-api-key" \
-  -d '{"chat_id": "a-unique-chat-id"}' \
-  constellation.api.cloud.macrocosmos.ai:443 \
-  apex.v1.ApexService/GetStoredChatCompletions
-```
-{% endtab %}
-{% endtabs %}
-
-
-
-**Body**
-
-| Name      | Type   | Description                                   |
-| --------- | ------ | --------------------------------------------- |
-| `chat_id` | string | The id of the chat this completion belongs to |
-
-**Response**
-
-{% tabs %}
-{% tab title="200" %}
-```json
-{
-  "chatCompletions": [
-    {
-      "id": "000f172b-479e-4272-aff5-8f87d5bfe5af",
-      "chatId": "d90a4724-2dc4-4058-82d1-c95120eee777",
-      "completionType": "chain-of-thought",
-      "createdAt": "2025-05-22T11:09:33.153507Z",
-      "completedAt": "2025-05-22T11:09:33.153507Z",
-      "userPromptText": "tell me a neural networks",
-      "completionText": "Researching",
-      "metadata": {
-        "deep-researcher": {
-          "createdAt": "2025-05-22T11:09:34.179781Z",
-          "jobId": "ee724a2b-70c8-4f95-8147-62b3512cc614",
-          "status": "completed"
-        },
-        "status": {
-          "content": "Done.",
-          "status": "in-progress"
-        },
-        "thoughts": [
-          "undefined Neural networks are a series of algorithms modeled after the human brain that are designed to recognize patterns. They interpret sensory data through a kind of machine perception, labeling or clustering raw input. The patterns they recognize are numerical, contained in vectors, into which all real-world data, be it images, sound, text or time series, must be translated. Neural networks can adapt to changing input so that they learn to perform tasks better over time. They are used in a wide variety of applications, including image and speech recognition, natural language processing, and predictive analytics."
-        ]
-      }
-    }
-  ]
-}
-```
-{% endtab %}
-
-{% tab title="400" %}
-```json
-{
-  "error": "Invalid request"
-}
-```
-{% endtab %}
-{% endtabs %}
-
-
-
 ### Chat Completions&#x20;
 
 Send a prompt to an LLM on the Apex subnet.
@@ -574,6 +481,87 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 {
   "error": "Invalid request"
 }
+```
+{% endtab %}
+{% endtabs %}
+
+### Get Stored Chat Completions (Coming Soon)
+
+Get the stored chat completions for the given chat. The input to this endpoint is a unique chat id.
+
+{% tabs %}
+{% tab title="Typescript" %}
+```typescript
+import { ApexClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new ApexClient({ apiKey: 'your-api-key' });
+
+// Get Stored chat completions
+const result = await client.getStoredChatCompletions({ chatId });
+```
+{% endtab %}
+
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "chat_id": "a-unique-chat-id"
+  }' \
+  https://constellation.api.cloud.macrocosmos.ai\
+/apex.v1.ApexService/GetStoredChatCompletions
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{"chat_id": "a-unique-chat-id"}' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  apex.v1.ApexService/GetStoredChatCompletions
+```
+{% endtab %}
+{% endtabs %}
+
+
+
+**Body**
+
+| Name      | Type   | Description                                   |
+| --------- | ------ | --------------------------------------------- |
+| `chat_id` | string | The id of the chat this completion belongs to |
+
+**Response**
+
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+  "chatCompletions": [
+    {
+      "id": "000f172b-479e-4272-aff5-8f87d5bfe5af",
+      "chatId": "d90a4724-2dc4-4058-82d1-c95120eee777",
+      "completionType": "chain-of-thought",
+      "createdAt": "2025-05-22T11:09:33.153507Z",
+      "completedAt": "2025-05-22T11:09:33.153507Z",
+      "userPromptText": "tell me a neural networks",
+      "completionText": "Researching",
+      "metadata": {
+        "deep-researcher": {
+          "createdAt": "2025-05-22T11:09:34.179781Z",
+          "jobId": "ee724a2b-70c8-4f95-8147-62b3512cc614",
+          "status": "completed"
+        },
+        "status": {
+          "content": "Done.",
+          "status": "in-progress"
+        },
+        "thoughts": [
+          "undefined Neural networks are a series of algorithms modeled after the human brain that are designed to recognize patterns. They interpret sensory data through a kind of machine perception, labeling or clustering raw input. The patterns they recognize are numerical, contained in vectors, into which all real-world data, be it images, sound, text or time series, must be translated. Neural networks can adapt to changing input so that they learn to perform tasks better over time. They are used in a wide variety of applications, including image and speech recognition, natural language processing, and predictive analytics."
+        ]
+      }
+    }
 ```
 {% endtab %}
 {% endtabs %}
