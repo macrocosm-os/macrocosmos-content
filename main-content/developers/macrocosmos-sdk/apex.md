@@ -278,10 +278,12 @@ const submittedResponse = await client.submitDeepResearcherJob({
 
 {% tab title="Python" %}
 ```python
+import asyncio
 import macrocosmos as mc
 
-client = mc.AsyncApexClient(api_key="your-api-key")
-submitted_response = await client.deep_research.create_job(
+async def main():
+    client = mc.AsyncApexClient(api_key="your-api-key")
+    submitted_response = await client.deep_research.create_job(
         messages=[
             {
                 "role": "user",
@@ -300,8 +302,11 @@ submitted_response = await client.deep_research.create_job(
             "do_sample": False
         },
     ) # produces a unique job_id
+    print(submitted_response)
 
-print(submitted_response)
+# Run the async function
+if __name__ == "__main__":
+    asyncio.run(main())
 ```
 {% endtab %}
 
@@ -415,14 +420,19 @@ const polledResponse = await client.getDeepResearcherJob({jobId: 'your-job-id'})
 
 {% tab title="Python" %}
 ```python
+import asyncio
 import macrocosmos as mc
 
-client = mc.AsyncApexClient(api_key="your-api-key")
+async def main():
+    client = mc.AsyncApexClient(api_key="your-api-key")
+    
+    # Get the results of a deep research job using a job_id from submitted_response
+    polled_response = await client.deep_research.get_job_results(job_id="your-job-id")
+    print(polled_response)
 
-# Get the results of a deep research job using a job_id from submitted_response
-polled_response = await client.deep_research.get_job_results(job_id="your-job-id")
-
-print(polled_response)
+# Run the async function
+if __name__ == "__main__":
+    asyncio.run(main())
 ```
 {% endtab %}
 
