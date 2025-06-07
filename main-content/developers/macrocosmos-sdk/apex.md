@@ -256,7 +256,7 @@ client = mc.ApexClient(api_key="your-api-key")
 response = client.web_search.search(
     search_query="What is Bittensor?",
     n_miners=3,
-    n_results=2,
+    max_results_per_miner=2,
     max_response_time=30
 )
 
@@ -271,7 +271,7 @@ curl -H "Authorization: Bearer your-api-key" \
   -d '{
     "search_query": "What is Bittensor?",
     "n_miners": 3,
-    "n_results": 2,
+    "max_results_per_miner": 2,
     "max_response_time": 30
   }' \
   https://constellation.api.cloud.macrocosmos.ai\
@@ -285,7 +285,7 @@ grpcurl -H "Authorization: Bearer your-api-key" \
   -d '{
     "search_query": "What is Bittensor?",
     "n_miners": 3,
-    "n_results": 2,
+    "max_results_per_miner": 2,
     "max_response_time": 30
   }' \
   constellation.api.cloud.macrocosmos.ai:443 \
