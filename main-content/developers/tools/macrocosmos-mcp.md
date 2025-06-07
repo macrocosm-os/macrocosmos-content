@@ -9,7 +9,7 @@ description: Using Macrocosmos MCP with Claude Desktop or Cursor
 ### Features
 
 * 🔍 Query **X** (Twitter) and **Reddit** data on demand
-* 🌐 Perform live **web search** using SN1 miners
+* 🌐 Perform live **web search** using SN1 miners ( coming soon)
 * 📚 Explore **SN13 Hugging Face** repositories and datasets
 
 ###
@@ -74,7 +74,7 @@ uv init
 4. **Install required dependencies**
 
 ```bash
-uv add "mcp[cli]" httpx
+uv add "mcp[cli]" httpx macrocosmos
 ```
 
 
@@ -127,8 +127,7 @@ code ~/Library/Application\ Support/Claude/claude_desktop_config.json
                 "src/macrocosmos_mcp.py"
             ],
             "env": {
-                "SN1_API_KEY": "your-sn1-api-key",
-                "SN13_API_KEY": "your-sn13-api-key"
+                "MC_KEY": "your-sdk-api-key"
             }
         }
     }
@@ -206,8 +205,7 @@ Add the following configuration to your `mcp.json`. This will let you access the
                 "src/macrocosmos_mcp.py"
             ],
             "env": {
-                "SN1_API_KEY": "your-sn1-api-key",
-                "SN13_API_KEY": "your-sn13-api-key"
+                "MC_KEY": "your-sdk-api-key"
             }
         }
     }
