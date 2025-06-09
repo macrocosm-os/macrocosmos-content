@@ -90,7 +90,7 @@
 
 ## About us
 
-* [About Macrocosmos](about-us/readme.md)
+* [About Macrocosmos](<README (1).md>)
 * [Bittensor](about-us/bittensor/README.md)
   * [DTAO](about-us/bittensor/dtao.md)
 * [News and updates](about-us/news-and-updates.md)
