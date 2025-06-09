@@ -264,7 +264,6 @@ const submittedResponse = await client.submitDeepResearcherJob({
         without relying on human-defined ontologies or centralized arbitration?`},
     ],
       seed: 42,
-      uids: [1, 2, 3],
       model: "Default",
       samplingParameters: {
         temperature: 0.7,
@@ -372,7 +371,6 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 | -------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `messages`           | Array of `Messages` objects  | List of message objects with 'role' and 'content' keys. Roles can be 'system', 'user', or 'assistant'.                                                                                                  |
 | `seed`               | int                          | <p><code>[Optional]</code> </p><p></p><p>Default: <code>Random int between [0, 1000000]</code></p><p></p><p>Random seed for reproducible results. If not provided, a random seed will be generated.</p> |
-| `uids`               | Array of int                 | <p><code>[Optional]</code> </p><p></p><p>Default: <code>[]</code></p><p></p><p>List of specific miner UIDs to query. If not provided (default), miners will be selected automatically.</p>              |
 | `model`              | string                       | <p><code>[Optional]</code> </p><p></p><p>Default: <code>"Default"</code> </p><p></p><p>Model identifier to filter available miners.</p>                                                                 |
 | `samplingParameters` | `SamplingParameters` object  | <p>Example: <code>{"temperature":0.7,"top_p":0.95,"top_k":50,"max_new_tokens":1024,"do_sample":true}</code> </p><p></p><p>Parameters to control text generation, such as temperature, top_p, etc.</p>   |
 
