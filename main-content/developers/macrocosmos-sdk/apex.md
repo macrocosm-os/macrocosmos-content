@@ -269,7 +269,7 @@ const submittedResponse = await client.submitDeepResearcherJob({
       samplingParameters: {
         temperature: 0.7,
         topP: 0.95,
-        maxNewTokens: 100,
+        maxNewTokens: 8192,
         doSample: false,
       },
     }); // produces a unique jobId
@@ -278,35 +278,31 @@ const submittedResponse = await client.submitDeepResearcherJob({
 
 {% tab title="Python" %}
 ```python
-import asyncio
 import macrocosmos as mc
 
-async def main():
-    client = mc.AsyncApexClient(api_key="your-api-key")
-    submitted_response = await client.deep_research.create_job(
-        messages=[
-            {
-                "role": "user",
-                "content": """Can you propose a mechanism by which a decentralized network 
-                of AI agents could achieve provable alignment on abstract ethical principles 
-                without relying on human-defined ontologies or centralized arbitration?""",
-            }
-        ],
-        seed=42,
-        uids=[1, 2, 3],
-        model="Default",
-        sampling_parameters={
-            "temperature": 0.7,
-            "top_p": 0.95,
-            "max_new_tokens": 100,
-            "do_sample": False
-        },
-    ) # produces a unique job_id
-    print(submitted_response)
+client = mc.ApexClient(api_key="your-api-key")
 
-# Run the async function
-if __name__ == "__main__":
-    asyncio.run(main())
+submitted_response = client.deep_research.create_job(
+    messages=[
+        {
+            "role": "user",
+            "content": """Can you propose a mechanism by which a decentralized network 
+            of AI agents could achieve provable alignment on abstract ethical principles 
+            without relying on human-defined ontologies or centralized arbitration?""",
+        }
+    ],
+    seed=42,
+    uids=[1, 2, 3],
+    model="Default",
+    sampling_parameters={
+        "temperature": 0.7,
+        "top_p": 0.95,
+        "max_new_tokens": 8192,
+        "do_sample": False
+    },
+) # produces a unique job_id
+
+print(submitted_response)
 ```
 {% endtab %}
 
@@ -420,19 +416,14 @@ const polledResponse = await client.getDeepResearcherJob({jobId: 'your-job-id'})
 
 {% tab title="Python" %}
 ```python
-import asyncio
 import macrocosmos as mc
 
-async def main():
-    client = mc.AsyncApexClient(api_key="your-api-key")
+client = mc.ApexClient(api_key="your-api-key")
     
-    # Get the results of a deep research job using a job_id from submitted_response
-    polled_response = await client.deep_research.get_job_results(job_id="your-job-id")
-    print(polled_response)
+# Get the results of a deep research job using a job_id from submitted_response
+polled_response = client.deep_research.get_job_results(job_id="your-job-id")
 
-# Run the async function
-if __name__ == "__main__":
-    asyncio.run(main())
+print(polled_response)
 ```
 {% endtab %}
 
