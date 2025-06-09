@@ -291,7 +291,6 @@ submitted_response = client.deep_research.create_job(
         }
     ],
     seed=42,
-    uids=[1, 2, 3],
     model="Default",
     sampling_parameters={
         "temperature": 0.7,
@@ -317,7 +316,6 @@ curl -H "Authorization: Bearer your-api-key" \
       }
     ],
     "seed": 42,
-    "uids": [1, 2, 3],
     "model": "Default",
     "sampling_parameters": {
       "temperature": 0.7,
@@ -346,7 +344,6 @@ grpcurl -H "Authorization: Bearer your-api-key" \
       }
     ],
     "seed": 42,
-    "uids": [1, 2, 3],
     "model": "Default",
     "sampling_parameters": {
       "temperature": 0.7,
