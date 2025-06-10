@@ -441,7 +441,7 @@ import macrocosmos as mc
 
 client = mc.GravityClient(api_key="your-api-key")
 
-response = client.gravity.GetDataset(datasetId: 'your-dataset-id')
+response = client.gravity.GetDataset(dataset_id='your-dataset-id')
 
 # Print the details about the gravity task and crawler IDs
 print(response)
@@ -605,12 +605,12 @@ client = mc.GravityClient(api_key="your-api-key")
 
 # Cancel a gravity task
 response_grav = client.gravity.CancelGravityTask(
-    gravity_task_id: 'your-gravity-task-id'
+    gravity_task_id='your-gravity-task-id'
 )
 
 # Cancel a dataset
 # response_data = client.gravity.CancelDataset(
-#     datasetId: 'your-dataset-id'
+#     dataset_id='your-dataset-id'
 #)
 
 # Print the dataset ID
