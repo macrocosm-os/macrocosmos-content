@@ -17,6 +17,7 @@ Check [examples/gravity\_workflow\_example.py](https://github.com/macrocosm-os/m
 
 * `reddit`
 * `twitter` (X)
+* Youtube - coming soon
 
 More platforms will be supported as subnet capabilities expand.
 
