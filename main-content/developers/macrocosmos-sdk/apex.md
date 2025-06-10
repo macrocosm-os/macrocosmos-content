@@ -396,6 +396,8 @@ if __name__ == "__main__":
 
 ```
 
+### Deep Research Endpoints
+
 #### Submit a deep researcher Job
 
 {% tabs %}
