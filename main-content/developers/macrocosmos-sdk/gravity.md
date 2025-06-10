@@ -35,9 +35,11 @@ npm install macrocosmos
 {% endtab %}
 {% endtabs %}
 
-Macrocosmos SDK should be version 1.0.4+
+Macrocosmos SDK should be version 1.0.5+. For upgrade use
 
-
+```
+pip install macrocosmos==1.0.5
+```
 
 ### Create a task for Data Collection
 
