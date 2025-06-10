@@ -668,7 +668,7 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 {% endtab %}
 {% endtabs %}
 
-### On demand data
+### Streaming API
 
 Run precise, real-time queries using the synchronous `Sn13Client` to query historical or current data based on users, keywords, and time range on platforms like X (Twitter) and Reddit.
 
