@@ -600,7 +600,7 @@ const cancelResult = await client.cancelGravityTask({
 ```python
 import macrocosmos as mc
 
-client = mc.GravityClient(api_key="<your-api-key>")
+client = mc.GravityClient(api_key="your-api-key")
 
 # Cancel a gravity task
 response_grav = client.gravity.CancelGravityTask(
@@ -669,7 +669,7 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 
 ### On demand data
 
-Run precise, real-time queries against platforms like X (Twitter) and Reddit (YouTube forthcoming), using the synchronous `Sn13Client` to query historical or current data based on users, keywords, and time range
+Run precise, real-time queries using the synchronous `Sn13Client` to query historical or current data based on users, keywords, and time range on platforms like X (Twitter) and Reddit.
 
 {% tabs %}
 {% tab title="Typescript" %}
