@@ -303,7 +303,7 @@ const dataset = await client.buildDataset({
 ```python
 import macrocosmos as mc
 
-client = mc.GravityClient(api_key="<your-api-key>")
+client = mc.GravityClient(api_key="your-api-key")
 
 notification = {
     "type": "email",
