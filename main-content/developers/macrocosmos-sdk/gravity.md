@@ -20,6 +20,22 @@ Check [examples/gravity\_workflow\_example.py](https://github.com/macrocosm-os/m
 
 More platforms will be supported as subnet capabilities expand.
 
+{% tabs %}
+{% tab title="Python" %}
+```python
+pip install macrocosmos
+```
+{% endtab %}
+
+{% tab title="Typescript" %}
+```javascript
+npm install macrocosmos
+```
+{% endtab %}
+{% endtabs %}
+
+Macrocosmos SDK should be version 1.0.4+
+
 
 
 ### Create a task for Data Collection

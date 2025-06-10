@@ -10,6 +10,22 @@ description: >-
 
 Use `ApexClient` to send prompts to open-source language models like LLaMA and Mistral, or perform web-augmented completions using subnet-based retrieval.
 
+{% tabs %}
+{% tab title="Python" %}
+```python
+pip install macrocosmos
+```
+{% endtab %}
+
+{% tab title="Typescript" %}
+```javascript
+npm install macrocosmos
+```
+{% endtab %}
+{% endtabs %}
+
+Macrocosmos SDK should be version 1.0.4+
+
 ### Chat Completions&#x20;
 
 Send a prompt to an LLM on the Apex subnet.
