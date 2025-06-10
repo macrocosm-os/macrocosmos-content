@@ -197,7 +197,7 @@ const crawler = await client.getCrawler({
 ```python
 import macrocosmos as mc
 
-client = mc.GravityClient(api_key="<your-api-key>")
+client = mc.GravityClient(api_key="your-api-key")
 
 response = client.gravity.GetGravityTasks(gravity_task_id="your-gravity-task-id", include_crawlers=False)
 
