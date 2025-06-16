@@ -40,11 +40,11 @@ It takes several minutes for dataset to be built, once your dataset is ready, yo
 Return back to your task library and you’ll also see a **“View Dataset”** button in your task row.\
 Click it to preview the data.
 
-#### Download your data
+### Download Your Data
 
 To download, hit **“Download”** — files are exported in **CSV** and **Parquet** format.
 
-#### Cancel a Task
+### Cancel a Task
 
 Tasks are present in the request lists for **7 days** by default. This allows miners to add more data to your request. If you'd like to stop a task early, click **“Cancel.”**
 
