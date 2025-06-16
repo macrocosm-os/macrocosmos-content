@@ -6,7 +6,7 @@ description: >-
 
 # Subnet 13 Gravity API
 
-Quickstart
+## Quickstart
 
 Choose `GravityClient` for sync tasks. Use `AsyncGravityClient` if async fits better.\
 Check [examples/gravity\_workflow\_example.py](https://github.com/macrocosm-os/macrocosmos-py/blob/main/examples/gravity_workflow_example.py) for a complete working example of a data collection CLI you can use for your next big project or to plug right into your favorite data product.
@@ -36,6 +36,12 @@ npm install macrocosmos==1.0.5
 ```
 {% endtab %}
 {% endtabs %}
+
+### Demo Video
+
+{% embed url="https://drive.google.com/file/d/1-vRJiFJv6JzXaqGsMrASKZMwN5fT8cp8/view?usp=drive_link" %}
+
+## Gravity API Endpoints
 
 ### Create a task for Data Collection
 
