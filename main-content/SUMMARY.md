@@ -82,7 +82,7 @@
   * [FAQs](constellation-user-guides/apex/faqs.md)
 * [Gravity User Guide](constellation-user-guides/gravity/README.md)
   * [Scraping Data](constellation-user-guides/gravity/scraping-data.md)
-  * [Managing and Collecting your data](constellation-user-guides/gravity/managing-and-collecting-your-data.md)
+  * [Managing And Collecting Your Data](constellation-user-guides/gravity/managing-and-collecting-your-data.md)
   * [FAQs](constellation-user-guides/gravity/faqs.md)
 * [Nebula User Guide](constellation-user-guides/nebula/README.md)
   * [Explore Nebula](constellation-user-guides/nebula/explore-nebula.md)
