@@ -26,7 +26,11 @@ npm install macrocosmos
 
 Macrocosmos SDK should be version 1.0.4+
 
-[Demo Video is here](https://drive.google.com/file/d/1FByuBrSuPmfPX2ggecpcWkfY_95G6Gvm/view?usp=drive_link)
+### Demo Video
+
+{% embed url="https://drive.google.com/file/d/1FByuBrSuPmfPX2ggecpcWkfY_95G6Gvm/view?usp=drive_link" %}
+
+
 
 ## Apex API Endpoints
 
