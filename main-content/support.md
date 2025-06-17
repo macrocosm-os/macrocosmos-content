@@ -2,7 +2,7 @@
 
 {% columns %}
 {% column %}
-#### Get started <a href="#get-started" id="get-started"></a>
+#### &#x20;![](.gitbook/assets/roket-icon.png) Get started <a href="#get-started" id="get-started"></a>
 
 [Using Macrocosmos services](https://docs.macrocosmos.ai/constellation-user-guides/apex)
 
@@ -16,7 +16,7 @@
 {% endcolumn %}
 
 {% column %}
-#### Contact us <a href="#contact-us" id="contact-us"></a>
+#### ![](.gitbook/assets/contact-icon.png) Contact us <a href="#contact-us" id="contact-us"></a>
 
 [Macrocosmos Discord](https://discord.gg/hSuasW9q)
 
@@ -26,7 +26,15 @@
 {% endcolumn %}
 {% endcolumns %}
 
-### FAQ
+![](.gitbook/assets/community-icon.png)  Community Channels
+
+[Macrocosmos X](https://t.me/macrocosmosai)
+
+[Telegram](https://t.me/macrocosmosai)
+
+[The Cosmonaut Substack](https://macrocosmosai.substack.com/)
+
+### ![](.gitbook/assets/faq-icon.png) FAQ
 
 #### **Constellation**
 
