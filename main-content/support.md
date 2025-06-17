@@ -40,9 +40,9 @@
 
 <details>
 
-<summary>What is the Macrocosmos Constellation?</summary>
+<summary>What is the Constellation?</summary>
 
-The Macrocosmos Constellation is a service platform providing access to several services. To get access to the Constellation, follow [app.macrocosmos.ai](http://app.macrocosmos.ai/).
+Constellation is Macrocosmos' overarching platform. It provides access to a full range products and services, all powered by Bittensor. Log in at [app.macrocosmos.ai](http://app.macrocosmos.ai/).
 
 </details>
 
