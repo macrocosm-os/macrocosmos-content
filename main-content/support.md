@@ -56,6 +56,38 @@ When you click on the Account Settings from the Constellation Home page, the sys
 
 </details>
 
+<details>
+
+<summary>Do credits roll over from month to month?</summary>
+
+Your credits do not expire over time. Once you’ve purchased or received credits, they’ll remain in your account indefinitely until you decide to use them.
+
+</details>
+
+<details>
+
+<summary>What payment methods does Constellation support? Can I pay in $TAO, SN13 alpha, or even BTC?</summary>
+
+Currently we accept payments in fiat currencies. Crypto token payments are in the shirt-term plan.
+
+</details>
+
+<details>
+
+<summary>Where can I find Constellation prices?</summary>
+
+The prices for Apex and Gravity are listed at the [Cravity Page](https://www.macrocosmos.ai/gravity).
+
+</details>
+
+<details>
+
+<summary>Is it the same cost to scrape X, Reddit and YouTube?</summary>
+
+Yes, the payment is taken per post and does not depend on the source.
+
+</details>
+
 #### **Mining**
 
 <details>
