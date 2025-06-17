@@ -96,3 +96,7 @@
 * [News and updates](about-us/news-and-updates.md)
 * [Macromedia](about-us/macromedia.md)
 * [Subnet Status Update](about-us/subnet-status-update.md)
+
+***
+
+* [Support](support.md)
