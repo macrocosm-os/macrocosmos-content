@@ -1,6 +1,30 @@
 # Support
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Get Started</td><td><p><a href="https://app.macrocosmos.ai/">Constellation Product Platform</a></p><p></p><p><a href="http://docs.macrocosmos.ai/">Using Subnets API</a></p><p></p><p><a href="https://docs.macrocosmos.ai/subnets/subnet-1-apex">Guides for mining and </a></p><p><a href="https://docs.macrocosmos.ai/subnets/subnet-1-apex">validating the subnets</a></p><p></p><p><a href="https://docs.bittensor.com/">Bittensor Documentation</a></p></td></tr><tr><td>Contact Us</td><td><p><a href="https://discord.gg/hSuasW9q">Macrocosmos Discord</a></p><p></p><p><a href="https://discord.gg/a2h4JYTS">Bittensor Discord</a></p><p></p><p><a href="mailto:support@macrocosmos.ai">Support Email</a></p></td></tr><tr><td>Community Channels</td><td><p><a href="https://t.me/macrocosmosai">Macrocosmos X</a></p><p></p><p><a href="https://t.me/macrocosmosai">Telegram</a></p><p></p><p><a href="https://macrocosmosai.substack.com/">The Cosmonaut Substack</a></p></td></tr></tbody></table>
+{% columns %}
+{% column %}
+#### Get started <a href="#get-started" id="get-started"></a>
+
+[Using Macrocosmos services](https://docs.macrocosmos.ai/constellation-user-guides/apex)
+
+[Constellation Product Platform](https://app.macrocosmos.ai/)
+
+[Using Subnets API](http://docs.macrocosmos.ai/)
+
+[Guides for mining and validating the subnets](https://docs.macrocosmos.ai/subnets/subnet-1-apex)
+
+[Bittensor Documentation](https://docs.bittensor.com/)
+{% endcolumn %}
+
+{% column %}
+#### Contact us <a href="#contact-us" id="contact-us"></a>
+
+[Macrocosmos Discord](https://discord.gg/hSuasW9q)
+
+[Bittensor Discord](https://discord.gg/a2h4JYTS)
+
+[Support Email](mailto:support@macrocosmos.ai)
+{% endcolumn %}
+{% endcolumns %}
 
 ### FAQ
 
