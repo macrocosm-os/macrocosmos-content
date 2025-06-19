@@ -99,5 +99,5 @@
 
 ***
 
-* [Support](support.md)
 * [Pricing](pricing.md)
+* [Support](support.md)
