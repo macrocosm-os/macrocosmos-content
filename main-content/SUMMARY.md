@@ -100,3 +100,4 @@
 ***
 
 * [Support](support.md)
+* [Pricing](pricing.md)
