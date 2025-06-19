@@ -1,6 +1,6 @@
 # Pricing
 
-## Flexible pricing to suit you
+### Flexible pricing to suit you
 
 Built for business of all sizes to move forward in a data-led world
 
@@ -30,7 +30,7 @@ Enterprise - discounts for large data quantities
 
 
 
-## Frequently asked questions
+### Frequently asked questions
 
 <details>
 
