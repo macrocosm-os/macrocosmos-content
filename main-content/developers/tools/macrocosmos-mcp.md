@@ -11,16 +11,12 @@ description: Using Macrocosmos MCP with Claude Desktop or Cursor
 * 🔍 Query **X** (Twitter) and **Reddit** data on demand
 * 🌐 Perform live **web search** using SN1 miners ( coming soon)
 
-###
-
 ### Prerequisites
 
 * Python 3.10
 * `uv` package manager
 * [Install Claude desktop](https://claude.ai/download)
 * Install Cursor&#x20;
-
-
 
 **Install UV package manager:**
 
@@ -156,9 +152,9 @@ For instance:
 
 **Watch a demo 👇**
 
-{% embed url="https://x.com/MacrocosmosAI/status/1910738653292486969" %}
-
-
+{% embed url="https://drive.google.com/file/d/1bcS4Vq-MTgbamZMFOnIjWBItFK3LHgjN/view?usp=sharing" %}
+MCP Demo Video
+{% endembed %}
 
 
 
