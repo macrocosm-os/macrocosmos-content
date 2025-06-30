@@ -642,6 +642,76 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 {% endtab %}
 {% endtabs %}
 
+### Create Completion
+
+Create a completion and append it to an existing chat. For this request, you'll need the unique chat id to which you want to append this completion along with the prompt and completion type.&#x20;
+
+{% tabs %}
+{% tab title="Typescript" %}
+```typescript
+import { ApexClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new ApexClient({ apiKey: 'your-api-key' });
+
+// Create a completion
+const result = await client.createCompletion({
+  chatId: "a-unique-chat-id",
+  userPrompt: "This is a test completion, how are you?",
+  completionType: "basic",
+});
+```
+{% endtab %}
+
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{"chat_id": "your-chat-id", "user_prompt": "Hello, this is a completion, what do you think?", "completion_type": "basic"}' \
+ -X POST https://constellation.api.cloud.macrocosmos.ai \
+/apex.v1.ApexService/CreateCompletion
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{"chat_id": "your-chat-id", "user_prompt": "Hello, this is a completion, what do you think?", "completion_type": "basic"}' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  apex.v1.ApexService/GetStoredChatCompletions
+```
+{% endtab %}
+{% endtabs %}
+
+
+
+**Body**
+
+| Name              | Type   | Description                                                                                                      |
+| ----------------- | ------ | ---------------------------------------------------------------------------------------------------------------- |
+| `chat_id`         | string | The unique chat id                                                                                               |
+| `user_prompt`     | string | A prompt                                                                                                         |
+| `completion_type` | string | The type of the completion. Could be either `basic`, `combined`, `web-search`, `chain-of-thought` or `reasoning` |
+
+**Response**
+
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+  "parsedCompletion": {
+    "id": "069f43b5-7cf9-4317-b8d9-57e910ca144b",
+    "chatId": "1bed9635-e901-4cfb-8804-e8eec346ce69",
+    "createdAt": "2025-06-30T15:00:49.191159Z",
+    "userPromptText": "Test prompt for completion",
+    "completionType": "chain-of-thought",
+    "metadata": {}
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
 ### Get Stored Chat Completions (Coming Soon)
 
 Get the stored chat completions for the given chat. The input to this endpoint is a unique chat id.
@@ -685,9 +755,9 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 
 **Body**
 
-| Name      | Type   | Description                                   |
-| --------- | ------ | --------------------------------------------- |
-| `chat_id` | string | The id of the chat this completion belongs to |
+| Name      | Type   | Description                                                 |
+| --------- | ------ | ----------------------------------------------------------- |
+| `chat_id` | string | The id of the chat that the returned completions belongs to |
 
 **Response**
 
