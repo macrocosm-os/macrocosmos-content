@@ -642,6 +642,65 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 {% endtab %}
 {% endtabs %}
 
+### Delete a chat
+
+Delete one or more chats by specifying their ids in the request.
+
+{% tabs %}
+{% tab title="Typescript" %}
+```typescript
+import { ApexClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new ApexClient({ apiKey: 'your-api-key' });
+
+// Create a completion
+const result = await client.deleteChat({
+  chatIds: ["chat-id-1", "chat-id-2"],
+});
+```
+{% endtab %}
+
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{"chat_ids": ["chat-id-1", "chat-id-2"]}' \
+ -X POST https://constellation.api.cloud.macrocosmos.ai \
+/apex.v1.ApexService/DeleteChats
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{"chat_ids": ["chat-id-1", "chat-id-2"]}' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  apex.v1.ApexService/DeleteChats
+```
+{% endtab %}
+{% endtabs %}
+
+
+
+**Body**
+
+| Name       | Type                | Description       |
+| ---------- | ------------------- | ----------------- |
+| `chat_ids` | Array of `strings`  | Array of chat ids |
+
+**Response**
+
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+  "success": true
+}
+```
+{% endtab %}
+{% endtabs %}
+
 ### Create Completion
 
 Create a completion and append it to an existing chat. For this request, you'll need the unique chat id to which you want to append this completion along with the prompt and completion type.&#x20;
