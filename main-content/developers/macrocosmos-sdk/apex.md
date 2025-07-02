@@ -654,7 +654,7 @@ import { ApexClient } from 'macrocosmos';
 // Initialize the client
 const client = new ApexClient({ apiKey: 'your-api-key' });
 
-// Create a completion
+// Delete a chat
 const result = await client.deleteChat({
   chatIds: ["chat-id-1", "chat-id-2"],
 });
@@ -688,6 +688,65 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 | Name       | Type                | Description       |
 | ---------- | ------------------- | ----------------- |
 | `chat_ids` | Array of `strings`  | Array of chat ids |
+
+**Response**
+
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+  "success": true
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### Delete a completion
+
+Delete one or more completions by specifying their ids in the request.
+
+{% tabs %}
+{% tab title="Typescript" %}
+```typescript
+import { ApexClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new ApexClient({ apiKey: 'your-api-key' });
+
+// Delete a completion
+const result = await client.deleteCompletions({
+  completionIds: ["completion-id-1", "completion-id-2"],
+});
+```
+{% endtab %}
+
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{"completion_ids": ["completion-id-1", "completion-id-2"]}' \
+ -X POST https://constellation.api.cloud.macrocosmos.ai \
+/apex.v1.ApexService/DeleteCompletions
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{"completion_ids": ["completion-id-1", "completion-id-2"]}' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  apex.v1.ApexService/DeleteCompletions
+```
+{% endtab %}
+{% endtabs %}
+
+
+
+**Body**
+
+| Name             | Type                | Description             |
+| ---------------- | ------------------- | ----------------------- |
+| `completion_ids` | Array of `strings`  | Array of completion ids |
 
 **Response**
 
