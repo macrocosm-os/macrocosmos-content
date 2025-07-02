@@ -642,6 +642,80 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 {% endtab %}
 {% endtabs %}
 
+### Update Chat Attributes
+
+Updates the attributes of a chat. Attributes that can be updated are the following:
+
+1. `title`
+2. `chat_type`
+
+{% tabs %}
+{% tab title="Typescript" %}
+```typescript
+import { ApexClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new ApexClient({ apiKey: 'your-api-key' });
+
+// Delete a chat
+const result = await client.updateChatAttributes({
+  chatId: "chat-id",
+  attributes: {
+    title: "Updated Test Chat",
+    chat_type: "gravity",
+  },
+});
+```
+{% endtab %}
+
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+ -H "Content-Type: application/json" \
+ -d '{"chat_id": "chat-id", "attributes": {"title": "Updated Test Chat", "chat_type": "gravity"}}' \
+ -X POST https://constellation.api.cloud.macrocosmos.ai \
+/apex.v1.ApexService/UpdateChatAttributes
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{"chat_id": "chat-id", "attributes": {"title": "Updated Test Chat", "chat_type": "gravity"}}' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  apex.v1.ApexService/UpdateChatAttributes
+```
+{% endtab %}
+{% endtabs %}
+
+
+
+**Body**
+
+| Name         | Type     | Description                                                                                 |
+| ------------ | -------- | ------------------------------------------------------------------------------------------- |
+| `chat_id`    | `string` | Unique identifier of chat                                                                   |
+| `attributes` | `map`    | Possible keys for this map are the attributes that can be updated: `title` and `chat_type`. |
+
+**Response**
+
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+  "chat": {
+    "id": "dbc99707-83c7-4086-b79e-bf41e45fb403",
+    "userId": "6226c8f6-29a9-400f-a3bb-a4a98af81cd4",
+    "title": "HTTP Test Chat Title Case 2",
+    "chatType": "gravity",
+    "createdAt": "2025-07-02T13:28:43.154364Z",
+    "updatedAt": "2025-07-02T13:29:08.693108Z"
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
 ### Delete a chat
 
 Delete one or more chats by specifying their ids in the request.
