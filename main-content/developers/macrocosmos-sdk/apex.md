@@ -26,14 +26,18 @@ npm install macrocosmos
 {% endtab %}
 {% endtabs %}
 
-Macrocosmos SDK should be version 1.0.5+
-
-For upgrade use
+Macrocosmos SDK should be version 1.1.1+. For upgrade use
 
 {% tabs %}
 {% tab title="Python" %}
 ```python
-pip install macrocosmos==1.0.5
+pip install macrocosmos==1.1.1
+```
+{% endtab %}
+
+{% tab title="Typescript" %}
+```javascript
+npm install macrocosmos==1.2.24
 ```
 {% endtab %}
 {% endtabs %}

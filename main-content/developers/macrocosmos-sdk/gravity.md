@@ -35,18 +35,18 @@ npm install macrocosmos
 {% endtab %}
 {% endtabs %}
 
-Macrocosmos SDK should be version 1.0.5+. For upgrade use
+Macrocosmos SDK should be version 1.1.1+. For upgrade use
 
 {% tabs %}
 {% tab title="Python" %}
 ```python
-pip install macrocosmos==1.0.5
+pip install macrocosmos==1.1.1
 ```
 {% endtab %}
 
 {% tab title="Typescript" %}
 ```javascript
-npm install macrocosmos==1.0.5
+npm install macrocosmos==1.2.24
 ```
 {% endtab %}
 {% endtabs %}
@@ -198,10 +198,6 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 {% endtab %}
 {% endtabs %}
 
-
-
-
-
 ### Get status of task
 
 If you wish to get further information about the crawlers, you can use the `include_crawlers` flag or make separate `GetCrawler()` calls since returning in bulk can be slow.
@@ -305,8 +301,6 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
 ### Build dataset&#x20;
 
@@ -430,8 +424,6 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
 ### Get status of a build
 
@@ -588,8 +580,6 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
 ### Cancel requests
 
