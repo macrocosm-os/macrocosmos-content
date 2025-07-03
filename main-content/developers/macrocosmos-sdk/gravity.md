@@ -8,10 +8,10 @@ description: >-
 
 ## Quickstart
 
+[Get started guide](installation.md)
+
 Choose `GravityClient` for sync tasks. Use `AsyncGravityClient` if async fits better.\
 Check [examples/gravity\_workflow\_example.py](https://github.com/macrocosm-os/macrocosmos-py/blob/main/examples/gravity_workflow_example.py) for a complete working example of a data collection CLI you can use for your next big project or to plug right into your favorite data product.
-
-
 
 **📎 Supported Platforms**
 
@@ -20,6 +20,20 @@ Check [examples/gravity\_workflow\_example.py](https://github.com/macrocosm-os/m
 * Youtube - coming soon
 
 More platforms will be supported as subnet capabilities expand.
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+pip install macrocosmos
+```
+{% endtab %}
+
+{% tab title="Typescript" %}
+```javascript
+npm install macrocosmos
+```
+{% endtab %}
+{% endtabs %}
 
 Macrocosmos SDK should be version 1.0.5+. For upgrade use
 
