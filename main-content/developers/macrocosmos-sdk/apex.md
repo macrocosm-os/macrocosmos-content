@@ -642,7 +642,218 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 {% endtab %}
 {% endtabs %}
 
-### Update Chat Attributes
+### Create a Chat and Completion (Coming Soon)
+
+Creates a chat and its first completion by supplying a prompt, the chat type, completion type and the chat title.
+
+{% tabs %}
+{% tab title="Typescript" %}
+```typescript
+import { ApexClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new ApexClient({ apiKey: 'your-api-key' });
+
+// Create a chat and completion
+const create_chat_result = await client.createChatAndCompletion({
+      userPrompt: "This is a test chat prompt. Tell me about yourself?",
+      chatType: "apex",
+      completionType: "basic",
+      title: "Test New Chat",
+    });
+```
+{% endtab %}
+
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "user_prompt": "This is a test chat prompt. Tell me about yourself?",
+    "chat_type": "apex",
+    "completion_type": "basic",
+    "title": "Test New Chat"
+  }' \
+  -X POST https://constellation.api.cloud.macrocosmos.ai/apex.v1.ApexService/CreateChatAndCompletion
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{
+    "user_prompt": "This is a test chat prompt. Tell me about yourself?",
+    "chat_type": "apex",
+    "completion_type": "basic",
+    "title": "Test New Chat"
+  }' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  apex.v1.ApexService/CreateChatAndCompletion
+```
+{% endtab %}
+{% endtabs %}
+
+#### Body&#x20;
+
+| Name             | Type     | Description                                                                                              |
+| ---------------- | -------- | -------------------------------------------------------------------------------------------------------- |
+| `userPrompt`     | `string` | The prompt for Apex chat                                                                                 |
+| `chatType`       | `string` | The type of chat. Can be: `apex` or `gravity`                                                            |
+| `completionType` | `string` | The type of the completion. Can be: `basic`, `combined`, `web-search`, `chain-of-thought` or `reasoning` |
+| `title`          | `string` | The title of the new chat                                                                                |
+
+#### Response
+
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+  parsedChat: {
+    id: '73ea3bb5-8366-4e49-887c-eac98a119dac',
+    title: 'Test New Chat',
+    createdAt: 2025-07-02T16:51:54.205Z,
+    chatType: 'apex'
+  },
+  parsedCompletion: {
+    id: '03a107ce-7495-4ca4-b81d-b0fcadd5a42c',
+    chatId: '73ea3bb5-8366-4e49-887c-eac98a119dac',
+    createdAt: 2025-07-02T16:51:54.378Z,
+    userPromptText: 'This is a test chat prompt. Tell me about yourself?',
+    completionText: '',
+    completionType: 'basic',
+    metadata: {}
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### Get Stored Chat Sessions (Coming Soon)
+
+Retrieves a users chat by providing a list of their unique IDs (no body required).
+
+{% tabs %}
+{% tab title="Typescript" %}
+```typescript
+import { ApexClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new ApexClient({ apiKey: 'your-api-key' });
+
+// Create a chat and completion
+const result = await client.getChatSessions();
+```
+{% endtab %}
+
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{}' \
+  -X POST https://constellation.api.cloud.macrocosmos.ai/apex.v1.ApexService/GetChatSessions 
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{}' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  apex.v1.ApexService/GetChatSessions
+```
+{% endtab %}
+{% endtabs %}
+
+#### Response
+
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+  chatSessions: [
+    {
+      id: 'f2190005-3676-4ffb-8d9b-f4eb9a0e6747',
+      userId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
+      title: 'Test New Chat 2',
+      chatType: 'apex',
+      createdAt: 2025-07-02T17:07:10.067Z,
+      updatedAt: 2025-07-02T17:07:10.067Z
+    },
+    {
+      id: 'e13a43e7-be9f-4909-8c4a-0647ccf650aa',
+      userId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
+      title: 'Test New Chat 1',
+      chatType: 'apex',
+      createdAt: 2025-07-02T17:07:02.154Z,
+      updatedAt: 2025-07-02T17:07:02.154Z
+    }
+  ]
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### Search Chat IDs by User Prompt and Completion text (Coming Soon)
+
+Returns a list of Chat IDs, whose associated completions match the search criteria in either the `user_prompt_text` or `completion_text` fields.&#x20;
+
+{% tabs %}
+{% tab title="Typescript" %}
+```typescript
+import { ApexClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new ApexClient({ apiKey: 'your-api-key' });
+
+// Search chats via the searchTerm
+const result = await client.searchChatIdsByPromptAndCompletionText({
+      searchTerm: “your-search-term”,
+    });
+```
+{% endtab %}
+
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{"search_term": "your-search-term"}' \
+  -X POST https://constellation.api.cloud.macrocosmos.ai/apex.v1.ApexService/SearchChatIdsByPromptAndCompletionText
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{"search_term": "your-search-term"}' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  apex.v1.ApexService/SearchChatIdsByPromptAndCompletionText
+```
+{% endtab %}
+{% endtabs %}
+
+#### Body&#x20;
+
+| Name         | Type     | Description     |
+| ------------ | -------- | --------------- |
+| `searchTerm` | `string` | The search term |
+
+#### Response
+
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+  chatIds: [
+    'f2190005-3676-4ffb-8d9b-f4eb9a0e6747',
+    'e13a43e7-be9f-4909-8c4a-0647ccf650aa'
+  ]
+}
+
+```
+{% endtab %}
+{% endtabs %}
+
+### Update Chat Attributes  (Coming Soon)
 
 Updates the attributes of a chat. Attributes that can be updated are the following:
 
@@ -716,7 +927,7 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 {% endtab %}
 {% endtabs %}
 
-### Delete a chat
+### Delete chats  (Coming Soon)
 
 Delete one or more chats by specifying their ids in the request.
 
@@ -728,7 +939,7 @@ import { ApexClient } from 'macrocosmos';
 // Initialize the client
 const client = new ApexClient({ apiKey: 'your-api-key' });
 
-// Delete a chat
+// Delete chats
 const result = await client.deleteChat({
   chatIds: ["chat-id-1", "chat-id-2"],
 });
@@ -775,7 +986,7 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 {% endtab %}
 {% endtabs %}
 
-### Delete a completion
+### Delete completions  (Coming Soon)
 
 Delete one or more completions by specifying their ids in the request.
 
@@ -787,7 +998,7 @@ import { ApexClient } from 'macrocosmos';
 // Initialize the client
 const client = new ApexClient({ apiKey: 'your-api-key' });
 
-// Delete a completion
+// Delete completions
 const result = await client.deleteCompletions({
   completionIds: ["completion-id-1", "completion-id-2"],
 });
@@ -834,7 +1045,7 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 {% endtab %}
 {% endtabs %}
 
-### Create Completion
+### Create Completion  (Coming Soon)
 
 Create a completion and append it to an existing chat. For this request, you'll need the unique chat id to which you want to append this completion along with the prompt and completion type.&#x20;
 
