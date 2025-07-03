@@ -1062,7 +1062,7 @@ const client = new ApexClient({ apiKey: 'your-api-key' });
 
 // Delete completions
 const result = await client.UpdateCompletionAttributes({
-  completionId: create_chat_result.parsedCompletion?.id ?? "",
+  completionId: "completion-id",
   completionText: "Updated completion text",
     metadata: {
       fancy_key: "fancy_value",
