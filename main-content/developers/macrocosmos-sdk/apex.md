@@ -840,7 +840,9 @@ import { ApexClient } from 'macrocosmos';
 const client = new ApexClient({ apiKey: 'your-api-key' });
 
 // Create a chat and completion
-const result = await client.getChatSessions();
+const result = await client.getChatSessions({
+  chatType: "apex",
+});
 ```
 {% endtab %}
 
@@ -848,20 +850,26 @@ const result = await client.getChatSessions();
 ```bash
 curl -H "Authorization: Bearer your-api-key" \
   -H "Content-Type: application/json" \
-  -d '{}' \
-  -X POST https://constellation.api.cloud.macrocosmos.ai/apex.v1.ApexService/GetChatSessions 
+  -d '{"chat_type": "apex"}' \
+  -X POST https://constellation.api.cloud.macrocosmos.ai/apex.v1.ApexService/GetChatSessions
 ```
 {% endtab %}
 
 {% tab title="Constellation API: grpcurl" %}
 ```bash
 grpcurl -H "Authorization: Bearer your-api-key" \
-  -d '{}' \
+  -d '{"chat_type": "apex"}' \
   constellation.api.cloud.macrocosmos.ai:443 \
   apex.v1.ApexService/GetChatSessions
 ```
 {% endtab %}
 {% endtabs %}
+
+#### Body&#x20;
+
+| Name        | Type     | Description                          |
+| ----------- | -------- | ------------------------------------ |
+| `chat_type` | `string` | Type of chat (e.g. `apex` `gravity`) |
 
 #### Response
 
