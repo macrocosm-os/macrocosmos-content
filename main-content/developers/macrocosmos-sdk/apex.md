@@ -8,6 +8,8 @@ description: >-
 
 ## Quickstart
 
+[Get started guide](installation.md)
+
 Use `ApexClient` to send prompts to open-source language models like LLaMA and Mistral, or perform web-augmented completions using subnet-based retrieval.
 
 {% tabs %}
@@ -24,11 +26,104 @@ npm install macrocosmos
 {% endtab %}
 {% endtabs %}
 
-Macrocosmos SDK should be version 1.0.4+
+Macrocosmos SDK should be version 1.0.5+
+
+For upgrade use
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+pip install macrocosmos==1.0.5
+```
+{% endtab %}
+{% endtabs %}
 
 ### Demo Video
 
 {% embed url="https://drive.google.com/file/d/1FByuBrSuPmfPX2ggecpcWkfY_95G6Gvm/view?usp=drive_link" %}
+
+
+
+### Stored Chat Completions&#x20;
+
+Retrieve completions of a chat given a chat id.
+
+{% tabs %}
+{% tab title="Typescript" %}
+```typescript
+import { ApexClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new ApexClient({ apiKey: 'your-api-key' });
+
+// Chat completions
+const response = await client.chat.completions.create({
+  messages: [
+    { role: 'user', content: 'Write a short story about a cosmonaut learning to paint.' }
+    ],
+});
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a short story about a cosmonaut learning to paint."
+      }
+    ],
+    "sampling_parameters": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_new_tokens": 256,
+      "do_sample": true
+    }
+  }' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  apex.v1.ApexService/ChatCompletion
+```
+{% endtab %}
+{% endtabs %}
+
+
+
+**Body**
+
+| Name       | Type   | Description                                            |
+| ---------- | ------ | ------------------------------------------------------ |
+| `messages` | string | A list of messages in chat format (`role`, `content`). |
+
+**Response**
+
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+ id: "bdb39416-aac3-45b5-af90-c40197ff819b"
+choices {
+  finish_reason: "stop"
+  message {
+    content: "**The Starlight Brush**\n\nAs the Soyuz spacecraft soared through the cosmos, Cosmonaut Sergei gazed out the window at the endless expanse of stars. The weightlessness of space made his body feel free, but his mind was trapped in a world of calculations and routine checks. He longed for a creative outlet, something to express the beauty he witnessed every day.\n\nOne evening, while reviewing the ship\'s inventory, Sergei stumbled upon a forgotten art kit. The box was dusty, but the paints and brushes inside seemed untouched. He couldn\'t resist the urge to try. As he floated in front of the window, he dipped a brush into a vibrant shade of blue and began to paint.\n\nAt first, the strokes were clumsy, and the colors clashed. Sergei\'s lack of experience showed in every splatter. But he persisted, entranced by the way the paint danced in mid-air. With each passing day, his skills improved, and his art took on a life of its own.\n\nSergei\'s crewmates, Anatoly and Elena, were amazed by his transformation. They\'d never seen him so carefree, lost in the world of art. As they floated around him, they\'d offer words of encouragement, and Sergei would share his latest creations. The spacecraft became a studio, with canvases attached to the walls and paint-splattered brushes drifting through the air.\n\nOne night, as the stars aligned in a perfect crescent, Sergei set out to capture their beauty on canvas. He mixed shades of gold, silver, and purple, creating a palette that shimmered like the cosmos. The brushstrokes flowed effortlessly, as if guided by the celestial bodies themselves. When he finished, the painting glowed with an otherworldly light.\n\nAnatoly and Elena gasped as they beheld the masterpiece. \"Sergei, this is incredible!\" Anatoly exclaimed. Elena nodded, her eyes shining with tears. \"You\'ve captured the essence of our journey.\"\n\nThe painting, titled \"Stellar Odyssey,\" became a symbol of the crew\'s shared experience. As they gazed at the stars, they saw not just a sea of light, but a universe of possibility. Sergei\'s art had unlocked a new dimension, one that transcended the boundaries of space and time.\n\nWhen the Soyuz returned to Earth, Sergei\'s paintings were met with acclaim. The cosmonaut-turned-artist had discovered a new way to share the beauty of the cosmos with the world. As he looked up at the night sky, now a reminder of his time in space, Sergei smiled, knowing that the stars would forever be his muse.\n\n---\n\nI hope you enjoyed this short story about a cosmonaut learning to paint."
+    role: "assistant"
+  }
+}
+created: 1743701513
+object: "chat.completion"
+}
+```
+{% endtab %}
+
+{% tab title="400" %}
+```json
+{
+  "error": "Invalid request"
+}
+```
+{% endtab %}
+{% endtabs %}
 
 
 
