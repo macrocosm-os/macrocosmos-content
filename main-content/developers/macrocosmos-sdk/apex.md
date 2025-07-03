@@ -1045,6 +1045,85 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 {% endtab %}
 {% endtabs %}
 
+### Update Completion Attributes  (Coming Soon)
+
+Update the attributes of a completion. The attributes that can be updated are the following:
+
+1. `completionText`
+2. `metadata`
+
+{% tabs %}
+{% tab title="Typescript" %}
+```typescript
+import { ApexClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new ApexClient({ apiKey: 'your-api-key' });
+
+// Delete completions
+const result = await client.UpdateCompletionAttributes({
+  completionId: create_chat_result.parsedCompletion?.id ?? "",
+  completionText: "Updated completion text",
+    metadata: {
+      fancy_key: "fancy_value",
+    },
+});
+```
+{% endtab %}
+
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+ -d '{"completion_id": "completion-id", "completion_text": "Updated completion text", "metadata": {"fancy_key": "fancy_value"}}' \
+ -X POST https://constellation.api.cloud.macrocosmos.ai \
+/apex.v1.ApexService/UpdateCompletionAttributes
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+ -d '{"completion_id": "completion-id", "completion_text": "Updated completion text", "metadata": {"fancy_key": "fancy_value"}}' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  apex.v1.ApexService/UpdateCompletionAttributes
+```
+{% endtab %}
+{% endtabs %}
+
+
+
+**Body**
+
+| Name              | Type     | Description                                   |
+| ----------------- | -------- | --------------------------------------------- |
+| `completion_id`   | `string` | Unique completion identifier                  |
+| `completion_text` | `string` | Completion text                               |
+| `metadata`        | `map`    | Key values pairs representing metadata values |
+
+**Response**
+
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+  "completion": {
+    "id": "59b1dad7-275f-4e13-a625-21dfeb5871a4",
+    "chatId": "29382c46-16c8-472b-972d-81e080f463a6",
+    "completionType": "chain-of-thought",
+    "createdAt": "2025-07-03T08:53:24.931167Z",
+    "completedAt": "2025-07-03T08:53:24.931167Z",
+    "userPromptText": "Initial test prompt",
+    "completionText": "Updated completion text",
+    "metadata": {
+      "fancy_key": "fancy_value"
+    }
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
 ### Create Completion  (Coming Soon)
 
 Create a completion and append it to an existing chat. For this request, you'll need the unique chat id to which you want to append this completion along with the prompt and completion type.&#x20;
