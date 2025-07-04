@@ -1157,7 +1157,8 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 Update the attributes of a completion. The attributes that can be updated are the following:
 
 1. `completionText`
-2. `metadata`
+2. `metadata`&#x20;
+3. `userPromptText`
 
 {% tabs %}
 {% tab title="Typescript" %}
@@ -1171,6 +1172,7 @@ const client = new ApexClient({ apiKey: 'your-api-key' });
 const result = await client.UpdateCompletionAttributes({
   completionId: "completion-id",
   completionText: "Updated completion text",
+  userPromptText: "Updated user prompt text",
     metadata: {
       fancy_key: "fancy_value",
     },
@@ -1182,7 +1184,7 @@ const result = await client.UpdateCompletionAttributes({
 ```bash
 curl -H "Authorization: Bearer your-api-key" \
   -H "Content-Type: application/json" \
- -d '{"completion_id": "completion-id", "completion_text": "Updated completion text", "metadata": {"fancy_key": "fancy_value"}}' \
+ -d '{"completion_id": "completion-id",   user_prompt_text: "Updated user prompt text", "completion_text": "Updated completion text", "metadata": {"fancy_key": "fancy_value"}}' \
  -X POST https://constellation.api.cloud.macrocosmos.ai \
 /apex.v1.ApexService/UpdateCompletionAttributes
 ```
@@ -1191,7 +1193,7 @@ curl -H "Authorization: Bearer your-api-key" \
 {% tab title="Constellation API: grpcurl" %}
 ```bash
 grpcurl -H "Authorization: Bearer your-api-key" \
- -d '{"completion_id": "completion-id", "completion_text": "Updated completion text", "metadata": {"fancy_key": "fancy_value"}}' \
+ -d '{"completion_id": "completion-id", user_prompt_text: "Updated user prompt text", "completion_text": "Updated completion text", "metadata": {"fancy_key": "fancy_value"}}' \
   constellation.api.cloud.macrocosmos.ai:443 \
   apex.v1.ApexService/UpdateCompletionAttributes
 ```
@@ -1202,11 +1204,12 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 
 **Body**
 
-| Name              | Type     | Description                                   |
-| ----------------- | -------- | --------------------------------------------- |
-| `completion_id`   | `string` | Unique completion identifier                  |
-| `completion_text` | `string` | Completion text                               |
-| `metadata`        | `map`    | Key values pairs representing metadata values |
+| Name               | Type     | Description                                   |
+| ------------------ | -------- | --------------------------------------------- |
+| `completion_id`    | `string` | Unique completion identifier                  |
+| `completion_text`  | `string` | Completion text                               |
+| `metadata`         | `map`    | Key values pairs representing metadata values |
+| `user_prompt_text` | `string` | Prompt text                                   |
 
 **Response**
 
