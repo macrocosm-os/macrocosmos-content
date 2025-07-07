@@ -1304,6 +1304,73 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 {% endtab %}
 {% endtabs %}
 
+### Get a Stored Chat Completion (Coming Soon)
+
+Given a completion id, this endpoint and the corresponding client retrieve the completion.&#x20;
+
+{% tabs %}
+{% tab title="Typescript" %}
+```typescript
+import { ApexClient } from 'macrocosmos';
+
+// Initialize the client
+const client = new ApexClient({ apiKey: 'your-api-key' });
+
+// Get a stored chat completion
+const result = await client.getChatCompletion({
+  completionId: "completion-id",
+});
+```
+{% endtab %}
+
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "completion_id": "a-completion-id"
+  }' \
+  https://constellation.api.cloud.macrocosmos.ai\
+/apex.v1.ApexService/GetChatCompletion
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{"completion_id": "a-completion-id"}' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  apex.v1.ApexService/GetChatCompletion
+```
+{% endtab %}
+{% endtabs %}
+
+
+
+**Body**
+
+| Name            | Type     | Description              |
+| --------------- | -------- | ------------------------ |
+| `completion_id` | `string` | The id of the completion |
+
+**Response**
+
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+  "id": "de739811-3db8-45d4-aae3-825b95d64316",
+  "chatId": "cce5cf44-cac0-4d99-99a9-ea16f3f1d91c",
+  "completionType": "basic",
+  "createdAt": "2025-07-07T10:24:48.938725Z",
+  "completedAt": "2025-07-07T10:24:48.938725Z",
+  "userPromptText": "This is a test chat, how are you?",
+  "metadata": {}
+}
+```
+{% endtab %}
+{% endtabs %}
+
 ### Get Stored Chat Completions (Coming Soon)
 
 Get the stored chat completions for the given chat. The input to this endpoint is a unique chat id.
