@@ -14,10 +14,6 @@ Before working with subnet 13, you should familiarize yourself with the [Bittens
 
 * [Validator Setup Guide](https://github.com/macrocosm-os/data-universe/blob/main/docs/validator.md) – learn how to set up a validator
 
-### API Documentation
-
-* Access Data Universe social media scraping endpoints (X, Youtube & Reddit) and developer tutorials - [api-documentation](../../developers/api-documentation/ "mention")
-
 ### Integrate via the SDK
 
 * Use the [..](../../ "mention") to plug into Subnet 13 directly
