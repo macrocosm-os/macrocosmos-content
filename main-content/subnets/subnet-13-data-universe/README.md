@@ -2,7 +2,7 @@
 description: Bittensor absorbs the most data
 ---
 
-# Subnet 13 - Data Universe
+# Subnet 13 Data Universe
 
 ## What is SN13 — Data Universe
 
@@ -55,7 +55,7 @@ The **Gravity subnet (SN13)** specializes in decentralized web scraping and data
 Using the `GravityClient` in the **Macrocosmos SDK**, you can easily launch scraping tasks and get structured datasets built by miners.\
 
 
-**You'll also need an API key. Visit** [api-documentation](../../developers/api-documentation/ "mention") to get started.
+**You'll also need an API key. Visit** [**Subnet Gravity API**](../../developers/macrocosmos-sdk/gravity.md) to get started.
 
 
 
