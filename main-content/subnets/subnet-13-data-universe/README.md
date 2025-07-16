@@ -55,7 +55,7 @@ The **Gravity subnet (SN13)** specializes in decentralized web scraping and data
 Using the `GravityClient` in the **Macrocosmos SDK**, you can easily launch scraping tasks and get structured datasets built by miners.\
 
 
-**You'll also need an API key. Visit** [**Subnet Gravity API**](../../developers/macrocosmos-sdk/gravity.md) to get started.
+**You'll also need an API key. Visit** [**Subnet 13 Gravity API**](../../developers/macrocosmos-sdk/gravity.md) to get started.
 
 
 
