@@ -16,7 +16,6 @@
     * [Supported Models](developers/api-documentation/sn1-apex/supported-models.md)
   * [SN13 - Data Universe](developers/api-documentation/sn13-data-universe/README.md)
     * [Endpoints](developers/api-documentation/sn13-data-universe/endpoints.md)
-    * [Example usage](developers/api-documentation/sn13-data-universe/example-usage.md)
     * [API Key management](developers/api-documentation/sn13-data-universe/api-key-management.md)
     * [Scraping Youtube Data](developers/api-documentation/sn13-data-universe/scraping-youtube-data.md)
 * [Tools](developers/tools/README.md)
