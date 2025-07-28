@@ -679,9 +679,11 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 {% endtab %}
 {% endtabs %}
 
-### OnDemandData API
+### Streaming API ( On Demand Data API)
 
-Run precise, real-time queries using the synchronous `Sn13Client` to query historical or current data based on users, keywords, and time range on platforms like X (Twitter) and Reddit.
+Run precise, real-time queries using the synchronous `Sn13Client` to query historical or current data based on users, keywords, and time range on platforms like X (Twitter) and Reddit.&#x20;
+
+The Streaming API is limited to the last 30 days time period and 1000 posts per request.
 
 {% tabs %}
 {% tab title="Typescript" %}
