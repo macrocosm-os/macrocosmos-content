@@ -59,8 +59,9 @@ npm install macrocosmos==1.2.24
 
 ### Create a task for Data Collection
 
-Each task gets registered on the network. Miners begin work right away. The task stays live for 7 days. After that, the dataset gets built automatically. You’ll get an email with a download link.\
-Use any email you like.
+The task after the launch gets registered on the network within 20 min. The data is starting to be collected and delivered by miners from the moment of the registration on the Blockchain. The task stays live for 7 days to allow the most data to be collected. After that, the dataset gets built automatically. If you provided an email you’ll get a notification with a download link.&#x20;
+
+To check the status of the task and the amount of data collected at any time use the endpoint [**Get status of the task**](gravity.md#get-status-of-task)**.** To start building the dataset prior the 7 days completion, use the endpoint [**Build dataset**](gravity.md#build-dataset).
 
 {% tabs %}
 {% tab title="Typescript" %}
@@ -200,6 +201,8 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 
 ### Get status of task
 
+To check the status of the task and the amount of data collected at any time use the endpoint Get status of the task.
+
 If you wish to get further information about the crawlers, you can use the `include_crawlers` flag or make separate `GetCrawler()` calls since returning in bulk can be slow.
 
 {% tabs %}
@@ -304,7 +307,7 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 
 ### Build dataset&#x20;
 
-No need to wait 7 days. You can request your dataset early. Add a notification to get alerted when it's ready.&#x20;
+No need to wait 7 days until the task is complete. If you already got enough data, you can request your dataset early. Add a notification to get alerted when the dataset is built. Once built, the task gets completed and de-registered.
 
 {% tabs %}
 {% tab title="TypeScript" %}
@@ -427,7 +430,7 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 
 ### Get status of a build
 
-Watch your dataset build with `GetDataset()`. Once built, the task gets de-registered.&#x20;
+Watch your dataset build with `GetDataset()`. Once built, the task gets completed and de-registered.&#x20;
 
 {% tabs %}
 {% tab title="TypeScript" %}
