@@ -10,7 +10,7 @@ The IOTA incentive mechanism continuously scores miners on the quality of their 
 
 ### Joining the network
 
-Miners join the network and get registered with the orchestrator using their API client, which assigns them to a training layer. Then, they download the current global weights for their layer and begin processing activations.
+Miners join the network and get registered with the orchestrator, which assigns them to a training layer. Then, they download the current global weights for their layer and begin processing activations.
 
 ### Activations
 
