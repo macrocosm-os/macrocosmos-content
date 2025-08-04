@@ -70,7 +70,7 @@ To start setting up the miner on IOTA requires:
 * Bittensor wallet - [set up instructions](https://docs.bittensor.com/working-with-keys)
 * Training infrastructure:\
   Miners must run on GPUs with at least 80 GB of VRAM (A100-class or higher); hardware with less memory will process updates more slowly and consequently may earn markedly lower rewards.
-* Basic HuggingFace Access token to pull the model from HuggingFace - no need to modify the permissions
+* Basic [HuggingFace Access token](https://huggingface.co/docs/hub/en/security-tokens) to pull the model.
 
 ### Installation
 
