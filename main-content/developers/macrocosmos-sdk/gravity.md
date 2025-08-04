@@ -685,6 +685,11 @@ Run precise, real-time queries using the synchronous `Sn13Client` to query histo
 
 The Streaming API is limited to the last 30 days time period and 1000 posts per request.
 
+As of data-universe release [v1.9.75](https://github.com/macrocosm-os/data-universe/releases/tag/v1.9.75):
+
+* All keywords in an `OnDemandData` request will be present in the returned post/comment data.
+* For Reddit requests, the first keyword in the list corresponds to the requested subreddit, and subsequent keywords are treated as normal.
+
 {% tabs %}
 {% tab title="Typescript" %}
 ```typescript
