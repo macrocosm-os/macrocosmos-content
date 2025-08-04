@@ -1,14 +1,10 @@
-# Subnet 9 Mining Setup Guide
+# Mining
 
 ## Introduction
 
-IOTA (Incentivized Orchestrated Training Architecture) is a data- and pipeline-parallel training algorithm designed to operate on a network of heterogeneous, unreliable devices in adversarial and trustless environments.&#x20;
+In IOTA miners are the workers that supply GPU compute, memory, and bandwidth to collaboratively train models. Our architecture uses data- and pipeline-parallelism, meaning that miners run sections of the model rather than its entirety, which greatly reduces the hardware requirement for participation. Each miner downloads its assigned section of the model, runs forwards and backward passes of activations and periodically sync their weights with peers in the same layer via a merging process. By distributing workloads across a large number of independent miners, the network achieves massive parallelism, fault tolerance, and censorship resistance while eliminating single-point infrastructure costs.&#x20;
 
-## Miners purpose in IOTA
-
-In a decentralized LLM-training network, miners are the workers that supply GPU compute, memory, and bandwidth to collaboratively train models. IOTA utilizes data- and pipeline-parallelism, meaning that miners run sections of the model rather than its entirety. This reduces the hardware requirement for participation. Each miner downloads its assigned section of the model, runs forwards and backward passes of activations and periodically sync their weights with peers in the same layer via a merging process. By distributing workloads across a large number of independent miners, the network achieves massive parallelism, fault tolerance, and censorship resistance while eliminating single-point infrastructure costs.&#x20;
-
-The IOTA incentive mechanism continuously scores miners on throughput and the quality of their work during the training and merging processes. In turn, they are rewarded with subnet 9 alpha tokens based on the quality of their contributions.
+The IOTA incentive mechanism continuously scores miners on the quality of their contributions, and rewards them with subnet 9 alpha tokens.
 
 ## Operations explained
 

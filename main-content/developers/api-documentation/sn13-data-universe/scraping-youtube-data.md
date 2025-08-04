@@ -129,12 +129,10 @@ Downloads transcript to local machine
 
 **Body (JSON)**
 
-| Name      | Details                                                         | Description                |
-| --------- | --------------------------------------------------------------- | -------------------------- |
-| video\_id | <p></p><pre><code>{
+<table><thead><tr><th>Name</th><th>Details</th><th>Description</th></tr></thead><tbody><tr><td>video_id</td><td><p></p><pre><code>{
   "video_id": "UH_sOZSIk10"
 }
-</code></pre> | video id of youtube video  |
+</code></pre></td><td>video id of youtube video </td></tr></tbody></table>
 
 **Response**
 
@@ -174,13 +172,11 @@ Scrapes random videos , allowing you specify the total number of videos you'd li
 
 **Body (JSON)**
 
-| Name         | Details                                                                                                                                                   | Description         |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| `channel_id` | <p></p><pre class="language-postman_json"><code class="lang-postman_json">{
+<table><thead><tr><th>Name</th><th>Details</th><th>Description</th></tr></thead><tbody><tr><td><code>channel_id</code></td><td><p></p><pre class="language-postman_json"><code class="lang-postman_json">{
   "channel_id": "UC92OMuTHmkrk0Crz5Xqi-5w",
   "max_videos": 3
 }
-</code></pre> | Youtube Channel ID  |
+</code></pre></td><td>Youtube Channel ID </td></tr></tbody></table>
 
 **Response**
 
