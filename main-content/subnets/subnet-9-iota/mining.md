@@ -65,105 +65,48 @@ If you have any questions, not covered in the instruction or facing issues with 
 
 ### Prerequisites
 
-To start setting up the miner on IOTA requires:
+To setup a miner on IOTA you will need the following:
 
 * [Bittensor wallet](https://docs.bittensor.com/working-with-keys).
 * Minimum training infrastructure: CUDA GPU with 8GB of VRAM (e.g. RTX-4080 class or higher) and Ubuntu 22.04 (Jammy)
 * Basic [HuggingFace Access token](https://huggingface.co/docs/hub/en/security-tokens) to pull the model.
 
-### Installation
+### Installation&#x20;
 
-1.  Provide the files executable rights to run on your local machine
+To-do: test on fresh install
+
+1.  Download the IOTA repository and setup your environment.
 
     ```python
-    # Provide the files executable rights to run on your local machine
-    cd .ssh
-    vim id_rsa
-    chmod 0400 ~/.ssh/id_rsa
-
     #Clone the repository
-    cd workspace
     git clone https://github.com/macrocosm-os/IOTA.git
     cd IOTA
-    bash
 
-    #Check uv version
-    uv –version
-
-    #Install dependencies
-    cd IOTA
+    # Assuming a new .venv is needed
+    uv venv
+    source .venv/bin/activate
     uv sync
 
-    #Install bittensor cli
-    pip install bittensor-cli
 
-    #Optional - update the bittensor-cli, if a new version is available
-    python -m pip install --upgrade pip
     ```
+2.  Register your miner.
 
-### Bittensor Wallet Registraton
+    ```bash
+    # Activate virtual environment if needed
+    source .venv/bin/activate
 
-```python
-# Regenerate the coldkey: create a name of the wallet = coldkey name and provide your Bittensor Wallet mnemonic key.
-btcli w regen_coldkey
+    # Register on mainnet (finney)
+    btcli s register --netuid 9 --wallet.name [your_wallet_name] --wallet.hotkey [your_wallet_hotkey]
+    ```
+3.  Make sure that your `.env` file contains all necessary variables.
 
-# Regenerate the hotkey: Provide your wallet (just created coldkey name) and create a name of the hotkey (do not insert your actual key symbolic combination).
-btcli w regen_hotkey
+    ```
+    To Do
+    ```
+4.  Launch your miner
 
-#Check your wallets balance
-btcli wallets balance
-```
-
-### Miner Registration and Launch
-
-#### Register on Mainnet
-
-```python
-# Activate virtual environment
-source .venv/bin/activate
-
-# Register on the mainnet (finney)
-btcli s register --netuid 9 --wallet.name [wallet_name] --wallet.hotkey [wallet.hotkey]
-```
-
-**Change miner values, where necessary, and copy them:**
-
-wallet\_name="wallet\_name" #change the wallet\_name to your wallet name (coldkey name)
-
-wallet\_hotkey="wallet\_hotkey" #change the wallet\_hotkey to your hotkey name
-
-netuid=9
-
-network="finney"
-
-MOCK=False
-
-BITTENSOR=True
-
-HF\_TOKEN="hf\_token" #change to your HuggingFace Access token
-
-ORCHESTRATOR\_HOST="iota.api.macrocosmos.ai"
-
-ORCHESTRATOR\_PORT=443
-
-ORCHESTRATOR\_SCHEME=https
-
-```python
-#Edit miners file with required values
-vim .env
-
-# For Terminal - use a key combination to paste the miner values: Ctrl + Shift + V (Cmd + V)
-:wq
-
-#For the UI enabled tools just change the values in the miner's .env file
-
-#Launch the miner
-source .venv/bin/activate
-python launch_miner.py
-```
-
-Expected output:
-
-<figure><img src="../../.gitbook/assets/Screenshot 2025-06-01 at 20.22.01.png" alt=""><figcaption></figcaption></figure>
+    ```
+    To Do
+    ```
 
 🎉Welcome to the Cosmos!
