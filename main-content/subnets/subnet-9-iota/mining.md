@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In IOTA miners are the workers that supply GPU compute, memory, and bandwidth to collaboratively train models. Our architecture uses data- and pipeline-parallelism, meaning that miners run sections of the model rather than its entirety, which greatly reduces the hardware requirement for participation. Each miner downloads its assigned section of the model, runs forwards and backward passes of activations and periodically sync their weights with peers in the same layer via a merging process. By distributing workloads across a large number of independent miners, the network achieves massive parallelism, fault tolerance, and censorship resistance while eliminating single-point infrastructure costs.&#x20;
+In IOTA, miners are the workers that supply GPU compute, memory, and bandwidth to collaboratively train models. Our architecture uses data- and pipeline-parallelism, meaning that miners run sections of the model rather than its entirety, which greatly reduces the hardware requirement for participation. Each miner downloads its assigned section of the model, runs forwards and backward passes of activations and periodically sync their weights with peers in the same layer via a merging process. By distributing workloads across a large number of independent miners, the network achieves massive parallelism, fault tolerance, and censorship resistance while eliminating single-point infrastructure costs.&#x20;
 
 The IOTA incentive mechanism continuously scores miners on the quality of their contributions, and rewards them with subnet 9 alpha tokens.
 
@@ -17,7 +17,7 @@ Miners join the network and get registered with the orchestrator using their API
 There are two activation types: forward and backward.
 
 * Forwards activations propagate samples through the model to produce losses.
-* Backwards activations propagate the samples in the opposite direction to produce gradients for training their layer weights.
+* Backwards activations propagate learning signals in the opposite direction, allowing the entire network to adjust its parameters.
 
 Backwards activations are given precedence over forwards activations as they provide the learning signal.
 
