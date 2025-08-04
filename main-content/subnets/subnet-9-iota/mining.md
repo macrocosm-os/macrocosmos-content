@@ -10,20 +10,16 @@ The IOTA incentive mechanism continuously scores miners on the quality of their 
 
 ### Joining the network
 
-Miners join the network and get registered with the orchestrator using their API client, which assigns them to a training layer. Up to 50 miners operate per layer. Miners download the current global weights for their layer and begin processing activations.
+Miners join the network and get registered with the orchestrator using their API client, which assigns them to a training layer. Then, they download the current global weights for their layer and begin processing activations.
 
 ### Activations
 
 There are two activation types: forward and backward.
 
-* Forwards activations propagate samples through the model to produce losses.
+* Forwards activations propagate samples through the model to produce a next-token prediction, which is fed to an evaluation function.
 * Backwards activations propagate learning signals in the opposite direction, allowing the entire network to adjust its parameters.
 
-Backwards activations are given precedence over forwards activations as they provide the learning signal.
-
-If a miner fails to process an activation that it has been assigned, it is penalized. This is like an assembly line, where workers pass between adjacent stages in the process. An important part of the design is that samples propagate through the pipeline in random and stochastic paths.
-
-Activation processing happens in all layers at once, but miners process samples and train asynchronously. Miners must process as many activations as possible in each epoch — their score is based on throughput.
+Miners must process as many activations as possible in each epoch — their score is based on throughput. If a miner fails to process an activation that it has been assigned, it is penalized.&#x20;
 
 ### Merging
 
@@ -52,9 +48,7 @@ Figure 1 Explanation - While inside the training loop, the miner is responsible 
 
 For the details on validating, please follow the link -> [Subnet 9 Validation](https://docs.macrocosmos.ai/subnets/subnet-9-pre-training/subnet-9-validating).
 
-## Setting Up Mining
-
-This section provides an instruction on the IOTA miner set up. The setting up process is described as a full flow, assuming use of the Terminal. Some operations should be adjusted, when using any UI dev tools for set up. At the bottom of the page you may find instructions on RunPod setup examples for the ones who are not familiar with infrastructure setup.
+## Setting Up a Miner
 
 Before working with subnet 9, you should familiarize yourself with the [Bittensor documentation](https://docs.bittensor.com/), describing the ecosystem and relationships between network participants.
 
