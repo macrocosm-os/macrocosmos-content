@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In IOTA, miners are the workers that supply GPU compute, memory, and bandwidth to collaboratively train models. Our architecture uses data- and pipeline-parallelism, meaning that miners run sections of the model rather than its entirety, which greatly reduces the hardware requirement for participation. Each miner downloads its assigned section of the model, runs forwards and backward passes of activations and periodically sync their weights with peers in the same layer via a merging process. By distributing workloads across a large number of independent miners, the network achieves massive parallelism and fault tolerance.
+In IOTA, miners are the workers that supply GPU compute, memory, and bandwidth to collaboratively train models. Our architecture uses data- and pipeline-parallelism, meaning that miners run sections of the model rather than its entirety, which reduces the hardware requirement for participation. Each miner downloads its assigned section of the model, runs forwards and backward passes of activations and periodically sync their weights with peers in the same layer via a merging process. By distributing workloads across a large number of independent miners, the network achieves massive parallelism and fault tolerance.
 
-The IOTA incentive mechanism continuously scores miners on the quality of their contributions, and rewards them with subnet 9 alpha tokens.
+The IOTA incentive mechanism continuously scores miners on the quality of their contributions, and rewards them with IOTA alpha tokens.
 
 ## Operations explained
 
