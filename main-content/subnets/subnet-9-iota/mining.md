@@ -6,7 +6,7 @@ In IOTA, miners are the workers that supply GPU compute, memory, and bandwidth t
 
 The IOTA incentive mechanism continuously scores miners on the quality of their contributions, and rewards them with IOTA alpha tokens.
 
-## Operations explained
+## Operations
 
 ### Joining the network
 
@@ -50,9 +50,9 @@ For the details on validating, please follow the link -> [Subnet 9 Validation](h
 
 ## Setting Up a Miner
 
-Before working with subnet 9, you should familiarize yourself with the [Bittensor documentation](https://docs.bittensor.com/), describing the ecosystem and relationships between network participants.
+Before contributing to IOTA, you should familiarize yourself with the [Bittensor documentation](https://docs.bittensor.com/) to better understand the ecosystem and the relationships between network participants.
 
-If you have any questions, not covered in the instruction or facing issues with installation, reach us out for support in:
+If you have any questions not covered here, reach out for support in:
 
 * ​[Macrocosmos Discord](https://discord.com/channels/1238450997848707082)
 * [Bittensor Discord](https://discord.com/channels/799672011265015819/1162768567821930597)
