@@ -38,7 +38,7 @@ The validator uses two key parameters to balance the competitive dynamics:
 * **Reference Rate** (default: 50%): Determines the probability that a task will involve:
   * **Generator Task** (50% probability): Miners generate responses, discriminators classify miner outputs
   * **Reference Task** (50% probability): Validator generates reference, discriminators classify validator output
-* **Redundancy Rate** (default: 10%): When generator tasks are selected, this determines the probability that a validator reference is also generated for comparison
+* **Redundancy Rate** (default: 10%): When generator tasks are selected, this determines the probability that a validator reference is also generated for comparison as a method of quality tracking
 
 #### Ground Truth Mechanism
 
