@@ -7,184 +7,170 @@ description: >-
 
 # Subnet 1 Mining Setup Guide
 
-### ⚠️ Disclaimer
+## Miner Documentation
 
-> **Do not run this miner on mainnet.**
->
-> The base miner is solely for educational and testing purposes. Running this miner on mainnet will not yield any rewards. Any expenses incurred during registration or infrastructure setup will not be reimbursed
+### Overview
 
-#### 🖥️ Compute Requirements
+The Apex Miner is a minimalistic implementation designed for educational purposes within the Bittensor network. It provides both **generator** and **discriminator** functionality for the Apex subnet.
 
-* **VRAM:** None
-* **vCPU:** 8 cores
-* **RAM:** 8 GB
-* **Storage:** 80 GB
-* Set up your testnet [Bittensor Wallet ](https://docs.bittensor.com/working-with-keys)
-* testTAO - please reach out in the Bittensor discord to acquire some&#x20;
-* **Python version 3.11** (the miner fails on Python < 3.10)
+> ⚠️ **WARNING**: This is a dummy miner implementation. Do not run it on mainnet as it won't produce any yields and the registration fee will be lost.
 
+### Architecture
 
+#### Core Components
 
-#### Installation&#x20;
+1. **HTTP Server**: Uses aiohttp to serve requests on `/v1/chat/completions` endpoint
+2. **Bittensor Integration**: Connects to Bittensor network using subtensor and wallet
+3. **Dual Functionality**: Acts as both generator and discriminator
 
-1. **Clone the Repository:**
+#### Network Configuration
 
-```bash
-git clone https://github.com/macrocosm-os/prompting.git
-cd prompting
-```
+* **Testnet**: NetUID 61
+* **Mainnet**: NetUID 1 (not recommended for this dummy implementation)
 
+### Functionality
 
+#### Generator Mode
 
-2. **Run the Installation Script:**
+When `step` parameter equals `"generator"`:
 
-Giving the files executable rights to run on your local machine
-
-```bash
-chmod +x scripts/install.sh
-sudo ./scripts/install.sh
-```
-
-
-
-**Installation Dependencies**
-
-Incase the install script doesn’t cover all Python dependencies. You’ll likely need to run:
-
-```bash
-pip3.11 install pydantic-settings loguru python-dotenv httpx vllm trafilatura lxml_html_clean duckduckgo-search substrateinterface
-```
-
-
-
-Before running the miner, you need to set up miner environment variables
-
-Configure \`.env.miner\` file&#x20;
-
-1. **Create a `.env.miner` File:**
-
-Note: This would most likely be hidden , search out hidden files from your cli to locate this&#x20;
-
-```bash
-cp .env.miner.example .env.miner
-```
-
-
-
-2. **Edit `.env.miner` with Appropriate Values:**
-
-```ini
-# Network UID (e.g., 61 for testnet)
-NETUID=61
-
-# Network name: test, main, or local
-SUBTENSOR_NETWORK=test
-
-# Chain endpoint (set to None for testnet)
-SUBTENSOR_CHAIN_ENDPOINT=None
-
-# Wallet (coldkey) name
-WALLET_NAME=your_wallet_name
-
-# Hotkey name associated with the wallet
-HOTKEY=your_hotkey_name
-
-# Open port for network connections
-AXON_PORT=12345
-
-# OpenAI API key (required for OpenAI test miner)
-OPENAI_API_KEY=your_openai_api_key
-```
-
-Fill in the appropriate details e.g wallet name , hot key and port (so that validators can connect) _Ensure that the wallet and hotkey are properly registered on the testnet._
-
-
-
-#### ⚙️ Running the Miner
-
-After configuring your environment variables, start the miner using the following command:​
-
-```bash
-python neurons/miners/epistula_miner/miner.py
-```
-
-
-
-### Base Miner Functionalities
-
-The SN1 base miner is designed to handle two primary tasks: Web Retrieval and Inference.
-
-**1. Web Retrieval (`stream_web_retrieval`)**
-
-The miner receives a query from validators, such as "What is the biggest event in 2025?" The miner's responsibility is to search the web for relevant information that answers this query.​
-
-The process involves:​
-
-* Searching for websites that contain information pertinent to the query.
-* Extracting the content and identifying the most relevant section that answers the question.
-* Formatting the results into a structured response.​
-
-The implementation is located in `neurons/miners/epistula_miner/web_retrieval.py`. The function returns a list of dictionaries containing:​
-
-* `url`: The website URL.
-* `content`: The full text content of the page.
-* `relevant`: A concise excerpt that directly answers the query.​
+* Receives a query in the request body
+* Returns a generation response
+* The miner should try to match the validator's reference as close as possible, within a much shorter time.
 
 ```python
-return [
-    {
-        "url": result["website"],
-        "content": result["text"],
-        "relevant": result["best_chunk"],
-    }
-    for result in top_k
-]
+# Current dummy implementation
+response = "This is a dummy generation from the base miner"
 ```
 
+#### Discriminator Mode
 
+When `step` parameter is not `"generator"`:
 
-**2. Inference Task (`run_inference`)**
-
-The Inference task involves utilizing a smaller version of the LLaMA model (`casperhansen/llama-3.2-3b-instruct-awq`) to perform language model inference.​
-
-The process includes:​
-
-* Receiving tasks directed to the `/v1/chat/completions` endpoint.
-* Determining the task type (e.g., inference or web retrieval).
-*   Invoking the appropriate method based on the task:​
-
-    ```python
-    if task == "inference":
-        self.create_inference_completion(request)
-    elif task == "web_retrieval":
-        self.web_retrieval_method(request)
-    ```
-
-The implementation is located in `neurons/miners/epistula_miner/miner.py`. The `self.llm` attribute loads the LLaMA 3B model.​
-
-_Note:_ The 3B model is suitable only for testnet but not for mainnet, where state-of-the-art models are prevalent, like: `mrfakename/mistral-small-3.1-24b-instruct-2503-hf`  and `hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4`&#x20;
-
-To check for the latest required models, go to:  [https://github.com/macrocosm-os/prompting/blob/main/shared/settings.py#L141](https://github.com/macrocosm-os/prompting/blob/main/shared/settings.py#L141)
-
-
-
-### Miner Availability Check
-
-Validators also assess miner availability for tasks. Miners indicate how suited they are by setting task availability flags:​
+* Receives query and generation in request body
+* Should classify the response (Miner class: 1, Validator class: 0)
 
 ```python
-task_response = {key: True for key in task_availabilities}
+# Current dummy implementation
+response = random.choice(["0", "1"])
 ```
 
-If a miner determines it is unsuitable for a task, it sets the corresponding flag to `False`. This ensures that tasks are assigned to miners best equipped to handle them.
+### Setup and Usage
 
+#### Prerequisites
 
+* Python environment with required dependencies
+* Bittensor wallet (coldkey and hotkey)
+  * To register a neuron, see [the documentation](https://docs.learnbittensor.org/miners/#miner-registration).
+* Network access for IP detection and subnet communication
 
-Relevant repository: [https://github.com/macrocosm-os/apex](https://github.com/macrocosm-os/apex)
+#### Command Line Arguments
 
+```bash
+python miner.py [OPTIONS]
+```
 
+| Argument    | Default  | Description                      |
+| ----------- | -------- | -------------------------------- |
+| `--network` | "test"   | Network type: "test" or "finney" |
+| `--coldkey` | Required | Coldkey name for wallet          |
+| `--hotkey`  | Required | Hotkey name for wallet           |
+| `--port`    | 8080     | Port to serve the miner on       |
 
-**Note: WSL Compatibility**
+#### Example Usage
 
-Installation also works smoothly on **WSL Ubuntu** with sufficient memory and space (16GB RAM, 60.2GB free disk space).&#x20;
+```bash
+# Run on testnet
+python miner.py --network test --coldkey my_coldkey --hotkey my_hotkey --port 8080
 
+# Run on finney (not recommended for dummy miner)
+python miner.py --network finney --coldkey my_coldkey --hotkey my_hotkey --port 8080
+```
+
+### Request Format
+
+The miner accepts POST requests to `/v1/chat/completions` with JSON body:
+
+#### Generator Request
+
+```json
+{
+  "step": "generator",
+  "query": "Your input query here"
+}
+```
+
+#### Discriminator Request
+
+```json
+{
+  "step": "discriminator",
+  "query": "Input query",
+  "generation": "Response to classify"
+}
+```
+
+### Miner Ecosystem
+
+#### Miner Sampling
+
+The validator system includes a `MinerSampler` class that:
+
+* Samples miners from the network metagraph
+* Supports random and sequential sampling modes
+* Queries multiple miners simultaneously
+* Tracks miner information (hotkey, UID, address)
+
+#### Scoring System
+
+The `MinerScorer` evaluates miner performance:
+
+* Uses a 22-hour scoring window
+* Sets weights based on performance
+* Updates scores periodically (every 22 hours by default)
+* Connects to results database for historical data
+
+### For Competition:
+
+#### Critical Implementation Needed
+
+1. **Generator Function**: Replace dummy response with actual text generation
+   * Implement proper language model or API integration
+   * Handle different types of queries appropriately
+2. **Discriminator Function**: Implement actual classification logic
+   * Develop criteria for miner vs validator classification
+   * Use query and generation context for accurate scoring
+
+### Security Considerations
+
+* **Mainnet Warning**: This implementation is not production-ready
+* **Registration Fees**: Running on mainnet will result in lost registration fees
+* **IP Exposure**: Miner IP is publicly registered on the network
+* **Wallet Security**: Protect coldkey and hotkey credentials
+
+### Integration Points
+
+#### Validator Integration
+
+* Validators query miners using the `/v1/chat/completions` endpoint
+* Results are used for miner scoring and weight setting
+* Performance data is logged to database
+
+#### Network Integration
+
+* Automatic IP detection using AWS checkip service
+* Subnet registration via Bittensor serve\_extrinsic
+* Protocol version 4 compliance
+
+### Troubleshooting
+
+#### Common Issues
+
+1. **Port Already in Use**: Change the `--port` parameter
+2. **Wallet Not Found**: Verify coldkey and hotkey names
+3. **Network Connection**: Check internet connectivity and firewall settings
+4. **Subnet Registration**: Ensure sufficient balance for registration fees
+
+***
+
+_This documentation covers the current dummy implementation. Refer to TODOs in the code for specific areas requiring development before production use._
