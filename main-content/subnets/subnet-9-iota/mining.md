@@ -63,24 +63,26 @@ To setup a miner on IOTA you will need the following:
 
 ### Installation&#x20;
 
-1.  Download the IOTA repository
+1. Download the IOTA repository
 
-    ```bash
-    #Clone the repository
-    git clone https://github.com/macrocosm-os/iota
-    cd iota
-    ```
-2.  Register your miner
+```bash
+#Clone the repository
+git clone https://github.com/macrocosm-os/iota
+cd iota
+```
 
-    ```bash
-    # Register on mainnet (finney)
-    btcli s register --netuid 9 --wallet.name [your_wallet_name] --wallet.hotkey [your_wallet_hotkey]
-    ```
-3.  Launch the setup script
+2. Register your miner
 
-    ```bash
-    bash setup.sh
-    ```
+```bash
+# Register on mainnet (finney)
+btcli s register --netuid 9 --wallet.name [your_wallet_name] --wallet.hotkey [your_wallet_hotkey]
+```
+
+3. Launch the setup script
+
+<pre class="language-bash" data-full-width="false"><code class="lang-bash"><strong>bash setup.sh
+</strong></code></pre>
+
 4. Launch the miner
 
 {% code fullWidth="false" %}
@@ -88,6 +90,8 @@ To setup a miner on IOTA you will need the following:
 ./start_miner.sh
 ```
 {% endcode %}
+
+
 
 
 
