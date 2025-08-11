@@ -1,4 +1,4 @@
-# Subnet 9 Validating
+# Validating
 
 Within the system, validators play a core role in determining if the work completed by the miner was honest. Primarily, the validator relies on computational reproducibility to achieve this validation signal. As the validator is tracking a specific miner, a portion of the miner’s training is completely rerun on the validator side. Forward and backwards passes are checked against the submitted miner activations using a cosine similarity. However, there are many complications when it comes to reliable validation, and we explore them in the remainder of the paper.
 
@@ -14,18 +14,35 @@ Validators will periodically reproduce an epoch’s worth of work of a randomly 
 
 Validators share information via the orchestrator by design. This means that validators submit the miner scores that they produce in their spot check, and all the miner scores are pooled together to give a total consensus score. Periodically, validators request the miner scores from the orchestrator, normalize and set weights. This guarantees that validators agree with each other, sustaining very high validator trust.
 
-#### Installation
+### Prerequisites
 
-To install the validator:Clone the repo:\
-`git clone` [`https://github.com/macrocosm-os/iota.git`](https://github.com/macrocosm-os/iota.git)\
-Enter the folder:\
-`cd iota`\
-Create your `.env`:\
-It is necessary to add \`wallet\_name, wallet\_hotkey, netuid, network,\
-Install the dependencies:\
-`uv sync`\
-&#x20;  If `uv` is not installed in your system, [install it here](https://docs.astral.sh/uv/getting-started/installation/)\
-Activate the environment:\
-`source .venv/bin/activate`\
-Start the validator:\
-`python launch_validator.py --host 0.0.0.0 --port 8081`
+To setup a validator on IOTA you will need the following:
+
+* A [Bittensor wallet](https://docs.bittensor.com/working-with-keys).
+* [The Bittensor command line interface](https://docs.learnbittensor.org/getting-started/install-btcli) (CLI) - `btcli` .
+* [UV](https://docs.astral.sh/uv/#installation).
+* Minimum training infrastructure: CUDA GPU with at least 16GB VRAM (RTX 4090, for example) and Ubuntu 22.04 (Jammy).
+* Basic [HuggingFace Access token](https://huggingface.co/docs/hub/en/security-tokens) to pull the model.
+
+### Installation&#x20;
+
+1. Download the IOTA repository
+
+```bash
+#Clone the repository
+git clone https://github.com/macrocosm-os/iota
+cd iota
+```
+
+2. Launch the setup script
+
+<pre class="language-bash" data-full-width="false"><code class="lang-bash"><strong>bash setup.sh
+</strong></code></pre>
+
+3. Launch the validator
+
+{% code fullWidth="false" %}
+```bash
+./start_validator.sh
+```
+{% endcode %}
