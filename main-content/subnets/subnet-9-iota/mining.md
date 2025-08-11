@@ -81,6 +81,13 @@ To setup a miner on IOTA you will need the following:
     ```bash
     bash setup.sh
     ```
+4. Launch the miner
+
+{% code fullWidth="false" %}
+```bash
+./start_miner.sh
+```
+{% endcode %}
 
 
 
