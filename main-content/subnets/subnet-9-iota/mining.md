@@ -55,7 +55,7 @@ If you have any questions not covered here, reach out for support in:
 
 To setup a miner on IOTA you will need the following:
 
-* [Bittensor wallet](https://docs.bittensor.com/working-with-keys).
+* A [Bittensor wallet](https://docs.bittensor.com/working-with-keys) and [btcli](https://docs.learnbittensor.org/btcli/).
 * Minimum training infrastructure: CUDA GPU with at least 16GB VRAM (RTX 4090, for example) and Ubuntu 22.04 (Jammy).
 * Basic [HuggingFace Access token](https://huggingface.co/docs/hub/en/security-tokens) to pull the model.
 
@@ -71,21 +71,10 @@ To setup a miner on IOTA you will need the following:
 2.  Register your miner.
 
     ```bash
-    # Activate virtual environment if needed
-    source .venv/bin/activate
-
     # Register on mainnet (finney)
     btcli s register --netuid 9 --wallet.name [your_wallet_name] --wallet.hotkey [your_wallet_hotkey]
     ```
-3.  Make sure that your `.env` file contains all necessary variables.
 
-    ```
-    To Do
-    ```
-4.  Launch your miner
 
-    ```
-    To Do
-    ```
 
 🎉Welcome to the Cosmos!
