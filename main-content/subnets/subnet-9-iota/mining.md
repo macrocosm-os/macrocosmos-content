@@ -76,7 +76,7 @@ To setup a miner on IOTA you will need the following:
     # Register on mainnet (finney)
     btcli s register --netuid 9 --wallet.name [your_wallet_name] --wallet.hotkey [your_wallet_hotkey]
     ```
-3.  Download the IOTA repository
+3.  Launch the setup script
 
     ```bash
     bash setup.sh
