@@ -56,7 +56,7 @@ If you have any questions not covered here, reach out for support in:
 To setup a miner on IOTA you will need the following:
 
 * A [Bittensor wallet](https://docs.bittensor.com/working-with-keys).
-* [The Bittensor command line interface](https://docs.learnbittensor.org/btcli/overview) (CLI) - `btcli` .
+* [The Bittensor command line interface](https://docs.learnbittensor.org/getting-started/install-btcli) (CLI) - `btcli` .
 * [UV](https://docs.astral.sh/uv/#installation).
 * Minimum training infrastructure: CUDA GPU with at least 16GB VRAM (RTX 4090, for example) and Ubuntu 22.04 (Jammy).
 * Basic [HuggingFace Access token](https://huggingface.co/docs/hub/en/security-tokens) to pull the model.
