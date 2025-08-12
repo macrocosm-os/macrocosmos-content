@@ -892,3 +892,51 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 {% endtab %}
 {% endtabs %}
 
+#### Request Examples
+
+```
+import macrocosmos as mc
+
+client = mc.Sn13Client(api_key="your-api-key")
+
+response = client.sn13.OnDemandData(
+    source='YouTube',                     # Searches YouTube
+    keywords=["mrbeast"],                 # For videos from Mr Beast
+    start_date='2024-08-01',              # From midnight 2024-08-01 UTC
+                                          # To the time this request was made. 
+    limit=10                              # For 10 items maximum
+)
+
+print(response)
+```
+
+```
+import macrocosmos as mc
+
+client = mc.Sn13Client(api_key="your-api-key")
+
+response = client.sn13.OnDemandData(
+    source='Reddit',                      # Searches Reddit
+    keywords=["r/astronomy", "space"],    # For posts/comments mentioning 'space', in the r/astronomy subreddit
+                                          # In the default time range of the past 24 hours
+    limit=50                              # For 50 items maximum
+)
+
+print(response)
+```
+
+```
+import macrocosmos as mc
+
+client = mc.Sn13Client(api_key="your-api-key")
+
+response = client.sn13.OnDemandData(
+    source='Reddit',                      # Searches Reddit
+    keywords=["r/all", "space"],          # For posts/comments mentioning 'space', across all subreddits
+    start_date='2025-04-01',              # From midnight 2025-04-01 UTC
+    end_date='2025-04-02',                # To midnight 2025-04-02 UTC
+    limit=50                              # For 50 items maximum
+)
+
+print(response)
+```
