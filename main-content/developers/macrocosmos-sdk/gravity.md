@@ -681,9 +681,9 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 
 ### Streaming API ( On Demand Data API)
 
-Run precise, real-time queries using the synchronous `Sn13Client` to query historical or current data based on users, keywords, and time range on platforms like X (Twitter) and Reddit.&#x20;
+Run precise, real-time queries using the synchronous `Sn13Client` to query historical or current data based on users, keywords, and time range on platforms like X (Twitter) Reddit, and YouTube.&#x20;
 
-The Streaming API is limited to the last 30 days time period and 1000 posts per request.
+The Streaming API is limited to 1000 posts per request.
 
 As of data-universe release [v1.9.8](https://github.com/macrocosm-os/data-universe/releases/tag/v1.9.8):&#x20;
 
@@ -701,7 +701,7 @@ const client = new Sn13Client({apiKey: 'your-api-key'});
 
 // Get the onDemandData response
 const response = await client.onDemandData({
-    source: 'X',                           // or 'Reddit'
+    source: 'X',                           // or 'Reddit', 'YouTube'
     usernames: ['nasa', 'spacex'],         // Optional, up to 5 users
     keywords: ['photo', 'space', 'mars'],  // Optional, up to 5 keywords
     startDate: '2024-04-01',               // Defaults to 24h range if not specified
@@ -718,7 +718,7 @@ import macrocosmos as mc
 client = mc.Sn13Client(api_key="your-api-key")
 
 response = client.sn13.OnDemandData(
-    source='X',                           # or 'Reddit'
+    source='X',                           # or 'Reddit', 'YouTube'
     usernames=["nasa", "spacex"],         # Optional, up to 5 users
     keywords=["photo", "space", "mars"],  # Optional, up to 5 keywords
     start_date='2024-04-01',              # Defaults to 24h range if not specified
@@ -766,14 +766,14 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 
 #### Body
 
-| Name        | Type              | Description                                                                                                                                                                           |
-| ----------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `source`    | string            | Data source (`X` or `Reddit`).                                                                                                                                                        |
-| `usernames` | Array of strings  | <p>Default: <code>[]</code></p><p></p><p>Number of items: <code>&#x3C;= 10 items</code></p><p></p><p>List of usernames to fetch data from. If Default, random usernames selected.</p> |
-| `keywords`  | Array of strings  | <p>Default: <code>[]</code><br></p><p>Number of items: <code>&#x3C;= 5 items</code></p><p></p><p>List of keywords to search for. If Default, random keywords are selected.</p>        |
-| `startDate` | string            | <p><code>[Optional]</code></p><p></p><p>Start date (ISO format).</p>                                                                                                                  |
-| `endDate`   | string            | <p><code>[Optional]</code></p><p></p><p>End date (ISO format).</p>                                                                                                                    |
-| `limit`     | integer           | <p><code>[Optional]</code></p><p></p><p>Default: <code>100</code></p><p></p><p>Options: <code>[1,...,1000]</code></p><p></p><p>Maximum number of items to return.</p>                 |
+| Name        | Type              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ----------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `source`    | string            | Data source (`X` or `Reddit`).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `usernames` | Array of strings  | <p>Default: <code>[]</code></p><p></p><p>Number of items: <code>&#x3C;= 10 items</code></p><p></p><p>List of usernames to fetch data from. Searches for posts from <strong>any</strong> of the given usernames. </p><p></p><p>If <code>usernames</code> are not included, they will not be constrained in the search parameters. <br><br>For YouTube:<br>Items in the <code>usernames</code> field should correspond to the YouTube Channel name.</p>                                                                                                                                                                                           |
+| `keywords`  | Array of strings  | <p>Default: <code>[]</code><br></p><p>Number of items: <code>&#x3C;= 5 items</code></p><p></p><p>List of keywords to search for. Searches for posts where <strong>all</strong> given keywords are present. </p><p></p><p>If <code>keywords</code> are not included in the query, they will not be constrained in the search parameters. <br><br>For Reddit: <br>The first keyword indicates the subreddit (r/all for cross-subreddit queries), and subsequent keywords are text matches. <br><br>For YouTube:<br>YouTube keyword queries are not currently accepted. Channel names should be placed under the <code>usernames</code> field.</p> |
+| `startDate` | string            | <p><code>[Optional]</code></p><p></p><p>Start date (ISO format).<br><br>Defaults to 24 hours prior to the request time if not specified.<br><br>Datetimes without time information will be set to midnight (00:00:00) by default. Datetimes without timezone information will be set to UTC by default. </p>                                                                                                                                                                                                                                                                                                                                    |
+| `endDate`   | string            | <p><code>[Optional]</code></p><p></p><p>End date (ISO format).<br><br>Defaults to the request time if not specified.</p><p><br>Datetimes without time information will be set to midnight (00:00:00) by default. Datetimes without timezone information will be set to UTC by default. </p>                                                                                                                                                                                                                                                                                                                                                     |
+| `limit`     | integer           | <p><code>[Optional]</code></p><p></p><p>Default: <code>100</code></p><p></p><p>Options: <code>[1,...,1000]</code></p><p></p><p>Maximum number of items to return.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 #### Response
 
