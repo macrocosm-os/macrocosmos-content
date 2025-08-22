@@ -20,7 +20,7 @@ Before working with subnet 13, you should familiarize yourself with the [Bittens
 
 ### Explore Constellation
 
-* [Constellation ](https://app.macrocosmos.ai/mission-command)
+* [Constellation ](https://app.macrocosmos.ai/)
 
 ***
 

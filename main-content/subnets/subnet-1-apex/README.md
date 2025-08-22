@@ -69,7 +69,7 @@ For more details about the subnet 1 R\&D work, take a look at our Substack artic
 
 **Related resources**
 
-* [Apex Chat](https://app.macrocosmos.ai/apex/chat)
+* [Apex Chat](https://app.macrocosmos.ai/apex)
 * [Website](https://www.macrocosmos.ai/sn1)
 * [Dashboard](https://www.macrocosmos.ai/sn1/dashboard)
 * [GitHub](https://macrocosmosai.substack.com/t/language-models)

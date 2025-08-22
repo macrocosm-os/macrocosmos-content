@@ -6,7 +6,7 @@ description: Power your business with real-time insights from the latest data
 
 ### **What is Gravity?**
 
-**Gravity** is a dataset delivery product built with subnet 13, Data-Universe. It is a part of the Constellation and can be accessed through the [platform](https://app.macrocosmos.ai/gravity/create.)
+**Gravity** is a dataset delivery product built with subnet 13, Data-Universe. It is a part of the Constellation and can be accessed through the [platform](https://app.macrocosmos.ai/gravity/create)
 
 In a world where consumer preferences shift overnight, businesses battle to stay relevant— outdated, incomplete data is no longer an option.&#x20;
 

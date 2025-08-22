@@ -10,7 +10,7 @@ description: One interface. Multiple minds. Choose how you want to think with AI
 
 Apex goes beyond simple chat, it supports web-retrieval, deep research, reasoning, and combined results from multiple miners.
 
-[Launch Apex from Constellation](https://app.macrocosmos.ai/apex/chat)
+[Launch Apex from Constellation](https://app.macrocosmos.ai/apex)
 
 ### Choose the Model That Fits Your Goal:
 

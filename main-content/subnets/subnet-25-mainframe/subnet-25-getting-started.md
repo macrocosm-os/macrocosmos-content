@@ -20,7 +20,7 @@ Before working with subnet 1, you should familiarize yourself with the [Bittenso
 
 ### Explore  Constellation
 
-* Mainframe is live on [Constellation](https://app.macrocosmos.ai/mission-command)
+* Mainframe is live on [Constellation](https://app.macrocosmos.ai/)
 
 ***
 
