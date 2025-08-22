@@ -18,7 +18,7 @@ APEX is a specialized LLM app focused on high-quality language model inference. 
 
 
 
-Try the visual interface at [**Mission Command**](https://app.macrocosmos.ai/mission-command) — a control center for LLM testing and prompting.&#x20;
+Try the visual interface at [**Mission Command**](https://app.macrocosmos.ai/) — a control center for LLM testing and prompting.&#x20;
 
 ***
 

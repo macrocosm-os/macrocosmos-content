@@ -1,6 +1,6 @@
 # Scraping data
 
-#### Navigate to [Constellation](https://app.macrocosmos.ai/mission-command) to access Gravity&#x20;
+#### Navigate to [Constellation](https://app.macrocosmos.ai/gravity/tasks) to access Gravity&#x20;
 
 Simply Click Data Universe
 

@@ -1,6 +1,6 @@
 # Navigating Apex
 
-#### Navigate to [Constellation](https://app.macrocosmos.ai/mission-command) to access Apex
+#### Navigate to [Constellation](https://app.macrocosmos.ai/) to access Apex
 
 No login required (for now) – open access for demo purposes
 

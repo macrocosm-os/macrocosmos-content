@@ -23,7 +23,7 @@ Help power the subnet by contributing compute and serving LLM responses. Start h
 
 #### Explore Constellation
 
-* [Constellation ](https://app.macrocosmos.ai/mission-command)
+* [Constellation ](https://app.macrocosmos.ai/)
 
 
 

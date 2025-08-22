@@ -8,7 +8,7 @@
 
 [Constellation Product Platform](https://app.macrocosmos.ai/)
 
-[Using Subnets API](http://docs.macrocosmos.ai/)
+[Using Subnets API](https://docs.macrocosmos.ai/)
 
 [Guides for mining and validating the subnets](https://docs.macrocosmos.ai/subnets/subnet-1-apex)
 
@@ -42,7 +42,7 @@
 
 <summary>What is the Constellation?</summary>
 
-Constellation is Macrocosmos' overarching platform. It provides access to a full range products and services, all powered by Bittensor. Log in at [app.macrocosmos.ai](http://app.macrocosmos.ai/).
+Constellation is Macrocosmos' overarching platform. It provides access to a full range products and services, all powered by Bittensor. Log in at [app.macrocosmos.ai](https://app.macrocosmos.ai/).
 
 </details>
 
@@ -94,7 +94,7 @@ Yes, the payment is taken per post and does not depend on the source.
 
 <summary>Where do I start with mining on the subnet?</summary>
 
-Have a look at the guides for miners provided at [docs.macrocosmos.ai](http://docs.macrocosmos.ai/) in SUBNETS section and contact us, if any additional questions.
+Have a look at the guides for miners provided at [docs.macrocosmos.ai](https://docs.macrocosmos.ai/) in SUBNETS section and contact us, if any additional questions.
 
 </details>
 
@@ -104,6 +104,6 @@ Have a look at the guides for miners provided at [docs.macrocosmos.ai](http://do
 
 <summary>Where do I start with validating on the subnet?</summary>
 
-Have a look at the guides for miners provided at [Macrocosmos SDK | Macrocosmos Developer Guide](http://docs.macrocosmos.ai/) in SUBNETS section and contact us, if any additional questions.
+Have a look at the guides for miners provided at [Macrocosmos SDK | Macrocosmos Developer Guide](https://docs.macrocosmos.ai/) in SUBNETS section and contact us, if any additional questions.
 
 </details>

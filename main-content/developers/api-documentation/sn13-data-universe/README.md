@@ -17,7 +17,7 @@ description: Getting started - Data Scraping on Macrocosms
 * Discover Hugging Face repositories deployed by miners
 * Launch incentivized scraping tasks for specific keywords (miners get rewarded for collecting the data you request)
 
-Try the visual interface at [**Mission Command**](https://app.macrocosmos.ai/mission-command)&#x20;
+Try the visual interface at [**Mission Command**](https://app.macrocosmos.ai/)&#x20;
 
 ***
 
