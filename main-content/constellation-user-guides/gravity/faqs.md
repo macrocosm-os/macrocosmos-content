@@ -12,18 +12,17 @@ Currently, **you can download up to 5 million records** per dataset. While more 
 
 #### **How is data delivered?**
 
-Once a task is complete or actively running, you can: Download it in **CSV** or **Parquet** format for easy use in data pipelines or ML training
+Once a task is complete or actively running, you can download it in **CSV** or **Parquet** format for easy use in data pipelines or ML training.
 
 #### **Is Gravity free to use?**
 
-Additional usage may require more credits in the future
+1M posts are provided for free for the first login. The [pricing page](../../pricing.md) provides more details.
 
 #### **What can I do with the data?**
 
-* Fine-tuning LLMs for specific use-cases&#x20;
-* Market research and brand tracking
-* Sentiment analysis
-* And more&#x20;
+* Fine-tuning LLMs for specific use-cases,&#x20;
+* Market research and brand tracking,
+* And more.&#x20;
 
 #### **How does Gravity fit into the Bittensor ecosystem?**
 
