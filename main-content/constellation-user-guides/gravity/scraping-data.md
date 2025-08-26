@@ -1,58 +1,54 @@
-# Scraping data
+# Scraping Data
 
-#### Navigate to [Constellation](https://app.macrocosmos.ai/gravity/tasks) to access Gravity&#x20;
+#### Navigate to [Macrocosmos Constellation](https://app.macrocosmos.ai/) to access Gravity and simply click Data Universe.
 
-Simply Click Data Universe
+#### Use the Macrocosmos icon to navigate the menu
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-04-03 at 14.45.57.png" alt=""><figcaption></figcaption></figure>
+<div align="left" data-full-width="true"><figure><img src="../../.gitbook/assets/Main-menu.png" alt=""><figcaption></figcaption></figure></div>
 
-#### **Create a New Task**
+#### **Create a New Task to collect data**
 
 You might be interested in building an app that tracks public reactions to new tech launches.\
-Lets say Vision Pro, Pixel, or the latest MacBooks.\
-You want live posts from Reddit and X.
+You want live posts from Reddit, X and Youtube.
 
-**Step 1:** Name your task. For Example:\
-&#xNAN;**`TechNews Tracker`**
+<div align="left"><figure><img src="../../.gitbook/assets/New-task (1).png" alt=""><figcaption></figcaption></figure></div>
 
-**Step 2:** Specify your data source, or scrap from both!\
-`Reddit`or `Twitter (X)`
+**Step 1:** Name your task. For Example: **`TechNews Tracker`**
 
-**Step 3:** Define your keywords.\
-Tell Gravity what to find.
+**Step 2:** Specify your data source, or scrape from any!
 
-For X, try hashtags like:\
-`#VisionPro` , `#MacbookAir` , `#Pixel8,` `#AppleEvent`
+**Step 3:** Define your keywords. Tell Gravity what to find.
 
-For Reddit, specify relevant subreddits such as:\
-`r/technology`, `r/Apple`, `r/GooglePixel`, `r/gadgets`
+<figure><img src="../../.gitbook/assets/Gravity-page.png" alt=""><figcaption></figcaption></figure>
 
-
-
-#### Mission Commander&#x20;
+#### Mission Commander
 
 Mission Commander (MC), our specialized AI assistant can also help provide the relevant keywords for you task, all you have to do is ask! Mission commander is powered by [subnet-1-apex](../../subnets/subnet-1-apex/ "mention")
 
-
-
-**Step 1: Write a request**&#x20;
+**Step 1: Write a request**
 
 Start by telling MC what type of data you'd like to collect.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-04-07 at 17.21.51.png" alt=""><figcaption></figcaption></figure>
+<div align="left"><figure><img src="../../.gitbook/assets/Mission-commander (1).png" alt=""><figcaption></figcaption></figure></div>
 
+**Step 2. Correct the labels and keywords, if needed**
 
+If the labels aren't quite right, you can edit manually or ask mission commander to fix it.
 
-**Step 2. Ask to Correct the Labels (Optional)**
+<figure><img src="../../.gitbook/assets/Label-correction.png" alt=""><figcaption></figcaption></figure>
 
-If the labels aren't quite right, you can edit manually or ask mission commander to fix it. For example, we didn't include any labels on iPhones . Let's update that.
+**Step 3: Pick a date range**
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-04-07 at 18.00.49.png" alt=""><figcaption></figcaption></figure>
+Pick the dates if you would like to define period when the data was published.
 
-**Step 3: Launch the Task**
+<div align="left"><figure><img src="../../.gitbook/assets/Date-range.png" alt=""><figcaption></figcaption></figure></div>
 
-Once you’re happy with the request and the label setup, hit **"Launch data collection"**. You will automatically redirected to your task library. Your task will be deployed and miners will start collecting data according to the labels in real time.
+<div align="left"><figure><img src="../../.gitbook/assets/Calendar.png" alt=""><figcaption></figcaption></figure></div>
 
-**Learn more by watching our video tutorials** [**here**](https://macrocosmosai.substack.com/p/0cb3c240-5f5e-48fb-bd33-17b216ee52d0?postPreview=paid\&updated=2025-04-03T11%3A29%3A18.787Z\&audience=everyone\&free_preview=false\&freemail=true)**.**
+**Step 4: Launch the Task**
+
+Once you’re happy with the request and the label setup, hit **Launch data collection**. You will be automatically redirected to your task library. Your task will be deployed and the data will satrt to be collected in real time.
+
+<div align="left"><figure><img src="../../.gitbook/assets/TEchNewsTask.png" alt=""><figcaption></figcaption></figure></div>
 
 **You can also interact with Gravity using our APIs . Click here to access** [**Subnet 13 Gravity API**](../../developers/macrocosmos-sdk/gravity.md)**.**
