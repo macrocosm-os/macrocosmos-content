@@ -4,7 +4,7 @@ description: Frequently Asked Questions on APEX
 
 # FAQs
 
-**Is Apex free? -** 1M credits is provided for free for the first login. The [pricing page](../../pricing.md) provides more details. &#x20;
+**Is Apex free? -** 2.5M tokens are provided for free for the first login. The [pricing page](../../pricing.md) provides more details. &#x20;
 
 
 
