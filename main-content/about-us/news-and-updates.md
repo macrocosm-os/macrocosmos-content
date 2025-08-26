@@ -12,7 +12,7 @@ New Subnet 9 Launch! Have a look at the overview at [Subnet 9 IOTA](../subnets/s
 
 2025-04-11
 
-User guides for Constellation have been added , you can access them on [Broken link](broken-reference "mention") . [..](../ "mention") has also been updated with the release of our Typescript SDK
+User guides for Constellation have been added , you can access them on [Broken link](broken-reference "mention") . [Broken link](broken-reference "mention") has also been updated with the release of our Typescript SDK
 
 ***
 

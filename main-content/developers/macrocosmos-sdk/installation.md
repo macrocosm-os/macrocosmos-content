@@ -2,7 +2,7 @@
 
 To get started using Macrocosmos Software Development Kit (SDK) you should:
 
-1. Generate your API key using the instruction from the [API Keys](api-keys.md) page
+1. Generate your API key using the instruction from the [API Keys](broken-reference) page
 2. Ensure that you are using Python 3.9+ or Typescript
 
 <details>

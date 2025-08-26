@@ -6,30 +6,19 @@ No login required – open access for demo purposes.
 
 #### Prompting
 
-Click the `NEW CHAT +` to initiate a new chat, You can ask any question!
+Ask any question or click a New chat to start a new conversation.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-04-08 at 16.04.50.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/New-chat-Apex.png" alt=""><figcaption></figcaption></figure>
 
 #### **Model Selector**
 
-We have various models for you to choose from . Click the`Basic`button for a drop down menu on all the models available on Apex . Choose between different models depending on your needs.
+We have various models for you to choose from . Click the `Basic`button for a drop down menu on all the models available on Apex . Choose between different models depending on your needs.
 
-<div align="center"><figure><img src="../../.gitbook/assets/Screenshot 2025-04-08 at 15.53.10.png" alt=""><figcaption></figcaption></figure></div>
+<figure><img src="../../.gitbook/assets/Screenshot 2025-08-26 at 11.49.13.png" alt=""><figcaption></figcaption></figure>
 
-| **Model**                 | **What It Does**                                            | **Best For**                           |
-| ------------------------- | ----------------------------------------------------------- | -------------------------------------- |
-| **Apex Basic**            | Fast, general-purpose LLM                                   | Everyday questions, summaries          |
-| **Apex Combined**         | Aggregated results from multiple miners                     | Balanced answers, wider consensus      |
-| **Apex Web Enhanced**     | Adds real-time web retrieval to LLM                         | Information on current news and events |
-| **Apex Chain of Thought** | Our highly intelligent model but for step-by-step reasoning | Math, logic, planning                  |
-| **Apex Reasoning**        | Deeper logic leveraging advanced reasoning skills           | Research, arguments, nuanced queries   |
-
-#### Switching between Models
-
-Click the dropdown button on the right side of the response box, and select a different model of your choice.
-
-<figure><img src="../../.gitbook/assets/canva3.png" alt=""><figcaption></figcaption></figure>
-
-Click the regenerate response button 🔄 to run your prompt through the model you selected . A new response will be generated , allowing you to compare output from both models.
-
-**You can also interact with Apex using our APIs . Click here to access** [api-documentation](../../developers/api-documentation/ "mention")
+| **Model**             | **What It Does**                                  | **Best For**                           |
+| --------------------- | ------------------------------------------------- | -------------------------------------- |
+| **Apex Basic**        | Fast, general-purpose LLM                         | Everyday questions, summaries          |
+| **Apex Combined**     | Aggregated results from multiple miners           | Balanced answers, wider consensus      |
+| **Apex Web Enhanced** | Adds real-time web retrieval to LLM               | Information on current news and events |
+| **Apex Reasoning**    | Deeper logic leveraging advanced reasoning skills | Research, arguments, nuanced queries   |
