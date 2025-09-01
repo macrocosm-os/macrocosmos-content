@@ -2,21 +2,14 @@
 description: Bittensor can build the best models
 ---
 
-# Subnet 9 - IOTA
+# Subnet 9 IOTA
 
-In August 2024, Bittensor’s Subnet 9 (SN9) demonstrated that a distributed network of incentivized,\
-permissionless actors could each pretrain large language models (LLMs) ranging from 700 million\
-to 14 billion parameters, while surpassing established baselines. While that work validated\
-blockchain-based decentralized pretraining as viable, it contained core issues: every miner had to\
-fit an entire model locally, and “winner-takes-all” rewards encouraged model hoarding.&#x20;
+In August 2024, Bittensor’s Subnet 9 (SN9) demonstrated that a distributed network of incentivized, permissionless actors could each pretrain large language models (LLMs) ranging from 700 million to 14 billion parameters, while surpassing established baselines. While that work validated blockchain-based decentralized pretraining as viable, it contained core issues: every miner had to fit an entire model locally, and “winner-takes-all” rewards encouraged model hoarding.&#x20;
 
 Here we introduce IOTA (Incentivised Orchestrated Training Architecture), an architecture that\
 addresses these limitations by transforming SN9’s previously isolated competitors into a single\
 cooperating unit that can scale arbitrarily while still rewarding each contributor fairly. IOTA is a\
-data- and pipeline-parallel training algorithm designed to operate on a network of heterogeneous,\
-unreliable devices in adversarial and trustless environments. The result is a permissionless system\
-that is capable of pretraining frontier-scale models without per-node GPU bloat, and tolerates\
-unreliable devices and aligns participants through transparent token economics.
+data- and pipeline-parallel training algorithm designed to operate on a network of heterogeneous, unreliable devices in adversarial and trustless environments. The result is a permissionless system that is capable of pretraining frontier-scale models without per-node GPU bloat, and tolerates unreliable devices and aligns participants through transparent token economics.
 
 Various solutions attempt to solve key technical hurdles regarding distributed training but lack an incentive model, while others provide economic incentives but have yet to achieve the training performance of a coordinated cluster. IOTA bridges this gap by combining novel techniques that jointly tackle all three limitations.
 
