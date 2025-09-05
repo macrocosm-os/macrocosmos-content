@@ -6,7 +6,7 @@ description: Bittensor can build the best agents
 
 ## What is Subnet 1?
 
-**Subnet 1** is Bittensor’s flagship subnet, focused on building **state-of-the-art open-source intelligence** through decentralized competitions and cutting-edge LLM research. Bittensor requires persistent research and innovation to compete with leading proprietary models for it to continue being a viable solution to closed-source and centralized alternatives.&#x20;
+**Subnet 1** is Bittensor’s flagship subnet, focused on building **state-of-the-art open-source intelligence** through decentralized competitions and cutting-edge LLM research. Bittensor requires persistent research and innovation to compete with leading proprietary models for it to continue being a viable solution to closed-source and centralized alternatives.
 
 <figure><img src="../../.gitbook/assets/Apex overview.png" alt=""><figcaption></figcaption></figure>
 
@@ -17,8 +17,6 @@ description: Bittensor can build the best agents
 * Prove that decentralized systems can produce **SOTA AI models**.
 * Serve as **Bittensor’s main entry point** for new users.
 * Power smart interfaces to interact with other subnets and digital tools.
-
-
 
 ## Why SN1 Matters
 
@@ -34,8 +32,6 @@ Subnet 1 enhances the Bittensor environment by:
 * Subnet 1 additionally allows Validators to spin up their own api endpoints with 1 line, using OpenAI standard endpoints for seamless streaming to front-ends and plug-ins.
 * Expanding Bittensor's incentive landscape and framework, building on its legacy as the protocol's flagship subnet, and continuing to push the boundaries of mechanism design.
 
-
-
 ## Interoperability
 
 Subnet 1 works closely with other subnets to expand its capabilities:
@@ -44,21 +40,16 @@ Subnet 1 works closely with other subnets to expand its capabilities:
 * subnet 13, Data Universe, through data annotation and sentiment analysis,
 * subnet 19, Inference, offloading tasks to an inference-specific subnet.
 
-
-
 ## Apex Client - Macrocosmos SDK
 
 **(SN1)** runs open-source language models like LLaMA and Mistral, and you can interact with it easily using the [..](../../ "mention")\
-With the `ApexClient`, you can send prompts, run chat completions, and perform live web searches — all decentralized and miner-powered.\
-
+With the `ApexClient`, you can send prompts, run chat completions, and perform live web searches — all decentralized and miner-powered.\\
 
 **You'll also need an API key. Visit** [api-documentation](../../developers/api-documentation/ "mention") to get started.
 
-
-
 #### TLDR
 
-Subnet 1 plays a key role in Bittensor’s mission to compete with closed-source models by focusing on **specialization, innovation, and usability**. It strikes a balance between **research** and real-world **productization**, advancing the application of decentralized AI. Check out  [Subnet 1's Dashboard](https://www.macrocosmos.ai/sn1/dashboard) for a variety of metrics for the competition and the model's performance quality.
+Subnet 1 plays a key role in Bittensor’s mission to compete with closed-source models by focusing on **specialization, innovation, and usability**. It strikes a balance between **research** and real-world **productization**, advancing the application of decentralized AI. Check out [Subnet 1's Dashboard](https://www.macrocosmos.ai/sn1/dashboard) for a variety of metrics for the competition and the model's performance quality.
 
 For more details about the subnet 1 R\&D work, take a look at our Substack articles:
 
@@ -69,7 +60,6 @@ For more details about the subnet 1 R\&D work, take a look at our Substack artic
 
 **Related resources**
 
-* [Apex Chat](https://app.macrocosmos.ai/apex)
 * [Website](https://www.macrocosmos.ai/sn1)
 * [Dashboard](https://www.macrocosmos.ai/sn1/dashboard)
 * [GitHub](https://macrocosmosai.substack.com/t/language-models)
@@ -79,6 +69,4 @@ For more details about the subnet 1 R\&D work, take a look at our Substack artic
 * [Cosmonauts - Macrocosmos Telegram](https://t.me/macrocosmosai)
 * [Macrocosmos X](https://x.com/MacrocosmosAI)
 
-\
-
-
+\\
