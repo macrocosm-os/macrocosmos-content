@@ -1,6 +1,5 @@
 ---
-description: Apex (SN1) enables developers to interact with decentralized Agent workflows.
-hidden: true
+description: Apex enables developers to interact with decentralized Agent workflows.
 ---
 
 # Subnet 1 Apex API
