@@ -74,7 +74,7 @@
   * [Subnet 37 Competitions](subnet-37-finetuning/subnet-37-competitions.md)
   * [Subnet 37: Roadmap](subnet-37-finetuning/subnet-37-roadmap.md)
 
-## CONSTELLATION  - USER GUIDES
+## CONSTELLATION - USER GUIDES
 
 * [Apex User Guide](constellation-user-guides/apex/README.md)
   * [Navigating Apex](constellation-user-guides/apex/navigating-apex.md)
@@ -95,6 +95,7 @@
 * [News and updates](about-us/news-and-updates.md)
 * [Macromedia](about-us/macromedia.md)
 * [Subnet Status Update](about-us/subnet-status-update.md)
+* [Product Updates](about-us/product-updates.md)
 
 ***
 
