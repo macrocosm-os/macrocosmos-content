@@ -16,9 +16,9 @@ Macrocosmos SDK provides developers with a robust API for integrating Macrocosmo
 
 Macrocosmos makes it accessible to:
 
-* **Interact with AI models on-chain**: Use the Apex subnet 1 to send prompts to open source LLMs running in a decentralised way.
-* **Access real-time social media data**: Query Reddit and Twitter/X through Gravity subnet 13, powered by validator-coordinated scraping infrastructure.
-* **Streamline the scientific research**: Leverage powerful Molecular Dynamic Simulation engine using Mainframe on subnet 25 to increase accuracy and speed of protein folding or drug discovery research.
+* Through intuitive APIs Macrocosmos SDK abstracts away the low-level details of building over the subnets.
+* Developers can streamline and scale the data collection process — fetching millions of posts, hashtags, or profiles automatically.
+* APIs let you continuously monitor live social activity on specific keywords, usernames, or topics.
 
 ## Key Capabilities
 
