@@ -2,9 +2,10 @@
 description: >-
   See what your data is really saying, with real-time search, sentiment, and
   embeddings.
+hidden: true
 ---
 
-# Nebula
+# Nebula User Guide
 
 ### What is Nebula?
 
