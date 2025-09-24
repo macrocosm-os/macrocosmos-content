@@ -1,8 +1,9 @@
 ---
 description: Bittensor can train the best models
+hidden: true
 ---
 
-# Subnet 37 - Finetuning
+# Subnet 37 Finetuning
 
 The drive behind subnet 37 is to bring the entire AI development pipeline into Bittensor, with finetuning as a critical step in the path towards this. We believe it will strongly support Bittensor’s founding vision - that AI can be built in an _economical, safe and decentralized way_.
 
