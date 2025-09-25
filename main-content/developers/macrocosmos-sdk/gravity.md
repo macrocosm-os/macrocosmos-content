@@ -908,7 +908,7 @@ client = mc.Sn13Client(api_key="your-api-key")
 
 response = client.sn13.OnDemandData(
     source='YouTube',                     # Searches YouTube
-    keywords=["mrbeast"],                 # For videos from Mr Beast
+    usernames=["mrbeast"],                 # For videos from Mr Beast
     start_date='2024-08-01',              # From midnight 2024-08-01 UTC
                                           # To the time this request was made. 
     limit=10                              # For 10 items maximum
