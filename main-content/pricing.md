@@ -10,8 +10,8 @@ Free - **$5** of free credits
 
 ***
 
-* $2 per 1M tokens in Apex
-* $5 per 1M posts in Gravity
+* $0.75 per 1k posts through OnDemand API
+* $0.5 per 1k posts through Gravity UI
 {% endcolumn %}
 
 {% column %}
@@ -26,7 +26,7 @@ Enterprise - discounts for large data quantities
 
 ***
 
-<a href="https://app.macrocosmos.ai/gravity/" class="button primary">Go to Gravity</a>      <a href="https://app.macrocosmos.ai/apex" class="button primary">Go to Apex</a>      <a href="https://docs.macrocosmos.ai" class="button primary">API Docs</a>
+<a href="https://app.macrocosmos.ai/gravity/" class="button primary">Go to Gravity</a>  <a href="https://docs.macrocosmos.ai" class="button primary">API Docs</a>
 
 
 
