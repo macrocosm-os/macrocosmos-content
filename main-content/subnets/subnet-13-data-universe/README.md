@@ -21,7 +21,7 @@ Currently, miners are incentivized to scrap data from platforms like **Reddit** 
 
 ## Why It Matters
 
-In fast-moving markets, **up-to-date data** is critical. Data provided by subnet 13's product, [Gravity, ](../../constellation-user-guides/gravity/)allows businesses to:
+In fast-moving markets, **up-to-date data** is critical. Data provided by subnet 13's product, [Gravity](https://datauniverse.macrocosmos.ai/), allows businesses to:
 
 * Track brand sentiment and market shifts in real time
 * Make data-driven decisions based on the latest insights
@@ -29,21 +29,11 @@ In fast-moving markets, **up-to-date data** is critical. Data provided by subnet
 
 As machine learning becomes more commoditized, the **quality of training data** will become a key differentiator. SN13 aims to make **data one of Bittensor’s most valuable commodities.**
 
-
-
 <figure><img src="../../.gitbook/assets/Screenshot 2025-03-05 at 16.57.29 (1).png" alt=""><figcaption></figcaption></figure>
-
-
-
-Alongside Gravity is [Nebula](https://app.gitbook.com/o/eu9Z3qt7ycTIHIJGObFB/s/JDlWdmSC3GnzBPSkAiBM/), our second product launched on SN13. Its purpose is to perform analytics on data.
-
-
 
 ## Architecture
 
 Subnet 13's decentralized design allows data to be distributed across miners and queried by validators, showcasing Bittensor's scalability. Macrocosmos is expanding data sources, developing a queryable API ([endpoints.md](../../developers/api-documentation/sn13-data-universe/endpoints.md "mention")), and is currently the largest open source data provider on HuggingFace with over 17 billion scraped posts and comments (as of January 2025). By providing the raw material for pre-training and inference, subnet 13 is poised to supercharge the next stage of AI model development within the Bittensor ecosystem.
-
-
 
 Subnet 13's [interactive dashboard](https://www.macrocosmos.ai/sn13/dashboard) not only provides up-to-date metrics on the total scraped posts, total amount of datasets or scraping speed, but also statistics on the datasets content with the amount of posts scraped per the most popular topics. The dashboard interface allows filtering based on the content age and daily scraping metrics, whilst offering a different table-formated UX.
 
@@ -52,8 +42,7 @@ Subnet 13's [interactive dashboard](https://www.macrocosmos.ai/sn13/dashboard) n
 ## Gravity Client - Macrocosmos SDK
 
 The **Gravity subnet (SN13)** specializes in decentralized web scraping and data collection across platforms like Reddit and X.\
-Using the `GravityClient` in the **Macrocosmos SDK**, you can easily launch scraping tasks and get structured datasets built by miners.\
-
+Using the `GravityClient` in the **Macrocosmos SDK**, you can easily launch scraping tasks and get structured datasets built by miners.
 
 **You'll also need an API key. Visit** [**Subnet 13 Gravity API**](../../developers/macrocosmos-sdk/gravity.md) to get started.
 
