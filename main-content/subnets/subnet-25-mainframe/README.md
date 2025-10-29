@@ -1,8 +1,9 @@
 ---
 description: Bittensor can solve science’s hardest problems
+hidden: true
 ---
 
-# Mainframe
+# Subnet 25 Mainframe
 
 Mainframe is a decentralised science subnet on Bittensor. It provides computing power and community talent to solve scientific problems.
 

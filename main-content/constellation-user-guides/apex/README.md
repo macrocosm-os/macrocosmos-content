@@ -1,5 +1,6 @@
 ---
 description: One interface. Multiple minds. Choose how you want to think with AI
+hidden: true
 ---
 
 # Apex User Guide
