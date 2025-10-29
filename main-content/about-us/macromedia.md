@@ -6,7 +6,15 @@ description: Resources to read and watch about Macrocosmos
 
 
 
+{% embed url="https://x.com/VenturaLabs/status/1950209712563027979" %}
+
 {% embed url="https://www.forbes.com/sites/torconstantino/2025/06/02/swarm-intelligence-is-reshaping-how-ai-gets-trained/" %}
+
+[Revenue Search 12](https://x.com/i/broadcasts/1zqKVjXBDrdKB)
+
+<figure><img src="../.gitbook/assets/unknown.png" alt=""><figcaption></figcaption></figure>
+
+
 
 {% embed url="https://x.com/VenturaLabs/status/1939695637215285462" %}
 
