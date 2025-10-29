@@ -6,6 +6,18 @@ description: >-
 
 # Subnet Status Update
 
+[2025-08-01 Macrocosmos Subnets Status Updates Q3 2025](https://docs.google.com/presentation/d/13qJl_BRJP_gZDFb5KH3Tw4TAqFnzHHHxSc26i5Hd9DY/edit?usp=drive_link)
+
+<div align="left"><figure><img src="../.gitbook/assets/Screenshot 2025-10-29 at 15.40.32.png" alt="" width="375"><figcaption></figcaption></figure></div>
+
+***
+
+[2025-06-30 Macrocosmos Subnets Status Updates Q2 2025](https://docs.google.com/presentation/d/1rXV27BH6p_qHJEoHGU5ulRSY9ywTl9Lq7fhPNvUR0TI/edit?usp=drive_link)
+
+<div align="left"><figure><img src="../.gitbook/assets/Screenshot 2025-10-29 at 15.38.34.png" alt="" width="375"><figcaption></figcaption></figure></div>
+
+***
+
 [2025-04-30 Macrocosmos Subnets Status Updates Q2 2025](https://x.com/MacrocosmosAI/status/1917634765144088746)
 
 <div align="left"><figure><img src="../.gitbook/assets/GpzOqBTaYAAkxIj (1).jpeg" alt="" width="375"><figcaption></figcaption></figure></div>
