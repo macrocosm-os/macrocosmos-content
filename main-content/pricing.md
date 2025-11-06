@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Pricing
 
 ### Flexible pricing to suit you
