@@ -40,7 +40,7 @@ Macrocosmos SDK should be version 2.1.0. For upgrade use
 {% tabs %}
 {% tab title="Python" %}
 ```python
-pip install macrocosmos==2.1.0
+pip install macrocosmos==3.0.0
 ```
 {% endtab %}
 
