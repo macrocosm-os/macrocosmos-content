@@ -35,18 +35,18 @@ npm install macrocosmos
 {% endtab %}
 {% endtabs %}
 
-Macrocosmos SDK should be version 1.1.3+. For upgrade use
+Macrocosmos SDK should be version 2.1.0. For upgrade use
 
 {% tabs %}
 {% tab title="Python" %}
 ```python
-pip install macrocosmos==1.1.3
+pip install macrocosmos==2.1.0
 ```
 {% endtab %}
 
 {% tab title="Typescript" %}
 ```javascript
-npm install macrocosmos==1.2.24
+npm install macrocosmos==2.1.0
 ```
 {% endtab %}
 {% endtabs %}
@@ -692,6 +692,7 @@ As of the latest data-universe [release](https://github.com/macrocosm-os/data-un
   * `"all"` : Returns posts that contain all of the keywords (default, if field omitted).
 * For Reddit requests, the first keyword in the list corresponds to the requested subreddit, and subsequent keywords are treated as normal.&#x20;
 * For YouTube requests, only **one** of the following should be applied: One username (corresponding to YouTube channel name) or one keyword (corresponding to one YouTube video URL).
+* URL mode is mutually exclusive with `usernames` and `keywords` fields. If `url` is provided, `usernames` and `keywords` must be empty.
 
 {% tabs %}
 {% tab title="Typescript" %}
@@ -781,6 +782,7 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 | `endDate`     | string            | <p><code>[Optional]</code></p><p></p><p>End date or datetime (ISO format).<br><br>Defaults to the request time if not specified.</p><p><br>Datetimes without time information will be set to midnight (00:00:00) by default. </p><p>Datetimes without timezone information will be set to UTC by default. </p>                                                                                                                                                                                                                                                                                                                                                                                  |
 | `limit`       | integer           | <p><code>[Optional]</code></p><p></p><p>Default: <code>100</code></p><p></p><p>Options: <code>[1,...,1000]</code></p><p></p><p>Maximum number of items to return.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `keywordMode` | string            | <p><code>[Optional]</code> <br><br>Default: <code>all</code> <br><br>Options: <code>all</code> , <code>any</code> <br><br>Selects the post-filtering mode:</p><ul><li><code>"any"</code>: Returns posts that contain any combination of the listed <code>keywords</code>.</li><li><code>"all"</code>: Returns posts that contain all of the <code>keywords</code></li></ul>                                                                                                                                                                                                                                                                                                                     |
+| `url`         | string            | <p><code>[Optional]</code> <br><br>Single <code>url</code> for URL search mode (X or YouTube)<br><br>If <code>url</code> is provided, <code>usernames</code> and <code>keywords</code> must be empty or omitted.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 #### Response
 
@@ -923,8 +925,8 @@ import macrocosmos as mc
 client = mc.Sn13Client(api_key="your-api-key")
 
 response = client.sn13.OnDemandData(
-    source='YouTube',                                                 # Searches YouTube
-    keywords=["https://www.youtube.com/watch?v=pqwZ1mYM4v0"],         # For the transcript corresponding to this video URL
+    source='YouTube',                                          # Searches YouTube
+    url="https://www.youtube.com/watch?v=pqwZ1mYM4v0",         # For the transcript corresponding to this video URL
 )
 
 print(response)
