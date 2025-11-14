@@ -46,7 +46,7 @@ pip install macrocosmos==3.0.0
 
 {% tab title="Typescript" %}
 ```javascript
-npm install macrocosmos==2.1.0
+npm install macrocosmos==2.1.1
 ```
 {% endtab %}
 {% endtabs %}
@@ -685,13 +685,13 @@ Run precise, real-time queries using the synchronous `Sn13Client` to query histo
 
 The Streaming API is limited to 1000 posts per request.
 
-As of the latest data-universe [release](https://github.com/macrocosm-os/data-universe/releases/tag/v1.13.5):&#x20;
+As of the latest data-universe [release](https://github.com/macrocosm-os/data-universe/releases):&#x20;
 
 * &#x20;Users may select two post-filtering modes via the `keyword_mode` parameter:
   * `"any"` : Returns posts that contain any combination of the listed keywords.
   * `"all"` : Returns posts that contain all of the keywords (default, if field omitted).
 * For Reddit requests, the first keyword in the list corresponds to the requested subreddit, and subsequent keywords are treated as normal.&#x20;
-* For YouTube requests, only **one** of the following should be applied: One username (corresponding to YouTube channel name) or one keyword (corresponding to one YouTube video URL).
+* For YouTube requests, the username field value must correspond to the YouTube channel name.
 * URL mode is mutually exclusive with `usernames` and `keywords` fields. If `url` is provided, `usernames` and `keywords` must be empty.
 
 {% tabs %}
@@ -791,7 +791,6 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 {% code fullWidth="false" %}
 ```json
 {
-  "status": "success",
   "data": [
     {
       "content": "Falcon 9 launches the Bandwagon-3 rideshare mission to orbit from Florida",
@@ -875,18 +874,7 @@ grpcurl -H "Authorization: Bearer your-api-key" \
         "verified": false
       }
     }
-  ],
-  "meta": {
-    "consistent_miners": 2,
-    "inconsistent_miners": 0,
-    "items_returned": 2,
-    "miner_hotkey": "5CacbhmQxhAVGWgrYvCypqhR3n3mNmmWEA8JYzAVghmTDYZy",
-    "miner_uid": 179,
-    "miners_queried": 5,
-    "miners_responded": 5,
-    "source": "consistent",
-    "validated_miners": 0
-  }
+  ]
 }
 ```
 {% endcode %}
