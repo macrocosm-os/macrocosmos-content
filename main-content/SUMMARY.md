@@ -66,6 +66,7 @@
 * [New Subnet 1 Apex](subnets/new-subnet-1-apex.md)
   * [Incentive Mechanism](subnets/new-subnet-1-apex/incentive-mechanism.md)
   * [Mining](subnets/new-subnet-1-apex/mining.md)
+  * [Validating](subnets/new-subnet-1-apex/validating.md)
 
 ***
 
