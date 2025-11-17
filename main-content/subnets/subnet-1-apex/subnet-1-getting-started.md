@@ -10,7 +10,7 @@ Before working with subnet 1, you should familiarise yourself with the [Bittenso
 
 Help power the subnet by contributing compute and serving LLM responses. Start here:
 
-* To get started with mining, read [here](subnet-1-base-miner-setup.md)
+* To get started with mining, read [here](subnet-1-base-miner-setup/)
 * For getting started with validation, please read the README.md located in the repo
 
 ***

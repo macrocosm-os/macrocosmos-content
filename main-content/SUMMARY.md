@@ -39,7 +39,9 @@
 
 * [Subnet 1 Apex](subnets/subnet-1-apex/README.md)
   * [Subnet 1 Getting Started](subnets/subnet-1-apex/subnet-1-getting-started.md)
-  * [Subnet 1 Mining Setup Guide](subnets/subnet-1-apex/subnet-1-base-miner-setup.md)
+  * [Subnet 1 (APEX) Mining Guide](subnets/subnet-1-apex/subnet-1-base-miner-setup/README.md)
+    * [Current Competitions](subnets/subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md)
+    * [APEX CLI](subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli.md)
   * [Subnet 1 Incentive Mechanism](subnets/subnet-1-apex/subnet-1-incentive-mechanism.md)
   * [Subnet 1: Roadmap](subnets/subnet-1-apex/subnet-1-roadmap.md)
 * [Subnet 9 IOTA](subnets/subnet-9-iota/README.md)
