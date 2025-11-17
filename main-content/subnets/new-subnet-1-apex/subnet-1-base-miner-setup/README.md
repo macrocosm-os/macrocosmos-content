@@ -41,9 +41,9 @@ ORCHESTRATOR_PORT=443
 
 ### To Submit Solutions:
 
-[Current Competitions](current-competitions.md)
+To understand the current competitions including what miners should aim for: [Current Competitions](current-competitions.md)
 
-[Cli Usage](apex-cli.md)
+To use the CLI to submit miner solutions or view active competitions: [Cli Usage](apex-cli.md)
 
 ### To Get Started with A Baseline
 
