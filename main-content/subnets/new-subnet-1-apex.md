@@ -1,5 +1,6 @@
 ---
 description: Subnet 1 Overview
+hidden: true
 ---
 
 # New Subnet 1 Apex
