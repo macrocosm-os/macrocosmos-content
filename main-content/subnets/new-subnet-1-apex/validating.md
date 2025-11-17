@@ -6,7 +6,7 @@ By operating on hidden code during the evaluation window and only exposing logs 
 
 #### Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
-To setup a validator on IOTA you will need the following:
+To setup a validator on subnet 1 Apex you will need the following:
 
 * A [Bittensor wallet](https://docs.bittensor.com/working-with-keys).
 * [The Bittensor command line interface](https://docs.learnbittensor.org/getting-started/install-btcli) (CLI) - `btcli` .
