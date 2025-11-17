@@ -30,7 +30,7 @@ To setup a miner on IOTA you will need the following:
 
 To get started, [clone the repo](https://github.com/macrocosm-os/apex) and run `./setup.sh`
 
-Add the following to your .env file, after creating a new .env from the provided `.env.template`
+Add the following to your .env file created by `setup.sh`
 
 ```
 ENV="test" #TODO: Update to mainnet
