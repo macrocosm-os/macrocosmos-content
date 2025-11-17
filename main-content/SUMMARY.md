@@ -39,9 +39,6 @@
 
 * [Subnet 1 Apex](subnets/subnet-1-apex/README.md)
   * [Subnet 1 Getting Started](subnets/subnet-1-apex/subnet-1-getting-started.md)
-  * [Subnet 1 (APEX) Mining Guide](subnets/subnet-1-apex/subnet-1-base-miner-setup/README.md)
-    * [Current Competitions](subnets/subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md)
-    * [APEX CLI](subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli.md)
   * [Subnet 1 Incentive Mechanism](subnets/subnet-1-apex/subnet-1-incentive-mechanism.md)
   * [Subnet 1: Roadmap](subnets/subnet-1-apex/subnet-1-roadmap.md)
 * [Subnet 9 IOTA](subnets/subnet-9-iota/README.md)
@@ -67,7 +64,9 @@
   * [Subnet 25: Roadmap](subnets/subnet-25-mainframe/subnet-25-roadmap.md)
 * [New Subnet 1 Apex](subnets/new-subnet-1-apex.md)
   * [Incentive Mechanism](subnets/new-subnet-1-apex/incentive-mechanism.md)
-  * [Mining](subnets/new-subnet-1-apex/mining.md)
+  * [Mining](subnets/new-subnet-1-apex/subnet-1-base-miner-setup/README.md)
+    * [Current Competitions](subnets/new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md)
+    * [APEX CLI](subnets/new-subnet-1-apex/subnet-1-base-miner-setup/apex-cli.md)
   * [Validating](subnets/new-subnet-1-apex/validating.md)
 
 ***

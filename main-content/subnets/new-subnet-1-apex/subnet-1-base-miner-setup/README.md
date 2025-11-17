@@ -1,8 +1,8 @@
 ---
-description: Overview of Mining on SN1 APEX
+description: Subnet 1 mining guide
 ---
 
-# Subnet 1 (APEX) Mining Guide
+# Mining
 
 ## Miner Documentation
 
