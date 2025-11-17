@@ -4,6 +4,13 @@ In Subnet 1, the validator acts as the impartial referee and gatekeeper of quali
 
 By operating on hidden code during the evaluation window and only exposing logs and solutions after rounds are complete, validators help protect miners from code theft while still enabling open-source collaboration after the fact. In doing so, they uphold security, fairness, and continuous innovation at the core of Subnet 1’s decentralised optimisation ecosystem.
 
+#### Prerequisites <a href="#prerequisites" id="prerequisites"></a>
+
+To setup a validator on IOTA you will need the following:
+
+* A [Bittensor wallet](https://docs.bittensor.com/working-with-keys).
+* [The Bittensor command line interface](https://docs.learnbittensor.org/getting-started/install-btcli) (CLI) - `btcli` .
+
 ### Getting Started&#x20;
 
 To get started, [clone the repo](https://github.com/macrocosm-os/apex) and run `./setup.sh`
