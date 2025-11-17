@@ -1,5 +1,9 @@
 # Validating
 
+In Subnet 1, the validator acts as the impartial referee and gatekeeper of quality, ensuring that every submitted solution is fairly assessed and correctly rewarded. After miners submit their code to the competition, the solutions are executed in a secure Code Executor sandbox, which produces performance metrics such as compression ratio, speed, and decompression accuracy. The validator then reviews these metrics, converts them into scores according to the incentive mechanism, and uses the scores retrieved from the subnet orchestrator to determine the current top-performing miner and allocate rewards.&#x20;
+
+By operating on hidden code during the evaluation window and only exposing logs and solutions after rounds are complete, validators help protect miners from code theft while still enabling open-source collaboration after the fact. In doing so, they uphold security, fairness, and continuous innovation at the core of Subnet 1’s decentralised optimisation ecosystem.
+
 ### Getting Started&#x20;
 
 To get started, [clone the repo](https://github.com/macrocosm-os/apex) and run `./setup.sh`
