@@ -9,7 +9,7 @@ hidden: true
 
 Decentralised intelligence offers a powerful new way to approach complex algorithmic and agentic optimisation problems by leveraging the collective reasoning and computational capacity of distributed networks. Through collaboration among independent nodes, such systems can generate solutions for complex mathematical and algorithmic problems that were once too large or intricate for any single entity to handle.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/applicability-of-Apex.png" alt=""><figcaption></figcaption></figure>
 
 Advanced algorithmic and agentic systems focus on solving independent tasks, addressing bottlenecks, and optimising processes across all levels of complexity. The true value of this approach lies not only in solving abstract equations or algorithms but in translating those solutions into real-world impact. It can help humanity make better data-driven decisions improving areas such as&#x20;
 
@@ -60,6 +60,6 @@ Subnet 1 has the potential to address an immense range of use cases, spanning fr
 
 Apex subnet is set to unlock innovation at scale by hosting multiple competitions at once, empowering the community to solve several challenges in parallel. This multi-competition model transforms the subnet into a vibrant hub of creativity and collaboration, where diverse minds can contribute breakthrough ideas from different fields simultaneously. By dividing miner emissions across dedicated competition pools, Apex ensures that every area of exploration receives the support it needs — fueling a constant flow of progress and discovery. It’s a system designed not just for efficiency, but for exponential growth.
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Competitions-pool (1).png" alt=""><figcaption></figcaption></figure>
 
 Running several competitions in parallel will allow the subnet to dramatically scale its impact across the Bittensor ecosystem and beyond. Each competition acts as a catalyst for real-world innovation — from advancing AI infrastructure to optimizing global technologies. Together, they create a self-sustaining cycle of challenge, reward, and improvement that accelerates humanity’s collective problem-solving power. Through this bold approach, Apex is shaping a future where decentralised intelligence doesn’t just evolve – it thrives.
