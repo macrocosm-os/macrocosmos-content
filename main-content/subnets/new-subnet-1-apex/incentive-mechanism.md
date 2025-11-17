@@ -33,7 +33,7 @@ Opening the code approach creates several challenges for the subnet to solve:
 
 To ensure miners are fairly rewarded for their best solutions, the submitted code remains hidden for a set period. Once evaluation is complete and rewards are distributed, the code is made public for others to explore.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Competition1.png" alt=""><figcaption></figcaption></figure>
 
 The winner’s code is revealed with a delay, duration of the hidden code period depends on the competition and will be set for 2-5 days.
 
@@ -41,13 +41,13 @@ This approach guarantees creators to fully exercise the submission rewards, whil
 
 Logs are published only after the completion of a competition round. So, that a participants could improve their performance strategy.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Code-visibility.png" alt=""><figcaption></figcaption></figure>
 
 #### 2. How to motivate miners for continuous improvement? <a href="#id-2.-how-to-motivate-miners-for-continuous-improvement" id="id-2.-how-to-motivate-miners-for-continuous-improvement"></a>
 
 To encourage successful miners to keep improving their code, the subnet team introduced an emission burn mechanism. Once a top-performing solution is submitted, its associated emissions gradually start to burn. The longer the solution remains unchallenged, the higher the burn rate becomes — motivating continuous innovation and competition.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Burning-rate.png" alt=""><figcaption></figcaption></figure>
 
 #### 3. What will be the baseline and success metrics of the Compression competition? <a href="#id-3.-what-will-be-the-baseline-and-success-metrics-of-the-compression-competition" id="id-3.-what-will-be-the-baseline-and-success-metrics-of-the-compression-competition"></a>
 
@@ -63,12 +63,13 @@ The Code Executor is a part of the subnet where miners code runs in order to dem
 * Compression speed - the time required to run a compression and decompression processes
 * De-compression accuracy - similarity between the input and output of compression - decompression process.
 
-After solution run in the Code Executor, metrics are converted into score in accordance with incentive mechanism. Scores are stored and provided to Validators by request, enabling rewards distribution mechanism.
+After solution run in the Code Executor, metrics are converted into score in accordance with incentive mechanism. Scores are stored and provided to Validators by request, enabling rewards distribution mechanism.\
+
+
+<figure><img src="../../.gitbook/assets/Sumary-Apex-competition.png" alt=""><figcaption></figcaption></figure>
 
 ### Summary of Incentive Challenges <a href="#summary-of-incentive-challenges" id="summary-of-incentive-challenges"></a>
 
 The subnet is designed to share open-source problem-solving code, enabling researchers and developers worldwide to collaborate and create real-world impact. Its operation centres around competitions, where miners submit solutions to achieve the best performance metrics and earn rewards. To ensure fairness and continuous innovation, the subnet uses mechanisms such as temporary code hiding, emission burn incentives, and secure code execution during validation.
 
 Combined diagram below demonstrates the process timeline and plain principles of the subnet incentive mechanism:
-
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
