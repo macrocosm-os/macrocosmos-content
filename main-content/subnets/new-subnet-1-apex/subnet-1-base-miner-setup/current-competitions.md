@@ -1,5 +1,5 @@
 ---
-description: Registry of competitions currently active on SN1 APEX.
+description: Subnet 1 Apex registry of competitions
 ---
 
 # Current Competitions
