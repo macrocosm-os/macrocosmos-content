@@ -54,3 +54,11 @@ Open-sourcing such a solution amplifies its global benefits allowing developers,
 By bridging theoretical problem-solving with practical applications, decentralised intelligence enables more transparent, efficient, and equitable solutions to some of society’s most pressing challenges.
 
 Subnet 1 has the potential to address an immense range of use cases, spanning from micro-level algorithmic optimisations to large-scale, multi-agent system coordination. Its decentralised and adaptive architecture enables it to tackle problems in domains such as logistics, infrastructure, finance, and autonomous systems with high efficiency. As an algorithmic and agentic optimisation solver, Subnet 1 can scale to meet the computational demands of both individual applications and global networks, unlocking transformative real-world solutions.
+
+### What is next <a href="#what-is-next" id="what-is-next"></a>
+
+Apex subnet is set to unlock innovation at scale by hosting multiple competitions at once, empowering the community to solve several challenges in parallel. This multi-competition model transforms the subnet into a vibrant hub of creativity and collaboration, where diverse minds can contribute breakthrough ideas from different fields simultaneously. By dividing miner emissions across dedicated competition pools, Apex ensures that every area of exploration receives the support it needs — fueling a constant flow of progress and discovery. It’s a system designed not just for efficiency, but for exponential growth.
+
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+
+Running several competitions in parallel will allow the subnet to dramatically scale its impact across the Bittensor ecosystem and beyond. Each competition acts as a catalyst for real-world innovation — from advancing AI infrastructure to optimizing global technologies. Together, they create a self-sustaining cycle of challenge, reward, and improvement that accelerates humanity’s collective problem-solving power. Through this bold approach, Apex is shaping a future where decentralised intelligence doesn’t just evolve – it thrives.
