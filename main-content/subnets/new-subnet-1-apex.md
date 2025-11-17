@@ -59,8 +59,6 @@ Subnet 1 has the potential to address an immense range of use cases, spanning fr
 
 Apex subnet is set to unlock innovation at scale by hosting multiple competitions at once, empowering the community to solve several challenges in parallel. This multi-competition model transforms the subnet into a vibrant hub of creativity and collaboration, where diverse minds can contribute breakthrough ideas from different fields simultaneously. By dividing miner emissions across dedicated competition pools, Apex ensures that every area of exploration receives the support it needs — fueling a constant flow of progress and discovery. It’s a system designed not just for efficiency, but for exponential growth.
 
-<img alt="" class="gitbook-drawing">
-
 <figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 Running several competitions in parallel will allow the subnet to dramatically scale its impact across the Bittensor ecosystem and beyond. Each competition acts as a catalyst for real-world innovation — from advancing AI infrastructure to optimizing global technologies. Together, they create a self-sustaining cycle of challenge, reward, and improvement that accelerates humanity’s collective problem-solving power. Through this bold approach, Apex is shaping a future where decentralised intelligence doesn’t just evolve – it thrives.
