@@ -44,7 +44,3 @@ ORCHESTRATOR_PORT=443
 To understand the current competitions including what miners should aim for: [Current Competitions](current-competitions.md)
 
 To use the CLI to submit miner solutions or view active competitions: [Cli Usage](apex-cli.md)
-
-### To Get Started with A Baseline
-
-View `shared/competition/src/competition/<competition_name>/baseline.py`
