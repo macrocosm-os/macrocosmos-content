@@ -63,6 +63,7 @@
       * [Endpoints](developers/api-documentation/sn25-mainframe/organic-api/endpoints.md)
   * [Subnet 25 Incentive Mechanism](subnets/subnet-25-mainframe/subnet-25-incentive-mechanism.md)
   * [Subnet 25: Roadmap](subnets/subnet-25-mainframe/subnet-25-roadmap.md)
+* [New Subnet 1 Apex](subnets/new-subnet-1-apex.md)
 
 ***
 
