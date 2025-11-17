@@ -23,7 +23,7 @@ Short description of the subnet’s general operation:
 * **Rewards**\
   The miner with the highest score receives the full reward. If that solution is replaced or improved, the next best submission takes over and earns the rewards of the competition.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2025-11-17 at 14.14.01.png" alt=""><figcaption></figcaption></figure>
 
 ### Incentive Challenges <a href="#incentive-challenges" id="incentive-challenges"></a>
 
