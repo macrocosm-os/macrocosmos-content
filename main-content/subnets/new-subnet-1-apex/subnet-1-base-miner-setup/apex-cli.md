@@ -1,5 +1,5 @@
 ---
-description: Instructions on how to use Apex's cli tool
+description: Instructions on how to use Apex's CLI tool
 ---
 
 # APEX CLI
