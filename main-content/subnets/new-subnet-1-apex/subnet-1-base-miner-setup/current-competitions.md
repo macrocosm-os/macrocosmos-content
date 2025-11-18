@@ -1,12 +1,12 @@
 ---
-description: Registry of competitions currently active on SN1 APEX.
+description: Subnet 1 Apex competitions registry
 ---
 
 # Current Competitions
 
-### Activation Compression <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
+### Matrix Compression <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
 
-The first competition explores how small neural activations—both forward and backward—can be compressed while still retaining all their original information. Reducing activation size enables faster data transfer across the internet, a crucial step toward making distributed training more efficient, as it’s often constrained by network bandwidth. The top-performing algorithms from this competition will be integrated to enhance training on **IOTA (SN9)**. A follow-up **lossy** compression competition is planned for the future. Miners aim to optimize the following:
+The first competition - Matrix Compression - explores how small neural activations - both forward and backward - can be compressed while still retaining all their original information. Reducing activation size enables faster data transfer across the internet, a crucial step toward making distributed training more efficient, as it’s often constrained by network bandwidth. The top-performing algorithms from this competition will be integrated to enhance training on subnet 9 **IOTA**. A follow-up **lossy** compression competition is planned for the future. Miners aim to optimize the following:
 
 * Compression Ratio - How small the compressed solution is on disk versus the starting matrix.
 * Time - How fast the compression/decompression algorithm runs.
