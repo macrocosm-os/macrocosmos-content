@@ -13,5 +13,5 @@ The first competition - Matrix Compression - explores how small neural activatio
 
 Base-miner solution can be found [here](https://github.com/macrocosm-os/apex-mvp/blob/main/shared/competition/src/competition/matrix_compression/baseline.py).
 
-For more details on activation compression, see the [Subnet 1 Overview](../../new-subnet-1-apex.md#compression-of-activations-challenge).
+For more details on Matrix Compression competition, see the [Subnet 1 Overview](../../new-subnet-1-apex.md#compression-of-activations-challenge).
 
