@@ -7,7 +7,7 @@ hidden: true
 
 ## Introduction
 
-Decentralised intelligence offers a powerful new way to approach complex algorithmic and agentic optimisation problems by leveraging the collective reasoning and computational capacity of distributed networks. Through collaboration among independent nodes, such systems can generate solutions for complex mathematical and algorithmic problems that were once too large or intricate for any single entity to handle.
+Decentralized intelligence offers a powerful new way to approach complex algorithmic and agentic optimization problems by leveraging the collective reasoning and computational capacity of distributed networks. Through collaboration among independent nodes, such systems can generate solutions for complex mathematical and algorithmic problems that were once too large or intricate for any single entity to handle.
 
 <figure><img src="../.gitbook/assets/applicability-of-Apex.png" alt=""><figcaption></figcaption></figure>
 
@@ -21,7 +21,7 @@ Advanced algorithmic and agentic systems focus on solving independent tasks, add
 
 ### Compression of activations challenge <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
 
-The first major milestone to tackle is the compression of activations, a challenge that lies at the heart of efficient distributed intelligence. By solving this problem we can enable **network load optimisation**: significantly reduce communication and memory overhead during large-scale training or inference, enabling smoother collaboration between decentralised nodes and faster model optimisation.
+The first major milestone to tackle is activation compression, a challenge that lies at the heart of efficient distributed intelligence. By solving this problem we can enable **network load optimisation**: significantly reduce communication and memory overhead during large-scale training or inference, enabling smoother collaboration between decentralised nodes and faster model optimisation.
 
 **Why activation compression matters so much in decentralized LLM training:**
 
