@@ -11,7 +11,28 @@ The first competition - Matrix Compression - explores how small neural activatio
 * Compression Ratio - How small the compressed solution is on disk versus the starting matrix.
 * Time - How fast the compression/decompression algorithm runs.
 
-Base-miner solution can be found [here](https://github.com/macrocosm-os/apex-mvp/blob/main/shared/competition/src/competition/matrix_compression/baseline.py).
+#### For Miners
 
-For more details on Matrix Compression competition, see the [Subnet 1 Overview](../../new-subnet-1-apex.md#compression-of-activations-challenge).
+View the **base miner solution** provided as an example [here](https://github.com/macrocosm-os/apex-mvp/blob/main/shared/competition/src/competition/matrix_compression/baseline.py).
+
+View the **general miner solution** template [here](https://github.com/macrocosm-os/apex-mvp/blob/main/shared/competition/src/competition/matrix_compression/miner_solution.py).
+
+
+
+### Overview
+
+**Why Matrix Compression matters so much in decentralized LLM training:**
+
+1. Activations must be communicated or stored between layers/devices. Without compression, this inter-layer communication becomes the major bottleneck in throughput and scalability.
+2. Matrix Compression enables effective scalability across many nodes by mitigating network communication latencies. ￼
+3. Reducing the memory footprint of activations frees up resources for other parts of the pipeline, improving the overall efficiency and cost-effectiveness of decentralized training.
+
+Innovative matrix compression solutions unlock several high-impact real-world applications:
+
+* Distributed AI and Federated Learning Efficiency
+* Data Center and Cloud Infrastructure Optimisation
+* Edge and Networked Systems Performance
+* Large-Scale Simulation and Optimisation Systems.
+
+Optimisation advancements translate into lower network strain in AI-driven systems, more sustainable infrastructure, faster, scalable collaboration between machines and data centres, real-time enhancement for logistics, transportation, and communication networks.
 

@@ -19,24 +19,13 @@ Advanced algorithmic and agentic systems focus on solving independent tasks, add
 * Biology
 * and other.
 
-### Matrix Compression challenge <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
+### Activation Compression Challenge <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
+
+
 
 The first major milestone to tackle is activation compression, a challenge that lies at the heart of efficient distributed intelligence. By solving this problem we can enable **network load optimisation**: significantly reduce communication and memory overhead during large-scale training or inference, enabling smoother collaboration between decentralised nodes and faster model optimisation.
 
-**Why Matrix Compression matters so much in decentralized LLM training:**
 
-1. Activations must be communicated or stored between layers/devices. Without compression, this inter-layer communication becomes the major bottleneck in throughput and scalability.
-2. Matrix Compression enables effective scalability across many nodes by mitigating network communication latencies. ￼
-3. Reduced the memory footprint of activations, frees up resources for other parts of the pipeline — thus improving the overall efficiency and cost-effectiveness of decentralized training.
-
-Successful solution of Matrix Compression also unlocks several high-impact real-world applications:
-
-* Distributed AI and Federated Learning Efficiency
-* Data Center and Cloud Infrastructure Optimisation
-* Edge and Networked Systems Performance
-* Large-Scale Simulation and Optimisation Systems.
-
-The advancements of applying the optimisation translate into Lower network strain in AI-driven systems, more sustainable infrastructure, faster, scalable collaboration between machines and data centres, real-time optimisation for logistics, transportation, and communication networks.
 
 ### Subnet 9 IOTA Use Case <a href="#subnet-9-iota-use-case" id="subnet-9-iota-use-case"></a>
 
