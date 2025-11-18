@@ -19,28 +19,28 @@ Advanced algorithmic and agentic systems focus on solving independent tasks, add
 * Biology
 * and other.
 
-### Compression of activations challenge <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
+### Matrix Compression challenge <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
 
 The first major milestone to tackle is activation compression, a challenge that lies at the heart of efficient distributed intelligence. By solving this problem we can enable **network load optimisation**: significantly reduce communication and memory overhead during large-scale training or inference, enabling smoother collaboration between decentralised nodes and faster model optimisation.
 
-**Why activation compression matters so much in decentralized LLM training:**
+**Why Matrix Compression matters so much in decentralized LLM training:**
 
 1. Activations must be communicated or stored between layers/devices. Without compression, this inter-layer communication becomes the major bottleneck in throughput and scalability.
-2. Activation compression enables effective scalability across many nodes by mitigating network communication latencies. ￼
+2. Matrix Compression enables effective scalability across many nodes by mitigating network communication latencies. ￼
 3. Reduced the memory footprint of activations, frees up resources for other parts of the pipeline — thus improving the overall efficiency and cost-effectiveness of decentralized training.
 
-Successful solution of compression of activations also unlocks several high-impact real-world applications:
+Successful solution of Matrix Compression also unlocks several high-impact real-world applications:
 
 * Distributed AI and Federated Learning Efficiency
 * Data Center and Cloud Infrastructure Optimisation
 * Edge and Networked Systems Performance
-* Large-Scale Simulation and Optimisation Systems
+* Large-Scale Simulation and Optimisation Systems.
 
 The advancements of applying the optimisation translate into Lower network strain in AI-driven systems, more sustainable infrastructure, faster, scalable collaboration between machines and data centres, real-time optimisation for logistics, transportation, and communication networks.
 
 ### Subnet 9 IOTA Use Case <a href="#subnet-9-iota-use-case" id="subnet-9-iota-use-case"></a>
 
-When the Subnet 1 Compression of activations competition results in successful solutions, **Subnet 9 IOTA stands to gain significant benefits** in both performance and scalability. Efficient compression techniques will drastically reduce communication overhead between nodes, allowing faster and more synchronised training across the decentralised network. This improvement not only enhances computational throughput but also lowers the energy and bandwidth requirements for participating validators, making the subnet more sustainable and cost-efficient.
+When the Subnet 1 Matrix Compression competition results in successful solutions, **Subnet 9 IOTA stands to gain significant benefits** in both performance and scalability. Efficient compression techniques will drastically reduce communication overhead between nodes, allowing faster and more synchronised training across the decentralised network. This improvement not only enhances computational throughput but also lowers the energy and bandwidth requirements for participating validators, making the subnet more sustainable and cost-efficient.
 
 Additionally, successful solutions will strengthen IOTA’s position as a leader in decentralised intelligence by enabling smoother interoperability between AI agents and facilitating more complex, real-time collaboration.
 
@@ -58,7 +58,7 @@ Subnet 1 has the potential to address an immense range of use cases, spanning fr
 
 ### What is next <a href="#what-is-next" id="what-is-next"></a>
 
-Apex subnet is set to unlock innovation at scale by hosting multiple competitions at once, empowering the community to solve several challenges in parallel. This multi-competition model transforms the subnet into a vibrant hub of creativity and collaboration, where diverse minds can contribute breakthrough ideas from different fields simultaneously. By dividing miner emissions across dedicated competition pools, Apex ensures that every area of exploration receives the support it needs — fueling a constant flow of progress and discovery. It’s a system designed not just for efficiency, but for exponential growth.
+Apex subnet is set to unlock innovation at scale by hosting multiple competitions at once, empowering the community to solve several challenges in parallel. This multi-competition model transforms the subnet into a vibrant hub of creativity and collaboration, where diverse minds can contribute breakthrough ideas from different fields simultaneously. By dividing miner emissions across dedicated competition pools, Apex ensures that every area of exploration receives the support it needs — fuelling a constant flow of progress and discovery. It’s a system designed not just for efficiency, but for exponential growth.
 
 <figure><img src="../.gitbook/assets/Competitions-pool (1).png" alt=""><figcaption></figcaption></figure>
 
