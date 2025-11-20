@@ -5,7 +5,7 @@ hidden: true
 
 # New Subnet 1 Apex
 
-## Introduction2
+## Introduction
 
 Decentralized intelligence offers a powerful new way to approach complex algorithmic and agentic optimization problems by leveraging the collective reasoning and computational capacity of distributed networks. Through collaboration among independent nodes, such systems can generate solutions for complex mathematical and algorithmic problems that were once too large or intricate for any single entity to handle.
 
