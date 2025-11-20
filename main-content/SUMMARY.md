@@ -66,7 +66,7 @@
   * [Incentive Mechanism](subnets/new-subnet-1-apex/incentive-mechanism.md)
   * [Mining](subnets/new-subnet-1-apex/subnet-1-base-miner-setup/README.md)
     * [Current Competitions](subnets/new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md)
-    * [APEX CLI](subnets/new-subnet-1-apex/subnet-1-base-miner-setup/apex-cli.md)
+    * [Apex CLI](subnets/new-subnet-1-apex/subnet-1-base-miner-setup/apex-cli.md)
   * [Validating](subnets/new-subnet-1-apex/validating.md)
 
 ***

@@ -13,9 +13,11 @@ The first competition - Matrix Compression - explores how small neural activatio
 
 #### For Miners
 
-View the **base miner solution** provided as an example [here](https://github.com/macrocosm-os/apex-mvp/blob/main/shared/competition/src/competition/matrix_compression/baseline.py).
+View the [**baseline miner solution**](https://github.com/macrocosm-os/apex-mvp/blob/main/shared/competition/src/competition/matrix_compression/baseline.py) provided as an example.
 
-View the **general miner solution** template [here](https://github.com/macrocosm-os/apex-mvp/blob/main/shared/competition/src/competition/matrix_compression/miner_solution.py).
+View the [**general miner solution**](https://github.com/macrocosm-os/apex-mvp/blob/main/shared/competition/src/competition/matrix_compression/miner_solution.py) template.
+
+Then, continue to the [Apex CLI guide](https://docs.macrocosmos.ai/~/revisions/sm0UfbwJePs5Nk1ErAj9/subnets/new-subnet-1-apex/subnet-1-base-miner-setup/apex-cli) to submit a solution.&#x20;
 
 
 
