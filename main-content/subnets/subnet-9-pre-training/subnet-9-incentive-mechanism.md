@@ -2,7 +2,7 @@
 description: Subnet 9 incentive overview
 ---
 
-# Subnet 9: Incentive Mechanism
+# Incentive Mechanism
 
 ### System Architecture
 
@@ -69,4 +69,4 @@ $$
 I_{m} \;=\; \sum_{n=0}^{N} S_{m}^{n}\,\cdot\, w(t)_{m}^{n}
 $$
 
-where N is the total number of full synchronisation steps at that point of time. This simple linear reward structure ensures miners receive fixed compensation per processed activation, eliminating incentives for throughput manipulation or other gaming strategies during non-validation periods. The exact recomputation requirement during validation stages provides additional security against system exploitation.\
+where N is the total number of full synchronisation steps at that point of time. This simple linear reward structure ensures miners receive fixed compensation per processed activation, eliminating incentives for throughput manipulation or other gaming strategies during non-validation periods. The exact recomputation requirement during validation stages provides additional security against system exploitation.<br>

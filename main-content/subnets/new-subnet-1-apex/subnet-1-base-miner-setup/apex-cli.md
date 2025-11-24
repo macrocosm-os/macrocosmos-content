@@ -8,9 +8,20 @@ The Apex CLI is a miner's interface with the subnet: linking wallets, submitting
 
 To use the CLI you must have a [registered wallet on subnet 1.](https://docs.learnbittensor.org/miners#miner-registration)&#x20;
 
+
+
+### Setup
+
+Before using the Apex CLI, make sure you have your `.env` configured and have ran `./setup.sh`. For further instructions, see the [mining docs](./).&#x20;
+
+* Make sure you have activated your `.venv` prior to using the CLI.
+  * `source .venv/bin/activate`
+
+
+
 ### Link Wallet
 
-Link your registered wallet with the cli - required for most cli commands:
+Link your registered wallet with the CLI - required for most CLI commands:
 
 `apex link`&#x20;
 
@@ -19,6 +30,10 @@ This will prompt you to enter your Bittensor wallet location, which defaults to 
 * To select the default wallet location, press _ENTER/RETURN_.&#x20;
 
 Then, use the arrow keys to select your registered coldkey and hotkey from the list provided.&#x20;
+
+NOTE: Some previously created wallets using earlier versions of btcli may not a have a private key configured. If this is the case, regenerate this hotkey before linking.&#x20;
+
+
 
 ### View Competitions
 
@@ -36,6 +51,10 @@ Example Output:
 
 <figure><img src="../../../.gitbook/assets/dashboard_screenshot.png" alt=""><figcaption></figcaption></figure>
 
+Competition 10, Round 1.
+
+
+
 ### View Submissions
 
 To view a submission, first open the dashboard `apex dashboard` and press _ENTER/RETU&#x52;_&#x4E; when hovering the competition of interest.
@@ -44,10 +63,19 @@ To view a submission, first open the dashboard `apex dashboard` and press _ENTER
 
 Your own submissions will be viewable immediately, other's submissions will be viewable after a delay.&#x20;
 
+
+
 ### Submit a Solution
+
+`apex submit`
+
+This will prompt you to enter the file path to your solution, competition ID, and round ID consecutively.&#x20;
+
+Or, in one line:&#x20;
 
 ```
 apex submit <Path_To_Solution> -c <Competition_ID> -r <Round_ID>
 ```
 
-View the \<Competition\_ID> and \<Round\_ID> via the dashboard
+View the current \<Competition\_ID> and \<Round\_ID> via the dashboard.
+

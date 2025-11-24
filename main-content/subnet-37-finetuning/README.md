@@ -31,4 +31,4 @@ Related resources
 * [Cosmonauts - Macrocosmos Telegram](https://t.me/macrocosmosai)
 * [Macrocosmos X](https://x.com/MacrocosmosAI)
 
-\
+<br>

@@ -14,12 +14,10 @@ To get started using Macrocosmos Software Development Kit (SDK) you should:
 
     <figure><img src="../../.gitbook/assets/Open_folder.png" alt=""><figcaption></figcaption></figure>
 3.  In your new project folder type at the Chat menu asking to setup a new project:\
-    ![](../../.gitbook/assets/New_chat.png)\
-
+    ![](../../.gitbook/assets/New_chat.png)<br>
 
     > Cursor is a great tool for the development! It can follow human language instructions helping to setup the project, make it functional and secure, find issues with the code and provide instructions in case of challenges.&#x20;
-4.  I have got the next instructions and accepted the files.\
-
+4.  I have got the next instructions and accepted the files.<br>
 
     I'll help you set up a new empty project. First, let me check what's currently in the workspace directory.Listed 0 items in current directoryGreat, I see the directory is empty. I'll help you set up a basic project structure. I'll create:
 
@@ -27,17 +25,15 @@ To get started using Macrocosmos Software Development Kit (SDK) you should:
     2. A .gitignore file for common files to ignore
     3. A basic project structure
 
-    ![](../../.gitbook/assets/Accept_the_file.png)\
-
+    ![](../../.gitbook/assets/Accept_the_file.png)<br>
 5. In the next message ask to create a virtual environment\
    ![](<../../.gitbook/assets/Screenshot 2025-05-29 at 19.02.56.png>)
 6. I have accepted the changes and got the result:\
    \
    Perfect! Your virtual environment is now set up and ready to use. Here's what has been done:
-
-1) Created a new virtual environment in the venv directory
-2) Activated the virtual environment
-3) Verified Python 3.9.6 and pip 21.2.4 are installed
+7. Created a new virtual environment in the venv directory
+8. Activated the virtual environment
+9. Verified Python 3.9.6 and pip 21.2.4 are installed
 
 You can now:
 
@@ -55,8 +51,7 @@ You can now:
     </strong><strong>python
     </strong></code></pre>
 
-Congratulations! 🎉 You have setup the basic project and now can start to use Macrocosmos SDK through the terminal starting from **pip install macrocosmos** and activating clients for Apex and Gravity, as it described in the document below.\
-
+Congratulations! 🎉 You have setup the basic project and now can start to use Macrocosmos SDK through the terminal starting from **pip install macrocosmos** and activating clients for Apex and Gravity, as it described in the document below.<br>
 
 </details>
 

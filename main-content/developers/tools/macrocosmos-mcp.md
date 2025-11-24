@@ -226,8 +226,7 @@ You can now ask questions or give prompts. Be sure to **specify when you want th
 
 
 
-**Tool Usage in Action**\
-
+**Tool Usage in Action**<br>
 
 When the agent responds, you’ll see it indicate which **MCP tool** it’s using, along with a coherent and context-aware reply.
 
