@@ -19,9 +19,9 @@ Advanced algorithmic and agentic systems focus on solving independent tasks, add
 * Biology
 * and other.
 
+
+
 ### Activation Compression Challenge <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
-
-
 
 The first major milestone to tackle is activation compression, a challenge that lies at the heart of efficient distributed intelligence. By solving this problem we can enable **network load optimisation**: significantly reduce communication and memory overhead during large-scale training or inference, enabling smoother collaboration between decentralised nodes and faster model optimisation.
 
@@ -31,24 +31,16 @@ The first major milestone to tackle is activation compression, a challenge that 
 
 When the Subnet 1 Matrix Compression competition results in successful solutions, **Subnet 9 IOTA stands to gain significant benefits** in both performance and scalability. Efficient compression techniques will drastically reduce communication overhead between nodes, allowing faster and more synchronised training across the decentralised network. This improvement not only enhances computational throughput but also lowers the energy and bandwidth requirements for participating validators, making the subnet more sustainable and cost-efficient.
 
-Additionally, successful solutions will strengthen IOTA’s position as a leader in decentralised intelligence by enabling smoother interoperability between AI agents and facilitating more complex, real-time collaboration.
 
-Ultimately, this advancement will improve the overall robustness, accessibility, and competitiveness of Subnet 9 IOTA and Subnet 1 Apex within the broader Bittensor ecosystem.
 
-### Open source approach <a href="#open-source-approach" id="open-source-approach"></a>
+### Open Source Approach <a href="#open-source-approach" id="open-source-approach"></a>
 
 Open-sourcing such a solution amplifies its global benefits allowing developers, researchers, and industries to build upon a shared foundation, accelerate innovation, and ensure transparency and accessibility. This open collaboration not only democratises advanced computation but also strengthens real-world infrastructure by making intelligent, resource-efficient systems available to all.
 
-### Introduction Summary <a href="#introduction-summary" id="introduction-summary"></a>
 
-By bridging theoretical problem-solving with practical applications, decentralised intelligence enables more transparent, efficient, and equitable solutions to some of society’s most pressing challenges.
 
-Subnet 1 has the potential to address an immense range of use cases, spanning from micro-level algorithmic optimisations to large-scale, multi-agent system coordination. Its decentralised and adaptive architecture enables it to tackle problems in domains such as logistics, infrastructure, finance, and autonomous systems with high efficiency. As an algorithmic and agentic optimisation solver, Subnet 1 can scale to meet the computational demands of both individual applications and global networks, unlocking transformative real-world solutions.
-
-### What is next <a href="#what-is-next" id="what-is-next"></a>
+### What's Next <a href="#what-is-next" id="what-is-next"></a>
 
 Apex subnet is set to unlock innovation at scale by hosting multiple competitions at once, empowering the community to solve several challenges in parallel. This multi-competition model transforms the subnet into a vibrant hub of creativity and collaboration, where diverse minds can contribute breakthrough ideas from different fields simultaneously. By dividing miner emissions across dedicated competition pools, Apex ensures that every area of exploration receives the support it needs — fuelling a constant flow of progress and discovery. It’s a system designed not just for efficiency, but for exponential growth.
 
 <figure><img src="../.gitbook/assets/Competitions-pool (1).png" alt=""><figcaption></figcaption></figure>
-
-Running several competitions in parallel will allow the subnet to dramatically scale its impact across the Bittensor ecosystem and beyond. Each competition acts as a catalyst for real-world innovation — from advancing AI infrastructure to optimizing global technologies. Together, they create a self-sustaining cycle of challenge, reward, and improvement that accelerates humanity’s collective problem-solving power. Through this bold approach, Apex is shaping a future where decentralised intelligence doesn’t just evolve – it thrives.

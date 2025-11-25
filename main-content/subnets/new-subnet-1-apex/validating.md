@@ -2,9 +2,9 @@
 
 #### Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
-To setup a validator on subnet 1 Apex you will need the following:
+To setup a validator on subnet 1 Apex, you will need the following:
 
-* A Registered [Bittensor wallet](https://docs.bittensor.com/working-with-keys) with at least 10k Alpha staked
+* A Registered [Bittensor wallet](https://docs.bittensor.com/working-with-keys) with at least 10k Alpha staked.
 
 ### Getting Started&#x20;
 
