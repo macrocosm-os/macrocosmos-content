@@ -10,11 +10,11 @@ To setup a validator on subnet 1 Apex, you will need the following:
 
 To get started, [clone the repo](https://github.com/macrocosm-os/apex) and run `./setup.sh` , activating it with `source .venv/bin/activate`
 
-Add the following to your .env file, after creating a new .env created by `./setup.sh`
+Clone your validator keys, and add the following to your .env file.
 
 ```
 WALLET_NAME=""
 WALLET_HOTKEY=""
 ```
 
-Then clone your validator keys onto the machine, and run `./start_validator.sh`
+Then run `./start_validator.sh`
