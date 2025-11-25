@@ -12,7 +12,7 @@ To use the CLI you must have a [registered wallet on subnet 1.](https://docs.lea
 
 ### Setup
 
-Before using the Apex CLI, make sure you have your `.env` configured and have ran `./setup.sh`. For further instructions, see the [mining docs](./).&#x20;
+Before using the Apex CLI, make sure you have ran `./setup.sh`. For further instructions, see the [mining docs](./).&#x20;
 
 * Make sure you have activated your `.venv` prior to using the CLI.
   * `source .venv/bin/activate`
@@ -43,6 +43,8 @@ NOTE: Some previously created wallets using earlier versions of btcli may not a 
 
 This will return a list of all active competitions and their associated competition IDs.&#x20;
 
+
+
 #### To view competitions and their status in detail:
 
 `apex dashboard`
@@ -51,7 +53,7 @@ Example Output:
 
 <figure><img src="../../../.gitbook/assets/dashboard_screenshot.png" alt=""><figcaption></figcaption></figure>
 
-Competition 10, Round 1.
+Competition ID 10, Round ID 1.
 
 
 
