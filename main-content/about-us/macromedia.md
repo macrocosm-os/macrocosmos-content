@@ -6,6 +6,74 @@ description: Resources to read and watch about Macrocosmos
 
 
 
+***
+
+## Is this the decentralised version of Cambridge Analytica?
+
+{% embed url="https://www.youtube.com/watch?v=22XnH-z3nm8" %}
+
+***
+
+## 💎 Bittensor Hidden Gem - Explosive Project Ready To Pop
+
+{% embed url="https://www.youtube.com/watch?v=OApbcUCLCP4" %}
+
+***
+
+## Data Universe: Was Google & Meta geheim halten, ist jetzt öffentlich! (Bittensor Subnet)
+
+{% embed url="https://www.youtube.com/watch?v=z5carLls14k" %}
+
+***
+
+## DoesThis Bittensor (TAO) Subnet Have 10X Potential?
+
+{% embed url="https://youtu.be/J-gLRaX5uFo?si=g7-6BCsdlLEoo0tF" %}
+
+***
+
+## 🚨Will Barry Silbert Pump Bittensor TAO Like Zcash? Full Breakdown & Prediction
+
+{% embed url="https://www.youtube.com/watch?v=FWeDkJ3QRvo" %}
+
+***
+
+## This TAO Project Is Changing EVERYTHING For Data!
+
+{% embed url="https://www.youtube.com/watch?v=iF0dkMJPefM" %}
+
+***
+
+## Bittensor Brief #14: Data Universe (Subnet 13)
+
+{% embed url="https://www.youtube.com/watch?v=jEIHcZn_544" %}
+
+***
+
+## Can Data Make You Rich in 2025?
+
+
+
+{% embed url="https://youtu.be/EGOtFceHrOU?si=OmgZ0XlitOZgDRBy" %}
+
+***
+
+## Why Big Tech Is Scared of the Bittensor [#TAO](https://www.youtube.com/hashtag/tao) explosion (SN13 Data Universe Explained)
+
+
+
+{% embed url="https://youtu.be/xZ_fIkmVrcE?si=a0ZvNERIFpBT3Q6y" %}
+
+***
+
+## This Bittensor Subnet Could Be HUGE! | Bittensor (TAO) Update
+
+{% embed url="https://youtu.be/4IH0ud3qJ3U?si=ZpAOpmWG9ij_07EE" %}
+
+
+
+***
+
 {% embed url="https://x.com/VenturaLabs/status/1950209712563027979" %}
 
 {% embed url="https://www.forbes.com/sites/torconstantino/2025/06/02/swarm-intelligence-is-reshaping-how-ai-gets-trained/" %}
