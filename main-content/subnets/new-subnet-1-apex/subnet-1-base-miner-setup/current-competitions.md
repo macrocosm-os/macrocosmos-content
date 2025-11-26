@@ -15,6 +15,10 @@ Miners aim to optimize the following:
 * Compression Ratio - How small the compressed solution is on disk versus the starting matrix.
 * Time - How fast the compression/decompression algorithm runs.
 
+To surpass the current winner of the competition, a miner must earn a **raw score** of at least 1% higher than the current top score. If there is no current winner, then a miner must earn a raw score of at least 1% higher than the baseline score.&#x20;
+
+* The `score_to_beat` is displayed in the Apex CLI dashboard, under competition information.&#x20;
+
 #### For Miners
 
 View the matrix compression [**baseline miner solution**](https://github.com/macrocosm-os/apex-mvp/blob/main/shared/competition/src/competition/matrix_compression/baseline.py) provided as an example.

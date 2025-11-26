@@ -79,5 +79,6 @@ Or, in one line:&#x20;
 apex submit <Path_To_Solution> -c <Competition_ID> -r <Round_ID>
 ```
 
-View the current \<Competition\_ID> and \<Round\_ID> via the dashboard.
+* View the current \<Competition\_ID> and \<Round\_ID> via the dashboard.
+* Submissions are limited to **once per hour, per hotkey**.
 
