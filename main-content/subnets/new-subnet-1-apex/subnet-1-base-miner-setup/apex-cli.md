@@ -28,6 +28,7 @@ Link your registered wallet with the CLI - required for most CLI commands:
 This will prompt you to enter your Bittensor wallet location, which defaults to the default Bittensor wallet path: `/Users/{USERNAME}/.bittensor/wallets` .
 
 * To select the default wallet location, press _ENTER/RETURN_.&#x20;
+* For custom wallet locations, enter the path from the root directory.
 
 Then, use the arrow keys to select your registered coldkey and hotkey from the list provided.&#x20;
 
