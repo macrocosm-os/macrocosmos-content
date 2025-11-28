@@ -33,11 +33,9 @@ As machine learning becomes more commoditized, the **quality of training data** 
 
 ## Architecture
 
-Subnet 13's decentralized design allows data to be distributed across miners and queried by validators, showcasing Bittensor's scalability. Macrocosmos is expanding data sources, developing a queryable API ([endpoints.md](../../developers/api-documentation/sn13-data-universe/endpoints.md "mention")), and is currently the largest open source data provider on HuggingFace with over 17 billion scraped posts and comments (as of January 2025). By providing the raw material for pre-training and inference, subnet 13 is poised to supercharge the next stage of AI model development within the Bittensor ecosystem.
+Subnet 13's decentralized design allows data to be distributed across miners and queried by validators, showcasing Bittensor's scalability. Macrocosmos is expanding data sources, developing a queryable API ([endpoints.md](../../developers/api-documentation/sn13-data-universe/endpoints.md "mention")), and is currently one of the largest data providers with access to over 55 billion scraped posts and comments. By providing the raw material for pre-training and inference, subnet 13 is poised to supercharge the next stage of AI model development within the Bittensor ecosystem.
 
 Subnet 13's [interactive dashboard](https://www.macrocosmos.ai/sn13/dashboard) not only provides up-to-date metrics on the total scraped posts, total amount of datasets or scraping speed, but also statistics on the datasets content with the amount of posts scraped per the most popular topics. The dashboard interface allows filtering based on the content age and daily scraping metrics, whilst offering a different table-formated UX.
-
-
 
 ## Gravity Client - Macrocosmos SDK
 
@@ -46,12 +44,12 @@ Using the `GravityClient` in the **Macrocosmos SDK**, you can easily launch scra
 
 **You'll also need an API key. Visit** [**Subnet 13 Gravity API**](../../developers/macrocosmos-sdk/gravity.md) to get started.
 
-
-
 ## Want a deeper dive?
 
 For more details about the subnet 13 R\&D work, take a look at our Substack articles:
 
+* [TAOLOR: Building a subnet-native AI agent with distributed RAG](https://macrocosmosai.substack.com/p/taolor-building-a-subnet-native-ai)
+* [Building the future of authentic data: how subnet 111 leverages Macrocosmos' Gravity](https://macrocosmosai.substack.com/p/building-the-future-of-authentic)
 * [Result: SN44, Score, partners with SN13’s Data Universe](https://macrocosmosai.substack.com/p/result-sn44-score-partners-with-sn13s)
 * [A breakdown of SN13’s dashboard: historical data, mining activity, and enhancements for Gravity](https://macrocosmosai.substack.com/p/a-breakdown-of-sn13s-dashboard-historical)
 * [SN13's Election experiment: A decisive victory for data scraping?](https://macrocosmosai.substack.com/p/sn13s-election-experiment-a-decisive)
