@@ -22,7 +22,7 @@ To setup a miner on Apex you will need the following:
 
 ### Setting Up the Environment&#x20;
 
-To get started, [clone the repo](https://github.com/macrocosm-os/apex) and run `./setup.sh` then activate the environment created by running `source .venv/bin/activate`
+To get started, [clone the repo](https://github.com/macrocosm-os/apex) and run `./install_cli.sh` then activate the environment created by running `source .venv/bin/activate`
 
 
 
