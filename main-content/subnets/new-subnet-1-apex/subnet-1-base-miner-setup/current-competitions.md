@@ -6,8 +6,6 @@ description: Subnet 1 Apex competitions registry
 
 ### Matrix Compression <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt="" width="375"><figcaption></figcaption></figure>
-
 The first competition - Matrix Compression - explores how small neural activations - both forward and backward - can be compressed while still retaining all their original information. Reducing activation size enables faster data transfer across the internet, a crucial step toward making distributed training more efficient, as it’s often constrained by network bandwidth. The top-performing algorithms from this competition will be integrated to enhance training on subnet 9 **IOTA**.&#x20;
 
 Miners aim to optimize the following:
@@ -31,20 +29,5 @@ Then, continue to the [**Apex CLI guide**](https://docs.macrocosmos.ai/~/revisio
 
 
 
-### Overview
 
-**Why Matrix Compression matters so much in decentralized LLM training:**
-
-1. Activations must be communicated or stored between layers/devices. Without compression, this inter-layer communication becomes the major bottleneck in throughput and scalability.
-2. Matrix Compression enables effective scalability across many nodes by mitigating network communication latencies. ￼
-3. Reducing the memory footprint of activations frees up resources for other parts of the pipeline, improving the overall efficiency and cost-effectiveness of decentralized training.
-
-Innovative matrix compression solutions unlock several high-impact real-world applications:
-
-* Distributed AI and Federated Learning Efficiency
-* Data Center and Cloud Infrastructure Optimisation
-* Edge and Networked Systems Performance
-* Large-Scale Simulation and Optimisation Systems.
-
-Optimisation advancements translate into lower network strain in AI-driven systems, more sustainable infrastructure, faster, scalable collaboration between machines and data centres, real-time enhancement for logistics, transportation, and communication networks.
 
