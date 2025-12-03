@@ -50,7 +50,7 @@ Test your solution with the provided samples in this R2 bucket: [https://pub-770
 * First, download `manifest.csv` from the R2 bucket to access all sample file names.&#x20;
 * You will then be able to access all sample files with their given file names.&#x20;
 
-Then, continue to the [**Apex CLI guide**](https://docs.macrocosmos.ai/~/revisions/sm0UfbwJePs5Nk1ErAj9/subnets/new-subnet-1-apex/subnet-1-base-miner-setup/apex-cli) to submit a solution.&#x20;
+Then, continue to the [**Apex CLI guide**](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli) to submit a solution.&#x20;
 
 
 

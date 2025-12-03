@@ -8,7 +8,7 @@ description: Subnet 1 mining guide
 
 ### Overview
 
-**Apex** drives algorithmic innovation across diverse problem domains. Each pursuit of the best solution takes place within a **Competition**, which consists of multiple **Rounds** of evaluation. Participants, known as miners, join Competitions by submitting their Python-based algorithms through the [Apex CLI ](apex-cli.md)and earn rewards based on their performance.
+**Apex** drives algorithmic innovation across diverse problem domains. Each pursuit of the best solution takes place within a **Competition**, which consists of multiple **Rounds** of evaluation. Participants, known as miners, join Competitions by submitting their Python-based algorithms through the[ Apex CLI](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli) and earn rewards based on their performance.
 
 
 
@@ -36,6 +36,6 @@ You should keep all function signatures identical to the baseline to ensure that
 
 ### Submitting Your Solutions
 
-To understand the current competitions and their scoring guidlelines: [Current Competitions](../current-competitions.md)
+To understand the current competitions and their scoring guidlelines: [Current Competitions](https://docs.macrocosmos.ai/subnets/subnet-1-apex/current-competitions)
 
-To use the CLI to submit miner solutions, pull previous winning submissions, and view the submission dashboard: [CLI Usage](apex-cli.md)
+To use the CLI to submit miner solutions, pull previous winning submissions, and view the submission dashboard: [CLI Usage](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli)

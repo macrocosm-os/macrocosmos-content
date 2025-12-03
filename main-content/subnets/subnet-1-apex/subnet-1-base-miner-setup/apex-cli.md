@@ -8,16 +8,12 @@ The Apex CLI is a miner's interface with the subnet: linking wallets, submitting
 
 To use the CLI you must have a [registered wallet on subnet 1.](https://docs.learnbittensor.org/miners#miner-registration)&#x20;
 
-
-
 ### Setup
 
-Before using the Apex CLI, make sure you have ran `./setup.sh`. For further instructions, see the [mining docs](./).&#x20;
+Before using the Apex CLI, make sure you have ran `./setup.sh`. For further instructions, see the [mining docs](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup).&#x20;
 
 * Make sure you have activated your `.venv` prior to using the CLI.
   * `source .venv/bin/activate`
-
-
 
 ### Link Wallet
 
@@ -34,8 +30,6 @@ Then, use the arrow keys to select your registered coldkey and hotkey from the l
 
 NOTE: Some previously created wallets using earlier versions of btcli may not a have a private key configured. If this is the case, regenerate this hotkey before linking.&#x20;
 
-
-
 ### View Competitions
 
 #### To view the currently active competition:
@@ -43,8 +37,6 @@ NOTE: Some previously created wallets using earlier versions of btcli may not a 
 `apex competitions`
 
 This will return a list of all active competitions and their associated competition IDs.&#x20;
-
-
 
 #### To view competitions and their status in detail:
 
@@ -56,8 +48,6 @@ Example Output:
 
 Competition ID 10, Round ID 1.
 
-
-
 ### View Submissions
 
 To view a submission, first open the dashboard `apex dashboard` and press _ENTER/RETU&#x52;_&#x4E; when hovering the competition of interest.
@@ -65,8 +55,6 @@ To view a submission, first open the dashboard `apex dashboard` and press _ENTER
 <figure><img src="../../../.gitbook/assets/Screenshot 2025-11-14 at 10.15.29 PM.png" alt=""><figcaption></figcaption></figure>
 
 Your own submissions will be viewable immediately, other's submissions will be viewable after a delay.&#x20;
-
-
 
 ### Submit a Solution
 
