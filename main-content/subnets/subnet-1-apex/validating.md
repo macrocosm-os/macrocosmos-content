@@ -15,4 +15,5 @@ Clone your validator keys, and add the following to your .env file.
 ```
 WALLET_NAME=""
 WALLET_HOTKEY=""
+BITTENSOR=True
 ```
