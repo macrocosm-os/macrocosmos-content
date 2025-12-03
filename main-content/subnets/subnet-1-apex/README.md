@@ -15,19 +15,17 @@ description: Subnet 1 Overview
 * Validators:
   * Read through the [Validator Setup](https://docs.macrocosmos.ai/subnets/subnet-1-apex/validating) guide
 
+
+
 ## Introduction
 
 Decentralized intelligence offers a powerful new way to approach complex algorithmic and agentic optimization problems by leveraging the collective reasoning and computational capacity of distributed networks. Through collaboration and competition among independent nodes, SN1 can generate solutions for complex mathematical and algorithmic problems that were once too large or intricate for any single entity to handle.
 
 <figure><img src="../../.gitbook/assets/applicability-of-Apex.png" alt=""><figcaption></figcaption></figure>
 
-These algorithmic and agentic systems focus on solving independent tasks, addressing bottlenecks, and optimising processes across all levels of complexity. The value of this approach lies not only in solving abstract equations or algorithms but in translating those solutions into real-world impact. It can help humanity make better data-driven decisions improving areas such as:
+These algorithmic and agentic systems focus on solving independent tasks, addressing bottlenecks, and optimising processes across all levels of complexity. The value of this approach lies not only in solving abstract equations or algorithms but in translating those solutions into real-world impact.
 
-* Finance
-* Infrastructure
-* Social networks
-* Biology
-* etc.
+
 
 ### Matrix Compression Challenge <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
 
