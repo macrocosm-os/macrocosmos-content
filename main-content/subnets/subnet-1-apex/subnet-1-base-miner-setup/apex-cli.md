@@ -58,14 +58,14 @@ Your own submissions will be viewable immediately, other's submissions will be v
 
 `apex submit`
 
-This will prompt you to enter the file path to your solution, competition ID, and round ID consecutively.&#x20;
+This will prompt you to enter the file path to your solution path and competition ID.&#x20;
 
 Or, in one line:&#x20;
 
 ```
-apex submit <Path_To_Solution> -c <Competition_ID> -r <Round_ID>
+apex submit <Path_To_Solution> -c <Competition_ID>
 ```
 
-* View the current \<Competition\_ID> and \<Round\_ID> via the dashboard.
-* Submissions are limited to **once per hour, per hotkey**.
+* View the current \<Competition\_ID> and \<Round\_Number> via the dashboard.
+* Submissions are limited to **4 submissions per day,** **per hotkey**.
 
