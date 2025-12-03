@@ -17,7 +17,7 @@ Advanced algorithmic and agentic systems focus on solving independent tasks, add
 * Infrastructure
 * Social networks
 * Biology
-* and other.
+* etc.
 
 
 
@@ -25,7 +25,7 @@ Advanced algorithmic and agentic systems focus on solving independent tasks, add
 
 The first major milestone to tackle is activation compression, a challenge that lies at the heart of efficient distributed intelligence. By solving this problem we can enable **network load optimisation**: significantly reduce communication and memory overhead during large-scale training or inference, enabling smoother collaboration between decentralised nodes and faster model optimisation.
 
-Miners are encouraged to read through the activation compression challenge in [Current Competitions](https://docs.macrocosmos.ai/~/revisions/KrMJwem2Y231mkGUd91p/subnets/new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions).
+Read through the activation compression challenge overview and evaluation metrics in [Current Competitions](https://docs.macrocosmos.ai/~/revisions/KrMJwem2Y231mkGUd91p/subnets/new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions).
 
 
 
@@ -43,6 +43,6 @@ Open-sourcing such a solution amplifies its global benefits allowing developers,
 
 ### What's Next <a href="#what-is-next" id="what-is-next"></a>
 
-Apex subnet is set to unlock innovation at scale by hosting multiple competitions at once, empowering the community to solve several challenges in parallel. This multi-competition model transforms the subnet into a vibrant hub of creativity and collaboration, where diverse minds can contribute breakthrough ideas from different fields simultaneously. By dividing miner emissions across dedicated competition pools, Apex ensures that every area of exploration receives the support it needs — fuelling a constant flow of progress and discovery. It’s a system designed not just for efficiency, but for exponential growth.
+Apex subnet is set to unlock innovation at scale by hosting multiple competitions at once, empowering the community to solve several challenges in parallel. This multi-competition model transforms the subnet into a vibrant hub of creativity and collaboration, where diverse minds can contribute breakthrough ideas from different fields simultaneously. By dividing miner emissions across dedicated competition pools, Apex ensures that every area of exploration receives the support it needs — fuelling a constant flow of progress and discovery.&#x20;
 
 <figure><img src="../.gitbook/assets/Competitions-pool (1).png" alt=""><figcaption></figcaption></figure>
