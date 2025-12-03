@@ -39,7 +39,7 @@
 
 * [Subnet 1 Apex](subnets/subnet-1-apex/README.md)
   * [Incentive Mechanism](subnets/subnet-1-apex/incentive-mechanism.md)
-  * [Current Competitions](subnets/subnet-1-apex/current-competitions.md)
+  * [Current Competitions](subnets/subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md)
   * [Mining](subnets/subnet-1-apex/subnet-1-base-miner-setup/README.md)
     * [Apex CLI](subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli.md)
   * [Validating](subnets/subnet-1-apex/validating.md)

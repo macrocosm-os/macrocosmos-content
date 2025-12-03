@@ -15,27 +15,18 @@ Miners aim to optimize the following:
 * Compression Ratio - How small the compressed solution is on disk versus the starting matrix.
 * Time - How fast the compression/decompression algorithm runs.
 
-To surpass the current winner of the competition, a miner must earn a **raw score** of at least 1% higher than the current top score. If there is no current winner, then a miner must earn a raw score of at least 1% higher than the baseline score.&#x20;
+To surpass the current winner of the competition, a miner must earn a **score** of at least 1% higher than the current top score. If there is no current winner, then a miner must earn a score of at least 1% higher than the baseline score.&#x20;
 
 * The `score_to_beat` is displayed in the Apex CLI dashboard, under competition information.&#x20;
 
-**Raw score is calculated by:**
+**Score is calculated by:**
 
 ```
-raw_score = 1 * (30 - task_time) + 1000 * similarity + 1000000 * compression_ratio
+score = np.clip((1 - compression) * (1 - task_time / (1 + 0.012)), 0.0, 1.0)
 ```
 
 * Where `task_time` includes both compression and decompression.
-* Similarity is calculated by `cosine_similarity * norm_similarity`.
-* Compression ratio is calculated by `original_size / compressed_file_size`.
-
-**This raw score is then normalized with a sigmoid normalization function:**
-
-```
-normalized_score = 1 / (1 + np.exp(-0.003 * (raw_score / 1000 - 2000)))
-```
-
-* Where a normalized score of 0.5 correlates to a raw score of 2,000,000.
+* Compression is calculated by `compressed_file_size / original_file_size`.
 
 
 
