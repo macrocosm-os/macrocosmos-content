@@ -17,3 +17,8 @@ WALLET_NAME=""
 WALLET_HOTKEY=""
 BITTENSOR=True
 ```
+
+The default subtensor network is Finney. If you would like to use a local subtensor, add the following to your `.env`:
+
+<pre><code><strong>NETWORK=
+</strong></code></pre>

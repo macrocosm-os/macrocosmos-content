@@ -57,7 +57,6 @@ The Code Executor is a part of the subnet where miner code is ran and evaluated.
 
 * Compression ratio - the max level of compression provided by solution
 * Compression speed - the time required to run a compression and decompression processes
-* De-compression accuracy - similarity between the input and output of compression - decompression process.
 
 After solutions run in the Code Executor, metrics are converted into score in accordance with the given competition's scoring mechanism.&#x20;
 
