@@ -36,6 +36,6 @@ You should keep all function signatures identical to the baseline to ensure that
 
 ### Submitting Your Solutions
 
-To understand the current competitions and their scoring guidlelines: [Current Competitions](current-competitions.md)
+To understand the current competitions and their scoring guidlelines: [Current Competitions](../current-competitions.md)
 
 To use the CLI to submit miner solutions, pull previous winning submissions, and view the submission dashboard: [CLI Usage](apex-cli.md)

@@ -39,8 +39,8 @@
 
 * [Subnet 1 Apex](subnets/subnet-1-apex/README.md)
   * [Incentive Mechanism](subnets/subnet-1-apex/incentive-mechanism.md)
+  * [Current Competitions](subnets/subnet-1-apex/current-competitions.md)
   * [Mining](subnets/subnet-1-apex/subnet-1-base-miner-setup/README.md)
-    * [Current Competitions](subnets/subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md)
     * [Apex CLI](subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli.md)
   * [Validating](subnets/subnet-1-apex/validating.md)
 * [Subnet 9 IOTA](subnets/subnet-9-iota/README.md)
