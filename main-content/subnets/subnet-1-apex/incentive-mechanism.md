@@ -35,7 +35,7 @@ To ensure miners are fairly rewarded for their best solutions, the submitted cod
 
 <figure><img src="../../.gitbook/assets/Competition1.png" alt=""><figcaption></figcaption></figure>
 
-The winner’s code is revealed with a delay. The duration of the hidden code period depends on the competition and will be set for 2-5 days. Logs are published only after the completion of a competition round.&#x20;
+The winner’s code is revealed with a delay. The duration of the hidden code period depends on the competition. Logs are published only after the completion of a competition round.&#x20;
 
 This approach guarantees creators to fully exercise the submission rewards, while still allowing others to learn from and improve existing solutions — tapping into the power of community innovation.
 
@@ -49,17 +49,15 @@ The emission burning mechanism was created to push successful miners toward impr
 
 #### 3. What will be the baseline and success metrics of the Matrix Compression competition? <a href="#id-3.-what-will-be-the-baseline-and-success-metrics-of-the-compression-competition" id="id-3.-what-will-be-the-baseline-and-success-metrics-of-the-compression-competition"></a>
 
-The initial baseline for the Matrix Compression challenge will be the Lempel–Ziv–Markov-Chain Algorithm (LZMA). LZMA, recognisable in due to its frequent usage in 7-zip, combines dictionary and range encoding, saving bits on repeated data and predictable byte sequences. Apex adopts the implementation from the standard python library.&#x20;
+The initial baseline for the Matrix Compression challenge will be the Lempel–Ziv–Markov-Chain Algorithm (LZMA). LZMA, recognisable in due to its frequent usage in 7-zip. It combines dictionary and range encoding, saving bits on repeated data and predictable byte sequences. Apex adopts the implementation from the standard python library.&#x20;
 
 #### 4. How are code submissions validated? <a href="#id-4.-how-to-ensure-fair-and-safe-validation-of-someones-code-which-can-not-be-public-until-the-validat" id="id-4.-how-to-ensure-fair-and-safe-validation-of-someones-code-which-can-not-be-public-until-the-validat"></a>
 
-To ensure secure and safe validation process and still leave the process of validation decentralised, the subnet is using the Code Executor.
-
-The Code Executor is a part of the subnet where miners code runs in order to demonstrate working solution and provide solutions metrics. Metrics depend on the type of the competition. In case of the Matrix Compression competition such metrics are:
+The Code Executor is a part of the subnet where miner code is ran and evaluated. Evaluation metrics depend on the competition. In case of the Matrix Compression competition such metrics are:
 
 * Compression ratio - the max level of compression provided by solution
 * Compression speed - the time required to run a compression and decompression processes
 * De-compression accuracy - similarity between the input and output of compression - decompression process.
 
-After solutions run in the Code Executor, metrics are converted into score in accordance with the given competition's incentive mechanism. Scores are stored and provided to Validators by request, enabling rewards distribution mechanism.
+After solutions run in the Code Executor, metrics are converted into score in accordance with the given competition's scoring mechanism.&#x20;
 
