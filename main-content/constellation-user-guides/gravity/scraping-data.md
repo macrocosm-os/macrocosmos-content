@@ -23,7 +23,7 @@ You want live posts from Reddit, X and Youtube.
 
 #### Mission Commander
 
-Mission Commander (MC), our specialized AI assistant can also help provide the relevant keywords for you task, all you have to do is ask! Mission commander is powered by [subnet-1-apex](../../subnets/subnet-1-apex/ "mention")
+Mission Commander (MC), our specialized AI assistant can also help provide the relevant keywords for you task, all you have to do is ask! Mission commander is powered by [subnet-1-apex-old](../../subnets/subnet-1-apex-old/ "mention")
 
 **Step 1: Write a request**
 

@@ -1,72 +1,47 @@
 ---
-description: Bittensor can build the best agents
+description: Subnet 1 Overview
 ---
 
 # Subnet 1 Apex
 
-## What is Subnet 1?
+## Introduction
 
-**Subnet 1** is Bittensor’s flagship subnet, focused on building **state-of-the-art open-source intelligence** through decentralized competitions and cutting-edge LLM research. Bittensor requires persistent research and innovation to compete with leading proprietary models for it to continue being a viable solution to closed-source and centralized alternatives.
+Decentralized intelligence offers a powerful new way to approach complex algorithmic and agentic optimization problems by leveraging the collective reasoning and computational capacity of distributed networks. Through collaboration among independent nodes, such systems can generate solutions for complex mathematical and algorithmic problems that were once too large or intricate for any single entity to handle.
 
-<figure><img src="../../.gitbook/assets/Apex overview.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/applicability-of-Apex.png" alt=""><figcaption></figcaption></figure>
 
-## Core Goals
+Advanced algorithmic and agentic systems focus on solving independent tasks, addressing bottlenecks, and optimising processes across all levels of complexity. The true value of this approach lies not only in solving abstract equations or algorithms but in translating those solutions into real-world impact. It can help humanity make better data-driven decisions improving areas such as&#x20;
 
-* Produce agentic workflows with LLMs that surpass the capabilities of proprietary models at specific tasks.
-* Develop advanced inference techniques like **response ensembling** and **chain-of-thought reasoning**.
-* Prove that decentralized systems can produce **SOTA AI models**.
-* Serve as **Bittensor’s main entry point** for new users.
-* Power smart interfaces to interact with other subnets and digital tools.
+* Finance
+* Infrastructure
+* Social networks
+* Biology
+* etc.
 
-## Why SN1 Matters
 
-With a long-standing legacy in the ecosystem, SN1 has led the way in **LLM-based incentive design**. It was rebuilt in January 2024 to take full advantage of the latest breakthroughs in LLM research and infrastructure.
 
-One of SN1’s biggest innovations is the development of **agentic workflows** — LLM-powered agents equipped with tools like API access, code execution, and web search. These workflows dramatically improve performance by reducing hallucinations, boosting accuracy, and enabling deeper, more reasoned outputs.
+### Matrix Compression Challenge <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
 
-Subnet 1 enhances the Bittensor environment by:
+The first major milestone to tackle is Matrix Compression or Compression of Activations, a challenge that lies at the heart of efficient distributed intelligence. By solving this problem we can enable **network load optimisation**: significantly reduce communication and memory overhead during large-scale training or inference, enabling smoother collaboration between decentralised nodes and faster model optimisation.
 
-* Creating an [arena for miners ](https://www.macrocosmos.ai/sn1/dashboard)to relentlessly build innovative agents designed to compete with proprietary models.
-* Producing highly specialised, targeted intelligence as a digital commodity for users.
-* Providing chat interfaces, APIs, and other mechanisms for users and businesses to interact with the intelligent hivemind. At present, subnet 1 powers multiple user-facing products, one of which being [Apex](../../constellation-user-guides/apex/), part of our Constellation platform.
-* Subnet 1 additionally allows Validators to spin up their own api endpoints with 1 line, using OpenAI standard endpoints for seamless streaming to front-ends and plug-ins.
-* Expanding Bittensor's incentive landscape and framework, building on its legacy as the protocol's flagship subnet, and continuing to push the boundaries of mechanism design.
+Read through the activation compression challenge overview and evaluation metrics in [Current Competitions](https://docs.macrocosmos.ai/~/revisions/KrMJwem2Y231mkGUd91p/subnets/new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions).
 
-## Interoperability
 
-Subnet 1 works closely with other subnets to expand its capabilities:
 
-* subnets 37, Finetuning, and subnet 9, Pre-Training, through synthetic data generation,
-* subnet 13, Data Universe, through data annotation and sentiment analysis,
-* subnet 19, Inference, offloading tasks to an inference-specific subnet.
+### Subnet 9 IOTA Use Case <a href="#subnet-9-iota-use-case" id="subnet-9-iota-use-case"></a>
 
-## Apex Client - Macrocosmos SDK
+When the Subnet 1 Matrix Compression competition results in successful solutions, **Subnet 9 IOTA stands to gain significant benefits** in both performance and scalability. Efficient compression techniques will drastically reduce communication overhead between nodes, allowing faster and more synchronised training across the decentralised network. This improvement not only enhances computational throughput but also lowers the energy and bandwidth requirements for participating validators, making the subnet more sustainable and cost-efficient.
 
-**(SN1)** runs open-source language models like LLaMA and Mistral, and you can interact with it easily using the [..](../../ "mention")\
-With the `ApexClient`, you can send prompts, run chat completions, and perform live web searches — all decentralized and miner-powered.\\
 
-**You'll also need an API key. Visit** [api-documentation](../../developers/api-documentation/ "mention") to get started.
 
-#### TLDR
+### Open Source Approach <a href="#open-source-approach" id="open-source-approach"></a>
 
-Subnet 1 plays a key role in Bittensor’s mission to compete with closed-source models by focusing on **specialization, innovation, and usability**. It strikes a balance between **research** and real-world **productization**, advancing the application of decentralized AI. Check out [Subnet 1's Dashboard](https://www.macrocosmos.ai/sn1/dashboard) for a variety of metrics for the competition and the model's performance quality.
+Open-sourcing such a solution amplifies its global benefits allowing developers, researchers, and industries to build upon a shared foundation, accelerate innovation, and ensure transparency and accessibility. This open collaboration not only democratises advanced computation but also strengthens real-world infrastructure by making intelligent, resource-efficient systems available to all.
 
-For more details about the subnet 1 R\&D work, take a look at our Substack articles:
 
-* [Chain-of-thought: SN1 enhanced with multi-step reasoning](https://macrocosmosai.substack.com/p/chain-of-thought-sn1-enhanced-with)
-* [Mixture-of-Miners: improving SN1’s performance](https://macrocosmosai.substack.com/p/mixture-of-miners-improving-sn1s)
-* [Introducing SN1’s dashboard: benchmarks, leaderboards, & miner stats](https://macrocosmosai.substack.com/p/introducing-sn1s-dashboard)
-* [Task management: Redesigning SN1’s validation mechanisms](https://macrocosmosai.substack.com/p/task-management-redesigning-sn1s)
 
-**Related resources**
+### What's Next <a href="#what-is-next" id="what-is-next"></a>
 
-* [Website](https://www.macrocosmos.ai/sn1)
-* [Dashboard](https://www.macrocosmos.ai/sn1/dashboard)
-* [GitHub](https://macrocosmosai.substack.com/t/language-models)
-* [Substack](https://macrocosmosai.substack.com/t/language-models)
-* [Bittensor Discord](https://discord.com/channels/799672011265015819/1161764867166961704)
-* [Macrocosmos Discord](https://discord.com/channels/1238450997848707082)
-* [Cosmonauts - Macrocosmos Telegram](https://t.me/macrocosmosai)
-* [Macrocosmos X](https://x.com/MacrocosmosAI)
+Apex subnet is set to unlock innovation at scale by hosting multiple competitions at once, empowering the community to solve several challenges in parallel. This multi-competition model transforms the subnet into a vibrant hub of creativity and collaboration, where diverse minds can contribute breakthrough ideas from different fields simultaneously. By dividing miner emissions across dedicated competition pools, Apex ensures that every area of exploration receives the support it needs — fuelling a constant flow of progress and discovery.&#x20;
 
-\\
+<figure><img src="../../.gitbook/assets/Competitions-pool (1).png" alt=""><figcaption></figcaption></figure>

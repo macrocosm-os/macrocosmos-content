@@ -38,9 +38,11 @@
 ## SUBNETS
 
 * [Subnet 1 Apex](subnets/subnet-1-apex/README.md)
-  * [Subnet 1 Getting Started](subnets/subnet-1-apex/subnet-1-getting-started.md)
-  * [Subnet 1 Incentive Mechanism](subnets/subnet-1-apex/subnet-1-incentive-mechanism.md)
-  * [Subnet 1: Roadmap](subnets/subnet-1-apex/subnet-1-roadmap.md)
+  * [Incentive Mechanism](subnets/subnet-1-apex/incentive-mechanism.md)
+  * [Mining](subnets/subnet-1-apex/subnet-1-base-miner-setup/README.md)
+    * [Current Competitions](subnets/subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md)
+    * [Apex CLI](subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli.md)
+  * [Validating](subnets/subnet-1-apex/validating.md)
 * [Subnet 9 IOTA](subnets/subnet-9-iota/README.md)
   * [Incentive Mechanism](subnets/subnet-9-pre-training/subnet-9-incentive-mechanism.md)
   * [Mining](subnets/subnet-9-iota/mining.md)
@@ -50,6 +52,10 @@
   * [Subnet 13: Roadmap](subnets/subnet-13-data-universe/subnet-13-roadmap.md)
   * [Subnet 13 Data Universe API](subnets/subnet-13-data-universe/subnet-13-api.md)
   * [Subnet 13 Incentive Mechanism](subnets/subnet-13-data-universe/subnet-13-incentive-mechanism.md)
+* [Legacy Subnet 1 Apex](subnets/subnet-1-apex-old/README.md)
+  * [Subnet 1 Getting Started](subnets/subnet-1-apex-old/subnet-1-getting-started.md)
+  * [Legacy Subnet 1 Incentive Mechanism](subnets/subnet-1-apex-old/subnet-1-incentive-mechanism.md)
+  * [Subnet 1: Roadmap](subnets/subnet-1-apex-old/subnet-1-roadmap.md)
 * [Subnet 25 Mainframe](subnets/subnet-25-mainframe/README.md)
   * [Subnet 25 Getting Started](subnets/subnet-25-mainframe/subnet-25-getting-started.md)
   * [Subnet 25 Mainframe API](developers/api-documentation/sn25-mainframe/README.md)
@@ -62,12 +68,6 @@
       * [Endpoints](developers/api-documentation/sn25-mainframe/organic-api/endpoints.md)
   * [Subnet 25 Incentive Mechanism](subnets/subnet-25-mainframe/subnet-25-incentive-mechanism.md)
   * [Subnet 25: Roadmap](subnets/subnet-25-mainframe/subnet-25-roadmap.md)
-* [New Subnet 1 Apex](subnets/new-subnet-1-apex.md)
-  * [Incentive Mechanism](subnets/new-subnet-1-apex/incentive-mechanism.md)
-  * [Mining](subnets/new-subnet-1-apex/subnet-1-base-miner-setup/README.md)
-    * [Current Competitions](subnets/new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md)
-    * [Apex CLI](subnets/new-subnet-1-apex/subnet-1-base-miner-setup/apex-cli.md)
-  * [Validating](subnets/new-subnet-1-apex/validating.md)
 
 ***
 
