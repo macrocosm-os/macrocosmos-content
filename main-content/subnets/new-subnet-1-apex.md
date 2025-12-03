@@ -25,6 +25,8 @@ Advanced algorithmic and agentic systems focus on solving independent tasks, add
 
 The first major milestone to tackle is activation compression, a challenge that lies at the heart of efficient distributed intelligence. By solving this problem we can enable **network load optimisation**: significantly reduce communication and memory overhead during large-scale training or inference, enabling smoother collaboration between decentralised nodes and faster model optimisation.
 
+Miners are encouraged to read through the activation compression challenge in [Current Competitions](https://docs.macrocosmos.ai/~/revisions/KrMJwem2Y231mkGUd91p/subnets/new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions).
+
 
 
 ### Subnet 9 IOTA Use Case <a href="#subnet-9-iota-use-case" id="subnet-9-iota-use-case"></a>
