@@ -21,9 +21,9 @@ Advanced algorithmic and agentic systems focus on solving independent tasks, add
 
 
 
-### Activation Compression Challenge <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
+### Matrix Compression Challenge <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
 
-The first major milestone to tackle is activation compression, a challenge that lies at the heart of efficient distributed intelligence. By solving this problem we can enable **network load optimisation**: significantly reduce communication and memory overhead during large-scale training or inference, enabling smoother collaboration between decentralised nodes and faster model optimisation.
+The first major milestone to tackle is Matrix Compression or Compression of Activations, a challenge that lies at the heart of efficient distributed intelligence. By solving this problem we can enable **network load optimisation**: significantly reduce communication and memory overhead during large-scale training or inference, enabling smoother collaboration between decentralised nodes and faster model optimisation.
 
 Read through the activation compression challenge overview and evaluation metrics in [Current Competitions](https://docs.macrocosmos.ai/~/revisions/KrMJwem2Y231mkGUd91p/subnets/new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions).
 
