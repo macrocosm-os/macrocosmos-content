@@ -44,15 +44,13 @@ This will return a list of all active competitions and their associated competit
 
 Example Output:
 
-<figure><img src="../../../.gitbook/assets/dashboard_screenshot.png" alt=""><figcaption></figcaption></figure>
-
-Competition ID 10, Round ID 1.
+<figure><img src="../../../.gitbook/assets/ APEX.png" alt=""><figcaption><p>Competition 1, Round 1</p></figcaption></figure>
 
 ### View Submissions
 
 To view a submission, first open the dashboard `apex dashboard` and press _ENTER/RETU&#x52;_&#x4E; when hovering the competition of interest.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2025-11-14 at 10.15.29 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Sart. 13853-22-09 0145 ENd 2825-17-18 8885.png" alt=""><figcaption></figcaption></figure>
 
 Your own submissions will be viewable immediately, other's submissions will be viewable after a delay.&#x20;
 
