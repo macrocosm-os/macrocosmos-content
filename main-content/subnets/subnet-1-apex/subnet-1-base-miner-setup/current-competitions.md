@@ -28,7 +28,12 @@ score = np.clip((1 - compression) * (1 - task_time / (1 + 0.012)), 0.0, 1.0)
 * Where `task_time` includes both compression and decompression.
 * Compression is calculated by `compressed_file_size / original_file_size`.
 
+#### Other Matrix Compression settings
 
+* The submitted code remains hidden for 24 hours, after that it is open-sourced to the community to ensure fast innovation cycle.
+* The round time is 2 days. This means that the task pool is renewed and the logs for the competition are published every two days.
+* The emission Burn Rate currently is 90%.
+* "The winner takes it all" format means that the winning miner receives all the remaining 10% of miners emission as a first reward. If the same solution continues to stay on top, each **subsequent reward** for that solution will **decrease linearly over 10 days**, in accordance with the emission burning mechanism.
 
 #### For Miners
 
