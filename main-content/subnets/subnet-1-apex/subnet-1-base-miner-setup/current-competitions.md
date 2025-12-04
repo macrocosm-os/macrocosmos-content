@@ -27,6 +27,7 @@ score = np.clip((1 - compression) * (1 - task_time / (1 + 0.012)), 0.0, 1.0)
 
 * Where `task_time` includes both compression and decompression.
 * Compression is calculated by `compressed_file_size / original_file_size`.
+* In the compression of matrix mechanism, &#x53;_**imilarity**_ means that after you compress and then decompress a matrix the resulting matrix must be identical to the original - no changes in any values. Tasks performed with Similarity < 1 are not rewarded.
 
 #### Other Matrix Compression settings
 
