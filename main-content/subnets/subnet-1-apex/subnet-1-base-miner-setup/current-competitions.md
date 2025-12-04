@@ -36,11 +36,15 @@ View the matrix compression [**baseline miner solution**](https://github.com/mac
 
 View the matrix compression [**general miner solution**](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/matrix_compression/miner_solution.py) template.
 
-For the sample files, R2 does not list the files.&#x20;
+**Note:** The R2 bucket does not list files directly. Use the manifest to find and download samples.
 
-1. To download a file, first download this [manifest file](https://pub-77097c3387c340de9ff1bd5e5b443d8d.r2.dev/manifest.csv) to get a list of the samples.&#x20;
-2. Open the file and copy any of the file names from the list.
-3. Then use `https://pub-77097c3387c340de9ff1bd5e5b443d8d.r2.dev/<file_name>` to get the sample.
+1. Download the [manifest file](https://pub-77097c3387c340de9ff1bd5e5b443d8d.r2.dev/manifest.csv). This file contains the full list of available sample filenames.
+2. Open the manifest and copy the name of any file you want to download. For example: `example_001.txt`.
+3. In your browser (or with `curl`/`wget`), go to:\
+   `https://pub-77097c3387c340de9ff1bd5e5b443d8d.r2.dev/<file_name>` replacing `<file_name>` with the name you copied from the manifest.\
+   \
+   For example:\
+   `https://pub-77097c3387c340de9ff1bd5e5b443d8d.r2.dev/example_001.txt.`&#x20;
 
 Then, continue to the [**Apex CLI guide**](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli) to submit a solution.&#x20;
 
