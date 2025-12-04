@@ -35,12 +35,15 @@ score = np.clip((1 - compression) * (1 - task_time / (1 + 0.012)), 0.0, 1.0)
 * The round time is 2 days. This means that the task pool is renewed and the logs for the competition are published every two days.
 * The emission Burn Rate currently is 90%.
 * "The winner takes it all" format means that the winning miner receives all the remaining 10% of miners emission as a first reward. If the same solution continues to stay on top, each **subsequent reward** for that solution will **decrease linearly over 10 days**, in accordance with the emission burning mechanism.
+* Each round, 30 matrices are randomly selected from a large matrix pool and used to evaluate all miners’ submissions. In the next round, a different set of 30 matrices is selected and used for evaluation again.
 
 #### For Miners
 
 View the matrix compression [**baseline miner solution**](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/matrix_compression/baseline.py) provided as an example.
 
 View the matrix compression [**general miner solution**](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/matrix_compression/miner_solution.py) template.
+
+The manifest.json file contains a sample of 1000 matrices of a large matrix pool, including both matrices that have already been used for evaluation and matrices that have not been evaluated.
 
 **Note:** The R2 bucket does not list files directly. Use the manifest to find and download samples.
 
