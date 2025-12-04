@@ -41,8 +41,6 @@ score = np.clip((1 - compression) * (1 - task_time / (1 + 0.012)), 0.0, 1.0)
 
 View the matrix compression [**baseline miner solution**](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/matrix_compression/baseline.py) provided as an example.
 
-View the matrix compression [**general miner solution**](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/matrix_compression/miner_solution.py) template.
-
 The manifest.json file contains a sample of 1000 matrices of a large matrix pool, including both matrices that have already been used for evaluation and matrices that have not been evaluated.
 
 **Note:** The R2 bucket does not list files directly. Use the manifest to find and download samples.
