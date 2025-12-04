@@ -36,7 +36,10 @@ View the matrix compression [**baseline miner solution**](https://github.com/mac
 
 View the matrix compression [**general miner solution**](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/matrix_compression/miner_solution.py) template.
 
-For the sample files, R2 does not list the files. To download a file, first download this [manifest file](https://pub-77097c3387c340de9ff1bd5e5b443d8d.r2.dev/manifest.csv) to get a list of the samples. Then use `https://pub-77097c3387c340de9ff1bd5e5b443d8d.r2.dev/<file_name>` to get the samples.
+For the sample files, R2 does not list the files.&#x20;
+
+1. To download a file, first download this [manifest file](https://pub-77097c3387c340de9ff1bd5e5b443d8d.r2.dev/manifest.csv) to get a list of the samples.&#x20;
+2. Then use `https://pub-77097c3387c340de9ff1bd5e5b443d8d.r2.dev/<file_name>` to get the samples.
 
 Then, continue to the [**Apex CLI guide**](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli) to submit a solution.&#x20;
 
