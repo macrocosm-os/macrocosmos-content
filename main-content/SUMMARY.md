@@ -93,6 +93,7 @@
   * [FAQs](product-and-services/gravity/faqs.md)
   * [Data Universe Use Cases](product-and-services/gravity/data-universe-use-cases/README.md)
     * [How to understand how people feel about my brand?](product-and-services/gravity/data-universe-use-cases/how-to-understand-how-people-feel-about-my-brand.md)
+    * [How to find out what topics people most often connect with my brand and competitor?](product-and-services/gravity/data-universe-use-cases/how-to-find-out-what-topics-people-most-often-connect-with-my-brand-and-competitor.md)
 * [Nebula User Guide](product-and-services/nebula/README.md)
   * [Explore Nebula](product-and-services/nebula/explore-nebula.md)
   * [Analyzing data](product-and-services/nebula/analyzing-data.md)
