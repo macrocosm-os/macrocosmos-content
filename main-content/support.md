@@ -2,7 +2,7 @@
 
 {% columns %}
 {% column %}
-![](../../.gitbook/assets/roket-icon.png) **Get started**
+![](.gitbook/assets/roket-icon.png) **Get started**
 
 [Constellation Product Platform](https://app.macrocosmos.ai/)
 
@@ -14,7 +14,7 @@
 {% endcolumn %}
 
 {% column %}
-![](../../.gitbook/assets/contact-icon.png) **Contact us**
+![](.gitbook/assets/contact-icon.png) **Contact us**
 
 [Macrocosmos Discord](https://discord.gg/hSuasW9q)
 
@@ -24,7 +24,7 @@
 {% endcolumn %}
 {% endcolumns %}
 
-![](../../.gitbook/assets/community-icon.png) Community Channels
+![](.gitbook/assets/community-icon.png) Community Channels
 
 [Macrocosmos X](https://t.me/macrocosmosai)
 
@@ -32,7 +32,7 @@
 
 [The Cosmonaut Substack](https://macrocosmosai.substack.com/)
 
-### ![](../../.gitbook/assets/faq-icon.png) FAQ
+### ![](.gitbook/assets/faq-icon.png) FAQ
 
 #### **Constellation**
 
