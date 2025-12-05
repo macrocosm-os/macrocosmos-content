@@ -1,14 +1,12 @@
-# Support
+# Data Universe Support
 
 {% columns %}
 {% column %}
-#### &#x20;![](.gitbook/assets/roket-icon.png) Get started <a href="#get-started" id="get-started"></a>
-
-[Using Macrocosmos services](https://docs.macrocosmos.ai/constellation-user-guides/apex)
+![](.gitbook/assets/roket-icon.png) **Get started**
 
 [Constellation Product Platform](https://app.macrocosmos.ai/)
 
-[Using Subnets API](https://docs.macrocosmos.ai/)
+[Build with API](https://docs.macrocosmos.ai/)
 
 [Guides for mining and validating the subnets](https://docs.macrocosmos.ai/subnets/subnet-1-apex)
 
@@ -16,7 +14,7 @@
 {% endcolumn %}
 
 {% column %}
-#### ![](.gitbook/assets/contact-icon.png) Contact us <a href="#contact-us" id="contact-us"></a>
+![](.gitbook/assets/contact-icon.png) **Contact us**
 
 [Macrocosmos Discord](https://discord.gg/hSuasW9q)
 
@@ -26,7 +24,7 @@
 {% endcolumn %}
 {% endcolumns %}
 
-![](.gitbook/assets/community-icon.png)  Community Channels
+![](.gitbook/assets/community-icon.png) Community Channels
 
 [Macrocosmos X](https://t.me/macrocosmosai)
 
