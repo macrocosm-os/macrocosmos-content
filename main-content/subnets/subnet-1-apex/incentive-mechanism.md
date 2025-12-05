@@ -47,11 +47,7 @@ The emission burning mechanism was created to push successful miners toward impr
 
 <figure><img src="../../.gitbook/assets/Burning-rate.png" alt=""><figcaption></figcaption></figure>
 
-#### 3. What will be the baseline and success metrics of the Matrix Compression competition? <a href="#id-3.-what-will-be-the-baseline-and-success-metrics-of-the-compression-competition" id="id-3.-what-will-be-the-baseline-and-success-metrics-of-the-compression-competition"></a>
-
-The initial baseline for the Matrix Compression challenge will be the Lempel–Ziv–Markov-Chain Algorithm (LZMA). LZMA, recognisable in due to its frequent usage in 7-zip. It combines dictionary and range encoding, saving bits on repeated data and predictable byte sequences. Apex adopts the implementation from the standard python library.&#x20;
-
-#### 4. How are code submissions validated? <a href="#id-4.-how-to-ensure-fair-and-safe-validation-of-someones-code-which-can-not-be-public-until-the-validat" id="id-4.-how-to-ensure-fair-and-safe-validation-of-someones-code-which-can-not-be-public-until-the-validat"></a>
+#### 3. How are code submissions validated? <a href="#id-4.-how-to-ensure-fair-and-safe-validation-of-someones-code-which-can-not-be-public-until-the-validat" id="id-4.-how-to-ensure-fair-and-safe-validation-of-someones-code-which-can-not-be-public-until-the-validat"></a>
 
 The Code Executor is a part of the subnet where miner code is ran and evaluated. Evaluation metrics depend on the competition.&#x20;
 
@@ -61,8 +57,4 @@ In case of the Matrix Compression competition such metrics are:
 * Compression speed - the task\_time, required to run a compression and decompression processes
 
 After solutions run in the Code Executor, metrics are converted into score in accordance with the given competition's scoring mechanism.&#x20;
-
-```
-score = np.clip((1 - compression) * (1 - task_time / (1 + 0.012)), 0.0, 1.0)
-```
 

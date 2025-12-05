@@ -27,15 +27,19 @@ score = np.clip((1 - compression) * (1 - task_time / (1 + 0.012)), 0.0, 1.0)
 
 * Where `task_time` includes both compression and decompression.
 * Compression is calculated by `compressed_file_size / original_file_size`.
-* In the compression of matrix mechanism, &#x53;_**imilarity**_ means that after you compress and then decompress a matrix the resulting matrix must be identical to the original - no changes in any values. Tasks performed with Similarity < 1 are not rewarded.
+* If compression is not **lossless**, the submission will receive a score of 0.&#x20;
 
-#### Other Matrix Compression settings
 
-* The submitted code remains hidden for 24 hours, after that it is open-sourced to the community to ensure fast innovation cycle.
-* The round time is 2 days. This means that the task pool is renewed and the logs for the competition are published every two days.
-* The emission Burn Rate currently is 90%.
-* "The winner takes it all" format means that the winning miner receives all the remaining 10% of miners emission as a first reward. If the same solution continues to stay on top, each **subsequent reward** for that solution will **decrease linearly over 10 days**, in accordance with the emission burning mechanism.
-* Each round, 30 matrices are randomly selected from a large matrix pool and used to evaluate all miners’ submissions. In the next round, a different set of 30 matrices is selected and used for evaluation again.
+
+#### Matrix Compression Settings
+
+* The submitted code remains hidden for 24 hours to everyone but the submission owner, after which it becomes accessible to all miners.&#x20;
+* Round length: **2 days**
+* Burn rate: **90%**&#x20;
+  * The top scorer receives the remaining incentive pool (10%), annealing linearly over a **10 day period**, provided no other submissions surpass the current top score.&#x20;
+* Evaluation: each round uses 30 randomly sampled matrices from the total pool; the sample refreshes every round.
+
+
 
 #### For Miners
 
