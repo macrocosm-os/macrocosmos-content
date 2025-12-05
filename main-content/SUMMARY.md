@@ -48,7 +48,6 @@
   * [Mining](subnets/subnet-9-iota/mining.md)
   * [Validating](subnets/subnet-9-iota/validating.md)
   * [TAH Support](subnets/subnet-9-iota/support.md)
-  * [TAH User Guide](subnets/subnet-9-iota/tah-user-guide.md)
 * [Subnet 13 Data Universe](subnets/subnet-13-data-universe/README.md)
   * [Subnet 13 Getting Started](subnets/subnet-13-data-universe/subnet-13-getting-started.md)
   * [Subnet 13: Roadmap](subnets/subnet-13-data-universe/subnet-13-roadmap.md)
@@ -82,18 +81,19 @@
   * [Subnet 37 Competitions](subnet-37-finetuning/subnet-37-competitions.md)
   * [Subnet 37: Roadmap](subnet-37-finetuning/subnet-37-roadmap.md)
 
-## CONSTELLATION - USER GUIDES
+## PRODUCT AND SERVICES
 
-* [Apex User Guide](constellation-user-guides/apex/README.md)
-  * [Navigating Apex](constellation-user-guides/apex/navigating-apex.md)
-  * [FAQs](constellation-user-guides/apex/faqs.md)
-* [Gravity User Guide](constellation-user-guides/gravity/README.md)
-  * [Scraping Data](constellation-user-guides/gravity/scraping-data.md)
-  * [Managing And Collecting Your Data](constellation-user-guides/gravity/managing-and-collecting-your-data.md)
-  * [FAQs](constellation-user-guides/gravity/faqs.md)
-* [Nebula User Guide](constellation-user-guides/nebula/README.md)
-  * [Explore Nebula](constellation-user-guides/nebula/explore-nebula.md)
-  * [Analyzing data](constellation-user-guides/nebula/analyzing-data.md)
+* [Apex User Guide](product-and-services/apex/README.md)
+  * [Navigating Apex](product-and-services/apex/navigating-apex.md)
+  * [FAQs](product-and-services/apex/faqs.md)
+* [TAH User Guide](product-and-services/tah-user-guide.md)
+* [Data Universe User Guide](product-and-services/gravity/README.md)
+  * [Scraping Data](product-and-services/gravity/scraping-data.md)
+  * [Managing And Collecting Your Data](product-and-services/gravity/managing-and-collecting-your-data.md)
+  * [FAQs](product-and-services/gravity/faqs.md)
+* [Nebula User Guide](product-and-services/nebula/README.md)
+  * [Explore Nebula](product-and-services/nebula/explore-nebula.md)
+  * [Analyzing data](product-and-services/nebula/analyzing-data.md)
 
 ## About us
 

@@ -2,11 +2,11 @@
 description: Power your business with real-time insights from the latest data
 ---
 
-# Gravity User Guide
+# Data Universe User Guide
 
-### **What is Gravity?**
+### **What is** Data Univers&#x65;**?**
 
-**Gravity** is a dataset collection service built with subnet 13, Data-Universe. It is a part of the Constellation, more details can be found on the webpage [https://www.macrocosmos.ai/gravity](https://www.macrocosmos.ai/gravity).
+**Data Universe** is a dataset collection service built with subnet 13, Data-Universe. It is a part of the Constellation, more details can be found on the webpage [https://www.macrocosmos.ai/gravity](https://www.macrocosmos.ai/gravity).
 
 In a world where consumer preferences shift overnight, businesses battle to stay relevant— outdated, incomplete data is no longer an option.
 
