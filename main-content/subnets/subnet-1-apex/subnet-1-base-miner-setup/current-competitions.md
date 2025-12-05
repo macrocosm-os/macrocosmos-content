@@ -36,7 +36,8 @@ score = np.clip((1 - compression) * (1 - task_time / (1 + 0.012)), 0.0, 1.0)
 * The submitted code remains hidden for 24 hours to everyone but the submission owner, after which it becomes accessible to all miners.&#x20;
 * Round length: **2 days**
 * Burn rate: **90%**&#x20;
-  * The top scorer receives the remaining incentive pool (10%), annealing linearly over a **10 day period**, provided no other submissions surpass the current top score.&#x20;
+  * The top scorer receives the remaining incentive pool (10%), decreasing linearly over a **10 day period**, provided no other submissions surpass the current top score.&#x20;
+    * If a new submission exceeds the top score, the incentive decay resets from 10%.&#x20;
 * Evaluation: each round uses 30 randomly sampled matrices from the total pool; the sample refreshes every round.
 
 
