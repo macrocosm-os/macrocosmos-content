@@ -47,11 +47,13 @@
   * [Incentive Mechanism](subnets/subnet-9-pre-training/subnet-9-incentive-mechanism.md)
   * [Mining](subnets/subnet-9-iota/mining.md)
   * [Validating](subnets/subnet-9-iota/validating.md)
+  * [Training At Home Support](subnets/subnet-9-iota/support.md)
 * [Subnet 13 Data Universe](subnets/subnet-13-data-universe/README.md)
   * [Subnet 13 Getting Started](subnets/subnet-13-data-universe/subnet-13-getting-started.md)
   * [Subnet 13: Roadmap](subnets/subnet-13-data-universe/subnet-13-roadmap.md)
   * [Subnet 13 Data Universe API](subnets/subnet-13-data-universe/subnet-13-api.md)
   * [Subnet 13 Incentive Mechanism](subnets/subnet-13-data-universe/subnet-13-incentive-mechanism.md)
+  * [Data Universe Support](subnets/subnet-13-data-universe/support.md)
 * [Legacy Subnet 1 Apex](subnets/subnet-1-apex-old/README.md)
   * [Subnet 1 Getting Started](subnets/subnet-1-apex-old/subnet-1-getting-started.md)
   * [Legacy Subnet 1 Incentive Mechanism](subnets/subnet-1-apex-old/subnet-1-incentive-mechanism.md)
@@ -105,4 +107,3 @@
 ***
 
 * [Pricing](pricing.md)
-* [Data Universe Support](support.md)
