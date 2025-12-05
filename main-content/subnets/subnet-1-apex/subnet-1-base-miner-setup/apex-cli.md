@@ -10,7 +10,7 @@ To use the CLI you must have a [registered wallet on subnet 1.](https://docs.lea
 
 ### Setup
 
-Before using the Apex CLI, make sure you have ran `./setup.sh`. For further instructions, see the [mining docs](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup).&#x20;
+Before using the Apex CLI, make sure you have ran `./install_cli.sh`. For further instructions, see the [mining docs](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup).&#x20;
 
 * Make sure you have activated your `.venv` prior to using the CLI.
   * `source .venv/bin/activate`
