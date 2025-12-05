@@ -48,6 +48,7 @@
   * [Mining](subnets/subnet-9-iota/mining.md)
   * [Validating](subnets/subnet-9-iota/validating.md)
   * [TAH Support](subnets/subnet-9-iota/support.md)
+  * [TAH User Guide](subnets/subnet-9-iota/tah-user-guide.md)
 * [Subnet 13 Data Universe](subnets/subnet-13-data-universe/README.md)
   * [Subnet 13 Getting Started](subnets/subnet-13-data-universe/subnet-13-getting-started.md)
   * [Subnet 13: Roadmap](subnets/subnet-13-data-universe/subnet-13-roadmap.md)

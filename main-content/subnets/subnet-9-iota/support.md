@@ -5,15 +5,13 @@ description: >-
 hidden: true
 ---
 
-# Training At Home Support
+# TAH Support
 
 {% columns %}
 {% column %}
 ![](../../.gitbook/assets/roket-icon.png) **Get started**
 
 Training At Home (TAH) Guide
-
-[Bittensor Documentation](https://docs.bittensor.com/)
 {% endcolumn %}
 
 {% column %}
