@@ -58,7 +58,7 @@
   * [Subnet 1 Getting Started](subnets/subnet-1-apex-old/subnet-1-getting-started.md)
   * [Legacy Subnet 1 Incentive Mechanism](subnets/subnet-1-apex-old/subnet-1-incentive-mechanism.md)
   * [Subnet 1: Roadmap](subnets/subnet-1-apex-old/subnet-1-roadmap.md)
-* [Subnet 25 Mainframe](subnets/subnet-25-mainframe/README.md)
+* [Legacy Subnet 25 Mainframe](subnets/subnet-25-mainframe/README.md)
   * [Subnet 25 Getting Started](subnets/subnet-25-mainframe/subnet-25-getting-started.md)
   * [Subnet 25 Mainframe API](developers/api-documentation/sn25-mainframe/README.md)
     * [Running Folding API](developers/api-documentation/sn25-mainframe/running-folding-api.md)
