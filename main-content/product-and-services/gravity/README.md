@@ -16,25 +16,25 @@ Data Universe is available as
 
 {% columns %}
 {% column %}
-<p align="center">Data Collection Tool</p>
+<h4 align="center">Data Collection Tool</h4>
 
-<figure><img src="../../.gitbook/assets/Cosmo.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Cosmo1.png" alt=""><figcaption></figcaption></figure>
 
 <p align="center"><a href="https://app.macrocosmos.ai/gravity/tasks" class="button primary">Sign in</a></p>
 {% endcolumn %}
 
 {% column %}
-<p align="center">Marketplace</p>
+<h4 align="center">Marketplace</h4>
 
-<figure><img src="../../.gitbook/assets/Marketplace (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Marketplace1.png" alt=""><figcaption></figcaption></figure>
 
 <p align="center"><a href="https://app.macrocosmos.ai/gravity/marketplace" class="button primary">Sign in</a></p>
 {% endcolumn %}
 
 {% column %}
-<p align="center">API</p>
+<h4 align="center">API</h4>
 
-<figure><img src="../../.gitbook/assets/API.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API1.png" alt=""><figcaption></figcaption></figure>
 
 <p align="center"><a href="https://docs.macrocosmos.ai/developers/readme/installation" class="button secondary">Docs</a></p>
 {% endcolumn %}
