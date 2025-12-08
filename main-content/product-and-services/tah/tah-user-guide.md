@@ -6,10 +6,6 @@ description: Plug in to power decentralised AI model training
 
 Training at Home (TAH) application allows you to connect and partake in our decentralized AI training platform [IOTA](../../subnets/subnet-9-iota/). You can plug in any hardware you have access to and earn rewards for powering decentralized AI model training.&#x20;
 
-We aim to solve one of the biggest challenges in open-source AI today: the absence of a decentralized, community-driven, and highly efficient pre-training platform.&#x20;
-
-Today, access to large-scale compute is concentrated in a few organizations, limiting innovation and slowing progress across the ecosystem. By enabling anyone to contribute hardware and collectively train powerful models, we lower the barrier to participation, unlock underutilized global compute, and empower a wider community of builders and researchers. This creates a more resilient, transparent, and scalable foundation for advancing open-source AI — one that grows stronger as more people join and contribute.
-
 ## Installation
 
 To become a first beta tester of TAH application fill the form at [iota.macrocosmos.ai/train-at-home](http://iota.macrocosmos.ai/train-at-home). We are scaling the system and gradually rolling out to more users. Currently TAH only supports MacOS, with Linux support coming soon. Look at [Hardware & OS Requirements](hardware-requirements.md) for more details.
