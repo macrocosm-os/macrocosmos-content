@@ -87,6 +87,7 @@
   * [Navigating Apex](product-and-services/apex/navigating-apex.md)
   * [FAQs](product-and-services/apex/faqs.md)
 * [Training at Home](product-and-services/tah/README.md)
+  * [Operating TAH](product-and-services/tah/operating-tah.md)
   * [TAH User Guide](product-and-services/tah/tah-user-guide.md)
 * [Data Universe](product-and-services/gravity/README.md)
   * [Scraping Data](product-and-services/gravity/scraping-data.md)
