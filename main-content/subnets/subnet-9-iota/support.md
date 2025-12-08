@@ -29,10 +29,12 @@ hidden: true
 {% endcolumn %}
 {% endcolumns %}
 
-&#x20;      ![](../../.gitbook/assets/community-icon.png) Community Channels
+![](../../.gitbook/assets/community-icon.png) Community Channels
 
-&#x20;       [Macrocosmos X](https://t.me/macrocosmosai)
+[IOTA SN9 X](https://x.com/IOTA_SN9)
 
-&#x20;       [Telegram](https://t.me/macrocosmosai)
+[Macrocosmos X](https://x.com/MacrocosmosAI)
 
-&#x20;       [The Cosmonaut Substack](https://macrocosmosai.substack.com/)
+[Telegram](https://t.me/macrocosmosai)
+
+[The Cosmonaut Substack](https://macrocosmosai.substack.com/)
