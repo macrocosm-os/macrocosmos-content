@@ -1,6 +1,5 @@
 ---
 description: What is Training at Home (TAH)?
-hidden: true
 ---
 
 # Training at Home
