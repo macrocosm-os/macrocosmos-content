@@ -1,5 +1,5 @@
 ---
-description: Frequently asked Questions on Gravity
+description: Frequently asked Questions on Data Universe
 ---
 
 # FAQs
