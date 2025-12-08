@@ -11,7 +11,11 @@ hidden: true
 {% column %}
 ![](../../.gitbook/assets/roket-icon.png) **Get started**
 
-Training At Home (TAH) Guide
+[Training At Home (TAH) User Guide](../../product-and-services/tah/tah-user-guide.md)
+
+[Hardware & OS Requirements](../../product-and-services/tah/hardware-requirements.md)
+
+[FAQs](../../product-and-services/tah/faqs.md)
 {% endcolumn %}
 
 {% column %}
@@ -25,50 +29,10 @@ Training At Home (TAH) Guide
 {% endcolumn %}
 {% endcolumns %}
 
-![](../../.gitbook/assets/community-icon.png) Community Channels
+&#x20;      ![](../../.gitbook/assets/community-icon.png) Community Channels
 
-[Macrocosmos X](https://t.me/macrocosmosai)
+&#x20;       [Macrocosmos X](https://t.me/macrocosmosai)
 
-[Telegram](https://t.me/macrocosmosai)
+&#x20;       [Telegram](https://t.me/macrocosmosai)
 
-[The Cosmonaut Substack](https://macrocosmosai.substack.com/)
-
-### ![](../../.gitbook/assets/faq-icon.png) FAQ
-
-#### **What is TAH**
-
-<details>
-
-<summary>What is TAH Training at home concept?</summary>
-
-Cons
-
-</details>
-
-#### **Payments**
-
-<details>
-
-<summary>How I connect a wallet?</summary>
-
-When you click on the Account Settings from the Constellation Home page, the system takes you to the page with buttons. You can purchase the credits through TOP UP CREDITS button. If you’d like to discuss special price policies for your needs, reach us out at [support@macrocosmos.ai](mailto:support@macrocosmos.ai).
-
-</details>
-
-#### **Mining**
-
-<details>
-
-<summary>Where do I start with mining with TAH?</summary>
-
-Have a look at the guides for miners provided at [docs.macrocosmos.ai](https://docs.macrocosmos.ai/) in SUBNETS section and contact us, if any additional questions.
-
-</details>
-
-<details>
-
-<summary>How c</summary>
-
-Have a look at the guides for miners provided at [Macrocosmos SDK | Macrocosmos Developer Guide](https://docs.macrocosmos.ai/) in SUBNETS section and contact us, if any additional questions.
-
-</details>
+&#x20;       [The Cosmonaut Substack](https://macrocosmosai.substack.com/)
