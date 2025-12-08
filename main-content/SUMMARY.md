@@ -93,7 +93,7 @@
   * [Rewards](product-and-services/tah/rewards.md)
   * [FAQs](product-and-services/tah/faqs.md)
 * [Data Universe](product-and-services/gravity/README.md)
-  * [Scraping Data](product-and-services/gravity/scraping-data.md)
+  * [Data Collection](product-and-services/gravity/scraping-data.md)
   * [Managing And Collecting Your Data](product-and-services/gravity/managing-and-collecting-your-data.md)
   * [FAQs](product-and-services/gravity/faqs.md)
   * [Data Universe Use Cases](product-and-services/gravity/data-universe-use-cases/README.md)

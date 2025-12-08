@@ -1,54 +1,57 @@
-# Scraping Data
+---
+description: Social Media Data Collection Solution from Macrocosmos
+---
 
-#### Navigate to [Macrocosmos Constellation](https://app.macrocosmos.ai/) to access Gravity and simply click Data Universe.
+# Data Collection
+
+Navigate to [app.macrocosmos.ai](https://app.macrocosmos.ai/) to access Data Universe.&#x20;
+
+#### Chose between options
+
+* **Search** for any available data from the Marketplace&#x20;
+* **Create a new scraping task** for the new customised data collection
+* or **Tasks** to see your data library.
+
+<figure><img src="../../.gitbook/assets/Navigation-Data-Universe (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Use the Macrocosmos icon to navigate the menu
 
-<div align="left" data-full-width="true"><figure><img src="../../.gitbook/assets/Main-menu.png" alt=""><figcaption></figcaption></figure></div>
+<figure><img src="../../.gitbook/assets/Menu-Data-Universe.png" alt=""><figcaption></figcaption></figure>
 
 #### **Create a New Task to collect data**
 
-You might be interested in building an app that tracks public reactions to new tech launches.\
-You want live posts from Reddit, X and Youtube.
+With customised data collection request get only the data that truly matters. Understand audiences with confidence and turn social data into actionable insights for your brand or product.
 
-<div align="left"><figure><img src="../../.gitbook/assets/New-task (1).png" alt=""><figcaption></figcaption></figure></div>
+How it works:
 
-**Step 1:** Name your task. For Example: **`TechNews Tracker`**
+1. Name your task. For example, Top 10 stock assets US.
+2. Set your date range.
+3. Choose your platforms X (Tweeter), Reddit or YouTube.
+4. Add keywords, topics, or Youtube channels.
+5. Click **Launch data collection**
+6. Receive fresh, structured data collected specifically for your request in hours, or wait for a couple of day to get more data.
 
-**Step 2:** Specify your data source, or scrape from any!
+You also can use the **AI Assistant** to help you:\
+Simply type a topic into your chat with **Mission Commander**, then review the suggested labels, hashtags, and keywords that appear on the right side of the task collection request. You can easily customise them by adding new ones or deleting any that don’t fit.
 
-**Step 3:** Define your keywords. Tell Gravity what to find.
+No complex setup. No scraping headaches. Just fast, precise social data delivered straight to you.
 
-<figure><img src="../../.gitbook/assets/Gravity-page.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Collection Task.png" alt=""><figcaption></figcaption></figure>
 
 #### Mission Commander
 
-Mission Commander (MC), our specialized AI assistant can also help provide the relevant keywords for you task, all you have to do is ask! Mission commander is powered by [subnet-1-apex-old](../../subnets/subnet-1-apex-old/ "mention")
+Choosing the right topics for data collection is harder than it looks. Social conversations shift fast, keywords evolve, and each platform has its own language. Miss the right hashtag, subreddit, or phrasing, and you risk collecting irrelevant data or missing the conversations that matter most.&#x20;
 
-**Step 1: Write a request**
+Many teams spend hours guessing which keywords to include, testing variations, and manually exploring communities just to ensure their dataset is meaningful.
 
-Start by telling MC what type of data you'd like to collect.
+**Mission Commander** removes that guesswork. As a specialised AI assistant, it automatically suggests high-relevance keywords, trending hashtags on X, the most suitable subreddits on Reddit, and topic-aligned YouTube channels. It  also explains _why_ each choice fits your objective and recommends the best tactics for structuring your query.&#x20;
 
-<div align="left"><figure><img src="../../.gitbook/assets/Mission-commander (1).png" alt=""><figcaption></figcaption></figure></div>
+Whether you're tracking sentiment, analysing competitors, researching trends, or preparing training data, Mission Commander helps you choose smarter topics, faster, ensuring your collection is accurate, comprehensive, and aligned with your real goal.
 
-**Step 2. Correct the labels and keywords, if needed**
+#### Demo of Mission Commander
 
-If the labels aren't quite right, you can edit manually or ask mission commander to fix it.
+{% embed url="https://drive.google.com/file/d/1h1t8MCkXNOlwU1KPIynDTKWDLHHxkeTW/view?usp=drive_link" %}
 
-<figure><img src="../../.gitbook/assets/Label-correction.png" alt=""><figcaption></figcaption></figure>
+**You can also interact with Data Universe through API at** [**docs.macrocosmos.ai**](https://docs.macrocosmos.ai/)**.**
 
-**Step 3: Pick a date range**
-
-Pick the dates if you would like to define period when the data was published.
-
-<div align="left"><figure><img src="../../.gitbook/assets/Date-range.png" alt=""><figcaption></figcaption></figure></div>
-
-<div align="left"><figure><img src="../../.gitbook/assets/Calendar.png" alt=""><figcaption></figcaption></figure></div>
-
-**Step 4: Launch the Task**
-
-Once you’re happy with the request and the label setup, hit **Launch data collection**. You will be automatically redirected to your task library. Your task will be deployed and the data will satrt to be collected in real time.
-
-<div align="left"><figure><img src="../../.gitbook/assets/TEchNewsTask.png" alt=""><figcaption></figcaption></figure></div>
-
-**You can also interact with Gravity using our APIs . Click here to access** [**Subnet 13 Gravity API**](../../developers/macrocosmos-sdk/gravity.md)**.**
+Our pricing plans are available at the [app.macrocosmos.ai](https://app.macrocosmos.ai/) in your account section or on at [datauniverse.macrocosmos.ai](https://datauniverse.macrocosmos.aihttps/datauniverse.macrocosmos.ai/).
