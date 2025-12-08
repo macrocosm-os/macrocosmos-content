@@ -20,7 +20,7 @@ description: >-
 {% column %}
 ![](../../.gitbook/assets/contact-icon.png) **Contact us**
 
-[Macrocosmos Discord](https://discord.com/channels/1238450997848707082/1238453083143405598)
+[Macrocosmos Discord](https://discord.gg/vRTaAXpRcd)
 
 [Bittensor Discord](https://discord.com/channels/799672011265015819/1162768567821930597)
 
