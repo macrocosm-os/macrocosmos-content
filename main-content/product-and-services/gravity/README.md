@@ -54,3 +54,15 @@ For more use cases >> [Data Universe Use Cases](./#data-universe-use-cases)
 
 ### Case Studies
 
+![](../../.gitbook/assets/taolor.png)[TAOLOR: Building a subnet-native AI agent with distributed RAG](https://macrocosmosai.substack.com/p/taolor-building-a-subnet-native-ai)
+
+![](<../../.gitbook/assets/oneoneone (1).png>)[Building the future of authentic data: how subnet 111 leverages Macrocosmos' Gravity](https://macrocosmosai.substack.com/p/building-the-future-of-authentic)
+
+![](<../../.gitbook/assets/download (13) (3).png>)[Global weather, social context: How SN13 is powering SN57's weather data innovation](https://macrocosmosai.substack.com/p/global-weather-social-context-how)
+
+![](../../.gitbook/assets/score2.png) [Result: SN44, Score, partners with SN13’s Data Universe](https://macrocosmosai.substack.com/p/result-sn44-score-partners-with-sn13s)
+
+
+
+<br>
+
