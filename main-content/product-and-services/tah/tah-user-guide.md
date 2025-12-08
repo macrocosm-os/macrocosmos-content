@@ -12,7 +12,7 @@ There's currently a [shortlist](iota.macrocosmos.ai/train-at-home/) to use TAH a
 
 You'll have to follow the steps in the video below
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FJDlWdmSC3GnzBPSkAiBM%2Fuploads%2FnxT5vvIvbkghk58drv46%2FTAH-security-workaround.mp4?alt=media&token=80315f68-e7f1-4d0d-869f-58fca6c64287" %}
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FJDlWdmSC3GnzBPSkAiBM%2Fuploads%2FnxT5vvIvbkghk58drv46%2FTAH-security-workaround.mp4?alt=media&token=80315f68-e7f1-4d0d-869f-58fca6c64287>" %}
 
 Or if you can't open the video: Apple logo in the top left -> System Settings -> Privacy & Security, then you'll see this: ![](<../../.gitbook/assets/image (1).png>)
 
@@ -25,3 +25,7 @@ Once the app has launched properly you should be able to see the main dashboard:
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 You should see metrics related to your specific model and in the center there should be a visualization showing you the other training participants.
+
+## Next steps
+
+- [Operating TAH](./operating-tah.md) — start/pause training, connect wallet, and monitor runs.
