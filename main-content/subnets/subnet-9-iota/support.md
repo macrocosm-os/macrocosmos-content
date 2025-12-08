@@ -2,7 +2,6 @@
 description: >-
   This page provides link to guidance for Training At Home (TAH) and support
   channels
-hidden: true
 ---
 
 # TAH Support
