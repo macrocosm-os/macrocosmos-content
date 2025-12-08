@@ -31,6 +31,8 @@ Video below demonstrates installation process
 
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FJDlWdmSC3GnzBPSkAiBM%2Fuploads%2FnxT5vvIvbkghk58drv46%2FTAH-security-workaround.mp4?alt=media&token=80315f68-e7f1-4d0d-869f-58fca6c64287" %}
 
+## Operating TAH
+
 Once the app is installed you should be able to see the main dashboard:
 
 ![TAH dashboard showing Start training and Connect controls](../../.gitbook/assets/image.png)
@@ -65,3 +67,42 @@ You’ll see metrics for your model, and in the center there will be a visualiza
 #### Updates
 
 * If an update is available, install the latest build before starting a new session for compatibility with the active run.
+
+## Rewards
+
+Beta Launch is operating with o rewards. Once the major version of TAH is published, the earnings will be calculated and paid as described below.
+
+#### How Rewards Are Calculated
+
+Rewards are primarily based on:
+
+* The amount of tokens you contribute during training.
+* How many times you contribute your model weights back to the network.
+* Additional factors such as uptime, quality, and current network parameters.
+
+Note: Exact weighting can evolve as the system updates.
+
+#### Payout Cadence
+
+* Payouts occur approximately every 24 hours; this window may be extended in the future.
+* Minimum payout is **2 ALPHA**. Balances below the threshold roll over to the next payout.
+* Network transfer costs are deducted from the amount you receive.
+* To receive payouts, optionally connect a wallet by pasting your public coldkey (via the **Connect** button in the app). If you don’t connect, training still runs but rewards won’t be delivered to you; unconnected earnings are not paid retroactively.
+
+#### Viewing Earnings
+
+* In the app, click the **Miner** button (top left) to view your current earnings and contribution stats.
+
+#### Taxes & Compliance
+
+* You are responsible for complying with local tax and regulatory requirements related to rewards.
+
+{% columns %}
+{% column %}
+For more questions use [FAQs](faqs.md)
+{% endcolumn %}
+
+{% column %}
+If you have any issues use [TAH Support](../../subnets/subnet-9-iota/support.md)
+{% endcolumn %}
+{% endcolumns %}
