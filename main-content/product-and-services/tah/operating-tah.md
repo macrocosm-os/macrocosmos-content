@@ -6,6 +6,8 @@ description: How to run, pause, update, and observe TAH
 
 This page describes the main controls in the TAH desktop app and how to run, pause, and monitor your node.
 
+![TAH dashboard showing Start training and Connect controls](../../.gitbook/assets/image.png)
+
 ## Main controls (top right)
 
 - **Start training** (primary button): begins contributing your GPU/CPU to the current run. Click again to stop/exit the run.
