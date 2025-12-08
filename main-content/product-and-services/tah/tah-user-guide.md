@@ -18,6 +18,8 @@ There's currently a [shortlist](iota.macrocosmos.ai/train-at-home/) to use TAH a
 
 You'll have to follow the steps in the video below
 
+{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FJDlWdmSC3GnzBPSkAiBM%2Fuploads%2FnxT5vvIvbkghk58drv46%2FTAH-security-workaround.mp4?alt=media&token=80315f68-e7f1-4d0d-869f-58fca6c64287" %}
+
 Or if you can't open the video: Apple logo in the top left -> System Settings -> Privacy & Security, then you'll see this: ![](<../../.gitbook/assets/image (1).png>)
 
 Click on "Open Anyway" and the app should open correctly
