@@ -31,13 +31,11 @@ Video below demonstrates installation process
 
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FJDlWdmSC3GnzBPSkAiBM%2Fuploads%2FnxT5vvIvbkghk58drv46%2FTAH-security-workaround.mp4?alt=media&token=80315f68-e7f1-4d0d-869f-58fca6c64287" %}
 
-### First Launch
-
 Once the app is installed you should be able to see the main dashboard:
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-You should see metrics related to your specific model and in the center there should be a visualization showing you the other training participants.
+You’ll see metrics for your model, and in the center there will be a visualization of all the other participants in the training.
 
 ## Next steps
 
