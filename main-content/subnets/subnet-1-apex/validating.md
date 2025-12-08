@@ -23,3 +23,14 @@ The default subtensor network is Finney. If you would like to use a local subten
 ```
 NETWORK=""
 ```
+
+### Auto-updates with PM2
+
+A validator auto-update script is located in the `scripts` folder. The script spawns a PM2 process which runs the validator, restarting when the repo has a new release.&#x20;
+
+To run this script:
+
+```
+./scripts/start_autoupdater_pm2.sh
+```
+
