@@ -12,7 +12,7 @@ Today, access to large-scale compute is concentrated in a few organizations, lim
 
 ## Installation
 
-There's currently a [shortlist](iota.macrocosmos.ai/train-at-home/) to use TAH as we will slowly be scaling the system and rolling the app out to more and more users. We also currently only support MacOS, with Linux support coming soon. If you already have access you should've received a `.dmg` file, you can double click it to install the app. We are still working on getting notarization from Apple so after opening the installed app you will be prompted with the warning "Apple could not verify "IOTA Train at Home.app" is free of malware that may harm your Mac or compromise your privacy.
+There's currently a [shortlist](https://iota.macrocosmos.ai/train-at-home) to use TAH as we will slowly be scaling the system and rolling the app out to more and more users. We also currently only support MacOS, with Linux support coming soon. If you already have access you should've received a `.dmg` file, you can double click it to install the app. We are still working on getting notarization from Apple so after opening the installed app you will be prompted with the warning "Apple could not verify "IOTA Train at Home.app" is free of malware that may harm your Mac or compromise your privacy.
 
 <figure><img src="../../.gitbook/assets/Apple-warning.png" alt=""><figcaption></figcaption></figure>
 
