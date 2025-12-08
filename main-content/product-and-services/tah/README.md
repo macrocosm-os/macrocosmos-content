@@ -1,3 +1,8 @@
+---
+description: Training At Home (TAH) Overview
+hidden: true
+---
+
 # Training at Home
 
 Training at Home (TAH) is a decentralized, community-driven, and efficient pre-training platform.
