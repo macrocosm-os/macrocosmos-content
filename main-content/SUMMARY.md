@@ -88,7 +88,6 @@
 * [Training at Home](product-and-services/tah/README.md)
   * [TAH User Guide](product-and-services/tah/tah-user-guide.md)
   * [Hardware & OS Requirements](product-and-services/tah/hardware-requirements.md)
-  * [Rewards](product-and-services/tah/rewards.md)
   * [FAQs](product-and-services/tah/faqs.md)
   * [TAH Support](subnets/subnet-9-iota/support.md)
 * [Data Universe](product-and-services/gravity/README.md)

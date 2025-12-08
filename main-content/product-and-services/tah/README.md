@@ -16,5 +16,5 @@ TAH is a decentralized, community-driven, and efficient pre-training platform. I
 * [TAH User Guide](tah-user-guide.md)
 * [Operating TAH](/broken/pages/FLv11jMpH580SgP3zH7X)
 * [Hardware & OS Requirements](hardware-requirements.md)
-* [Rewards](rewards.md)
+* [Rewards](/broken/pages/cCKxrp40nW9SqpIfazI4)
 * [FAQs](faqs.md)
