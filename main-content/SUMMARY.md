@@ -89,6 +89,7 @@
 * [Training at Home](product-and-services/tah/README.md)
   * [Hardware & OS Requirements](product-and-services/tah/hardware-requirements.md)
   * [Operating TAH](product-and-services/tah/operating-tah.md)
+  * [FAQs](product-and-services/tah/faqs.md)
   * [TAH User Guide](product-and-services/tah/tah-user-guide.md)
 * [Data Universe](product-and-services/gravity/README.md)
   * [Scraping Data](product-and-services/gravity/scraping-data.md)

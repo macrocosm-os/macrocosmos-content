@@ -13,7 +13,7 @@ description: Supported platforms and resource guidance for TAH
 
 - CPU/GPU: Any modern Apple Silicon or Intel Mac capable of sustaining training loads.
 - Memory: **16 GB RAM minimum**.
-- Disk: At least 10 GB free for binaries, caches, and logs.
+- Disk: At least 10 GB free for binaries, caches, and logs; up to **30 GB** may be required depending on the current model size being trained.
 - Network: Fast, stable internet connection is imperative; training will stall on intermittent links.
 - Power/uptime: Keep the machine plugged in and awake to maintain contribution.
 
