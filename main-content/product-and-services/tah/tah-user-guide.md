@@ -34,10 +34,8 @@ You’ll see metrics for your model, and in the center there will be a visualiza
 
 <figure><img src="../../.gitbook/assets/Main-controls.png" alt=""><figcaption></figcaption></figure>
 
-
-
-* **Start training** (primary button): begins contributing your GPU/CPU to the current run. Click again to stop/exit the run.
-* **Connect** (smaller button): optionally paste your wallet coldkey to receive rewards to that address. You can train without connecting; if you connect later, rewards accrue to the provided coldkey from that point forward.
+* **Start training**: begins contributing your GPU/CPU to the current run. Click again to stop/exit the run.
+* **Connect**: optionally paste your wallet coldkey to receive rewards to that address. You can train without connecting; if you connect later, rewards accrue to the provided coldkey from that point forward.
 * **Status pill**: shows whether your hardware is ready (e.g., “Connected • Your GPU is ready to contribute”). Resolve any warnings before starting.
 
 #### Start a session
