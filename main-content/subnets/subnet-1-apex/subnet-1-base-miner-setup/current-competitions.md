@@ -39,6 +39,7 @@ score = np.clip((1 - compression) * (1 - task_time / (1 + 0.012)), 0.0, 1.0)
   * The top scorer receives the remaining incentive pool (10%), decreasing linearly over a **10 day period**, provided no other submissions surpass the current top score.&#x20;
     * If a new submission exceeds the top score, the incentive decay resets from 10%.&#x20;
 * Evaluation: each round uses 30 randomly sampled matrices from the total pool; the sample refreshes every round.
+* Submission Constraints: Your submission must be less than 20KB.
 
 
 
