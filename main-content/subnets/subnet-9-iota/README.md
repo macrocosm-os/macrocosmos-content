@@ -23,6 +23,8 @@ For more details on how to contribute you can have a looks at [**mining instruct
 
 If you have any questions or require support, please message us in the [Bittensor Discord](https://discord.com/channels/799672011265015819/1162768567821930597) channel for subnet 9, or our own [Macrocosmos Discord](https://discord.gg/vRTaAXpRcd) server.
 
+Read about Training At Home (TAH).
+
 Other related resources
 
 * [Website](https://www.macrocosmos.ai/sn9)

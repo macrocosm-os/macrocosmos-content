@@ -37,7 +37,6 @@ Subnet 1 enhances the Bittensor environment by:
 
 Subnet 1 works closely with other subnets to expand its capabilities:
 
-* subnets 37, Finetuning, and subnet 9, Pre-Training, through synthetic data generation,
 * subnet 13, Data Universe, through data annotation and sentiment analysis,
 * subnet 19, Inference, offloading tasks to an inference-specific subnet.
 
@@ -69,5 +68,3 @@ For more details about the subnet 1 R\&D work, take a look at our Substack artic
 * [Macrocosmos Discord](https://discord.com/channels/1238450997848707082)
 * [Cosmonauts - Macrocosmos Telegram](https://t.me/macrocosmosai)
 * [Macrocosmos X](https://x.com/MacrocosmosAI)
-
-\\

@@ -4,6 +4,8 @@ description: Frequently asked questions about TAH
 
 # FAQs
 
+If you still have questions or have any issues contact us through channels listed at [TAH Support](../../subnets/subnet-9-iota/support.md)
+
 <details>
 
 <summary><strong>How do I get access to Training At Home (TAH)?</strong></summary>
@@ -83,4 +85,3 @@ We store your public coldkey to pay you, and may store location and hardware met
 
 </details>
 
-If you still have questions or have any issues contact us through channels listed at [TAH Support](../../subnets/subnet-9-iota/support.md)

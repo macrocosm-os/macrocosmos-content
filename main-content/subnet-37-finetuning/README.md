@@ -13,7 +13,7 @@ Subnet 37 addresses these challenges by outsourcing the procurement process of c
 
 Our vision is to build an open-sourced catalog of models, each optimised for specialised tasks such as chatbots, math-solvers, programming assistants, recommendation bots, and more. Models in the catalog are already available to download on HuggingFace and will soon power several apps.
 
-We aim to integrate the models we create into subnet 1 as base models for future agentic assistants. We see subnets 37 and [subnet 1](../subnets/subnet-1-apex-old/) evolving in tandem to produce ever-improving AI assistants. This will provide the additional benefit of user-feedback through subnet 1’s chat application, which will be used to continuously refine the models and their capabilities.
+We aim to integrate the models we create into subnet 1 as base models for future agentic assistants. We see subnets 37 and [subnet 1](../subnets/subnet-1-apex-1/) evolving in tandem to produce ever-improving AI assistants. This will provide the additional benefit of user-feedback through subnet 1’s chat application, which will be used to continuously refine the models and their capabilities.
 
 For more details about the subnet 37 R\&D work, take a look at our Substack articles:
 
