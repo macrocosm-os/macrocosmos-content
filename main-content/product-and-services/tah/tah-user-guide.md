@@ -12,20 +12,15 @@ To become a first beta tester of TAH application fill the form at [iota.macrocos
 
 If you already have access, you can double click a `.dmg` file to install the app.&#x20;
 
-We are still working on receiving notarization from Apple, therefore after opening the installed app you will be prompted with the warning "Apple could not verify "IOTA Train at Home.app" is free of malware that may harm your Mac or compromise your privacy.
+Press Open in the push notification:
 
-<figure><img src="../../.gitbook/assets/Apple-warning.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/open-push (1).png" alt=""><figcaption></figcaption></figure>
 
-To work around the warning follow the next steps:
 
-1. Using Apple logo in the top left open **System Settings -> Privacy & Security**
-2. Click on **"Open Anyway"** - the app should open correctly
-
-<figure><img src="../../.gitbook/assets/Screenshot 2025-12-08 at 11.56.44.png" alt=""><figcaption></figcaption></figure>
 
 Video below demonstrates installation process
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FJDlWdmSC3GnzBPSkAiBM%2Fuploads%2FnxT5vvIvbkghk58drv46%2FTAH-security-workaround.mp4?alt=media&token=80315f68-e7f1-4d0d-869f-58fca6c64287" %}
+{% embed url="https://drive.google.com/file/d/1KEEYE37jqd3Wgxuds-JQSaQVe9gkSc3e/view?usp=drive_link" %}
 
 ## Operating TAH
 
@@ -36,6 +31,10 @@ Once the app is installed you should be able to see the main dashboard:
 You’ll see metrics for your model, and in the center there will be a visualization of all the other participants in the training.
 
 #### Main controls (top right of the screen)
+
+<figure><img src="../../.gitbook/assets/Main-controls.png" alt=""><figcaption></figcaption></figure>
+
+
 
 * **Start training** (primary button): begins contributing your GPU/CPU to the current run. Click again to stop/exit the run.
 * **Connect** (smaller button): optionally paste your wallet coldkey to receive rewards to that address. You can train without connecting; if you connect later, rewards accrue to the provided coldkey from that point forward.
@@ -50,10 +49,27 @@ You’ll see metrics for your model, and in the center there will be a visualiza
 
 #### Monitor while training
 
-* **Run panel** (right): shows run ID, model size, layers, cumulative progress, and tokens/hour graph.
-* **Network view** (center): visualizes peers and traffic; switch tabs (Network/Layer/Miner) for different views.
-* **Loss chart** (bottom center): training loss over time; toggle Log/Linear and tokens/time axes.
+* **Run panel**: shows run ID, model size, layers, cumulative progress, and tokens/hour graph.
+
+<figure><img src="../../.gitbook/assets/Run-panel.png" alt=""><figcaption></figcaption></figure>
+
+***
+
+* **Network view**: visualizes peers and traffic; switch tabs (Network/Layer/Miner) for different views.
+
+<figure><img src="../../.gitbook/assets/Network (1).png" alt=""><figcaption></figcaption></figure>
+
+***
+
+* **Loss chart**: training loss over time; toggle Log/Linear and tokens/time axes.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2025-12-09 at 17.26.21.png" alt=""><figcaption></figcaption></figure>
+
+***
+
 * **Run Log** (bottom right): per-epoch/step logs; lock icon indicates read-only when idle.
+
+<figure><img src="../../.gitbook/assets/Run-log.png" alt=""><figcaption></figcaption></figure>
 
 #### Resource behavior
 
