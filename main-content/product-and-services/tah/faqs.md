@@ -1,10 +1,40 @@
 ---
-description: Frequently asked questions about TAH
+description: Frequently asked questions and TAH support channels
 ---
 
 # FAQs
 
-If you still have questions or have any issues contact us through channels listed at [TAH Support](../../subnets/subnet-9-iota/support.md)
+{% columns %}
+{% column %}
+![](../../.gitbook/assets/roket-icon.png) **Get started**
+
+[Training At Home (TAH) User Guide](tah-user-guide.md)
+
+[Hardware & OS Requirements](hardware-requirements.md)
+
+[FAQs](faqs.md)
+{% endcolumn %}
+
+{% column %}
+![](../../.gitbook/assets/contact-icon.png) **Contact us for support**
+
+[Macrocosmos Discord](https://discord.gg/vRTaAXpRcd)
+
+[Bittensor Discord](https://discord.com/channels/799672011265015819/1162768567821930597)
+
+[Support Email](mailto:support@macrocosmos.ai)
+{% endcolumn %}
+{% endcolumns %}
+
+![](../../.gitbook/assets/community-icon.png) Community Channels
+
+[IOTA SN9 X](https://x.com/IOTA_SN9)
+
+[Macrocosmos X](https://x.com/MacrocosmosAI)
+
+[Telegram](https://t.me/macrocosmosai)
+
+[The Cosmonaut Substack](https://macrocosmosai.substack.com/)
 
 <details>
 
