@@ -26,16 +26,6 @@ description: Frequently asked questions and TAH support channels
 {% endcolumn %}
 {% endcolumns %}
 
-![](../../.gitbook/assets/community-icon.png) Community Channels
-
-[IOTA SN9 X](https://x.com/IOTA_SN9)
-
-[Macrocosmos X](https://x.com/MacrocosmosAI)
-
-[Telegram](https://t.me/macrocosmosai)
-
-[The Cosmonaut Substack](https://macrocosmosai.substack.com/)
-
 <details>
 
 <summary><strong>How do I get access to Training At Home (TAH)?</strong></summary>
