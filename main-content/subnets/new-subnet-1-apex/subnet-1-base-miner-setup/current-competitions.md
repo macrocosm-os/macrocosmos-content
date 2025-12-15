@@ -4,7 +4,7 @@ description: Registry of competitions currently active on SN1 APEX.
 
 # Current Competitions
 
-### 1. Matrix Compression <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
+## 1. Matrix Compression <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
 
 The first competition - Matrix Compression - explores how small neural activations - both forward and backward - can be compressed while still retaining all their original information. Reducing activation size enables faster data transfer across the internet, a crucial step toward making distributed training more efficient, as it’s often constrained by network bandwidth. The top-performing algorithms from this competition will be integrated to enhance training on subnet 9 **IOTA**.&#x20;
 
@@ -59,9 +59,7 @@ The manifest.json file contains a sample of 1000 matrices of a large matrix pool
    For example:\
    `https://pub-77097c3387c340de9ff1bd5e5b443d8d.r2.dev/example_001.txt.`&#x20;
 
-Then, continue to the [**Apex CLI guide**](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli) to submit a solution.&#x20;
-
-
+Then, continue to the [**Apex CLI guide**](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli) to submit a solution.
 
 
 
