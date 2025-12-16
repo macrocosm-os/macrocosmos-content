@@ -6,7 +6,9 @@ description: Registry of competitions currently active on SN1 APEX.
 
 ## 1. Matrix Compression <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
 
-The first competition - Matrix Compression - explores how small neural activations - both forward and backward - can be compressed while still retaining all their original information. Reducing activation size enables faster data transfer across the internet, a crucial step toward making distributed training more efficient, as it’s often constrained by network bandwidth. The top-performing algorithms from this competition will be integrated to enhance training on subnet 9 **IOTA**.&#x20;
+The first competition - Matrix Compression - explores how small neural activations - both forward and backward - can be compressed while still retaining all their original information. Reducing activation size enables faster data transfer across the internet, a crucial step toward making distributed training more efficient, as it’s often constrained by network bandwidth. The top-performing algorithms from this competition will be integrated to enhance training on subnet 9 **IOTA**.
+
+[Competition Dashboard ](https://apex.macrocosmos.ai/competitions/1)
 
 #### Evaluation
 
@@ -29,8 +31,6 @@ score = np.clip((1 - compression) * (1 - task_time / (1 + 0.012)), 0.0, 1.0)
 * Compression is calculated by `compressed_file_size / original_file_size`.
 * If compression is not **lossless**, the submission will receive a score of 0.&#x20;
 
-
-
 #### Matrix Compression Settings
 
 * The submitted code remains hidden for 24 hours to everyone but the submission owner, after which it becomes accessible to all miners.&#x20;
@@ -40,8 +40,6 @@ score = np.clip((1 - compression) * (1 - task_time / (1 + 0.012)), 0.0, 1.0)
     * If a new submission exceeds the top score, the incentive decay resets from 10%.&#x20;
 * Evaluation: each round uses 30 randomly sampled matrices from the total pool; the sample refreshes every round.
 * Submission Constraints: Your submission must be less than 20KB.
-
-
 
 #### For Miners
 
