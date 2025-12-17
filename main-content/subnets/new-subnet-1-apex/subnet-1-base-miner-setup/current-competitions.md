@@ -149,7 +149,7 @@ A match consists of **3 games** between two miners.
   * Logs are opened after the round completion.
   * Emission burning for the top miner is active.
 * Multiple submissions:
-  * The rate limit on 4 submissions a day per miner across all the competitions - Battleship and Matrix Compression.
+  * The rate limit is 4 submissions in 24 hours per miner across all the competitions - Battleship and Matrix Compression. The period is individual for each user and starts to count from the first submission.
   * If a miner makes multiple submissions to Battleship within a single round, only the latest version participates in the battle evaluation.
 * Base miner example can be found at [baseline.py](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/battleship/baseline.py).
 * The information about enabled packages is in [requirements.txt](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/battleship/dockerfiles/requirements.txt).
