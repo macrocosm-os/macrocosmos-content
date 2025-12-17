@@ -42,6 +42,8 @@ score = np.clip((1 - compression) * (1 - task_time / (1 + 0.012)), 0.0, 1.0)
     * If a new submission exceeds the top score, the incentive decay resets from 10%.&#x20;
 * Evaluation: each round uses 30 randomly sampled matrices from the total pool; the sample refreshes every round.
 * Submission Constraints: Your submission must be less than 20KB.
+* Multiple submissions:
+  * The rate limit is 4 submissions in 24 hours per miner across all the competitions - Matrix Compression and Battleship. The period is individual for each user and starts to count from the first submission.
 
 #### For Miners
 
