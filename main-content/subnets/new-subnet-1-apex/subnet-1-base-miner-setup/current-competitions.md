@@ -6,8 +6,8 @@ description: Registry of competitions currently active on SN1 APEX.
 
 List of competitions
 
-1. Matrix Compression
-2. Battleship
+1. [Matrix Compression](https://docs.macrocosmos.ai/subnets/subnet-1-apex/current-competitions#compression-of-activations-challenge)
+2. [Battleship](https://docs.macrocosmos.ai/subnets/subnet-1-apex/current-competitions#id-2.-battleship)
 
 ## 1. Matrix Compression <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
 
