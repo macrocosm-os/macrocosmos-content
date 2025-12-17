@@ -99,6 +99,7 @@ At the heart of this event is a deeper research goal: DUAL vs. SOLO competition 
 
 #### Daily Rounds <a href="#daily-rounds" id="daily-rounds"></a>
 
+* Submissions for the competition are accepted for 24 hours a day. Evaluation and actual matches start at 11 AM UTC everyday. The results are published on the dashboard on completion of the evaluation.
 * Every miner plays against every other miner: this creates a full matrix of matchups, ensuring fairness and eliminating bias toward specific opponents.
 * A round spans one full day.
 * If one of the miners dropped from the match, the other miner wins.
