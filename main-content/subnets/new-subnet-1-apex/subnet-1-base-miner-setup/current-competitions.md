@@ -9,6 +9,8 @@ List of competitions
 1. [Matrix Compression](https://docs.macrocosmos.ai/subnets/subnet-1-apex/current-competitions#compression-of-activations-challenge)
 2. [Battleship](https://docs.macrocosmos.ai/subnets/subnet-1-apex/current-competitions#id-2.-battleship)
 
+<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td align="center"><a href="https://docs.macrocosmos.ai/subnets/subnet-1-apex/current-competitions#compression-of-activations-challenge">Matrix Compression</a></td><td></td><td><a href="../../../.gitbook/assets/Matix-icon.png">Matix-icon.png</a></td></tr><tr><td align="center"><a href="https://docs.macrocosmos.ai/subnets/subnet-1-apex/current-competitions#id-2.-battleship">Battleship</a></td><td></td><td><a href="../../../.gitbook/assets/Battleship-icon.png">Battleship-icon.png</a></td></tr></tbody></table>
+
 ## 1. Matrix Compression <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
 
 The first competition - Matrix Compression - explores how small neural activations - both forward and backward - can be compressed while still retaining all their original information. Reducing activation size enables faster data transfer across the internet, a crucial step toward making distributed training more efficient, as it’s often constrained by network bandwidth. The top-performing algorithms from this competition will be integrated to enhance training on subnet 9 **IOTA**.
