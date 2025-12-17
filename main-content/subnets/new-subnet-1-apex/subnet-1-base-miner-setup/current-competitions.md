@@ -67,15 +67,23 @@ Then, continue to the [**Apex CLI guide**](https://docs.macrocosmos.ai/subnets/s
 
 This is SN1 Festive Competition Launch - a special experiment and a Christmas present for the community — the Battleship Competition!
 
-<figure><img src="../../../.gitbook/assets/Battleship-christmas.png" alt=""><figcaption></figcaption></figure>
-
-
-
 Unlike traditional benchmark races, this one is _**miner vs. miner.**_&#x20;
 
+{% columns %}
+{% column %}
 Each face-off plays 3 Battleship games, and the miner who wins the majority takes the daily round. A winner of the round takes all emissions. No chasing static baselines. No ceiling imposed by yesterday’s “best score.” Just real-time strategy, adaptation, and innovation and mainly FUN!&#x20;
 
 At the heart of this event is a deeper research goal: DUAL vs. SOLO competition architecture — exploring how peer-to-peer matchups can remove dependency on limiting benchmarks and unlock more organic progress.
+{% endcolumn %}
+
+{% column %}
+<figure><img src="../../../.gitbook/assets/Battleship-christmas.png" alt="" width="360"><figcaption></figcaption></figure>
+
+
+{% endcolumn %}
+{% endcolumns %}
+
+
 
 ### **Battleship Settings** <a href="#battleship-settings" id="battleship-settings"></a>
 
