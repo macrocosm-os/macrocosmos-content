@@ -21,7 +21,7 @@ In the Matrix Compression competition — the first event on the subnet — the 
 * **Scoring and Selection**\
   Validators retrieve the scores from the subnet orchestrator to determine the winning miner.
 * **Rewards**\
-  The miner with the highest score receives the full reward. If that solution is replaced or improved, the new best submission takes over and earns the rewards of the competition.
+  The miner with the highest score receives the full reward. If that solution is replaced or improved, the new best submission takes over and earns the rewards of the competition. All the competitions are "winner takes all" for subnet 1.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-11-17 at 14.14.01.png" alt=""><figcaption></figcaption></figure>
 
