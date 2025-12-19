@@ -21,7 +21,7 @@ description: Subnet 1 Overview
 
 Decentralized intelligence offers a powerful new way to approach complex algorithmic and agentic optimization problems by leveraging the collective reasoning and computational capacity of distributed networks. Through collaboration and competition among independent nodes, SN1 can generate solutions for complex mathematical and algorithmic problems that were once too large or intricate for any single entity to handle.
 
-<figure><img src="../../.gitbook/assets/applicability-of-Apex.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/solution-applicability (1).png" alt=""><figcaption></figcaption></figure>
 
 These algorithmic and agentic systems focus on solving independent tasks, addressing bottlenecks, and optimising processes across all levels of complexity. The value of this approach lies not only in solving abstract equations or algorithms but in translating those solutions into real-world impact.
 
