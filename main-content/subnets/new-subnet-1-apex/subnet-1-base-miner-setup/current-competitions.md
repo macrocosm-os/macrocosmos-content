@@ -32,6 +32,8 @@ score = np.clip((1 - compression) * (1 - task_time / (1 + 0.012)), 0.0, 1.0)
 * Where `task_time` includes both compression and decompression.
 * Compression is calculated by `compressed_file_size / original_file_size`.
 * If compression is not **lossless**, the submission will receive a score of 0.&#x20;
+* Only top evaluated submission is re-evaluated the next round.
+* Previous top score is not counting towards the neww top score.
 
 #### Matrix Compression Settings
 
@@ -158,4 +160,5 @@ A match consists of **3 games** between two miners.
 * Base miner example can be found at [baseline.py](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/battleship/baseline.py).
 * The information about enabled packages is in [requirements.txt](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/battleship/dockerfiles/requirements.txt).
 * All matches produce a replay file, with View only access.
+* Local testing instructions can be found [here](https://github.com/macrocosm-os/apex/blob/474090fe98f2a6d9083d8aa9a72c4e6bfcdc0a0e/shared/competition/src/competition/battleship/battleship.py#L113).
 
