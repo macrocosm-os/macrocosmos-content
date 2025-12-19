@@ -41,6 +41,14 @@ This approach guarantees creators to fully exercise the submission rewards, whil
 
 <figure><img src="../../.gitbook/assets/Code-visibility.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+### Warning: Running Miner Submission Code
+
+Running miner submission code may involve executing third-party code that is **not authored, audited, or controlled by Macrocosmos (**[**see Disclaimer**](incentive-mechanism.md#disclaimer-of-responsibility)**)**. Miner submissions can contain bugs, malicious logic, or unsafe configurations.
+
+**Only run miner submission code in isolated, sandboxed, or disposable environments.**
+{% endhint %}
+
 #### 2. How are miners driven toward continuous improvement? <a href="#id-2.-how-to-motivate-miners-for-continuous-improvement" id="id-2.-how-to-motivate-miners-for-continuous-improvement"></a>
 
 The emission burning mechanism was created to push successful miners toward improving their code. Once a top-performing solution is submitted, its associated emissions gradually start to burn. The longer the solution remains unchallenged, the higher the burn rate becomes — motivating continuous innovation and competition.
@@ -58,3 +66,20 @@ In case of the Matrix Compression competition such metrics are:
 
 After solutions run in the Code Executor, metrics are converted into score in accordance with the given competition's scoring mechanism.&#x20;
 
+### Disclaimer of Responsibility
+
+Macrocosmos **does not review, verify, endorse, or guarantee** the safety, correctness, or security of miner submission code provided by third parties.
+
+By running miner submission code, you acknowledge and agree that:
+
+* You are solely responsible for reviewing and evaluating the code before execution
+* You assume **all risks** associated with running third-party miner submissions
+* Macrocosmos is **not responsible or liable** for:
+  * System damage
+  * Data loss
+  * Security breaches
+  * Financial loss
+  * Network or infrastructure compromise
+  * Any other direct or indirect damages
+
+Miner submissions are executed **at your own risk**.
