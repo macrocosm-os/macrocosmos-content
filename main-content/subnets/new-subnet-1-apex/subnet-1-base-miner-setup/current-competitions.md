@@ -63,6 +63,8 @@ The manifest.json file contains a sample of 1000 matrices of a large matrix pool
 
 Then, continue to the [**Apex CLI guide**](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli) to submit a solution.
 
+The information about enabled packages is in [requirements.txt](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/battleship/dockerfiles/requirements.txt).
+
 
 
 ## 2. Battleship
@@ -156,3 +158,4 @@ A match consists of **3 games** between two miners.
 * Base miner example can be found at [baseline.py](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/battleship/baseline.py).
 * The information about enabled packages is in [requirements.txt](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/battleship/dockerfiles/requirements.txt).
 * All matches produce a replay file, with View only access.
+
