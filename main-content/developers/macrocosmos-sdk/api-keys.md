@@ -8,7 +8,7 @@ To interact with Macrocosmos subnets programmatically, you'll need a personal AP
 
 ### Step 1: Organise your credits
 
-1. Head to [**Constellation**](https://app.macrocosmos.ai/) and login.
+1. Head to [app.macrocosmos.ai](https://app.macrocosmos.ai) and login.
 2. Click to Macrocosmos logo icon at the top left corner of the screen\
    ![](<../../.gitbook/assets/Screenshot 2025-09-16 at 17.24.24.png>)
 3. In the dropdown menu, select **`Payments and credit`.**
