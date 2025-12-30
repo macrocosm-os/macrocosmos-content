@@ -4,12 +4,7 @@ description: Using Macrocosmos MCP with Claude Desktop or Cursor
 
 # Macrocosmos MCP
 
-**Macrocosmos MCP** (Model Context Protocol) lets you integrate **SN13** APIs directly into **Claude for Desktop,** **Cursor,** or **your custom LLM pipeline**. Instantly tap into social data, perform live web searches, and explore Hugging Face models — all from your AI environment.
-
-### Features
-
-* 🔍 Query **X** (Twitter) and **Reddit** data on demand
-* 🌐 Perform live **web search** using SN1 miners ( coming soon)
+**Macrocosmos MCP** (Model Context Protocol) allows you to integrate with Data Universe APIs directly into Claude for Desktop, Cursor, or your custom LLM pipeline. Query X (Twitter) and Reddit  Data on demand from your AI environment!
 
 ### Prerequisites
 
@@ -33,8 +28,6 @@ pip3 install uv
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
 ## Server setup instructions
 
@@ -96,8 +89,6 @@ After this verification, you don't need to run the server manually. As long as t
 which uv
 ```
 
-
-
 ## Configure **Claude Desktop**
 
 **Run the following command , this will open your Claude configuration file**&#x20;
@@ -105,8 +96,6 @@ which uv
 ```bash
 code ~/Library/Application\ Support/Claude/claude_desktop_config.json
 ```
-
-
 
 **Update with this:**
 
@@ -138,8 +127,6 @@ For instance:
 /Users/victorkanu/.local/bin/uv
 ```
 
-
-
 **Open Claude desktop**
 
 <figure><img src="../../.gitbook/assets/canva .png" alt=""><figcaption></figcaption></figure>
@@ -155,8 +142,6 @@ For instance:
 {% embed url="https://drive.google.com/file/d/1bcS4Vq-MTgbamZMFOnIjWBItFK3LHgjN/view?usp=sharing" %}
 MCP Demo Video
 {% endembed %}
-
-
 
 ## Configure **Cursor**
 
@@ -181,11 +166,7 @@ Paste the same config block (updated with your paths and API keys).
 
 > ⚠️ Note: In some cases, manually editing this file doesn't activate the MCP server in Cursor. If this happens, use the UI method above for best results.
 
-
-
-**Update your `mcp.json` file**
-
-\
+**Update your `mcp.json` file**\
 Add the following configuration to your `mcp.json`. This will let you access the available tools.            (Same values as shown in the Claude config above.)
 
 ```
@@ -212,10 +193,6 @@ Add the following configuration to your `mcp.json`. This will let you access the
 
 <figure><img src="../../.gitbook/assets/canva11.png" alt=""><figcaption></figcaption></figure>
 
-
-
-
-
 **Use Agent Mode**
 
 In Cursor, make sure you're using **Agent Mode** in the chat. Agents have the ability to use any MCP tool — including custom ones and those from SN1/SN13. You can ask it questions like:
@@ -224,15 +201,11 @@ In Cursor, make sure you're using **Agent Mode** in the chat. Agents have the ab
 
 You can now ask questions or give prompts. Be sure to **specify when you want the agent to use MCP tools**.
 
-
-
-**Tool Usage in Action**<br>
+**Tool Usage in Action**
 
 When the agent responds, you’ll see it indicate which **MCP tool** it’s using, along with a coherent and context-aware reply.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-04-16 at 04.38.41.png" alt=""><figcaption></figcaption></figure>
-
-
 
 ### Troubleshooting
 
@@ -242,7 +215,5 @@ If you encounter any issues:
 2. Verify that `uv` is properly installed
 3. Make sure the virtual environment is activated
 4. Check that all dependencies are properly installed
-
-
 
 For more on MCPs please refer to the [official documentation](https://modelcontextprotocol.io/introduction)&#x20;
