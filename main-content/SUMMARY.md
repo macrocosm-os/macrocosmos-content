@@ -2,7 +2,7 @@
 
 ## Developers
 
-* [Macrocosmos SDK](README.md)
+* [Macrocosmos API](README.md)
   * [Get Started](developers/macrocosmos-sdk/installation.md)
   * [API Keys](developers/macrocosmos-sdk/api-keys.md)
   * [Subnet 1 Apex API](developers/macrocosmos-sdk/apex.md)
@@ -91,7 +91,7 @@
   * [FAQs](product-and-services/tah/faqs.md)
   * [TAH Support](subnets/subnet-9-iota/support.md)
 * [Data Universe](product-and-services/gravity/README.md)
-  * [Data Collection](product-and-services/gravity/scraping-data.md)
+  * [Data Collection and Marketplace](product-and-services/gravity/scraping-data.md)
   * [Data Universe Use Cases](product-and-services/gravity/data-universe-use-cases/README.md)
     * [How to understand how people feel about my brand?](product-and-services/gravity/data-universe-use-cases/how-to-understand-how-people-feel-about-my-brand.md)
     * [What is the best way to find out what topics people connect with my brand and competitors?](product-and-services/gravity/data-universe-use-cases/what-is-the-best-way-to-find-out-what-topics-people-connect-with-my-brand-and-competitors.md)

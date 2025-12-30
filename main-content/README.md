@@ -1,8 +1,8 @@
 ---
-description: The Macrocosmos SDK - the bridge to decentralised AI services
+description: The Macrocosmos API - the bridge to decentralised AI services
 ---
 
-# Macrocosmos SDK
+# Macrocosmos API
 
 ## Overview
 

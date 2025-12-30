@@ -2,11 +2,11 @@
 description: Social Media Data Collection Solution from Macrocosmos
 ---
 
-# Data Collection
+# Data Collection and Marketplace
 
 Navigate to [app.macrocosmos.ai](https://app.macrocosmos.ai/) to access Data Universe.&#x20;
 
-#### Chose between options
+#### Choose between options
 
 * **Search** for any available data from the Marketplace&#x20;
 * **Create a new scraping task** for the new customised data collection

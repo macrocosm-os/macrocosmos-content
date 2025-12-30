@@ -55,7 +55,7 @@ npm install macrocosmos==2.1.1
 
 {% embed url="https://drive.google.com/file/d/1-vRJiFJv6JzXaqGsMrASKZMwN5fT8cp8/view?usp=drive_link" %}
 
-## Gravity API Endpoints
+## Data Universe API Endpoints
 
 ### Create a task for Data Collection
 
