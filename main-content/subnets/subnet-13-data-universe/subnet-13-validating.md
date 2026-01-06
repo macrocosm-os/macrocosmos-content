@@ -6,7 +6,7 @@ The Validator is responsible for validating the data delivered by Miners and sco
 
 Validators run multiple concurrent threads:
 
-| Component           | Purpose                                    |
+| **Component**       | **Purpose**                                |
 | ------------------- | ------------------------------------------ |
 | Main Loop           | Evaluation cycles, weight setting          |
 | Miner Evaluator     | Score calculation and validation           |
@@ -64,8 +64,6 @@ This will start a process called `net13-vali-updater`. This process periodically
 
 #### Without auto-updates
 
-
-
 If you'd prefer to manage your own validator updates...
 
 From the data-universe folder:
@@ -76,11 +74,7 @@ pm2 start python -- ./neurons/validator.py --wallet.name your-wallet --wallet.ho
 
 ## Configuring the Validator
 
-
-
 ### Flags
-
-
 
 The Validator offers some flags to customize properties.
 
@@ -91,8 +85,6 @@ python ./neurons/validator.py -h
 ```
 
 ### `.env`
-
-
 
 Your validator `.env` should look like the following after setup for all data sources:
 
