@@ -2,11 +2,9 @@
 description: Subnet 1 mining guide
 ---
 
-# Mining
+# Subnet 1 Mining
 
-## Miner Documentation
-
-### Overview
+### Introduction
 
 **Apex** drives algorithmic innovation across diverse problem domains. Each pursuit of the best solution takes place within a **Competition**, which consists of multiple **Rounds** of evaluation. Participants, known as miners, join Competitions by submitting their Python-based algorithms through the[ Apex CLI](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli) and earn rewards based on their performance.
 
