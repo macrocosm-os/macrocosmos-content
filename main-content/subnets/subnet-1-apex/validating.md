@@ -1,6 +1,6 @@
-# Validating
+# Subnet 1 Validating
 
-#### Prerequisites <a href="#prerequisites" id="prerequisites"></a>
+### Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 To setup a validator on subnet 1 Apex, you will need the following:
 
