@@ -2,9 +2,9 @@
 description: Registry of competitions currently active on SN1 APEX.
 ---
 
-# Current Competitions
+# Subnet 1 Current Competitions
 
-<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td align="center"><a href="https://docs.macrocosmos.ai/subnets/subnet-1-apex/current-competitions#compression-of-activations-challenge">Matrix Compression</a></td><td></td><td><a href="../../../.gitbook/assets/Matix-icon.png">Matix-icon.png</a></td></tr><tr><td align="center"><a href="https://docs.macrocosmos.ai/subnets/subnet-1-apex/current-competitions#id-2.-battleship">Battleship</a></td><td></td><td><a href="../../../.gitbook/assets/Battleship-icon.png">Battleship-icon.png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td align="center"><a href="https://docs.macrocosmos.ai/subnets/subnet-1-apex/current-competitions#compression-of-activations-challenge">Matrix Compression</a></td><td></td><td><a href="../../.gitbook/assets/Matix-icon.png">Matix-icon.png</a></td></tr><tr><td align="center"><a href="https://docs.macrocosmos.ai/subnets/subnet-1-apex/current-competitions#id-2.-battleship">Battleship</a></td><td></td><td><a href="../../.gitbook/assets/Battleship-icon.png">Battleship-icon.png</a></td></tr></tbody></table>
 
 ## 1. Matrix Compression <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
 
@@ -83,7 +83,7 @@ At the heart of this event is a deeper research goal: DUAL vs. SOLO competition 
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../../.gitbook/assets/Battleship-christmas.png" alt="" width="360"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Battleship-christmas.png" alt="" width="360"><figcaption></figcaption></figure>
 
 
 {% endcolumn %}
@@ -110,7 +110,7 @@ At the heart of this event is a deeper research goal: DUAL vs. SOLO competition 
 * A round spans one full day.
 * If one of the miners dropped from the match, the other miner wins.
 
-<figure><img src="../../../.gitbook/assets/battleship-boards.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/battleship-boards.png" alt=""><figcaption></figcaption></figure>
 
 ### Evaluation <a href="#evaluation" id="evaluation"></a>
 
