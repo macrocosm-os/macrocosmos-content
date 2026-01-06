@@ -2,7 +2,7 @@
 description: Frequently asked Questions on Apex
 ---
 
-# FAQs
+# Subnet 1 FAQs
 
 ### Mining
 
