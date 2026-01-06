@@ -54,6 +54,7 @@
   * [Subnet 13 Data Universe API](subnets/subnet-13-data-universe/subnet-13-api.md)
   * [Subnet 13 Incentive Mechanism](subnets/subnet-13-data-universe/subnet-13-incentive-mechanism.md)
   * [Subnet 13 Mining](subnets/subnet-13-data-universe/subnet-13-mining.md)
+  * [Subnet 13 Validating](subnets/subnet-13-data-universe/subnet-13-validating.md)
 * [Legacy Subnet 1 Apex](subnets/subnet-1-apex-1/README.md)
   * [Subnet 1 Getting Started](subnets/subnet-1-apex-1/subnet-1-getting-started.md)
   * [Legacy Subnet 1 Incentive Mechanism](subnets/subnet-1-apex-1/subnet-1-incentive-mechanism.md)
