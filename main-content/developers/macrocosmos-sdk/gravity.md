@@ -36,7 +36,12 @@ npm install macrocosmos
 {% endtab %}
 {% endtabs %}
 
-4. Macrocosmos API should be version 3.0.0. For upgrade use the command
+4. Macrocosmos API should be
+
+* &#x20;version 3.0.0 for Python
+* version 2.1.1 for Typescript&#x20;
+
+For upgrade use the command
 
 {% tabs %}
 {% tab title="Python" %}
