@@ -690,7 +690,7 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 
 ### Streaming API ( On Demand Data API)
 
-Run precise, real-time queries using the synchronous `Sn13Client` to query historical or current data based on users, keywords, and time range on platforms like X (Twitter) Reddit, and YouTube.&#x20;
+Run precise, real-time queries using the synchronous `Sn13Client` to query historical or current data based on users, keywords, and time range on platforms like X (Twitter) and Reddit.&#x20;
 
 The Streaming API is limited to 1000 posts per request.
 
@@ -700,7 +700,6 @@ As of the latest data-universe [release](https://github.com/macrocosm-os/data-un
   * `"any"` : Returns posts that contain any combination of the listed keywords.
   * `"all"` : Returns posts that contain all of the keywords (default, if field omitted).
 * For Reddit requests, the first keyword in the list corresponds to the requested subreddit, and subsequent keywords are treated as normal.&#x20;
-* For YouTube requests, the username field value must correspond to the YouTube channel name.
 * URL mode is mutually exclusive with `usernames` and `keywords` fields. If `url` is provided, `usernames` and `keywords` must be empty.
 
 {% tabs %}
@@ -713,7 +712,7 @@ const client = new Sn13Client({apiKey: 'your-api-key'});
 
 // Get the onDemandData response
 const response = await client.onDemandData({
-    source: 'X',                           // or 'Reddit', 'YouTube'
+    source: 'X',                           // or 'Reddit'
     usernames: ['nasa', 'spacex'],         // Optional, up to 5 users
     keywords: ['photo', 'space', 'mars'],  // Optional, up to 5 keywords
     startDate: '2024-04-01',               // Defaults to 24h range if not specified
@@ -782,16 +781,16 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 
 #### Body
 
-| Name          | Type              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `source`      | string            | Data source (`X` or `Reddit`).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `usernames`   | Array of strings  | <p>Default: <code>[]</code></p><p></p><p>Number of items: <code>&#x3C;= 10 items</code></p><p></p><p>List of usernames to fetch data from. Searches for posts from <strong>any</strong> of the given usernames. </p><p></p><p>If <code>usernames</code> are not included, they will not be constrained in the search parameters. <br><br>For YouTube:<br>The item in the <code>usernames</code> field should correspond to the YouTube Channel name. Only one keyword (URL) OR one username (channel name) is allowed per request, not both. </p>                                                                                                                                               |
-| `keywords`    | Array of strings  | <p>Default: <code>[]</code><br></p><p>Number of items: <code>&#x3C;= 5 items</code></p><p></p><p>List of keywords to search for. Searches for posts where <strong>all</strong> given keywords are present. </p><p></p><p>If <code>keywords</code> are not included in the query, they will not be constrained in the search parameters. <br><br>For Reddit: <br>The first keyword indicates the subreddit (r/all for cross-subreddit queries), and subsequent keywords are text matches. <br><br>For YouTube:<br>Enter a video URL as a YouTube keyword to request the transcript from that video. Only one keyword (URL) OR one username (channel name) is allowed per request, not both. </p> |
-| `startDate`   | string            | <p><code>[Optional]</code></p><p></p><p>Start date or datetime (ISO format).<br><br>Defaults to 24 hours prior to the request time if not specified.<br><br>Datetimes without time information will be set to midnight (00:00:00) by default.</p><p>Datetimes without timezone information will be set to UTC by default. </p>                                                                                                                                                                                                                                                                                                                                                                  |
-| `endDate`     | string            | <p><code>[Optional]</code></p><p></p><p>End date or datetime (ISO format).<br><br>Defaults to the request time if not specified.</p><p><br>Datetimes without time information will be set to midnight (00:00:00) by default. </p><p>Datetimes without timezone information will be set to UTC by default. </p>                                                                                                                                                                                                                                                                                                                                                                                  |
-| `limit`       | integer           | <p><code>[Optional]</code></p><p></p><p>Default: <code>100</code></p><p></p><p>Options: <code>[1,...,1000]</code></p><p></p><p>Maximum number of items to return.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `keywordMode` | string            | <p><code>[Optional]</code> <br><br>Default: <code>all</code> <br><br>Options: <code>all</code> , <code>any</code> <br><br>Selects the post-filtering mode:</p><ul><li><code>"any"</code>: Returns posts that contain any combination of the listed <code>keywords</code>.</li><li><code>"all"</code>: Returns posts that contain all of the <code>keywords</code></li></ul>                                                                                                                                                                                                                                                                                                                     |
-| `url`         | string            | <p><code>[Optional]</code> <br><br>Single <code>url</code> for URL search mode (X or YouTube)<br><br>If <code>url</code> is provided, <code>usernames</code> and <code>keywords</code> must be empty or omitted.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Name          | Type              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `source`      | string            | Data source (`X` or `Reddit`).                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `usernames`   | Array of strings  | <p>Default: <code>[]</code></p><p></p><p>Number of items: <code>&#x3C;= 10 items</code></p><p></p><p>List of usernames to fetch data from. Searches for posts from <strong>any</strong> of the given usernames. </p><p></p><p>If <code>usernames</code> are not included, they will not be constrained in the search parameters. </p>                                                                                                                                                         |
+| `keywords`    | Array of strings  | <p>Default: <code>[]</code><br></p><p>Number of items: <code>&#x3C;= 5 items</code></p><p></p><p>List of keywords to search for. Searches for posts where <strong>all</strong> given keywords are present. </p><p></p><p>If <code>keywords</code> are not included in the query, they will not be constrained in the search parameters. <br><br>For Reddit: <br>The first keyword indicates the subreddit (r/all for cross-subreddit queries), and subsequent keywords are text matches. </p> |
+| `startDate`   | string            | <p><code>[Optional]</code></p><p></p><p>Start date or datetime (ISO format).<br><br>Defaults to 24 hours prior to the request time if not specified.<br><br>Datetimes without time information will be set to midnight (00:00:00) by default.</p><p>Datetimes without timezone information will be set to UTC by default. </p>                                                                                                                                                                |
+| `endDate`     | string            | <p><code>[Optional]</code></p><p></p><p>End date or datetime (ISO format).<br><br>Defaults to the request time if not specified.</p><p><br>Datetimes without time information will be set to midnight (00:00:00) by default. </p><p>Datetimes without timezone information will be set to UTC by default. </p>                                                                                                                                                                                |
+| `limit`       | integer           | <p><code>[Optional]</code></p><p></p><p>Default: <code>100</code></p><p></p><p>Options: <code>[1,...,1000]</code></p><p></p><p>Maximum number of items to return.</p>                                                                                                                                                                                                                                                                                                                         |
+| `keywordMode` | string            | <p><code>[Optional]</code> <br><br>Default: <code>all</code> <br><br>Options: <code>all</code> , <code>any</code> <br><br>Selects the post-filtering mode:</p><ul><li><code>"any"</code>: Returns posts that contain any combination of the listed <code>keywords</code>.</li><li><code>"all"</code>: Returns posts that contain all of the <code>keywords</code></li></ul>                                                                                                                   |
+| `url`         | string            | <p><code>[Optional]</code> <br><br>Single <code>url</code> for URL search mode for X (Twitter)<br><br>If <code>url</code> is provided, <code>usernames</code> and <code>keywords</code> must be empty or omitted.</p>                                                                                                                                                                                                                                                                         |
 
 #### Response
 
@@ -906,24 +905,11 @@ import macrocosmos as mc
 client = mc.Sn13Client(api_key="your-api-key")
 
 response = client.sn13.OnDemandData(
-    source='YouTube',                     # Searches YouTube
-    usernames=["mrbeast"],                # For videos from Mr Beast
+    source='X',                           # Searches X
+    keywords=["AI"],                      # For posts about AI
     start_date='2024-08-01',              # From midnight 2024-08-01 UTC
                                           # To the time this request was made. 
     limit=10                              # For 10 items maximum
-)
-
-print(response)
-```
-
-```
-import macrocosmos as mc
-
-client = mc.Sn13Client(api_key="your-api-key")
-
-response = client.sn13.OnDemandData(
-    source='YouTube',                                          # Searches YouTube
-    url="https://www.youtube.com/watch?v=pqwZ1mYM4v0",         # For the transcript corresponding to this video URL
 )
 
 print(response)
