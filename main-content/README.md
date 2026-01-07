@@ -6,7 +6,7 @@ description: The Macrocosmos API - the bridge to decentralised AI services
 
 ## Overview
 
-Whether you're building cutting-edge Artificial Intelligence (AI) products, connecting to Bittensor subnets, or orchestrating large-scale data flows, the Macrocosmos Software Development Kit (SDK) simplifies access to the powerful tools and systems behind the Macrocosmos [Constellation Platform](https://app.macrocosmos.ai/).
+Whether you're building cutting-edge Artificial Intelligence (AI) products, connecting to Bittensor subnets, or orchestrating large-scale data flows, the Macrocosmos Software Development Kit (SDK) simplifies access to the powerful tools and systems behind the Macrocosmos [Data Universe](https://app.macrocosmos.ai/gravity/marketplace) platform.
 
 Macrocosmos SDK provides developers with a robust API for integrating Macrocosmos’s advanced AI and data infrastructure into applications, services, and research pipelines. Its extensive documentation, built-in support for authentication ensure a smooth experience from prototyping to production.
 
