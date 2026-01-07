@@ -17,8 +17,6 @@ Its incentive mechanism rewards miners for gathering content that is desirable, 
 
 Currently, miners are incentivized to scrap data from platforms like **Reddit** and **X (Twitter) .** Keeping the focus on rapidly shifting trends , because we all know in today’s world, stale data just doesn’t cut it.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-03-05 at 16.59.27 (1).png" alt=""><figcaption></figcaption></figure>
-
 ## Why It Matters
 
 In fast-moving markets, **up-to-date data** is critical. Data provided by subnet 13's product, [Gravity](https://datauniverse.macrocosmos.ai/), allows businesses to:
