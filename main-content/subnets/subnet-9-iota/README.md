@@ -23,7 +23,15 @@ For more details on how to contribute you can have a looks at [**mining instruct
 
 If you have any questions or require support, please message us in the [Bittensor Discord](https://discord.com/channels/799672011265015819/1162768567821930597) channel for subnet 9, or our own [Macrocosmos Discord](https://discord.gg/vRTaAXpRcd) server.
 
-Read about Training At Home (TAH).
+### Find out more
+
+Have a look at [Training At Home (TAH)](../../product-and-services/tah/).
+
+Read substack and other articles:
+
+* [Why IOTA is different: Comparing Pretraining, Federated Learning, and Swarm](https://macrocosmosai.substack.com/p/why-iota-is-different-comparing-pretraining) - The Cosmonaut Substack, August 2025
+* [Swarm Intelligence Is Reshaping How AI Gets Trained](https://www.forbes.com/sites/torconstantino/2025/06/02/swarm-intelligence-is-reshaping-how-ai-gets-trained/) - Forbes, July 2025
+* [IOTA: Bittensor's biggest pretraining breakthrough is here](https://macrocosmosai.substack.com/p/iota-bittensors-biggest-pretraining) - The Cosmonaut Substack, June 2025
 
 Other related resources
 
