@@ -14,6 +14,10 @@ You can plug in any hardware you have access to and earn rewards for powering de
 
 We aim to solve one of the biggest challenges in open-source AI today: the absence of a decentralized, community-driven, and highly efficient pre-training platform.
 
+#### Demo Video
+
+{% embed url="https://drive.google.com/file/d/1KEEYE37jqd3Wgxuds-JQSaQVe9gkSc3e/view?usp=drive_link" %}
+
 #### Learn More
 
 * [TAH User Guide](tah-user-guide.md)

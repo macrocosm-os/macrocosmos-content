@@ -50,7 +50,7 @@ For more use cases >> [Data Universe Use Cases](./#data-universe-use-cases)
 
 ### Data Universe Data Collection Demo
 
-{% embed url="https://drive.google.com/file/d/1-60S4XgFYG-CZKII-ySDkTrwosDzWaFL/view?usp=drive_link" %}
+{% embed url="https://drive.google.com/file/d/1rV0NVtPWTDnrwpD56mgEZFD609WRZabt/view?usp=drive_link" %}
 
 ### Case Studies
 
