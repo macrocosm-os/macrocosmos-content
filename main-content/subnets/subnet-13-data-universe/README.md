@@ -37,7 +37,7 @@ As machine learning becomes more focused on the output, the **quality of trainin
 
 Subnet 13's decentralized design allows data to be distributed across miners and queried by validators, showcasing Bittensor's scalability. Macrocosmos is expanding data sources, developing a queryable API ([endpoints.md](../../developers/api-documentation/sn13-data-universe/endpoints.md "mention")), and is currently one of the largest data providers with access to over 55 billion scraped posts and comments. By providing the raw material for pre-training and inference, subnet 13 is poised to supercharge the next stage of AI model development within the Bittensor ecosystem.
 
-## Gravity Client - Macrocosmos API
+## Macrocosmos API
 
 Using the `GravityClient` in the **Macrocosmos API**, you can easily launch scraping tasks and get structured datasets built by miners.
 
