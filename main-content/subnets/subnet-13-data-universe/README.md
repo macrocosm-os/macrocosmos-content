@@ -15,7 +15,11 @@ Its incentive mechanism rewards miners for gathering content that is desirable, 
 * The age of the data
 * &#x20;Data uniqueness&#x20;
 
-Currently, miners are incentivized to scrap data from platforms like **Reddit** and **X (Twitter) .** Keeping the focus on rapidly shifting trends , because we all know in today’s world, stale data just doesn’t cut it.
+Currently, miners are incentivized to scrap data from platforms like **Reddit** and **X (Twitter).** Keeping the focus on rapidly shifting trends , because we all know in today’s world, stale data just doesn’t cut it.
+
+API Documentation is available at [Macrocosmos API](../../).
+
+Data Universe Marketplace and Data Collection Tool <a href="https://app.macrocosmos.ai/gravity/marketplace" class="button primary">sign  up</a>.
 
 ## Why It Matters
 
