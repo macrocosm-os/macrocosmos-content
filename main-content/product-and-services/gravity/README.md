@@ -16,7 +16,7 @@ Data Universe is available as
 
 {% columns %}
 {% column %}
-<h4 align="center">Data Collection Tool</h4>
+<h4 align="center">Data Collection</h4>
 
 <figure><img src="../../.gitbook/assets/Cosmo1.png" alt=""><figcaption></figcaption></figure>
 
