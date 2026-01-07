@@ -10,7 +10,7 @@ Macrocosmos API makes it easy to bring fresh, structured social data into your p
 
 Data Universe is built for teams that need both speed and scale:&#x20;
 
-* use On-Demand / Streaming requests for real-time queries,&#x20;
+* use On-Demand API requests for real-time queries,&#x20;
 * or run dataset jobs to collect large batches over time, delivered in clean, consistent formats with rich metadata.&#x20;
 
 Compared to traditional data providers, Data Universe is designed to be high-volume, low-friction, and cost-efficient, so you can go from a quick test to production workloads with a single API key.
@@ -47,7 +47,7 @@ Macrocosmos makes it accessible to:
 
 <a href="developers/macrocosmos-sdk/gravity.md" class="button secondary">Data Universe API</a>
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><img src=".gitbook/assets/collection-icon.png" alt=""> <strong>Data Collection</strong></td><td>Request filtered data to collect relevant insights, structured information, real-time updates, hidden patterns, and competitive signals across multiple sources.</td></tr><tr><td><img src=".gitbook/assets/dataset-icon.png" alt=""> <strong>Build Dataset</strong></td><td>Build comprehensive datasets to enable precise retrieval, targeted analysis and intelligent automation, driving smarter decisions and scalable AI-driven capabilities.</td></tr><tr><td><img src=".gitbook/assets/stream2.png" alt=""> <strong>Streaming API</strong></td><td>Create a data flow for real-time updates and identify predictive signals to drive timely decisions, automation, and strategic forecasting across operations.</td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><img src=".gitbook/assets/collection-icon.png" alt=""> <strong>Data Collection</strong></td><td>Request filtered data to collect relevant insights, structured information, real-time updates, hidden patterns, and competitive signals across multiple sources.</td></tr><tr><td><img src=".gitbook/assets/dataset-icon.png" alt=""> <strong>Build Dataset</strong></td><td>Build comprehensive datasets to enable precise retrieval, targeted analysis and intelligent automation, driving smarter decisions and scalable AI-driven capabilities.</td></tr><tr><td><img src=".gitbook/assets/stream2.png" alt=""> <strong>OnDemand API</strong></td><td>Create a data flow for real-time updates and identify predictive signals to drive timely decisions, automation, and strategic forecasting across operations.</td></tr></tbody></table>
 
 ## Find out more
 
