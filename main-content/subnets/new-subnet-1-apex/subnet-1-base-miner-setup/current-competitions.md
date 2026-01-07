@@ -73,50 +73,23 @@ The information about enabled packages is in [requirements.txt](https://github.c
 
 This is SN1 Festive Competition Launch - a special experiment and a Christmas present for the community — the Battleship Competition!
 
-Unlike traditional benchmark races, this one is _**miner vs. miner.**_&#x20;
-
-{% columns %}
-{% column %}
-Each face-off plays 3 Battleship games, and the miner who wins the majority takes the daily round. A winner of the round takes all emissions. No chasing static baselines. No ceiling imposed by yesterday’s “best score.” Just real-time strategy, adaptation, and innovation and mainly FUN!&#x20;
-
-At the heart of this event is a deeper research goal: DUAL vs. SOLO competition architecture — exploring how peer-to-peer matchups can remove dependency on limiting benchmarks and unlock more organic progress.
-{% endcolumn %}
-
-{% column %}
-<figure><img src="../../../.gitbook/assets/Battleship-christmas.png" alt="" width="360"><figcaption></figcaption></figure>
-
-
-{% endcolumn %}
-{% endcolumns %}
-
-
-
 ### **Battleship Settings** <a href="#battleship-settings" id="battleship-settings"></a>
 
 [Competition Dashboard](https://apex.macrocosmos.ai/competitions/2)
 
 #### Match Structure <a href="#match-structure" id="match-structure"></a>
 
-* A single match consists of 3 Battleship games played between two miners.
-* In each game, both miners receive a hidden ship board - a unique configuration of ships that is known only to the orchestrator.
-* Their task is to determine an optimal strategy to locate and hit the opponent’s ships as efficiently as possible.
-* Each game has a winner, and the miner who wins at least 2 out of 3 games wins the match.
-  * The starting player of the first game is random. The starting player of the next 2 games is the previous loser.
-
-#### Daily Rounds <a href="#daily-rounds" id="daily-rounds"></a>
-
-* Submissions for the competition are accepted for 24 hours a day. Evaluation and actual matches start at 11 AM UTC everyday. The results are published on the dashboard on completion of the evaluation.
-* Every miner plays against every other miner: this creates a full matrix of matchups, ensuring fairness and eliminating bias toward specific opponents.
-* A round spans one full day.
-* If one of the miners dropped from the match, the other miner wins.
-
-<figure><img src="../../../.gitbook/assets/battleship-boards.png" alt=""><figcaption></figcaption></figure>
+* A single match consists of several Battleship games played by 1 miner.
+* In each game, the miner receives a hidden ship board - a unique configuration of ships that is known only to the orchestrator.
+* Their task is to determine an optimal strategy to locate and hit the opponent’s ships as efficiently as possible, while working under an unknown turn constraint
+* The miner that solves the most boards the fastest wins and receives all competition emissions, annealing with the burn.
+* Shots may not be repeated!
 
 ### Evaluation <a href="#evaluation" id="evaluation"></a>
 
 #### **Game Score** <a href="#game-score" id="game-score"></a>
 
-Each match contains **3 games**, and every game produces a score based on two components:
+Every game produces a score based on two components:
 
 **1. Win Score**
 
@@ -137,16 +110,9 @@ Each match contains **3 games**, and every game produces a score based on two co
 * **Maximum possible score per game:**\
   **1000 + 9 = 1009**
 
-**Match Score Calculation**
-
-A match consists of **3 games** between two miners.
-
-* The scores from the 3 games are **averaged** to produce the **match score**.
-
 **Final Competition Score**
 
-* Each miner plays a match against **every other miner**.
-* The miner’s **final score** is the **average of all their match scores** across the round.
+* The miner’s **final score** is the **average of all their game scores** across the round.
 
 #### Additional details: <a href="#additional-details" id="additional-details"></a>
 
