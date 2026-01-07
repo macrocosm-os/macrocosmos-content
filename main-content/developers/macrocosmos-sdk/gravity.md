@@ -4,22 +4,23 @@ description: >-
   Universe) on the Bittensor network.
 ---
 
-# Subnet 13 Gravity API
+# Subnet 13 Data Universe API
 
-## Quickstart
+## Get Started
 
-[Get started guide](installation.md)
+To get started using Macrocosmos API you should:
 
-Choose `GravityClient` for sync tasks. Use `AsyncGravityClient` if async fits better.\
-Check [examples/gravity\_workflow\_example.py](https://github.com/macrocosm-os/macrocosmos-py/blob/main/examples/gravity_workflow_example.py) for a complete working example of a data collection CLI you can use for your next big project or to plug right into your favorite data product.
+1. Generate your API key using the instruction from the [API Keys](/broken/pages/O3pJKPdh5VoU7QLhjMfb) page
+2. Ensure that you are using Python 3.9+ or Typescript
 
 **📎 Supported Platforms**
 
 * `reddit`
 * `twitter` (X)
-* Youtube
 
 More platforms will be supported as subnet capabilities expand.
+
+3. Install the Macrocosmos API using pip or npm:
 
 {% tabs %}
 {% tab title="Python" %}
@@ -35,7 +36,7 @@ npm install macrocosmos
 {% endtab %}
 {% endtabs %}
 
-Macrocosmos SDK should be version 2.1.0. For upgrade use
+4. Macrocosmos API should be version 3.0.0. For upgrade use the command
 
 {% tabs %}
 {% tab title="Python" %}
@@ -50,6 +51,9 @@ npm install macrocosmos==2.1.1
 ```
 {% endtab %}
 {% endtabs %}
+
+5. Choose `GravityClient` for sync tasks. Use `AsyncGravityClient` if async fits better.\
+   Check [examples/gravity\_workflow\_example.py](https://github.com/macrocosm-os/macrocosmos-py/blob/main/examples/gravity_workflow_example.py) for a complete working example of a data collection CLI you can use for your next big project or to plug right into your data product.
 
 ### Demo Video
 

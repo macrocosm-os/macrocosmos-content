@@ -1,6 +1,6 @@
 # Get Started
 
-To get started using Macrocosmos Software Development Kit (SDK) you should:
+To get started using Macrocosmos API you should:
 
 1. Generate your API key using the instruction from the [API Keys](/broken/pages/O3pJKPdh5VoU7QLhjMfb) page
 2. Ensure that you are using Python 3.9+ or Typescript
@@ -55,7 +55,7 @@ Congratulations! 🎉 You have setup the basic project and now can start to use 
 
 </details>
 
-### Install the Macrocosmos SDK using pip or npm
+### Install the Macrocosmos API using pip or npm
 
 {% tabs %}
 {% tab title="Python" %}
@@ -74,8 +74,6 @@ npm install macrocosmos
 Macrocosmos SDK should be version 1.0.4+
 
 ### Client Setup
-
-The **Client** classes — such as `ApexClient` and `GravityClient` , serve as the **primary interface** between your application and a specific Macrocosmos subnet.
 
 {% tabs %}
 {% tab title="Python" %}
