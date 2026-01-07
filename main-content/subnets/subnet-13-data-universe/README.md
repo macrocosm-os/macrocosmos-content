@@ -6,7 +6,7 @@ description: Bittensor absorbs the most data
 
 ## What is SN13 — Data Universe
 
-**Subnet 13** is Bittensor’s decentralized data layer , focused on the **collection, and distribution of fresh, desirable data**.
+**Subnet 13** is Bittensor’s decentralized data layer, focused on the **collection, and distribution of fresh, desirable data**.
 
 Its incentive mechanism rewards miners for gathering content that is desirable, based on the following:
 
@@ -19,17 +19,17 @@ Currently, miners are incentivized to scrap data from platforms like **Reddit** 
 
 API Documentation is available at [Macrocosmos API](../../).
 
-Data Universe Marketplace and Data Collection Tool <a href="https://app.macrocosmos.ai/gravity/marketplace" class="button primary">sign  up</a>.
+Data Universe Marketplace and Data Collection <a href="https://app.macrocosmos.ai/gravity/marketplace" class="button primary">sign  up</a>.
 
 ## Why It Matters
 
-In fast-moving markets, **up-to-date data** is critical. Data provided by subnet 13's product, [Gravity](https://datauniverse.macrocosmos.ai/), allows businesses to:
+In fast-moving markets, **up-to-date data** is critical. Data provided by subnet 13's product [Data Universe](https://datauniverse.macrocosmos.ai/) allows businesses to:
 
 * Track brand sentiment and market shifts in real time
 * Make data-driven decisions based on the latest insights
 * Refine strategy and stay competitive with fresh intelligence
 
-As machine learning becomes more commoditized, the **quality of training data** will become a key differentiator. SN13 aims to make **data one of Bittensor’s most valuable commodities.**
+As machine learning becomes more focused on the output, the **quality of training data** will become a key differentiator. SN13 aims to make **data one of Bittensor’s most valuable commodities.**
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-03-05 at 16.57.29 (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -37,26 +37,27 @@ As machine learning becomes more commoditized, the **quality of training data** 
 
 Subnet 13's decentralized design allows data to be distributed across miners and queried by validators, showcasing Bittensor's scalability. Macrocosmos is expanding data sources, developing a queryable API ([endpoints.md](../../developers/api-documentation/sn13-data-universe/endpoints.md "mention")), and is currently one of the largest data providers with access to over 55 billion scraped posts and comments. By providing the raw material for pre-training and inference, subnet 13 is poised to supercharge the next stage of AI model development within the Bittensor ecosystem.
 
-Subnet 13's [interactive dashboard](https://www.macrocosmos.ai/sn13/dashboard) not only provides up-to-date metrics on the total scraped posts, total amount of datasets or scraping speed, but also statistics on the datasets content with the amount of posts scraped per the most popular topics. The dashboard interface allows filtering based on the content age and daily scraping metrics, whilst offering a different table-formated UX.
+## Gravity Client - Macrocosmos API
 
-## Gravity Client - Macrocosmos SDK
+Using the `GravityClient` in the **Macrocosmos API**, you can easily launch scraping tasks and get structured datasets built by miners.
 
-The **Gravity subnet (SN13)** specializes in decentralized web scraping and data collection across platforms like Reddit and X.\
-Using the `GravityClient` in the **Macrocosmos SDK**, you can easily launch scraping tasks and get structured datasets built by miners.
+API Documentation is available at [Macrocosmos API](../../).
 
-**You'll also need an API key. Visit** [**Subnet 13 Gravity API**](../../developers/macrocosmos-sdk/gravity.md) to get started.
+You'll also need an API key. Visit [Data Universe](https://app.macrocosmos.ai/account) to get started.
 
 ## Want a deeper dive?
 
-For more details about the subnet 13 R\&D work, take a look at our Substack articles:
+Have a look at the Social Media Data use cases in [Data Universe Use Cases](../../product-and-services/gravity/data-universe-use-cases/) page.
 
+For more details about the subnet 13 R\&D and Data Science work, take a look at our Substack articles:
+
+* [Beyond dashboards: Why social listening SaaS, AI teams and growth marketers are starving for better data](https://macrocosmosai.substack.com/p/beyond-dashboards-why-social-listening)
+* [From TAO price to flow: emissions upgrade through the lens of sentiment analysis](https://macrocosmosai.substack.com/p/from-tao-price-to-flow-emissions)
 * [TAOLOR: Building a subnet-native AI agent with distributed RAG](https://macrocosmosai.substack.com/p/taolor-building-a-subnet-native-ai)
 * [Building the future of authentic data: how subnet 111 leverages Macrocosmos' Gravity](https://macrocosmosai.substack.com/p/building-the-future-of-authentic)
 * [Result: SN44, Score, partners with SN13’s Data Universe](https://macrocosmosai.substack.com/p/result-sn44-score-partners-with-sn13s)
-* [A breakdown of SN13’s dashboard: historical data, mining activity, and enhancements for Gravity](https://macrocosmosai.substack.com/p/a-breakdown-of-sn13s-dashboard-historical)
 * [SN13's Election experiment: A decisive victory for data scraping?](https://macrocosmosai.substack.com/p/sn13s-election-experiment-a-decisive)
 * [Dynamic desirability: Launching Gravity, SN13’s democratization of data source selection](https://macrocosmosai.substack.com/p/dynamic-desirability-launching-gravity)
-* [How we’re expanding the Data Universe](https://macrocosmosai.substack.com/p/how-were-expanding-the-data-universe)
 
 Related resources
 
