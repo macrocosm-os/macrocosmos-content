@@ -16,8 +16,6 @@ Press Open in the push notification:
 
 <figure><img src="../../.gitbook/assets/open-push (1).png" alt=""><figcaption></figcaption></figure>
 
-
-
 Video below demonstrates installation process
 
 {% embed url="https://drive.google.com/file/d/1KEEYE37jqd3Wgxuds-JQSaQVe9gkSc3e/view?usp=drive_link" %}
@@ -113,6 +111,6 @@ For more questions use [FAQs](faqs.md)
 {% endcolumn %}
 
 {% column %}
-If you have any issues use [TAH Support](../../subnets/subnet-9-iota/support.md)
+If you have any issues use [TAH Support](/broken/pages/sOuXmk7Tjf1tKjUMyPCT)
 {% endcolumn %}
 {% endcolumns %}

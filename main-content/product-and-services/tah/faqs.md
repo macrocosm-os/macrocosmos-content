@@ -2,7 +2,7 @@
 description: Frequently asked questions and TAH support channels
 ---
 
-# FAQs
+# TAH Support and FAQs
 
 {% columns %}
 {% column %}
@@ -11,8 +11,6 @@ description: Frequently asked questions and TAH support channels
 [Training At Home (TAH) User Guide](tah-user-guide.md)
 
 [Hardware & OS Requirements](hardware-requirements.md)
-
-[FAQs](faqs.md)
 {% endcolumn %}
 
 {% column %}

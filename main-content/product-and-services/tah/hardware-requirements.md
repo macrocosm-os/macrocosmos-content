@@ -37,6 +37,6 @@ For more questions use [FAQs](faqs.md)
 {% endcolumn %}
 
 {% column %}
-If you have any issues use [TAH Support](../../subnets/subnet-9-iota/support.md)
+If you have any issues use [TAH Support](/broken/pages/sOuXmk7Tjf1tKjUMyPCT)
 {% endcolumn %}
 {% endcolumns %}

@@ -5,6 +5,7 @@
 * [Macrocosmos API](README.md)
   * [Subnet 13 Data Universe API](developers/macrocosmos-sdk/gravity.md)
   * [API Keys](developers/macrocosmos-sdk/api-keys.md)
+  * [Macrocosmos MCP](developers/readme/macrocosmos-mcp.md)
   * [Subnet 1 Apex API](developers/macrocosmos-sdk/apex.md)
 * [API Documentation](developers/api-documentation/README.md)
   * [Accessing API Keys](developers/api-documentation/accessing-api-keys.md)
@@ -17,13 +18,6 @@
     * [Endpoints](developers/api-documentation/sn13-data-universe/endpoints.md)
     * [API Key management](developers/api-documentation/sn13-data-universe/api-key-management.md)
     * [Scraping Youtube Data](developers/api-documentation/sn13-data-universe/scraping-youtube-data.md)
-* [Tools](developers/tools/README.md)
-  * [Macrocosmos MCP](developers/tools/macrocosmos-mcp.md)
-  * [Developer Projects](developers/tools/developer-projects.md)
-
-## Getting Started
-
-* [Quickstart](getting-started/quickstart.md)
 
 ## Basics
 
@@ -80,14 +74,10 @@
 
 ## PRODUCT AND SERVICES
 
-* [Apex User Guide](product-and-services/apex/README.md)
-  * [Navigating Apex](product-and-services/apex/navigating-apex.md)
-  * [FAQs](product-and-services/apex/faqs.md)
 * [Training at Home](product-and-services/tah/README.md)
   * [TAH User Guide](product-and-services/tah/tah-user-guide.md)
   * [Hardware & OS Requirements](product-and-services/tah/hardware-requirements.md)
-  * [FAQs](product-and-services/tah/faqs.md)
-  * [TAH Support](subnets/subnet-9-iota/support.md)
+  * [TAH Support and FAQs](product-and-services/tah/faqs.md)
 * [Data Universe](product-and-services/gravity/README.md)
   * [Data Collection and Marketplace](product-and-services/gravity/scraping-data.md)
   * [Data Universe Use Cases](product-and-services/gravity/data-universe-use-cases/README.md)
@@ -96,8 +86,11 @@
     * [How can I identify emerging trends in my market before they show up in traditional surveys?](product-and-services/gravity/data-universe-use-cases/how-can-i-identify-emerging-trends-in-my-market-before-they-show-up-in-traditional-surveys.md)
     * [How can I track changes in public perception after a product launch or major campaign?](product-and-services/gravity/data-universe-use-cases/how-can-i-track-changes-in-public-perception-after-a-product-launch-or-major-campaign.md)
   * [Managing And Collecting Your Data](product-and-services/gravity/managing-and-collecting-your-data.md)
-  * [Data Universe Support](product-and-services/gravity/support.md)
+  * [Data Universe Support and FAQs](product-and-services/gravity/support.md)
   * [FAQs](product-and-services/gravity/faqs.md)
+* [Apex User Guide](product-and-services/apex/README.md)
+  * [Navigating Apex](product-and-services/apex/navigating-apex.md)
+  * [FAQs](product-and-services/apex/faqs.md)
 * [Nebula User Guide](product-and-services/nebula/README.md)
   * [Explore Nebula](product-and-services/nebula/explore-nebula.md)
   * [Analyzing data](product-and-services/nebula/analyzing-data.md)
@@ -107,8 +100,8 @@
 * [About Macrocosmos](<README (1).md>)
 * [Bittensor](about-us/bittensor/README.md)
   * [DTAO](about-us/bittensor/dtao.md)
-* [News and updates](about-us/news-and-updates.md)
 * [Macromedia](about-us/macromedia.md)
+* [News and updates](about-us/news-and-updates.md)
 * [Subnet Status Update](about-us/subnet-status-update.md)
 * [Product Updates](about-us/product-updates.md)
 

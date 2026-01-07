@@ -1,5 +1,6 @@
 ---
 description: The last updates from Macrocosmos
+hidden: true
 ---
 
 # News and updates

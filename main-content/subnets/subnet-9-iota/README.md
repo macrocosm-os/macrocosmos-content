@@ -35,11 +35,12 @@ Read substack and other articles:
 
 Other related resources
 
-* [Website](https://www.macrocosmos.ai/sn9)
+* [Website](https://iota.macrocosmos.ai/)
+* [IOTA X (Twitter)](https://x.com/Iota_SN9)
 * [Dashboard](https://iota.macrocosmos.ai/)
 * [GitHub](https://github.com/macrocosm-os/iota)
 * [Substack](https://macrocosmosai.substack.com/t/pre-training)
 * [Bittensor Discord](https://discord.com/channels/799672011265015819/1162768567821930597)
 * [Macrocosmos Discord](https://discord.com/channels/1238450997848707082)
 * [Cosmonauts - Macrocosmos Telegram](https://t.me/macrocosmosai)
-* [Macrocosmos X](https://x.com/MacrocosmosAI)
+* [Macrocosmos X (Twitter)](https://x.com/MacrocosmosAI)
