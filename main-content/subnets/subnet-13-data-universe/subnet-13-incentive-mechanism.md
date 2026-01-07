@@ -45,9 +45,8 @@ Data Source Weight (P2P Only): Each platform has a fixed weight applied during p
 
 | Source     | Weight     |
 | ---------- | ---------- |
-| Reddit     | 0.61 (61%) |
+| Reddit     | 0.65 (65%) |
 | X/Twitter  | 0.35 (35%) |
-| YouTube    | 0.04 (4%)  |
 
 Note: These weights are applied only to the raw p2p data score. S3 and OnDemand boosts are not weighted by data source.
 

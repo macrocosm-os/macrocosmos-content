@@ -14,7 +14,7 @@ Miners do not require a GPU and should be able to run on a low-tier machine, as 
 
 #### Prerequisites
 
-1. As of Dec 17th 2023, we support Twitter and Reddit scraping via Apify. You can [setup your Apify API token here](https://github.com/macrocosm-os/data-universe/blob/main/docs/apify.md), or build your own custom scraper (recommended). We also support Reddit scraping via a [personal reddit account](https://github.com/macrocosm-os/data-universe/blob/main/docs/reddit.md) which is completely free. To support YouTube Scraping via a [official youtube api](https://github.com/macrocosm-os/data-universe/blob/main/docs/youtube.md) which is completely free.
+1. As of Dec 17th 2023, we support X (Twitter) and Reddit scraping via Apify. You can [setup your Apify API token here](https://github.com/macrocosm-os/data-universe/blob/main/docs/apify.md), or use official APIs from X (Twitter) and Reddit (recommended). The data delivered by miner have to be compliant with [Miner Data Compliance Policy (v1.0, March 2025)](https://github.com/macrocosm-os/data-universe/blob/b24723d18770f413a4d501de2122e4314370a0c5/docs/miner_policy.md?plain=1#L4).
 2. Clone the repo
 
 ```
@@ -128,8 +128,6 @@ As described in [on demand request handle](https://github.com/macrocosm-os/data-
 
 #### Choosing which data to scrape
 
-As described in the [incentive mechanism](https://github.com/macrocosm-os/data-universe/blob/main/README.md#incentive-mechanism), Miners are, in part, scored based on their data's desirability and uniqueness. We encourage Miners to tune their Miners to maximize their scores by scraping unique, desirable data.
-
-For uniqueness, you can [view the dashboard](https://github.com/macrocosm-os/data-universe/blob/main/README.md#data-universe-dashboard) to see how much data, by DataSource and DataLabel is currently on the Subnet.
+As described in the [incentive mechanism](subnet-13-incentive-mechanism.md), miners are, in part, scored based on their data's desirability and uniqueness. We encourage miners to tune their Miners to maximize their scores by scraping unique, desirable data.
 
 For desirability, the [DataDesirabilityLookup](https://github.com/RusticLuftig/data-universe/blob/main/rewards/data_desirability_lookup.py) defines the exact rules Validators use to compute data desirability.<br>
