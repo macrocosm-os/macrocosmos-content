@@ -3,10 +3,9 @@
 ## Developers
 
 * [Macrocosmos API](README.md)
-  * [Get Started](developers/macrocosmos-sdk/installation.md)
+  * [Subnet 13 Data Universe API](developers/macrocosmos-sdk/gravity.md)
   * [API Keys](developers/macrocosmos-sdk/api-keys.md)
   * [Subnet 1 Apex API](developers/macrocosmos-sdk/apex.md)
-  * [Subnet 13 Data Universe API](developers/macrocosmos-sdk/gravity.md)
 * [API Documentation](developers/api-documentation/README.md)
   * [Accessing API Keys](developers/api-documentation/accessing-api-keys.md)
   * [SN1 - APEX](developers/api-documentation/sn1-apex/README.md)

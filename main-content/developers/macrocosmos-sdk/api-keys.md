@@ -14,8 +14,6 @@ To interact with Macrocosmos subnets programmatically, you'll need a personal AP
 3. In the dropdown menu, select **`Payments and credit`.**
 4. Provide your credit card details in order to access the account management and **Constellation API Key Dashboard.**
 
-
-
 ### Step 2: Generate Your Personal API Key
 
 1. From the home menu and select **`Account Settings`.**
@@ -25,8 +23,8 @@ To interact with Macrocosmos subnets programmatically, you'll need a personal AP
 2. Click to the API Keys tab and create a new key.
 3. Copy the generated API key immediately and save it in a secure location , you **won’t be able to view it again**.
 
-You can now use this key to interact with **all Macrocosmos subnets** from your preferred coding environment.
+You can now use this key to interact with **all Macrocosmos services** from your preferred coding environment.
 
 ### You’re Ready!
 
-With your API key and credits in place, you’re ready to build with Macrocosmos Subnets
+With your API key and credits in place, you’re ready to build with Macrocosmos!
