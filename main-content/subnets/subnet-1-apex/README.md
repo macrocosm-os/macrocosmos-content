@@ -6,7 +6,7 @@ description: Subnet 1 Overview
 
 ## Quickstart
 
-* Visit the [Apex website landing page](https://apex.macrocosmos.ai/)
+* Visit the [Apex website](https://apex.macrocosmos.ai/)
 * Miners:
   * Read through:
     * [Current Competitions](https://docs.macrocosmos.ai/subnets/subnet-1-apex/current-competitions)
@@ -52,3 +52,14 @@ Open-sourcing such a solution amplifies its global benefits allowing developers,
 Apex subnet is set to unlock innovation at scale by hosting multiple competitions at once, empowering the community to solve several challenges in parallel. This multi-competition model transforms the subnet into a vibrant hub of creativity and collaboration, where diverse minds can contribute breakthrough ideas from different fields simultaneously. By dividing miner emissions across dedicated competition pools, Apex ensures that every area of exploration receives the support it needs — fuelling a constant flow of progress and discovery.&#x20;
 
 <figure><img src="../../.gitbook/assets/Competitions-pool (1).png" alt=""><figcaption></figcaption></figure>
+
+### Other related resources
+
+* [Website](https://apex.macrocosmos.ai/)
+* [Apex X (Twitter)](https://x.com/Apex_SN1)
+* [GitHub](https://github.com/macrocosm-os/apex)
+* [Substack](https://macrocosmosai.substack.com/t/language-models)
+* [Bittensor Discord](https://discord.com/channels/799672011265015819/1161764867166961704)
+* [Macrocosmos Discord](https://discord.com/channels/1238450997848707082)
+* [Cosmonauts - Macrocosmos Telegram](https://t.me/macrocosmosai)
+* [Macrocosmos X (Twitter)](https://x.com/MacrocosmosAI)

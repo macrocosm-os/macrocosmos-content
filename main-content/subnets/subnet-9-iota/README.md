@@ -25,7 +25,9 @@ If you have any questions or require support, please message us in the [Bittenso
 
 ### Find out more
 
-Have a look at [Training At Home (TAH)](../../product-and-services/tah/).
+Have a look at [Training At Home (TAH)](../../product-and-services/tah/) application for permissionless contribution to distributed foundational model training.
+
+<figure><img src="../../.gitbook/assets/Training-at-home.png" alt=""><figcaption></figcaption></figure>
 
 Read substack and other articles:
 

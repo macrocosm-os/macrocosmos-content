@@ -62,10 +62,10 @@ For more details about the subnet 13 R\&D and Data Science work, take a look at 
 Related resources
 
 * [Website](https://www.macrocosmos.ai/sn13)
-* [Dashboard](https://www.macrocosmos.ai/sn13/dashboard)
+* [Data Universe X (Twitter)](https://x.com/Data_SN13)
 * [GitHub](https://github.com/macrocosm-os/data-universe)
 * [Substack](https://macrocosmosai.substack.com/t/data-scraping)
 * [Bittensor Discord](https://discord.com/channels/799672011265015819/1185617142914236518)
 * [Macrocosmos Discord](https://discord.com/channels/1238450997848707082)
 * [Cosmonauts - Macrocosmos Telegram](https://t.me/macrocosmosai)
-* [Macrocosmos X](https://x.com/MacrocosmosAI)
+* [Macrocosmos X (Twitter)](https://x.com/MacrocosmosAI)
