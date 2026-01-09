@@ -46,7 +46,7 @@ For upgrade use the command
 {% tabs %}
 {% tab title="Python" %}
 ```python
-pip install macrocosmos==3.0.0
+pip install -U macrocosmos
 ```
 {% endtab %}
 
