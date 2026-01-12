@@ -8,7 +8,7 @@ description: Registry of competitions currently active on SN1 APEX.
 
 ## 1. Matrix Compression <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
 
-The first competition - Matrix Compression - explores how small neural activations - both forward and backward - can be compressed while still retaining all their original information. Reducing activation size enables faster data transfer across the internet, a crucial step toward making distributed training more efficient, as it’s often constrained by network bandwidth. The top-performing algorithms from this competition will be integrated to enhance training on subnet 9 **IOTA**.
+The first competition - Matrix Compression - explores how small neural activations - both forward and backward - can be compressed while still retaining all their original information. Reducing activation size enables faster data transfer across the internet, a crucial step toward making distributed training more efficient, as it’s often constrained by network bandwidth. The top-performing algorithms from this competition will be integrated to enhance training on **subnet 9** **IOTA**.
 
 [Competition Dashboard ](https://apex.macrocosmos.ai/competitions/1)
 
@@ -42,7 +42,7 @@ score = np.clip((1 - compression) * (1 - task_time / (1 + 0.012)), 0.0, 1.0)
 * Burn rate: **90%**&#x20;
   * The top scorer receives the remaining incentive pool (10%), decreasing linearly over a **10 day period**, provided no other submissions surpass the current top score.&#x20;
     * If a new submission exceeds the top score, the incentive decay resets from 10%.&#x20;
-* Evaluation: each round uses 30 randomly sampled matrices from the total pool; the sample refreshes every round.
+* Evaluation: each round uses 400 randomly sampled matrices from the total pool; the sample refreshes every round.
 * Submission Constraints: Your submission must be less than 20KB.
 * Multiple submissions:
   * The rate limit is 4 submissions in 24 hours per miner across all the competitions - Matrix Compression and Battleship. The period is individual for each user and starts to count from the first submission.
@@ -71,7 +71,7 @@ The information about enabled packages is in [requirements.txt](https://github.c
 
 ## 2. Battleship
 
-This is SN1 Festive Competition Launch - a special experiment and a Christmas present for the community — the Battleship Competition!
+This is SN1 Festive Competition Launch - a special experiment - the Battleship Competition!
 
 ### **Battleship Settings** <a href="#battleship-settings" id="battleship-settings"></a>
 
