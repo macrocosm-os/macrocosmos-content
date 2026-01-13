@@ -128,3 +128,65 @@ Every game produces a score based on two components:
 * All matches produce a replay file, with View only access.
 * Local testing instructions can be found [here](https://github.com/macrocosm-os/apex/blob/474090fe98f2a6d9083d8aa9a72c4e6bfcdc0a0e/shared/competition/src/competition/battleship/battleship.py#L113).
 
+## 3. Matrix Compression v2 - Lossy Compression <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
+
+The first competition - Matrix Compression - explored how small neural activations - both forward and backward - can be compressed while still retaining all their original information. Now we're seeing how small we can make bfloat16 matrices while still keeping enough information for training, while allowing minor information loss. The top-performing algorithms from this competition will be integrated to enhance training on **subnet 9** **IOTA**.
+
+[Competition Dashboard ](https://apex.macrocosmos.ai/competitions/1)
+
+#### Evaluation
+
+Miners aim to optimize the following:
+
+* Compression Ratio - How small the compressed solution is on disk versus the starting matrix.
+* Similarity - Percent similarity of the norm multiplied by cosine similarity
+
+To surpass the current winner of the competition, a miner must earn a **score** of at least 1% higher than the current top score. If there is no current winner, then a miner must earn a score of at least 1% higher than the baseline score.&#x20;
+
+* The `score_to_beat` is displayed in the Apex CLI dashboard, under competition information.&#x20;
+
+**Score is calculated by:**
+
+```
+if similarity > similarity_threshold: #similarity threshold is at 0.99
+    score = np.clip(1 - compression, 0.0, 1.0)
+else:
+    score = 0
+```
+
+* Compression is calculated by `compressed_file_size / original_file_size`.
+* If compression does not meet the similarity threshold, the submission will receive a score of 0.&#x20;
+* Only top evaluated submission is re-evaluated the next round.
+
+#### Matrix Compression Settings
+
+* The submitted code remains hidden for 24 hours to everyone but the submission owner, after which it becomes accessible to all miners.&#x20;
+* Round length: **2 days**
+* Burn rate: **90%**&#x20;
+  * The top scorer receives the remaining incentive pool (10%), decreasing linearly over a **10 day period**, provided no other submissions surpass the current top score.&#x20;
+    * If a new submission exceeds the top score, the incentive decay resets from 10%.&#x20;
+* Evaluation: each round uses 400 randomly sampled matrices from the total pool; the sample refreshes every round.
+* Submission Constraints: Your submission must be less than 20KB.
+* Multiple submissions:
+  * The rate limit is 4 submissions in 24 hours per miner across all the competitions - Matrix Compression and Battleship. The period is individual for each user and starts to count from the first submission.
+
+#### For Miners
+
+View the matrix compression [**baseline miner solution**](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/matrix_compression/baseline.py) provided as an example.
+
+The manifest.json file contains a sample of 1000 matrices of a large matrix pool, including both matrices that have already been used for evaluation and matrices that have not been evaluated.
+
+**Note:** The R2 bucket does not list files directly. Use the manifest to find and download samples.
+
+1. Download the [manifest file](https://pub-77097c3387c340de9ff1bd5e5b443d8d.r2.dev/manifest.csv). This file contains the full list of available sample filenames.
+2. Open the manifest and copy the name of any file you want to download. For example: `example_001.txt`.
+3. In your browser (or with `curl`/`wget`), go to:\
+   `https://pub-77097c3387c340de9ff1bd5e5b443d8d.r2.dev/<file_name>` replacing `<file_name>` with the name you copied from the manifest.\
+   \
+   For example:\
+   `https://pub-77097c3387c340de9ff1bd5e5b443d8d.r2.dev/example_001.txt.`&#x20;
+
+Then, continue to the [**Apex CLI guide**](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli) to submit a solution.
+
+The information about enabled packages is in [requirements.txt](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/battleship/dockerfiles/requirements.txt).
+
