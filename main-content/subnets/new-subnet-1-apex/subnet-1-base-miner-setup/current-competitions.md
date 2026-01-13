@@ -71,7 +71,7 @@ The information about enabled packages is in [requirements.txt](https://github.c
 
 The first competition - Matrix Compression - explored how small neural activations - both forward and backward - can be compressed while still retaining all their original information. Now we're seeing how small we can make bfloat16 matrices while still keeping enough information for training, while allowing minor information loss. The top-performing algorithms from this competition will be integrated to enhance training on **subnet 9** **IOTA**.
 
-[Competition Dashboard ](https://apex.macrocosmos.ai/competitions/1)
+[Competition Dashboard](https://apex.macrocosmos.ai/competitions/4)&#x20;
 
 #### Evaluation
 
