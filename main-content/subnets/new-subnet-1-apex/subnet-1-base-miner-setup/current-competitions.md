@@ -4,7 +4,7 @@ description: Registry of competitions currently active on SN1 APEX.
 
 # Subnet 1 Current Competitions
 
-<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td align="center"><a href="https://docs.macrocosmos.ai/subnets/subnet-1-apex/current-competitions#compression-of-activations-challenge">Matrix Compression</a></td><td></td><td><a href="../../../.gitbook/assets/Matix-icon.png">Matix-icon.png</a></td></tr><tr><td align="center"><a href="https://docs.macrocosmos.ai/subnets/subnet-1-apex/current-competitions#id-2.-battleship">Battleship</a></td><td></td><td><a href="../../../.gitbook/assets/Battleship-icon.png">Battleship-icon.png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td align="center"><a href="https://docs.macrocosmos.ai/subnets/subnet-1-apex/current-competitions#compression-of-activations-challenge">Matrix Compression</a></td><td></td><td><a href="../../../.gitbook/assets/Matix-icon.png">Matix-icon.png</a></td></tr><tr><td align="center">Matrix Compression v2</td><td></td><td><a href="../../../.gitbook/assets/Lossy-Matrix-picture.png">Lossy-Matrix-picture.png</a></td></tr><tr><td align="center"><a href="https://docs.macrocosmos.ai/subnets/subnet-1-apex/current-competitions#id-2.-battleship">Battleship</a></td><td></td><td><a href="../../../.gitbook/assets/Battleship-icon.png">Battleship-icon.png</a></td></tr></tbody></table>
 
 ## 1. Matrix Compression <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
 
@@ -67,68 +67,7 @@ Then, continue to the [**Apex CLI guide**](https://docs.macrocosmos.ai/subnets/s
 
 The information about enabled packages is in [requirements.txt](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/battleship/dockerfiles/requirements.txt).
 
-
-
-## 2. Battleship
-
-This is SN1 Festive Competition Launch - a special experiment - the Battleship Competition!
-
-### **Battleship Settings** <a href="#battleship-settings" id="battleship-settings"></a>
-
-[Competition Dashboard](https://apex.macrocosmos.ai/competitions/2)
-
-#### Match Structure <a href="#match-structure" id="match-structure"></a>
-
-* A single match consists of several Battleship games played by 1 miner.
-* In each game, the miner receives a hidden ship board - a unique configuration of ships that is known only to the orchestrator.
-* Their task is to determine an optimal strategy to locate and hit the opponent’s ships as efficiently as possible, while working under an unknown turn constraint
-* The miner that solves the most boards the fastest wins and receives all competition emissions, annealing with the burn.
-* Shots may not be repeated!
-
-### Evaluation <a href="#evaluation" id="evaluation"></a>
-
-#### **Game Score** <a href="#game-score" id="game-score"></a>
-
-Every game produces a score based on two components:
-
-**1. Win Score**
-
-* Winning a game grants **1000 points**.
-
-**2. Speed Bonus**
-
-* A speed bonus is added based on how quickly the miner wins:\
-  &#xNAN;**(100 − number\_of\_turns\_to\_win) × 0.1**
-* This rewards faster solutions.
-* **Important rule:**\
-  If a game ends in **fewer than 10 turns**, we assume it failed to run correctly → **no speed bonus is awarded.**\
-  **\*** One turn - is one shot made to the ship board.
-
-**Score Limits**
-
-* **Maximum speed bonus:** 9 - Received when the miner wins in 10 turns
-* **Maximum possible score per game:**\
-  **1000 + 9 = 1009**
-
-**Final Competition Score**
-
-* The miner’s **final score** is the **average of all their game scores** across the round.
-
-#### Additional details: <a href="#additional-details" id="additional-details"></a>
-
-* [Incentive mechanism](https://docs.macrocosmos.ai/subnets/subnet-1-apex/incentive-mechanism#incentive-challenges) is standard for the Subnet 1
-  * Miners code reveals 1 day after the evaluation.
-  * Logs are opened after the round completion.
-  * Emission burning for the top miner is active.
-* Multiple submissions:
-  * The rate limit is 4 submissions in 24 hours per miner across all the competitions - Battleship and Matrix Compression. The period is individual for each user and starts to count from the first submission.
-  * If a miner makes multiple submissions to Battleship within a single round, only the latest version participates in the battle evaluation.
-* Base miner example can be found at [baseline.py](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/battleship/baseline.py).
-* The information about enabled packages is in [requirements.txt](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/battleship/dockerfiles/requirements.txt).
-* All matches produce a replay file, with View only access.
-* Local testing instructions can be found [here](https://github.com/macrocosm-os/apex/blob/474090fe98f2a6d9083d8aa9a72c4e6bfcdc0a0e/shared/competition/src/competition/battleship/battleship.py#L113).
-
-## 3. Matrix Compression v2 - Lossy Compression <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
+## 2. Matrix Compression v2 - Lossy Compression <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
 
 The first competition - Matrix Compression - explored how small neural activations - both forward and backward - can be compressed while still retaining all their original information. Now we're seeing how small we can make bfloat16 matrices while still keeping enough information for training, while allowing minor information loss. The top-performing algorithms from this competition will be integrated to enhance training on **subnet 9** **IOTA**.
 
@@ -189,4 +128,63 @@ The manifest.json file contains a sample of 1000 matrices of a large matrix pool
 Then, continue to the [**Apex CLI guide**](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli) to submit a solution.
 
 The information about enabled packages is in [requirements.txt](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/battleship/dockerfiles/requirements.txt).
+
+## 3. Battleship
+
+This is SN1 Festive Competition Launch - a special experiment - the Battleship Competition!
+
+### **Battleship Settings** <a href="#battleship-settings" id="battleship-settings"></a>
+
+[Competition Dashboard](https://apex.macrocosmos.ai/competitions/2)
+
+#### Match Structure <a href="#match-structure" id="match-structure"></a>
+
+* A single match consists of several Battleship games played by 1 miner.
+* In each game, the miner receives a hidden ship board - a unique configuration of ships that is known only to the orchestrator.
+* Their task is to determine an optimal strategy to locate and hit the opponent’s ships as efficiently as possible, while working under an unknown turn constraint
+* The miner that solves the most boards the fastest wins and receives all competition emissions, annealing with the burn.
+* Shots may not be repeated!
+
+### Evaluation <a href="#evaluation" id="evaluation"></a>
+
+#### **Game Score** <a href="#game-score" id="game-score"></a>
+
+Every game produces a score based on two components:
+
+**1. Win Score**
+
+* Winning a game grants **1000 points**.
+
+**2. Speed Bonus**
+
+* A speed bonus is added based on how quickly the miner wins:\
+  &#xNAN;**(100 − number\_of\_turns\_to\_win) × 0.1**
+* This rewards faster solutions.
+* **Important rule:**\
+  If a game ends in **fewer than 10 turns**, we assume it failed to run correctly → **no speed bonus is awarded.**\
+  **\*** One turn - is one shot made to the ship board.
+
+**Score Limits**
+
+* **Maximum speed bonus:** 9 - Received when the miner wins in 10 turns
+* **Maximum possible score per game:**\
+  **1000 + 9 = 1009**
+
+**Final Competition Score**
+
+* The miner’s **final score** is the **average of all their game scores** across the round.
+
+#### Additional details: <a href="#additional-details" id="additional-details"></a>
+
+* [Incentive mechanism](https://docs.macrocosmos.ai/subnets/subnet-1-apex/incentive-mechanism#incentive-challenges) is standard for the Subnet 1
+  * Miners code reveals 1 day after the evaluation.
+  * Logs are opened after the round completion.
+  * Emission burning for the top miner is active.
+* Multiple submissions:
+  * The rate limit is 4 submissions in 24 hours per miner across all the competitions - Battleship and Matrix Compression. The period is individual for each user and starts to count from the first submission.
+  * If a miner makes multiple submissions to Battleship within a single round, only the latest version participates in the battle evaluation.
+* Base miner example can be found at [baseline.py](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/battleship/baseline.py).
+* The information about enabled packages is in [requirements.txt](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/battleship/dockerfiles/requirements.txt).
+* All matches produce a replay file, with View only access.
+* Local testing instructions can be found [here](https://github.com/macrocosm-os/apex/blob/474090fe98f2a6d9083d8aa9a72c4e6bfcdc0a0e/shared/competition/src/competition/battleship/battleship.py#L113).
 
