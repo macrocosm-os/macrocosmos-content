@@ -316,7 +316,7 @@ grpcurl -H "Authorization: Bearer your-api-key" \
 
 ### Build dataset&#x20;
 
-No need to wait 7 days until the task is complete. If you already got enough data, you can request your dataset early. Add a notification to get alerted when the dataset is built. Once built, the task gets completed and de-registered.
+No need to wait 7 days until the task is complete. If you already collected enough data, you can request your dataset early. Add a notification to get alerted when the dataset is built. Once built, the task gets completed and de-registered.
 
 {% tabs %}
 {% tab title="TypeScript" %}
@@ -424,6 +424,119 @@ grpcurl -H "Authorization: Bearer your-api-key" \
     "statusMessage": "Initializing",
     "totalSteps": "10"
   }
+}
+```
+{% endtab %}
+
+{% tab title="400" %}
+```json
+{
+  "error": "Invalid request"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### Build All Datasets&#x20;
+
+If your Gravity task consists of multiple crawlers (i.e. multiple sets of request parameters), the `BuildAllDatasets` call allows you to build the corresponding datasets simultaneously by supplying the `build_crawlers_config` .
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+import macrocosmos as mc
+
+client = mc.GravityClient(api_key="your-api-key")
+
+task_id = "your-task-id"
+response = client.gravity.BuildAllDatasets(
+    gravity_task_id=task_id,
+    build_crawlers_config=[
+        {
+            "crawler_id": f"crawler-0-{task_id}",
+            "max_rows": 200,
+        },
+        {
+            "crawler_id": f"crawler-1-{task_id}",
+            "max_rows": 200,
+        },
+    ]
+)
+
+print(response)
+```
+{% endtab %}
+
+{% tab title="Constellation API: curl" %}
+```bash
+curl -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "gravity_task_id": "your-task-id",
+    "build_crawlers_config": [
+      {
+        "crawler_id": "crawler-0-your-task-id",
+        "max_rows": 200
+      },
+      {
+        "crawler_id": "crawler-1-your-task-id",
+        "max_rows": 200
+      }
+    ]
+  }' \
+  https://constellation.api.cloud.macrocosmos.ai\
+  /gravity.v1.GravityService/BuildAllDatasets
+
+```
+{% endtab %}
+
+{% tab title="Constellation API: grpcurl" %}
+```bash
+grpcurl -H "Authorization: Bearer your-api-key" \
+  -d '{"gravity_task_id": "your-task-id",
+       "build_crawlers_config": [
+        {"crawler_id": "crawler-0-your-task-id",
+         "max_rows": 200
+        },
+        {"crawler_id": "crawler-1-your-task-id",
+         "max_rows": 200
+        }
+       ]
+      }' \
+  constellation.api.cloud.macrocosmos.ai:443 \
+  gravity.v1.GravityService/BuildAllDatasets
+```
+{% endtab %}
+{% endtabs %}
+
+**Body**
+
+| Name                    | Type   | Description                                                                                                                                          |
+| ----------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `gravity_task_id`       | string | The task ID of the gravity task you want to collect data from.                                                                                       |
+| `build_crawlers_config` | dict   | A configuration dictionary which allows you to specify the maximum number of rows that you will collect for each individual crawler within the task. |
+
+**Response**
+
+{% tabs %}
+{% tab title="200" %}
+```json
+{
+  "gravityTaskId": "your-task-id",
+  "datasets": [
+    {
+      "crawlerWorkflowId": "crawler-1-your-task-id",
+      "createDate": "2026-01-15T17:56:40.524749Z",
+      "status": "Running",
+      "statusMessage": "Initializing",
+      "steps": [
+        {
+          "stepName": "Initializing"
+        }
+      ],
+      "totalSteps": "8"
+    }
+  ]
 }
 ```
 {% endtab %}
