@@ -135,7 +135,7 @@ This is the first reinforcement learning competition for Apex. Miners train RL m
 
 ### **Battleship Settings** <a href="#battleship-settings" id="battleship-settings"></a>
 
-[Competition Dashboard](https://apex.macrocosmos.ai/competitions/2)
+[Competition Dashboard](https://apex.macrocosmos.ai/competitions/5)
 
 * Be sure the model loads with `torch.jit.load()` before submitting.&#x20;
   * Submissions must be in `.pt` files to be accepted.
