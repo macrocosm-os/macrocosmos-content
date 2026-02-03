@@ -133,11 +133,13 @@ The information about enabled packages is in [requirements.txt](https://github.c
 
 This is the first reinforcement learning competition for Apex. Miners train RL models on their own machines and submit their models in **TorchScript** (`.pt` files) for evaluation.&#x20;
 
-* Be sure the model loads with `torch.jit.load()` before submitting.&#x20;
-
 ### **Battleship Settings** <a href="#battleship-settings" id="battleship-settings"></a>
 
 [Competition Dashboard](https://apex.macrocosmos.ai/competitions/2)
+
+* Be sure the model loads with `torch.jit.load()` before submitting.&#x20;
+  * Submissions must be in `.pt` files to be accepted.
+* Max submission size is 100 MB.
 
 #### Match Structure <a href="#match-structure" id="match-structure"></a>
 
@@ -175,8 +177,7 @@ Every game produces a score based on two components:
   * Logs are opened after the current round is completed.
 * Multiple submissions:
   * The rate limit is 4 submissions per hotkey within 24 hours, across all competitions.&#x20;
-* Base miner example can be found at [baseline.py](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/battleship/baseline.py).
-* The information about enabled packages is in [requirements.txt](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/battleship/dockerfiles/requirements.txt).
+* An example of model training can be found in the [train folder](https://github.com/macrocosm-os/apex/tree/main/shared/competition/src/competition/rl_battleship/train).&#x20;
+* The information about enabled packages is in [requirements.txt](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/rl_battleship/dockerfiles/requirements.txt).
 * All matches produce a replay file, with View only access.
-* Local testing instructions can be found [here](https://github.com/macrocosm-os/apex/blob/474090fe98f2a6d9083d8aa9a72c4e6bfcdc0a0e/shared/competition/src/competition/battleship/battleship.py#L113).
 
