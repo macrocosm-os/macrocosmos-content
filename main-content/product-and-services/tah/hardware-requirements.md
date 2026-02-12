@@ -6,7 +6,7 @@ description: Supported platforms and resource guidance for TAH
 
 #### Supported Platforms
 
-* macOS (Apple Silicon and Intel). M‑class chips are recommended for efficiency but not required.
+* macOS Apple Silicon. M‑class chips are recommended for efficiency but not required.
 * Linux support is planned; Windows is not yet supported.
 
 #### Minimum Specs (participate)
