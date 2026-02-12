@@ -38,7 +38,7 @@ Training At Home lets you contribute your computer’s spare power to help train
 
 <summary><strong>How do I get access to Training At Home (TAH)?</strong></summary>
 
-Fill the form at [iota.macrocosmos.ai/train-at-home](http://iota.macrocosmos.ai/train-at-home). TAH will open to everyone soon and all regions are supported.
+The TAH app is now available to everyone, and can be downloaded by clicking "Download" in the Train at Home section of [https://iota.macrocosmos.ai/](https://iota.macrocosmos.ai/) .
 
 </details>
 
@@ -74,9 +74,7 @@ No. A wallet is only required if you want to receive rewards. You can train and 
 
 To earn rewards you only need one thing:
 
-a Bittensor coldkey address.
-
-
+* A Bittensor coldkey address.
 
 A coldkey is simply the address where rewards are sent.
 
@@ -364,9 +362,23 @@ When rewards are active:
 
 Yes.
 
-* The minimum payout is 2 ALPHA
+* The minimum payout is subject to a variable network threshold amount
 * If your balance is below this amount, it rolls over to the next payout
 * Network transfer costs are deducted from the amount you receive
+
+</details>
+
+<details>
+
+<summary>Are there other reasons why I have not been paid out?</summary>
+
+Yes. If your balance is above the minimum threshold, but the model being trained hasn't improved over that period, the payout entitlement for users can be frozen.
+
+In more detail
+
+* The performance of the model being trained is measured by a metric called "Global Loss". When this decreases, the model is improving. Conversely, increasing loss means the model is deteriorating.
+* If the loss is not at the global minimum (the smallest value in the run's history) in the current billing period, the payout entitlements for that period are currently frozen.
+* These frozen entitlements may paid out at a later time, subject to future eligibility criteria.
 
 </details>
 
@@ -409,10 +421,10 @@ In the app:
 
 Common reasons:
 
-* Rewards are not active during beta
 * Training has just started
 * You haven’t reached the minimum payout yet
 * No wallet is connected
+* The loss of the current run is not at the global minimum&#x20;
 
 This is normal and does not mean something is broken.
 
@@ -438,9 +450,11 @@ You can stop training at any time, and nothing continues running in the backgrou
 
 <summary>Why does my contribution change over time?</summary>
 
-Your contribution is not a fixed score. It changes because the network is shared with many other people.<br>
+Your contribution is not a fixed score. It changes because the network is shared with many other people.
 
-As others join or leave, as training phases change, or if your computer or internet speed changes, your contribution number can go up or down. This is normal and does not mean something is wrong.
+As others join or leave, as training phases change, or if your computer or internet speed changes, your contribution number can go up or down.&#x20;
+
+This is normal and does not mean something is wrong.
 
 </details>
 

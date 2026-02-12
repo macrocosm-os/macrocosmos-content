@@ -8,7 +8,7 @@ Training at Home (TAH) application allows you to connect and partake in our dece
 
 ## Installation
 
-To become a first beta tester of TAH application fill the form at [iota.macrocosmos.ai/train-at-home](http://iota.macrocosmos.ai/train-at-home). We are scaling the system and gradually rolling out to more users. Currently TAH only supports MacOS, with Linux support coming soon. Look at [Hardware & OS Requirements](hardware-requirements.md) for more details.
+To start training at home, visit [https://iota.macrocosmos.ai/](https://iota.macrocosmos.ai/) and click "Download" in the Train at Home section. Currently TAH only supports MacOS, with Linux support coming soon. Look at [Hardware & OS Requirements](hardware-requirements.md) for more details.
 
 If you already have access, you can double click a `.dmg` file to install the app.&#x20;
 
@@ -24,13 +24,13 @@ Video below demonstrates installation process
 
 Once the app is installed you should be able to see the main dashboard:
 
-![TAH dashboard showing Start training and Connect controls](../../.gitbook/assets/image.png)
+![TAH dashboard showing Start training and Connect controls](<../../.gitbook/assets/Screenshot 2026-02-10 at 14.54.01.png>)
 
 You’ll see metrics for your model, and in the center there will be a visualization of all the other participants in the training.
 
 #### Main controls (top right of the screen)
 
-<figure><img src="../../.gitbook/assets/Main-controls.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-02-10 at 14.55.27.png" alt=""><figcaption></figcaption></figure>
 
 * **Start training**: begins contributing your GPU/CPU to the current run. Click again to stop/exit the run.
 * **Connect**: optionally paste your wallet coldkey to receive rewards to that address. You can train without connecting; if you connect later, rewards accrue to the provided coldkey from that point forward.
@@ -41,7 +41,10 @@ You’ll see metrics for your model, and in the center there will be a visualiza
 1. Launch the app and wait for the status pill to read **Connected**.
 2. (Optional) Click **Connect**, paste your wallet coldkey, and save.
 3. Click **Start training**. The run ID, model size, and layer count populate in the right panel; progress and tokens/hour graphs begin updating.
-4. To stop, click **Start training** again (it toggles off) or quit the app.
+4. To stop, click **Start training** again (it toggles off) or quit the app.&#x20;
+5. A TAH tray icon is also available, that allows you to stop or start training and to quit the app:
+
+<figure><img src="../../.gitbook/assets/Screenshot 2026-02-10 at 15.52.23.png" alt=""><figcaption></figcaption></figure>
 
 #### Monitor while training
 
@@ -78,7 +81,7 @@ You’ll see metrics for your model, and in the center there will be a visualiza
 
 ## Rewards
 
-Beta Launch is operating with o rewards. Once the major version of TAH is published, the earnings will be calculated and paid as described below.
+Earnings will be calculated and paid as described below.
 
 #### How Rewards Are Calculated
 
@@ -93,13 +96,20 @@ Note: Exact weighting can evolve as the system updates.
 #### Payout Cadence
 
 * Payouts occur approximately every 24 hours; this window may be extended in the future.
-* Minimum payout is **2 ALPHA**. Balances below the threshold roll over to the next payout.
+* Minimum payout is subject to a variable network threshold. Balances below the threshold roll over to the next payout. For details see the [FAQs](faqs.md) "Earnings and Payouts" section.
+* Payouts may be frozen if the active run is not improving. For details see the [FAQs](faqs.md) "Earnings and Payouts" section.
 * Network transfer costs are deducted from the amount you receive.
 * To receive payouts, optionally connect a wallet by pasting your public coldkey (via the **Connect** button in the app). If you don’t connect, training still runs but rewards won’t be delivered to you; unconnected earnings are not paid retroactively.
 
 #### Viewing Earnings
 
 * In the app, click the **Miner** button (top left) to view your current earnings and contribution stats.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2026-02-10 at 15.13.07.png" alt="" width="375"><figcaption></figcaption></figure>
+
+* _Total Earned_: Total amount credited to you, including both completed and pending payments.
+* _Total Paid:_ The amount paid to your wallet.
+* _Total Pending:_ Pending amount credited to you, but not yet paid.
 
 #### Taxes & Compliance
 
