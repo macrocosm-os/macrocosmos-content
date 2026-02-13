@@ -328,6 +328,16 @@ If you get stuck, you can:
 
 </details>
 
+<details>
+
+<summary>Can I train on multiple devices using the same payout address?</summary>
+
+Yes.&#x20;
+
+While the miner address (hotkey) must be different on each device, your payout address (coldkey) can be the same across all. I.e. payouts from all devices can be delivered to your specified payout address.
+
+</details>
+
 ## Earnings & Payouts
 
 <details>
@@ -362,7 +372,7 @@ When rewards are active:
 
 Yes.
 
-* The minimum payout is subject to a variable network threshold amount
+* The minimum payout is determined by a dynamic network threshold, presently around 0.4 alpha
 * If your balance is below this amount, it rolls over to the next payout
 * Network transfer costs are deducted from the amount you receive
 
@@ -471,6 +481,20 @@ Yes. You are always in control. You can stop training at any time, and your comp
 <summary>What happens if I close the app, restart my computer, or my laptop sleeps?</summary>
 
 Training stops automatically. Nothing continues running when the app is closed or your computer goes to sleep. When you open the app again, you can start training again.
+
+</details>
+
+<details>
+
+<summary>I have been training, but my contribution hasn't changed? What is wrong?</summary>
+
+Train at Home and activation processing in general depend on various factors, such as hardware performance, internet speed, and the presence of other participants. Since these factors can change over time, there may be periods when your training session results in no activation submissions (no contribution).
+
+In machine learning, training consists of a forward pass (the inference stage) followed by a backward pass (the learning stage). The model learns based on how close its prediction (inference) was to the correct answer. If T@H allowed an unlimited number of predictions before performing any learning, those predictions would likely be of lower quality, which would hinder overall learning. It is therefore better to allow the model to make a limited number of predictions, eight for example, and then perform a learning step before continuing. This significantly improves training quality.
+
+Once you have completed your allocated eight predictions, you must wait for other participants to return the corresponding learning updates. Without this coordination, the work performed would not contribute effectively to the model.
+
+Therefore, if you have been training for a long time without seeing a change in contribution, it is likely that there is no issue, you may simply be waiting to receive the necessary learning updates. This highlights the importance of maintaining a stable connection and continuous training over extended periods, so that activations can be passed back and forth successfully among participants.
 
 </details>
 

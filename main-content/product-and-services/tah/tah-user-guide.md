@@ -4,7 +4,7 @@ description: Plug in to power decentralised AI model training
 
 # TAH User Guide
 
-Training at Home (TAH) application allows you to connect and partake in our decentralized AI training platform [IOTA](../../subnets/subnet-9-iota/). You can plug in any hardware you have access to and earn rewards for powering decentralized AI model training.&#x20;
+The Training at Home (TAH) application allows you to connect and partake in our decentralized AI training platform [IOTA](../../subnets/subnet-9-iota/). You can plug in any hardware you have access to and earn rewards for powering decentralized AI model training.&#x20;
 
 ## Installation
 
@@ -42,7 +42,7 @@ You’ll see metrics for your model, and in the center there will be a visualiza
 2. (Optional) Click **Connect**, paste your wallet coldkey, and save.
 3. Click **Start training**. The run ID, model size, and layer count populate in the right panel; progress and tokens/hour graphs begin updating.
 4. To stop, click **Start training** again (it toggles off) or quit the app.&#x20;
-5. A TAH tray icon is also available, that allows you to stop or start training and to quit the app:
+5. A TAH tray icon is also available that allows you to stop or start training and to quit the app:
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-02-10 at 15.52.23.png" alt=""><figcaption></figcaption></figure>
 
@@ -96,7 +96,7 @@ Note: Exact weighting can evolve as the system updates.
 #### Payout Cadence
 
 * Payouts occur approximately every 24 hours; this window may be extended in the future.
-* Minimum payout is subject to a variable network threshold. Balances below the threshold roll over to the next payout. For details see the [FAQs](faqs.md) "Earnings and Payouts" section.
+* Minimum payout is subject to a variable network threshold (approximately 0.4 alpha currently). Balances below the threshold roll over to the next payout. For details see the [FAQs](faqs.md) "Earnings and Payouts" section.
 * Payouts may be frozen if the active run is not improving. For details see the [FAQs](faqs.md) "Earnings and Payouts" section.
 * Network transfer costs are deducted from the amount you receive.
 * To receive payouts, optionally connect a wallet by pasting your public coldkey (via the **Connect** button in the app). If you don’t connect, training still runs but rewards won’t be delivered to you; unconnected earnings are not paid retroactively.
