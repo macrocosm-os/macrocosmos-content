@@ -429,14 +429,20 @@ In the app:
 
 <summary>Why do my earnings show 0?</summary>
 
-Common reasons:
+The earnings may be showing 0 in case the machine contribution is not sufficient for the current training period. This can happen due to several reasons:
 
-* Training has just started
-* You haven’t reached the minimum payout yet
-* No wallet is connected
-* The loss of the current run is not at the global minimum&#x20;
+1. If it runs not long enough or the connection with the network is failing for any reason.
 
-This is normal and does not mean something is broken.
+In this case machine:
+
+* didn't submit weights
+* didn't do enough activations
+* didn't merge partitions
+* or fell asleep and had to rejoin multiple times
+
+2. If the machine failed validations. For example, due to hardware or software compatibility or not sufficient activation files quality due to the network issues.
+3. If any of the machines is in the chain layer 1 to layer 3 failed to transfer their results, therefore the loss of the current run is not at the global minimum
+4. We don’t exclude the probability of bugs in our current Beta version of the system. We are continuously looking into the issues and fixing them.
 
 </details>
 
