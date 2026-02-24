@@ -79,6 +79,7 @@ Miners aim to optimize the following:
 
 * Compression Ratio - How small the compressed solution is on disk versus the starting matrix.
 * Similarity - Percent similarity of the norm multiplied by cosine similarity
+  * `similarity(x,y)=( dot(x,y) / (norm(x)*norm(y)) ) * (1-norm(x-y) / norm(x))`&#x20;
 
 To surpass the current winner of the competition, a miner must earn a **score** of at least 1% higher than the current top score. If there is no current winner, then a miner must earn a score of at least 1% higher than the baseline score.&#x20;
 
