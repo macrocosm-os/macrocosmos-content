@@ -506,7 +506,7 @@ Therefore, if you have been training for a long time without seeing a change in 
 
 <details>
 
-<summary>Why am I receving no (or lower) contribution on Layer 3, why is this happening?</summary>
+<summary>I am receving no (or lower) contribution on Layer 3, why is this happening?</summary>
 
 Last layer miners have a more intensive role in T@H, as they need to calculate the model’s loss. This means it’s imperative that both internet-connection and machine capabilities are at a very high level. If you were performing well on other layers, but are struggling on this layer, it could mean your device or your internet is struggling with the workload. As there’s a little more heavy-lifting on the last layer, we try to compensate miners who are there.
 
