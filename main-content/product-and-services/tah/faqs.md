@@ -390,6 +390,8 @@ In more detail
 * If the loss is not at the global minimum (the smallest value in the run's history) in the current billing period, the payout entitlements for that period are currently frozen.
 * These frozen entitlements may paid out at a later time, subject to future eligibility criteria.
 
+We have an economic safeguard that delays rewards - a part of the layered validation stack. It is triggered automatically due to a loss fluctuation. In this case the rewards may not to be distributed on time. If after the check next day the state of the system is green, the rewards will be payed the next night.
+
 </details>
 
 <details>
