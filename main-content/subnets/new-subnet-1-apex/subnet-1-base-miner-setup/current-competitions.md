@@ -51,17 +51,9 @@ score = np.clip((1 - compression) * (1 - task_time / (1 + 0.012)), 0.0, 1.0)
 
 View the matrix compression [**baseline miner solution**](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/matrix_compression/baseline.py) provided as an example.
 
-The manifest.json file contains a sample of 1000 matrices of a large matrix pool, including both matrices that have already been used for evaluation and matrices that have not been evaluated.
+To view samples from the previous round to test your solution:
 
-**Note:** The R2 bucket does not list files directly. Use the manifest to find and download samples.
-
-1. Download the [manifest file](https://pub-77097c3387c340de9ff1bd5e5b443d8d.r2.dev/manifest.csv). This file contains the full list of available sample filenames.
-2. Open the manifest and copy the name of any file you want to download. For example: `example_001.txt`.
-3. In your browser (or with `curl`/`wget`), go to:\
-   `https://pub-77097c3387c340de9ff1bd5e5b443d8d.r2.dev/<file_name>` replacing `<file_name>` with the name you copied from the manifest.\
-   \
-   For example:\
-   `https://pub-77097c3387c340de9ff1bd5e5b443d8d.r2.dev/example_001.txt.`&#x20;
+`uv run python shared/competition/scripts/get_previous_round_input_files.py -c <competition_number>`
 
 Then, continue to the [**Apex CLI guide**](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli) to submit a solution.
 
@@ -114,17 +106,9 @@ else:
 
 View the matrix compression [**baseline miner solution**](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/matrix_compression/baseline.py) provided as an example.
 
-The manifest.json file contains a sample of 1000 matrices of a large matrix pool, including both matrices that have already been used for evaluation and matrices that have not been evaluated.
+To view samples from the previous round to test your solution:
 
-**Note:** The R2 bucket does not list files directly. Use the manifest to find and download samples.
-
-1. Download the [manifest file](https://pub-77097c3387c340de9ff1bd5e5b443d8d.r2.dev/manifest.csv). This file contains the full list of available sample filenames.
-2. Open the manifest and copy the name of any file you want to download. For example: `example_001.txt`.
-3. In your browser (or with `curl`/`wget`), go to:\
-   `https://pub-77097c3387c340de9ff1bd5e5b443d8d.r2.dev/<file_name>` replacing `<file_name>` with the name you copied from the manifest.\
-   \
-   For example:\
-   `https://pub-77097c3387c340de9ff1bd5e5b443d8d.r2.dev/example_001.txt.`&#x20;
+`uv run python shared/competition/scripts/get_previous_round_input_files.py -c <competition_number>`
 
 Then, continue to the [**Apex CLI guide**](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli) to submit a solution.
 
