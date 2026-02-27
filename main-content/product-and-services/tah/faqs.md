@@ -514,6 +514,16 @@ Last layer miners have a more intensive role in T@H, as they need to calculate t
 
 </details>
 
+<details>
+
+<summary>I have a strong machine and fast internet, why am I performing poorly on T@H?</summary>
+
+While it's paramount that you have a powerful (and compatible) machine along with fast internet, there are scenarios where this does not yield the desired benefits on T@H. Some contributors who have ideal setups perform poorly while training the model.
+
+This isn't due to their configuration, but rather it could be related to the other contributors that they've been matched with during parts of their training run. As this is a swarm training architecture, you're working as a collective, where your work relies on the work of others. If some of the participants you've been matched with have poor internet, or a poorly optimised machine, it can have a negative effect on your work.
+
+</details>
+
 ## Hardware & internet
 
 <details>
