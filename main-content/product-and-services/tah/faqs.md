@@ -524,6 +524,16 @@ This isn't due to their configuration, but rather it could be related to the oth
 
 </details>
 
+<details>
+
+<summary>What are T@H logs, and how do I access mine?</summary>
+
+Your T@H logs act as a snapshot of your training history. They document your machine's activity on the network.
+
+To access your logs, follow [our steps here](tah-user-guide.md#accessing-log-data-for-t-h).
+
+</details>
+
 ## Hardware & internet
 
 <details>
