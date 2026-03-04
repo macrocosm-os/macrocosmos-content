@@ -111,6 +111,22 @@ Note: Exact weighting can evolve as the system updates.
 * _Total Paid:_ The amount paid to your wallet.
 * _Total Pending:_ Pending amount credited to you, but not yet paid.
 
+## Accessing Log data for T@H
+
+To document how the Train at Home app is running, operation logs are stored on your computer. You can access these via the following steps:
+
+1. Open the Terminal app.
+2. Navigate to the T@H logging directory by typing `cd ~/Library/Logs/IOTA\ Train\ at\ Home` in the Terminal window, then press "enter".
+3. Type `ls` and press "enter". This will show you your current log files. The file which provides diagnostic data on your T@H activity is named `YYYY-MM-DD-cli.log`.
+4. Choose the relevant date and open the file by typing `cat YYYY-MM-DD-cli.log` and pressing "enter". This will show the file contents in the terminal, allowing you to scroll through the T@H events.
+5. You can copy this log to another directory using `cp YYYY-MM-DD-cli.log /Users/<your-user-name>/Documents/logs` for example.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2026-03-04 at 12.42.48.png" alt=""><figcaption><p>Commands used to access the T@H logs, with a print out of initial logs</p></figcaption></figure>
+
+
+
+
+
 #### Taxes & Compliance
 
 * You are responsible for complying with local tax and regulatory requirements related to rewards.
