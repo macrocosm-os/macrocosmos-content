@@ -10,7 +10,7 @@ description: >-
 
 To get started using Macrocosmos API you should:
 
-1. Generate your API key using the instruction from the [API Keys](/broken/pages/O3pJKPdh5VoU7QLhjMfb) page
+1. Generate your API key using the instruction from the [API Keys](https://docs.macrocosmos.ai/developers/readme/api-keys) page
 2. Ensure that you are using Python 3.9+ or Typescript
 
 **📎 Supported Platforms**
