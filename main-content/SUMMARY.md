@@ -7,6 +7,7 @@
   * [API Keys](developers/macrocosmos-sdk/api-keys.md)
   * [Macrocosmos MCP](developers/readme/macrocosmos-mcp.md)
   * [Subnet 1 Apex API](developers/macrocosmos-sdk/apex.md)
+  * [OpenClaw Skills](developers/readme/openclaw-skills.md)
 * [API Documentation](developers/api-documentation/README.md)
   * [Accessing API Keys](developers/api-documentation/accessing-api-keys.md)
   * [SN1 - APEX](developers/api-documentation/sn1-apex/README.md)
