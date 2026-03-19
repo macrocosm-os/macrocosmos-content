@@ -202,8 +202,8 @@ task_score = clamp(1 - (total_epoch_time / max_epoch_time), 0.0, 1.0)
 final_score = median(task_scores)  # median across 5 tasks
 ```
 
-* total\_epoch\_time: sum of all epoch durations (simulated seconds), excluding merge phases
-* max\_epoch\_time: analytically computed time ceiling with a safety multiplier
+* total\_epoch\_time: sum of all epoch durations (simulated seconds), excluding merge phases.
+* max\_epoch\_time: analytically computed time ceiling with a safety multiplier.
 * To surpass the current winner, a miner must earn a raw score at least 1% higher than the current top raw score. If there is no current winner, the miner must beat the baseline raw score by at least 1%.
 * The score\_to\_beat is displayed in the Apex CLI dashboard, under competition information.
 
@@ -212,7 +212,7 @@ final_score = median(task_scores)  # median across 5 tasks
 #### Miner Submissions <a href="#additional-details" id="additional-details"></a>
 
 * Miners submit a single `.py` file.
-* Maximum submission size: 50,000 characters
+* Maximum submission size: 50,000 characters.
 * Default round length: 1 day.
 * Standard [Incentive mechanism](https://docs.macrocosmos.ai/subnets/subnet-1-apex/incentive-mechanism#incentive-challenges) Subnet 1.
   * Miners code is revealed 1 day after evaluation.
