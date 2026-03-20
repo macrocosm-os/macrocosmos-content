@@ -4,7 +4,7 @@ description: Registry of competitions currently active on SN1 APEX.
 
 # Subnet 1 Current Competitions
 
-<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td align="center"><a href="current-competitions.md#id-1.-reinforcement-learning-battleship">RL Battleship</a></td><td></td><td><a href="../../../.gitbook/assets/ChatGPT Image Feb 2, 2026, 05_01_28 PM.png">ChatGPT Image Feb 2, 2026, 05_01_28 PM.png</a></td></tr><tr><td align="center"><a href="https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-current-competitions#id-2.-iota-simulator"><code>iota</code> Simulator</a></td><td></td><td><a href="../../../.gitbook/assets/iota_sim_competition_image.png">iota_sim_competition_image.png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td align="center"><a href="current-competitions.md#id-1.-reinforcement-learning-battleship">RL Battleship</a></td><td></td><td><a href="../../../.gitbook/assets/ChatGPT Image Feb 2, 2026, 05_01_28 PM.png">ChatGPT Image Feb 2, 2026, 05_01_28 PM.png</a></td></tr><tr><td align="center"><a href="current-competitions.md#id-2.-iota-simulator"><code>iota</code> Simulator</a></td><td></td><td><a href="../../../.gitbook/assets/iota_sim_competition_image.png">iota_sim_competition_image.png</a></td></tr></tbody></table>
 
 ## 1. Reinforcement Learning: Battleship
 
@@ -57,7 +57,7 @@ Every game produces a score based on two components:
 
 #### Additional details: <a href="#additional-details" id="additional-details"></a>
 
-* Standard [Incentive mechanism](https://docs.macrocosmos.ai/subnets/subnet-1-apex/incentive-mechanism#incentive-challenges) Subnet 1.
+* Standard [Incentive mechanism](../../subnet-1-apex/incentive-mechanism.md) Subnet 1.
   * Miners code is revealed 1 day after evaluation.
   * Logs are opened after the current round is completed.
 * Multiple submissions:
@@ -214,7 +214,7 @@ final_score = median(task_scores)  # median across 5 tasks
 * Miners submit a single `.py` file.
 * Maximum submission size: 50,000 characters.
 * Default round length: 1 day.
-* Standard [Incentive mechanism](https://docs.macrocosmos.ai/subnets/subnet-1-apex/incentive-mechanism#incentive-challenges) Subnet 1.
+* Standard [Incentive mechanism](../../subnet-1-apex/incentive-mechanism.md) Subnet 1.
   * Miners code is revealed 1 day after evaluation.
   * Logs are opened after the current round is completed.
 * Multiple submissions:
