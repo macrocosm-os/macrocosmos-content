@@ -9,11 +9,11 @@ description: Subnet 1 Overview
 * Visit the [Apex website](https://apex.macrocosmos.ai/)
 * Miners:
   * Read through:
-    * [Current Competitions](https://docs.macrocosmos.ai/subnets/subnet-1-apex/current-competitions)
-    * [Miner Setup](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup) and [Apex CLI](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli) guides
-    * [Incentive Mechanism](https://docs.macrocosmos.ai/subnets/subnet-1-apex/incentive-mechanism)
+    * [Current Competitions](../new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md)
+    * [Miner Setup](subnet-1-base-miner-setup/) and [Apex CLI](subnet-1-base-miner-setup/apex-cli.md) guides
+    * [Incentive Mechanism](incentive-mechanism.md)
 * Validators:
-  * Read through the [Validator Setup](https://docs.macrocosmos.ai/subnets/subnet-1-apex/validating) guide
+  * Read through the [Validator Setup](validating.md) guide
 
 
 
@@ -31,7 +31,7 @@ These algorithmic and agentic systems focus on solving independent tasks, addres
 
 The first major milestone to tackle is Matrix Compression or Compression of Activations, a challenge that lies at the heart of efficient distributed intelligence. By solving this problem we can enable **network load optimisation**: significantly reduce communication and memory overhead during large-scale training or inference, enabling smoother collaboration between decentralised nodes and faster model optimisation.
 
-Read through the activation compression challenge overview and evaluation metrics in [Current Competitions](https://docs.macrocosmos.ai/subnets/subnet-1-apex/current-competitions).
+Read through the activation compression challenge overview and evaluation metrics in [Current Competitions](../new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md).
 
 
 
