@@ -32,7 +32,7 @@ description: Frequently asked questions and Apex support channels
 
 <summary>Where do I start with mining the subnet 1?</summary>
 
-Read the docs related to the [Apex subnet](https://docs.macrocosmos.ai/subnets/subnet-1-apex) and [current competitions](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-current-competitions). Have a look at the [Subnet 1 Mining](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup) for the setup guidance.&#x20;
+Read the docs related to the [Apex subnet](./) and [current competitions](../new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md). Have a look at the [Subnet 1 Mining](subnet-1-base-miner-setup/) for the setup guidance.&#x20;
 
 </details>
 
@@ -40,7 +40,7 @@ Read the docs related to the [Apex subnet](https://docs.macrocosmos.ai/subnets/s
 
 <summary>How to test my miner locally?</summary>
 
-You can use the sample tasks from manifest file to perform local testing. See instruction on [how to get sample tasks](https://docs.macrocosmos.ai/subnets/subnet-1-apex/current-competitions#for-miners). To emulate the validator, have a look at the [Validating](https://docs.macrocosmos.ai/subnets/subnet-1-apex/validating) instructions.
+You can use the sample tasks from manifest file to perform local testing. See instruction on [how to get sample tasks](../new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md). To emulate the validator, have a look at the [Validating](validating.md) instructions.
 
 </details>
 
@@ -48,6 +48,6 @@ You can use the sample tasks from manifest file to perform local testing. See in
 
 <summary>Where can I see my scores and other metrics?</summary>
 
-Each competition has it's own dashboard demonstrating relevant metrics. You can find them on the Apex website at [apex.macrocosmos.ai/](https://apex.macrocosmos.ai/) in the competition section. Also [Apex CLI](https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli) provides a set of metrics for the competitions.
+Each competition has it's own dashboard demonstrating relevant metrics. You can find them on the Apex website at [apex.macrocosmos.ai/](https://apex.macrocosmos.ai/) in the competition section. Also [Apex CLI](subnet-1-base-miner-setup/apex-cli.md) provides a set of metrics for the competitions.
 
 </details>
