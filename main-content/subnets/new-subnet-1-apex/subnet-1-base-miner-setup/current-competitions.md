@@ -80,7 +80,7 @@ The `iota` Simulator models a distributed compute network where activations flow
 
 ### Simulator Details <a href="#evaluation" id="evaluation"></a>
 
-A detailed simulator, submission, and log file description can be found in the **info doc** within the [iota\_simulator folder](https://github.com/macrocosm-os/apex/tree/main/shared/competition/src/competition/iota_simulator).
+A detailed simulator, submission, and log file description can be found in the **info doc** within the [iota\_simulator folder](https://github.com/macrocosm-os/apex/tree/main/shared/competition/src/competition/iota_simulator). The simulator code is currently **proprietary**.
 
 * 96 simulated miners (by default, number may change from round to round) are distributed across layers in a simulated network with bandwidth, latency, queuing, and caching.
 * Each activation travels forward through layers 0→N-1, then backward N-1→0.
