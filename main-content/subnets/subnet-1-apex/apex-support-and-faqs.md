@@ -40,7 +40,7 @@ Read the docs related to the [Apex subnet](./) and [current competitions](../new
 
 <summary>How to test my miner locally?</summary>
 
-You can use the sample tasks from manifest file to perform local testing. See instruction on [how to get sample tasks](../new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md). To emulate the validator, have a look at the [Validating](validating.md) instructions.
+Visit each of the [competition folders](https://github.com/macrocosm-os/apex/tree/main/shared/competition/src/competition) to see example submission formats as well as a baseline submission. Inside each competition-specific folder is also a ReadMe guide to get started.&#x20;
 
 </details>
 
@@ -48,6 +48,6 @@ You can use the sample tasks from manifest file to perform local testing. See in
 
 <summary>Where can I see my scores and other metrics?</summary>
 
-Each competition has it's own dashboard demonstrating relevant metrics. You can find them on the Apex website at [apex.macrocosmos.ai/](https://apex.macrocosmos.ai/) in the competition section. Also [Apex CLI](subnet-1-base-miner-setup/apex-cli.md) provides a set of metrics for the competitions.
+Each competition has its own dashboard demonstrating relevant metrics. You can find them on the Apex website at [apex.macrocosmos.ai/](https://apex.macrocosmos.ai/) in the competition section. Also [Apex CLI](subnet-1-base-miner-setup/apex-cli.md) provides a set of metrics for the competitions.
 
 </details>
