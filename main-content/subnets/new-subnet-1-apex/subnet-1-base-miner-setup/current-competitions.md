@@ -301,9 +301,9 @@ At each time step, per battery:
 * The miner's final score is the average quality across all 100 instances.
 * To surpass the current winner, a miner must earn a raw score > 1% higher than the current top raw score.&#x20;
   * If there is no current winner, the miner must beat the baseline raw score by at least 1%.
-* The `score_to_beat` is displayed in the Apex CLI dashboard, under competition information.
+* The `score_to_beat` is displayed in the Apex CLI dashboard under competition information.
 
-
+####
 
 #### Miner Submissions
 
