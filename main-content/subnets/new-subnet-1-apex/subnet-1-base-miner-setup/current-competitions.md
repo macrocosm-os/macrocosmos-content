@@ -213,7 +213,7 @@ final_score = median(task_scores)  # median across 5 tasks
 
 * Miners submit a single `.py` file.
 * Maximum submission size: 50,000 characters.
-* Submission Fee: $28.
+* Submission Fee: $10.
 * Default round length: 1 day.
 * Standard [Incentive mechanism](../../subnet-1-apex/incentive-mechanism.md).
   * Miners code is revealed 1 day after evaluation.
