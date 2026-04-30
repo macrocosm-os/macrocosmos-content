@@ -64,7 +64,15 @@ Submission fees are variable per competition. Currently, all competitions are fr
 
 <details>
 
-<summary>Something went wrong with my submission. What can I do?</summary>
+<summary>My submission was rejected by the screener. What happens to my fee?</summary>
+
+If your submission was rejected by the competition screener, you can reuse the fee payment information on another submission.
+
+</details>
+
+<details>
+
+<summary>Something went wrong with my submission fee payment. What can I do?</summary>
 
 If your payment went through successfully, you will receive a receipt including the payment block hash and extrinsic index. You can resubmit your solution with the unused payment with:
 
