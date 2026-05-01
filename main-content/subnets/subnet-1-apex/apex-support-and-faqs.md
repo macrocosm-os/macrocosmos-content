@@ -66,7 +66,9 @@ Submission fees are variable per competition. Currently, all competitions are fr
 
 <summary>My submission was rejected. What happens to my fee?</summary>
 
-If your submission was rejected, you can reuse the fee payment information on another submission.
+If your submission was rejected, you can reuse the fee payment information on another submission. Resubmit with:
+
+`apex submit --payment-block-hash [YOUR BLOCK HASH] --payment-extrinsic-index [YOUR EXTRINSIC INDEX]`&#x20;
 
 </details>
 
