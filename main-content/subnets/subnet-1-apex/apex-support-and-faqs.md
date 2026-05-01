@@ -64,9 +64,9 @@ Submission fees are variable per competition. Currently, all competitions are fr
 
 <details>
 
-<summary>My submission was rejected by the screener. What happens to my fee?</summary>
+<summary>My submission was rejected. What happens to my fee?</summary>
 
-If your submission was rejected by the competition screener, you can reuse the fee payment information on another submission.
+If your submission was rejected, you can reuse the fee payment information on another submission.
 
 </details>
 
