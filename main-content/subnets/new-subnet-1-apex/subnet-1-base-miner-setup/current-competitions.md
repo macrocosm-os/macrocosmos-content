@@ -8,7 +8,7 @@ description: Registry of competitions currently active on SN1 APEX.
 
 
 
-## 1. `iota` Simulator
+## 1. `iota` Simulator <a href="#iota-simulator" id="iota-simulator"></a>
 
 The `iota` Simulator models a distributed compute network where activations flow through layers of miners. Miners submit routing and load-balancing algorithms to guide activations through the network as fast as possible. The top-performing algorithms from this competition will be considered for use in subnet 9 `iota`'s orchestration layer.
 
@@ -166,7 +166,7 @@ final_score = median(task_scores)  # median across 5 tasks
 
 
 
-## 2. Energy Arbitrage
+## 2. Energy Arbitrage <a href="#energy-arbitrage" id="energy-arbitrage"></a>
 
 **Energy storage arbitrage** is a core problem in modern electricity markets: a battery operator can profit by purchasing power when prices are low and selling it back when prices are high, but must act under uncertainty as real-time prices deviate from day-ahead forecasts due to weather, demand shocks, and transmission congestion.
 
