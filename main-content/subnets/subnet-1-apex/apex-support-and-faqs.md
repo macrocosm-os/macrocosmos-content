@@ -58,7 +58,10 @@ Each competition has its own dashboard demonstrating relevant metrics. You can f
 
 <summary>How much are submission fees?</summary>
 
-Submission fees are variable per competition. Currently, all competitions are free except for the `iota` simulator competition, which is priced at $10 USD per submission.
+Submission fees are variable per competition. If a competition is not listed here, then it's free to submit to.
+
+* RL Tron: $1 per submission
+* Iota Simulator: $10 per submission
 
 </details>
 
