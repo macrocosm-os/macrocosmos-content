@@ -4,75 +4,11 @@ description: Registry of competitions currently active on SN1 APEX.
 
 # Subnet 1 Current Competitions
 
-<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td align="center"><a href="current-competitions.md#id-1.-reinforcement-learning-battleship">RL Battleship</a></td><td></td><td><a href="../../../.gitbook/assets/ChatGPT Image Feb 2, 2026, 05_01_28 PM.png">ChatGPT Image Feb 2, 2026, 05_01_28 PM.png</a></td></tr><tr><td align="center"><a href="current-competitions.md#id-2.-iota-simulator"><code>iota</code> Simulator</a></td><td></td><td><a href="../../../.gitbook/assets/iota_sim_competition_image.png">iota_sim_competition_image.png</a></td></tr><tr><td align="center"><a href="https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-current-competitions#id-3.-energy-arbitrage">Energy Arbitrage</a></td><td></td><td><a href="../../../.gitbook/assets/7 (1).jpg">7 (1).jpg</a></td></tr></tbody></table>
-
-## 1. Reinforcement Learning: Battleship
-
-This is the first reinforcement learning competition for Apex. Miners train RL models on their own machines and submit their models in **TorchScript** (`.pt` files) for evaluation.&#x20;
+<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td align="center"><a href="current-competitions.md#id-2.-iota-simulator"><code>iota</code> Simulator</a></td><td></td><td><a href="../../../.gitbook/assets/iota_sim_competition_image.png">iota_sim_competition_image.png</a></td></tr><tr><td align="center"><a href="https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-current-competitions#id-3.-energy-arbitrage">Energy Arbitrage</a></td><td></td><td><a href="../../../.gitbook/assets/7 (1).jpg">7 (1).jpg</a></td></tr><tr><td align="center"><a href="https://docs.macrocosmos.ai/subnets/subnet-1-apex/subnet-1-current-competitions#rl-tron">RL Tron</a></td><td></td><td><a href="../../../.gitbook/assets/8.jpg">8.jpg</a></td></tr></tbody></table>
 
 
 
-### **Battleship Settings** <a href="#battleship-settings" id="battleship-settings"></a>
-
-[Competition Dashboard](https://apex.macrocosmos.ai/competitions/5)
-
-* Be sure the model loads with `torch.jit.load()` before submitting.&#x20;
-  * Submissions must be in `.pt` files to be accepted.
-* Max submission size is 100 MB.
-
-
-
-#### Match Structure <a href="#match-structure" id="match-structure"></a>
-
-* A single match consists of several Battleship games played by 1 miner.
-* In each game, the miner receives a hidden ship board - a unique configuration of ships that is known only to the orchestrator.
-* Their task is to determine an optimal strategy to locate and hit the opponent’s ships as efficiently as possible, while working under an unknown turn constraint
-* The miner that solves the most boards the fastest wins and receives all competition emissions, annealing with the burn.
-* Shots may not be repeated!
-
-
-
-### Evaluation <a href="#evaluation" id="evaluation"></a>
-
-#### **Game Score** <a href="#game-score" id="game-score"></a>
-
-Every game produces a score based on two components:
-
-**1. Win Score**
-
-* Winning a game grants **1000 points**.
-
-**2. Speed Bonus**
-
-* A speed bonus is added based on how quickly the miner wins:\
-  &#xNAN;**(100 − number\_of\_turns\_to\_win) × 0.1**
-* This rewards faster solutions.
-* One turn is equivalent to one shot made to the ship board.
-
-**Final Competition Score**
-
-* The miner’s **final score** is the **average of all their game scores** across the round.
-
-
-
-#### Additional details: <a href="#additional-details" id="additional-details"></a>
-
-* Standard [Incentive mechanism](../../subnet-1-apex/incentive-mechanism.md) Subnet 1.
-  * Miners code is revealed 1 day after evaluation.
-  * Logs are opened after the current round is completed.
-* Multiple submissions:
-  * The rate limit is 4 submissions per hotkey within 24 hours, across all competitions.&#x20;
-* An example of model training can be found in the [train folder](https://github.com/macrocosm-os/apex/tree/main/shared/competition/src/competition/rl_battleship/train).&#x20;
-* The information about enabled packages is in [requirements.txt](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/rl_battleship/dockerfiles/requirements.txt).
-* All matches produce a replay file, with View only access.
-
-
-
-***
-
-
-
-## 2. `iota` Simulator
+## 1. `iota` Simulator
 
 The `iota` Simulator models a distributed compute network where activations flow through layers of miners. Miners submit routing and load-balancing algorithms to guide activations through the network as fast as possible. The top-performing algorithms from this competition will be considered for use in subnet 9 `iota`'s orchestration layer.
 
@@ -226,9 +162,11 @@ final_score = median(task_scores)  # median across 5 tasks
 
 
 
+***
 
 
-## 3. Energy Arbitrage
+
+## 2. Energy Arbitrage
 
 **Energy storage arbitrage** is a core problem in modern electricity markets: a battery operator can profit by purchasing power when prices are low and selling it back when prices are high, but must act under uncertainty as real-time prices deviate from day-ahead forecasts due to weather, demand shocks, and transmission congestion.
 
@@ -304,7 +242,7 @@ At each time step, per battery:
   * If there is no current winner, the miner must beat the baseline raw score by at least 1%.
 * The `score_to_beat` is displayed in the Apex CLI dashboard under competition information.
 
-####
+
 
 #### Miner Submissions
 
@@ -320,3 +258,124 @@ At each time step, per battery:
 
 
 
+***
+
+
+
+## 3. Reinforcement Learning: Tron <a href="#rl-tron" id="rl-tron"></a>
+
+In this head-to-head reinforcement learning competition for Apex, miners train RL agents to play Tron on their own machines and submit their models in TorchScript (`.pt` files) for evaluation. All miners face off in a duels in a single elimination bracket-style tournament, where the winner takes emissions.&#x20;
+
+
+
+### Tron Settings
+
+* Competition Dashboard
+* Be sure the model loads with `torch.jit.load()` before submitting.
+* Submissions must be in `.pt` files to be accepted.
+* Max submission size is 100 MB.
+* The model must accept an input tensor of shape `(1, 5, H, W)` and output Q-values / logits of shape `(4,)` over the action space `[UP, RIGHT, DOWN, LEFT]`.
+
+
+
+### Round Structure
+
+A round is run as a **single-elimination bracket**. Miners can make submissions while the round is `OPEN`. Miners get one submission per hotkey - if multiple submissions are made under the same hotkey, the most recent submission is used during the evaluation phase.
+
+During the evaluation phase:
+
+* Miners are seeded into a single elimination bracket.
+* Every match is a head-to-head duel between two miners.
+* The winner advances to the next round of the bracket.&#x20;
+* The last surviving miner is the round winner and receives all competition emissions, annealing with the burn.
+
+
+
+### Match Structure
+
+A single match is a **duel between two miners**, consisting of several Tron games played head-to-head. The miner with the higher win rate across the games wins the match and advances in the bracket.
+
+* The default is 5 **games per match**. Player spawn slots alternate every game to minimize positional advantages.
+* Each game is played on a **30×30 playable grid** (default) bordered 1-block walls.
+* Miners spawn in **opposite corners** (top-left and bottom-right) for maximum separation.
+* Each game runs for at most **500 ticks**.
+* A game ends when:
+  * one player is alive (that player wins),
+  * both players die on the same tick (draw),
+  * the tick limit is reached with both still alive (draw).
+* Trails are permanent - riding into your own trail, the opponent's trail, or a wall kills you.
+* A miner that does not respond in time on a given tick is defaulted to "continue straight" - there is no per-tick penalty, but continuing straight may run the miner into a wall or trail.
+
+#### Per-Tick Miner I/O
+
+The miner runs as a long-running HTTP server inside its sandbox. The orchestrator calls the miner **every game tick** (not just at the start) with the current state.
+
+Each tick, the miner receives:
+
+* The full **grid** as a 2D array (`0`=empty, `1`=wall, `2+`=trail cells)
+* Its own **position** `[y, x]`, **direction** (`0`=UP, `1`=RIGHT, `2`=DOWN, `3`=LEFT), and **alive** status
+* The opponent's **position(s)** and **alive** status
+* The pre-filtered list of **valid actions** (excludes reversing direction)
+
+The miner returns a single integer action `0–3`.&#x20;
+
+#### Timing
+
+* **Per-tick move timeout**: 0.5 seconds. Exceeding this defaults the miner to its current direction.
+* **Per-game wall-clock timeout**: 120 real-time second maximum per simulated game.
+
+
+
+### Evaluation
+
+#### Game Score
+
+Every game produces a score for each miner:
+
+* **Win**: 1.0
+* **Draw** (both die same tick, or hit the 500-tick limit): 0.5
+* **Loss**: 0.0
+* If a game fails to start due to model load failures, both miners receive 0.0 for that game.
+
+#### Match Score
+
+A match's win rate for each miner is the average of their per-game scores across all games in the match:
+
+```
+match_win_rate = sum(per_game_scores) / num_games
+```
+
+So a match win rate is bounded in `[0.0, 1.0]`.
+
+#### Match Outcome
+
+Once both miners' match win rates are computed, the match outcome is decided:
+
+* The miner with the higher win rate **wins the match** and advances in the bracket.
+* If both miners tie (e.g. 0.5 / 0.5, or both fail with 0 / 0), a random tiebreak is conducted.
+
+A losing miner is eliminated from the bracket. Surviving miners are paired up for the next round of the bracket and play another match. This continues until one miner remains.
+
+* Information on game stats and outcomes can be found in the eval metadata.&#x20;
+
+#### Aggregate Stats
+
+* **`eval_raw_score`** = the **sum** of per-match win rates across every duel the miner has played this round.
+* **`eval_score`** = the normalized **average** = `eval_raw_score / number_of_duels_played`.
+
+These numbers do not determine the bracket winner - they are tracking stats. The round winner is the **last surviving miner in the bracket**.
+
+
+
+### Additional Details
+
+* Miner code is revealed 1 day after evaluation.
+* Round length: 2 days.
+* Submission fee: $1 USD, converted to the current TAO price.
+* Logs are opened after the current round is completed.
+* Multiple submissions:
+  * The rate limit is 4 submissions per hotkey within 24 hours, across all competitions.
+* A guide on training a baseline model can be found in the `train` folder \[ADD LINK HERE].
+* Information on the RL Tron Player API can be found in launch\_tron\_rl.py \[ADD LINK HERE]
+* See `requirements.txt` for information on allowed packages.
+* All matches produce a replay file (per-game grid history and tick-by-tick actions).
