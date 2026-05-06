@@ -371,7 +371,7 @@ These numbers do not determine the bracket winner - they are tracking stats. The
 * View results on the website's [competition dashboard.](https://apex.macrocosmos.ai/competitions/8)
 * Miner code is revealed 2 days after evaluation.
 * Round length: 2 days.
-* Submission fee: $1 USD, converted to the current TAO price.
+* Submission fee: $1.40 USD, converted to the current TAO price.
 * Logs are opened after the current round is completed.
 * Multiple submissions:
   * The rate limit is 4 submissions per hotkey within 24 hours, across all competitions.
