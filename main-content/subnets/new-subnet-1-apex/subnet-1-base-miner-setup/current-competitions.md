@@ -294,7 +294,7 @@ During the evaluation phase:
 
 A single match is a **duel between two miners**, consisting of several Tron games played head-to-head. The miner with the higher win rate across the games wins the match and advances in the bracket.
 
-* The default is 5 **games per match**. Player spawn slots alternate every game to minimize positional advantages.
+* The default is **3 games per match**. Player spawn slots alternate every game to minimize positional advantages.
 * Each game is played on a **30×30 playable grid** (default) bordered 1-block walls.
 * Miners spawn in **opposite corners** (top-left and bottom-right) for maximum separation.
 * Each game runs for at most **500 ticks**.
