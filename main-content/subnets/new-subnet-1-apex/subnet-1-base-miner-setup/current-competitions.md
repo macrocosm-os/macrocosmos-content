@@ -270,7 +270,6 @@ In this head-to-head reinforcement learning competition for Apex, miners train R
 
 ### Tron Settings
 
-* Competition Dashboard
 * Be sure the model loads with `torch.jit.load()` before submitting.
 * Submissions must be in `.pt` files to be accepted.
 * Max submission size is 100 MB.
@@ -369,6 +368,7 @@ These numbers do not determine the bracket winner - they are tracking stats. The
 
 ### Additional Details
 
+* View results on the website's [competition dashboard.](https://apex.macrocosmos.ai/competitions/8)
 * Miner code is revealed 2 days after evaluation.
 * Round length: 2 days.
 * Submission fee: $1 USD, converted to the current TAO price.
