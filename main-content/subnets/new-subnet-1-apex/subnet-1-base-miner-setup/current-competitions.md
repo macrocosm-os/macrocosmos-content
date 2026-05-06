@@ -375,7 +375,7 @@ These numbers do not determine the bracket winner - they are tracking stats. The
 * Logs are opened after the current round is completed.
 * Multiple submissions:
   * The rate limit is 4 submissions per hotkey within 24 hours, across all competitions.
-* A guide on training a baseline model can be found in the `train` folder \[ADD LINK HERE].
-* Information on the RL Tron Player API can be found in launch\_tron\_rl.py \[ADD LINK HERE]
+* A guide on training a baseline model can be found in the [`train` folder](https://github.com/macrocosm-os/apex/tree/main/shared/competition/src/competition/tron/train).
+* Information on the RL Tron Player API can be found in [launch\_tron\_rl.py](https://github.com/macrocosm-os/apex/blob/main/shared/competition/src/competition/tron/launch_tron_rl.py).
 * See `requirements.txt` for information on allowed packages.
 * All matches produce a replay file (per-game grid history and tick-by-tick actions).
