@@ -320,7 +320,7 @@ The miner returns a single integer action `0–3`.&#x20;
 
 #### Timing
 
-* **Per-tick move timeout**: 0.5 seconds. Exceeding this defaults the miner to its current direction.
+* **Per-tick move timeout**: 0.1 seconds. Exceeding this defaults the miner to its current direction.
 * **Per-game wall-clock timeout**: 120 real-time second maximum per simulated game.
 
 
