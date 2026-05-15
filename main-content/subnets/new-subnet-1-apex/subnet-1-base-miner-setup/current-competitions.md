@@ -329,29 +329,26 @@ The miner returns a single integer action `0–3`.&#x20;
 
 #### Game Score
 
-Every game produces a score for each miner:
+Every game produces a per-game score for each miner based on a **death-cause cascade**. Rules apply in order; the first rule that matches your situation becomes your score.
 
-* **Win**: 1.0
-* **Draw** (both die same tick, or hit the 500-tick limit): 0.5
-* **Loss**: 0.0
+<table><thead><tr><th>#</th><th width="204">Your situation</th><th>Score</th></tr></thead><tbody><tr><td>1</td><td>You killed your opponent (their <code>killed_by</code> is you) and you're still alive</td><td><code>1.00</code></td></tr><tr><td>2</td><td>You're still alive and your opponent self-destructed (hit a wall or their own trail)</td><td><code>0.80</code></td></tr><tr><td>3</td><td>You killed your opponent but also died on the same step (head-on, mutual trail-kill, or you wall-died while your trail killed them)</td><td><code>0.40</code></td></tr><tr><td>4</td><td>Both players alive at <code>max_steps</code> (timeout draw)</td><td><code>0.25</code></td></tr><tr><td>5</td><td>Your opponent killed you and you did not kill them</td><td><code>0.10</code></td></tr><tr><td>6</td><td>You died alone (wall or your own trail), no kill credit</td><td><code>0.00</code></td></tr></tbody></table>
+
 * If a game fails to start due to model load failures, both miners receive 0.0 for that game.
+* The scoring rewards aggression: a clean kill (`1.00`) is worth more than waiting for your opponent to crash (`0.80`).
 
 #### Match Score
 
-A match's win rate for each miner is the average of their per-game scores across all games in the match:
+A match's score for each miner is the **average** of per-game scores across all games in the match:
 
 ```
-match_win_rate = sum(per_game_scores) / num_games
+match_score = sum(per_game_scores) / num_games
 ```
 
 So a match win rate is bounded in `[0.0, 1.0]`.
 
 #### Match Outcome
 
-Once both miners' match win rates are computed, the match outcome is decided:
-
-* The miner with the higher win rate **wins the match** and advances in the bracket.
-* If both miners tie (e.g. 0.5 / 0.5, or both fail with 0 / 0), a random tiebreak is conducted.
+The miner with the higher match score **wins the match** and advances in the bracket.&#x20;
 
 A losing miner is eliminated from the bracket. Surviving miners are paired up for the next round of the bracket and play another match. This continues until one miner remains.
 
@@ -359,7 +356,7 @@ A losing miner is eliminated from the bracket. Surviving miners are paired up fo
 
 #### Aggregate Stats
 
-* **`eval_raw_score`** = the **sum** of per-match win rates across every duel the miner has played this round.
+* **`eval_raw_score`** = the **sum** of per-match scores across every duel the miner has played this round.
 * **`eval_score`** = the normalized **average** = `eval_raw_score / number_of_duels_played`.
 
 These numbers do not determine the bracket winner - they are tracking stats. The round winner is the **last surviving miner in the bracket**.
