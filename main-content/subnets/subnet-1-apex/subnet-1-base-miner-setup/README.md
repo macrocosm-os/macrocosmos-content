@@ -1,12 +1,12 @@
 ---
-description: Subnet 1 mining guide
+description: Your guide to setup and participation as a miner.
 ---
 
 # Subnet 1 Mining
 
 ### Introduction
 
-**Apex** drives algorithmic innovation across diverse problem domains. Each pursuit of the best solution takes place within a **Competition**, which consists of multiple **Rounds** of evaluation. Participants, known as miners, join Competitions by submitting their Python-based algorithms through the[ Apex CLI](apex-cli.md) and earn rewards based on their performance.
+**Apex** drives algorithmic innovation across diverse problem domains. Each pursuit of the best solution takes place within a **Competition**, which consists of multiple **Rounds** of evaluation. Participants, known as miners, join Competitions by submitting their solutions through the [Apex CLI](apex-cli.md), and earn rewards based on their performance.
 
 
 
@@ -15,12 +15,13 @@ description: Subnet 1 mining guide
 To setup a miner on Apex you will need the following:
 
 * A registered [Bittensor wallet](https://docs.bittensor.com/working-with-keys)&#x20;
+  * If your chosen competition has a submission fee, the wallet must contain enough funds per submission to pay for it.
 
 
 
 ### Setting Up the Environment&#x20;
 
-To get started, [clone the repo](https://github.com/macrocosm-os/apex) and run `./install_cli.sh`. Then, activate the environment created by running `source .venv/bin/activate`
+To get started, [clone the repo](https://github.com/macrocosm-os/apex) and run `./install_cli.sh`. Then, activate the environment created by running `source .venv/bin/activate` .
 
 
 
@@ -28,12 +29,12 @@ To get started, [clone the repo](https://github.com/macrocosm-os/apex) and run `
 
 Miners are encouraged to review the baseline solutions for available competitions before submitting their own. All baseline solutions and general submission templates can be found in their respective competition folders within `shared/competition/src/competition`.
 
-You should keep all function signatures identical to the baseline to ensure that your submission can be evaluated properly.&#x20;
+Keep all function signatures identical to the baseline to ensure that your submission can be evaluated properly.&#x20;
+
+To understand the current competitions and their scoring guidelines visit the  [Current Competitions](../../new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md) page.
 
 
 
 ### Submitting Your Solutions
 
-To understand the current competitions and their scoring guidle lines: [Current Competitions](../../new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md)
-
-To use the CLI to submit miner solutions, pull previous winning submissions, and view the submission dashboard: [CLI Usage](apex-cli.md)
+To use the CLI to submit miner solutions, pull previous winning submissions, and view the submission dashboard, visit the [CLI Usage](apex-cli.md) page.

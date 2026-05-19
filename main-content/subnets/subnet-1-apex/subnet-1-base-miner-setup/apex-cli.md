@@ -1,18 +1,18 @@
 ---
-description: Instructions on how to use Apex's CLI tool
+description: Instructions on using the Apex CLI.
 ---
 
 # Apex CLI
 
 The Apex CLI is a miner's interface with the subnet: linking wallets, submitting competition solutions, and viewing the dashboard. The dashboard contains all miner submissions to past and current competitions - use it to view others' code submissions and logs to compare your individual performance against the subnet.&#x20;
 
-To use the CLI you must have a [registered wallet on subnet 1.](https://docs.learnbittensor.org/miners#miner-registration)&#x20;
+To use the CLI, you must have a [registered wallet on subnet 1.](https://docs.learnbittensor.org/miners#miner-registration)&#x20;
 
 ### Setup
 
-Before using the Apex CLI, make sure you have ran `./install_cli.sh`. For further instructions, see the [mining docs](./).&#x20;
+Before using the Apex CLI, make sure you have ran `./install_cli.sh`. For further instructions, see the [mining](./) page.&#x20;
 
-* Make sure you have activated your `.venv` prior to using the CLI.
+* Make sure you have activated your `.venv` prior to using the CLI. Do so with:
   * `source .venv/bin/activate`
 
 ### Link Wallet

@@ -1,5 +1,5 @@
 ---
-description: Subnet 1 Overview
+description: Subnet 1 — Apex. A routing layer for intelligence.
 ---
 
 # Subnet 1 Apex
@@ -19,41 +19,54 @@ description: Subnet 1 Overview
 
 ## Introduction
 
-Decentralized intelligence offers a powerful new way to approach complex algorithmic and agentic optimization problems by leveraging the collective reasoning and computational capacity of distributed networks. Through collaboration and competition among independent nodes, SN1 can generate solutions for complex mathematical and algorithmic problems that were once too large or intricate for any single entity to handle.
+**Apex is a routing layer for intelligence.** You provide a problem. Apex provides research, iteration, improvement, and real results.
 
-<figure><img src="../../.gitbook/assets/solution-applicability (3).png" alt=""><figcaption></figcaption></figure>
+* A competition structures a well-defined problem and a way to score solutions.&#x20;
+* A global network of independent developers and agentic agents competes to solve it.
+* The platform returns the best-performing solution.
 
-These algorithmic and agentic systems focus on solving independent tasks, addressing bottlenecks, and optimising processes across all levels of complexity. The value of this approach lies not only in solving abstract equations or algorithms but in translating those solutions into real-world impact.
+Apex is not a chatbot, a model marketplace, or a one-off prize platform. It is infrastructure for converting clearly-specified problems into working solutions — on demand, at scale, and without the need to recruit, manage, or evaluate researchers yourself.
 
-
-
-### Matrix Compression Challenge <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
-
-The first major milestone to tackle is Matrix Compression or Compression of Activations, a challenge that lies at the heart of efficient distributed intelligence. By solving this problem we can enable **network load optimisation**: significantly reduce communication and memory overhead during large-scale training or inference, enabling smoother collaboration between decentralised nodes and faster model optimisation.
-
-Read through the activation compression challenge overview and evaluation metrics in [Current Competitions](../new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md).
+The premise is simple: if you can define what "better" looks like, this gets fitted down to a scoring function that Apex measures success on.
 
 
 
-### Subnet 9 IOTA Use Case <a href="#subnet-9-iota-use-case" id="subnet-9-iota-use-case"></a>
+### Who Apex is for <a href="#compression-of-activations-challenge" id="compression-of-activations-challenge"></a>
 
-When the Subnet 1 Matrix Compression competition results in successful solutions, Subnet 9 IOTA stands to gain significant benefits in both performance and scalability. Efficient compression techniques will drastically reduce communication overhead between nodes, allowing faster and more synchronised training across the decentralised network. This improvement not only enhances computational throughput but also lowers the energy and bandwidth requirements for participating validators, making the subnet more sustainable and cost-efficient.
+Apex is built for organizations that have a measurable problem but don't want to staff or wait on an internal research team to solve it:
+
+* **Enterprises** with a quantifiable bottleneck — a forecasting model that needs to be more accurate, a compression ratio that needs to be tighter, a trading strategy that needs better risk-adjusted returns.
+* **Research labs and foundations** that want to crowdsource sustained progress on an open benchmark instead of running a single bounty.
+* **Product teams** that need a working algorithm as a component — not a paper, not a prototype, but code that runs.
+* **Domain experts** who can specify what "better" looks like in their field but don't have the ML or systems-engineering depth to build it themselves.
+
+You don't have to know _how_ the solution will be built. Apex and its miners source the innovation.
 
 
 
-### Open Source Approach <a href="#open-source-approach" id="open-source-approach"></a>
+### How Apex works <a href="#open-source-approach" id="open-source-approach"></a>
 
-Open-sourcing such a solution amplifies its global benefits allowing developers, researchers, and industries to build upon a shared foundation, accelerate innovation, and ensure transparency and accessibility. This open collaboration not only democratises advanced computation but also strengthens real-world infrastructure by making intelligent, resource-efficient systems available to all.
+Every competition on Apex follows the same lifecycle, regardless of whether the underlying task is compression, control, a head-to-head game, or a systems-design problem:
+
+1. **Problem specification.** A task, a dataset or simulation environment, a scoring function, and any constraints (runtime, model size, allowed dependencies) are defined up front.
+2. **Competition launch.** The competition is published to the network. Contributors on the network see the spec, the leaderboard, and the reward structure.
+3. **Submission.** Miners build solutions independently and submit them. Submissions can be source code, model weights, or both — whatever the task requires.
+4. **Sandboxed evaluation.** Every submission runs in an isolated, secure sandbox against identical inputs and identical resource limits. Scores are deterministic and reproducible.
+5. **Continuous ranking.** Leaderboards update in real time. Miners iterate, resubmit, and compete. Better solutions displace weaker ones. Miners vie for the top spot — it's winner takes all.
+6. **Reward distribution.** Emissions flow to the top-ranked miner. If a better submission arrives, the new leader takes over. See the [Incentive Mechanism](https://docs.macrocosmos.ai/subnets/subnet-1-apex/incentive-mechanism) page for how originator protection and emission burning keep the network pushing forward.
+7. **Delivery.** The customer receives the top-ranked solution(s) along with evaluation metadata, ready to deploy, integrate, or study.
+
+**The customer brings the problem and the scoring function. Everything else — the algorithms, the experimentation, the engineering — is handled across a competitive, decenralized network of miners that are paid only for measurable progress.**
 
 
 
 ### What's Next <a href="#what-is-next" id="what-is-next"></a>
 
-Apex subnet is set to unlock innovation at scale by hosting multiple competitions at once, empowering the community to solve several challenges in parallel. This multi-competition model transforms the subnet into a vibrant hub of creativity and collaboration, where diverse minds can contribute breakthrough ideas from different fields simultaneously. By dividing miner emissions across dedicated competition pools, Apex ensures that every area of exploration receives the support it needs — fuelling a constant flow of progress and discovery.&#x20;
+Apex is built to host many competitions at once. New tasks are added as customers, partners, and the community bring novel problems to the platform. Miner emissions are split across active competitions so that each one carries genuine incentive weight, and the same submission, sandboxing, scoring, and reward infrastructure backs every one of them.
 
-<figure><img src="../../.gitbook/assets/Competitions-pool (1).png" alt=""><figcaption></figcaption></figure>
+If you have a problem that is measurable, well-specified, and worth solving — Apex is built for you.
 
-### Other related resources
+### Related Resources
 
 * [Website](https://apex.macrocosmos.ai/)
 * [Apex X (Twitter)](https://x.com/Apex_SN1)
