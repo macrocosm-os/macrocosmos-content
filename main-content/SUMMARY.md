@@ -6,7 +6,6 @@
   * [Subnet 13 Data Universe API](developers/macrocosmos-sdk/gravity.md)
   * [API Keys](developers/macrocosmos-sdk/api-keys.md)
   * [Macrocosmos MCP](developers/readme/macrocosmos-mcp.md)
-  * [Subnet 1 Apex API](developers/macrocosmos-sdk/apex.md)
   * [OpenClaw Skills](developers/readme/openclaw-skills.md)
 * [API Documentation](developers/api-documentation/README.md)
   * [Accessing API Keys](developers/api-documentation/accessing-api-keys.md)
