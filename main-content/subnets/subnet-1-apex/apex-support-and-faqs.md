@@ -32,7 +32,7 @@ description: Frequently asked questions and Apex support channels
 
 <summary>Where do I start?</summary>
 
-Read the docs related to the [Apex subnet](./) and [current competitions](../new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md). Have a look at the [Subnet 1 Mining](subnet-1-base-miner-setup/) page for setup guidance.&#x20;
+Read the docs related to the [Apex subnet](../../) and [current competitions](../new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md). Have a look at the [Subnet 1 Mining](subnet-1-base-miner-setup/) page for setup guidance.&#x20;
 
 </details>
 

@@ -1,13 +1,8 @@
 # Table of contents
 
-## Developers
-
-* [API Documentation](README.md)
-  * [Accessing API Keys](developers/api-documentation/accessing-api-keys.md)
-
 ## SUBNETS
 
-* [Subnet 1 Apex](subnets/subnet-1-apex/README.md)
+* [Subnet 1 Apex](README.md)
   * [Subnet 1 Incentive Mechanism](subnets/subnet-1-apex/incentive-mechanism.md)
   * [Subnet 1 Mining](subnets/subnet-1-apex/subnet-1-base-miner-setup/README.md)
     * [Apex CLI](subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli.md)
@@ -35,32 +30,12 @@
   * [TAH User Guide](product-and-services/tah/tah-user-guide.md)
   * [Hardware & OS Requirements](product-and-services/tah/hardware-requirements.md)
   * [TAH Support and FAQs](product-and-services/tah/faqs.md)
-* [Data Universe](product-and-services/gravity/README.md)
+* [Gravity](product-and-services/gravity/README.md)
   * [Data Collection and Marketplace](product-and-services/gravity/scraping-data.md)
-  * [Data Universe Use Cases](product-and-services/gravity/data-universe-use-cases/README.md)
+  * [Gravity Use Cases](product-and-services/gravity/data-universe-use-cases/README.md)
     * [How to understand how people feel about my brand?](product-and-services/gravity/data-universe-use-cases/how-to-understand-how-people-feel-about-my-brand.md)
     * [What is the best way to find out what topics people connect with my brand and competitors?](product-and-services/gravity/data-universe-use-cases/what-is-the-best-way-to-find-out-what-topics-people-connect-with-my-brand-and-competitors.md)
     * [How can I identify emerging trends in my market before they show up in traditional surveys?](product-and-services/gravity/data-universe-use-cases/how-can-i-identify-emerging-trends-in-my-market-before-they-show-up-in-traditional-surveys.md)
     * [How can I track changes in public perception after a product launch or major campaign?](product-and-services/gravity/data-universe-use-cases/how-can-i-track-changes-in-public-perception-after-a-product-launch-or-major-campaign.md)
-  * [Data Universe Support and FAQs](product-and-services/gravity/support.md)
+  * [Gravity Support and FAQs](product-and-services/gravity/support.md)
   * [Managing And Collecting Your Data](product-and-services/gravity/managing-and-collecting-your-data.md)
-* [Apex User Guide](product-and-services/apex/README.md)
-  * [Navigating Apex](product-and-services/apex/navigating-apex.md)
-  * [FAQs](product-and-services/apex/faqs.md)
-* [Nebula User Guide](product-and-services/nebula/README.md)
-  * [Explore Nebula](product-and-services/nebula/explore-nebula.md)
-  * [Analyzing data](product-and-services/nebula/analyzing-data.md)
-
-## About us
-
-* [About Macrocosmos](<README (1).md>)
-* [Bittensor](about-us/bittensor/README.md)
-  * [DTAO](about-us/bittensor/dtao.md)
-* [Macromedia](about-us/macromedia.md)
-* [News and updates](about-us/news-and-updates.md)
-* [Subnet Status Update](about-us/subnet-status-update.md)
-* [Product Updates](about-us/product-updates.md)
-
-***
-
-* [Pricing](pricing.md)

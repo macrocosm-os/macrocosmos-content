@@ -2,7 +2,7 @@
 description: Frequently asked questions and Data Universe support channels
 ---
 
-# Data Universe Support and FAQs
+# Gravity Support and FAQs
 
 {% columns %}
 {% column %}
@@ -32,7 +32,7 @@ description: Frequently asked questions and Data Universe support channels
 
 <summary>I have provided a credit card in my Data Universe Account. How do I get credits?</summary>
 
-Click on the **Payments and subscription** from the Data Universe Home Navigation, then click Add credits button. If you’d like to discuss special price policies for your needs or having some issues, reach us out at [support@macrocosmos.ai](mailto:support@macrocosmos.ai).
+Click on the **Payments and subscription** from the Gravity Home Navigation, then click Add credits button. If you’d like to discuss special price policies for your needs or having some issues, reach us out at [support@macrocosmos.ai](mailto:support@macrocosmos.ai).
 
 </details>
 
@@ -40,7 +40,7 @@ Click on the **Payments and subscription** from the Data Universe Home Navigatio
 
 <summary>Why my credit card is not accepted by the Data Universe Payment System?</summary>
 
-Your credit card may not be accepted because the Data Universe Payment System is powered by Stripe, and Stripe has certain limitations on which cards, countries, and issuing banks are supported. If your card falls outside those supported criteria, the payment will be declined, please try a different card or contact your bank/card issuer.
+Your credit card may not be accepted because the Gravity Payment System is powered by Stripe, and Stripe has certain limitations on which cards, countries, and issuing banks are supported. If your card falls outside those supported criteria, the payment will be declined, please try a different card or contact your bank/card issuer.
 
 </details>
 
@@ -66,7 +66,7 @@ Currently we accept payments in fiat currencies through the payments system. Cry
 
 <summary>Where can I find Data Universe prices?</summary>
 
-The Data Universe plans are listed at the [Data Universe Page](https://datauniverse.macrocosmos.ai/).
+The Gravity plans are listed at the [Data Universe Page](https://datauniverse.macrocosmos.ai/).
 
 </details>
 
@@ -84,7 +84,7 @@ Yes, the payment is taken per collected post and does not depend on the source.
 
 <summary>How much data can I collect?</summary>
 
-Data Universe does not have limits to the amount of posts to collect. It collects data based on your selected hashtags or subreddits, and updates the quantity in real time as miners process your task.
+Gravity does not have limits to the amount of posts to collect. It collects data based on your selected hashtags or subreddits, and updates the quantity in real time as miners process your task.
 
 </details>
 

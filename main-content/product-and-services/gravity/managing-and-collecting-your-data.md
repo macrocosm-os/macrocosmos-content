@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Managing And Collecting Your Data
 
 ### Track and Manage Your Tasks in Gravity
