@@ -149,7 +149,7 @@ final_score = median(task_scores)  # median across 5 tasks
 
 * Miners submit a single `.py` file.
 * Maximum submission size: 50,000 characters.
-* Submission Fee: $10.
+* Submission Fee: $10.00 USD.
 * Default round length: 1 day.
 * Standard [Incentive mechanism](../../subnet-1-apex/incentive-mechanism.md).
   * Miners code is revealed 1 day after evaluation.
@@ -250,6 +250,7 @@ At each time step, per battery:
   * `def policy(challenge: PolicyView, state: State) -> list[float]:`
 * Maximum submission size: 50,000 characters.
 * Default round length: 1 day.
+* Submission Fee: $1.00 USD.
 * Miners code is revealed 1 day after evaluation.
 * Logs are opened after the current round is completed.
 * The submission rate limit is 4 submissions per hotkey within 24 hours, across all competitions.
