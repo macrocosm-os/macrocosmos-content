@@ -4,7 +4,7 @@ description: Plug in to power decentralised AI model training
 
 # TAH User Guide
 
-The Training at Home (TAH) application allows you to connect and partake in our decentralized AI training platform [IOTA](../../subnets/subnet-9-iota/). You can plug in any hardware you have access to and earn rewards for powering decentralized AI model training.&#x20;
+The Training at Home (TAH) application allows you to connect and partake in our decentralized AI training platform [IOTA](../../subnets/subnet-9-iota.md). You can plug in any hardware you have access to and earn rewards for powering decentralized AI model training.&#x20;
 
 ## Installation
 
