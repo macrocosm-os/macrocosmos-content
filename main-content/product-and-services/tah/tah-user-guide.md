@@ -12,11 +12,7 @@ To start training at home, visit [https://iota.macrocosmos.ai/](https://iota.mac
 
 If you already have access, you can double click a `.dmg` file to install the app.&#x20;
 
-Press Open in the push notification:
-
-<figure><img src="../../.gitbook/assets/open-push (1).png" alt=""><figcaption></figcaption></figure>
-
-Video below demonstrates installation process
+Video below demonstrates installation process:
 
 {% embed url="https://drive.google.com/file/d/1KEEYE37jqd3Wgxuds-JQSaQVe9gkSc3e/view?usp=drive_link" %}
 
@@ -78,6 +74,7 @@ You’ll see metrics for your model, and in the center there will be a visualiza
 #### Updates
 
 * If an update is available, install the latest build before starting a new session for compatibility with the active run.
+  * If you do not update, you will not be able to join the current run.
 
 ## Rewards
 
@@ -125,11 +122,13 @@ To document how the Train at Home app is running, operation logs are stored on y
 
 
 
-
-
 #### Taxes & Compliance
 
 * You are responsible for complying with local tax and regulatory requirements related to rewards.
+
+
+
+
 
 {% columns %}
 {% column %}
