@@ -17,7 +17,7 @@ Its incentive mechanism rewards miners for gathering content that is desirable, 
 
 Currently, miners are incentivized to scrap data from platforms like **Reddit** and **X (Twitter).** Keeping the focus on rapidly shifting trends , because we all know in today’s world, stale data just doesn’t cut it.
 
-API Documentation is available at [Macrocosmos API](../../).
+API Documentation is available at [Macrocosmos API](readme/).
 
 Data Universe Marketplace and Data Collection <a href="https://app.macrocosmos.ai/gravity/marketplace" class="button primary">sign  up</a>.
 
@@ -35,13 +35,13 @@ As machine learning becomes more focused on the output, the **quality of trainin
 
 ## Architecture
 
-Subnet 13's decentralized design allows data to be distributed across miners and queried by validators, showcasing Bittensor's scalability. Macrocosmos is expanding data sources, developing a queryable API ([endpoints.md](../../developers/api-documentation/sn13-data-universe/endpoints.md "mention")), and is currently one of the largest data providers with access to over 55 billion scraped posts and comments. By providing the raw material for pre-training and inference, subnet 13 is poised to supercharge the next stage of AI model development within the Bittensor ecosystem.
+Subnet 13's decentralized design allows data to be distributed across miners and queried by validators, showcasing Bittensor's scalability. Macrocosmos is expanding data sources, developing a queryable API ([Broken link](/broken/pages/Wfdi9DT48sFFhsxsSNXj "mention")), and is currently one of the largest data providers with access to over 55 billion scraped posts and comments. By providing the raw material for pre-training and inference, subnet 13 is poised to supercharge the next stage of AI model development within the Bittensor ecosystem.
 
 ## Macrocosmos API
 
 Using the `GravityClient` in the **Macrocosmos API**, you can easily launch scraping tasks and get structured datasets built by miners.
 
-API Documentation is available at [Macrocosmos API](../../).
+API Documentation is available at [Macrocosmos API](readme/).
 
 You'll also need an API key. Visit [Data Universe](https://app.macrocosmos.ai/account) to get started.
 

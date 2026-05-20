@@ -10,7 +10,7 @@ description: Frequently asked questions and Data Universe support channels
 
 [Data Universe Platform](./)
 
-[Build with API](../../)
+[Build with API](../../subnets/subnet-13-data-universe/readme/)
 
 [User Guides](scraping-data.md)
 {% endcolumn %}
@@ -114,7 +114,7 @@ There are multiple use cases for social media data exist. You can have a look at
 
 <summary>Where do I start with mining on the subnet?</summary>
 
-Have a look at the guides for miners provided at [Subnet 13 Mining](../../subnets/subnet-13-data-universe/subnet-13-mining.md) section and contact us, if any additional questions.
+Have a look at the guides for miners provided at [Subnet 13 Mining](../../subnets/subnet-13-data-universe/data-universe-mining.md) section and contact us, if any additional questions.
 
 </details>
 
@@ -124,6 +124,6 @@ Have a look at the guides for miners provided at [Subnet 13 Mining](../../subnet
 
 <summary>Where do I start with validating on the subnet?</summary>
 
-Have a look at the guides for validators provided at [Subnet 13 Validating](../../subnets/subnet-13-data-universe/subnet-13-validating.md) and contact us, if any additional questions.
+Have a look at the guides for validators provided at [Subnet 13 Validating](../../subnets/subnet-13-data-universe/data-universe-validating.md) and contact us, if any additional questions.
 
 </details>

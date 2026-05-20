@@ -2,26 +2,8 @@
 
 ## Developers
 
-* [Macrocosmos API](README.md)
-  * [Subnet 13 Data Universe API](developers/macrocosmos-sdk/gravity.md)
-  * [API Keys](developers/macrocosmos-sdk/api-keys.md)
-  * [Macrocosmos MCP](developers/readme/macrocosmos-mcp.md)
-  * [OpenClaw Skills](developers/readme/openclaw-skills.md)
-* [API Documentation](developers/api-documentation/README.md)
+* [API Documentation](README.md)
   * [Accessing API Keys](developers/api-documentation/accessing-api-keys.md)
-  * [SN13 - Data Universe](developers/api-documentation/sn13-data-universe/README.md)
-    * [Endpoints](developers/api-documentation/sn13-data-universe/endpoints.md)
-    * [API Key management](developers/api-documentation/sn13-data-universe/api-key-management.md)
-    * [Scraping Youtube Data](developers/api-documentation/sn13-data-universe/scraping-youtube-data.md)
-
-## Basics
-
-* [Editor](basics/editor.md)
-* [Markdown](basics/markdown.md)
-* [Images & media](basics/images-and-media.md)
-* [Interactive blocks](basics/interactive-blocks.md)
-* [OpenAPI](basics/openapi.md)
-* [Integrations](basics/integrations.md)
 
 ## SUBNETS
 
@@ -37,9 +19,15 @@
   * [Subnet 9 Mining](subnets/subnet-9-iota/mining.md)
   * [Subnet 9 Validating](subnets/subnet-9-iota/validating.md)
 * [Subnet 13 Data Universe](subnets/subnet-13-data-universe/README.md)
-  * [Subnet 13 Incentive Mechanism](subnets/subnet-13-data-universe/subnet-13-incentive-mechanism.md)
-  * [Subnet 13 Mining](subnets/subnet-13-data-universe/subnet-13-mining.md)
-  * [Subnet 13 Validating](subnets/subnet-13-data-universe/subnet-13-validating.md)
+  * [Data Universe MCP](subnets/subnet-13-data-universe/data-universe-mcp.md)
+  * [Data Universe Incentive Mechanism](subnets/subnet-13-data-universe/subnet-13-incentive-mechanism.md)
+  * [Data Universe Mining](subnets/subnet-13-data-universe/data-universe-mining.md)
+  * [Data Universe Validating](subnets/subnet-13-data-universe/data-universe-validating.md)
+  * [Data Universe API](subnets/subnet-13-data-universe/readme/README.md)
+    * [Getting Started](subnets/subnet-13-data-universe/readme/gravity.md)
+    * [API Keys](subnets/subnet-13-data-universe/readme/api-keys.md)
+  * [Data Universe MCP](subnets/subnet-13-data-universe/macrocosmos-mcp.md)
+  * [Data Universe OpenClaw Skills](subnets/subnet-13-data-universe/data-universe-openclaw-skills.md)
 
 ## PRODUCT AND SERVICES
 

@@ -1,4 +1,4 @@
-# Subnet 13 Validating
+# Data Universe Validating
 
 ### Introduction
 
@@ -90,11 +90,6 @@ Your validator `.env` should look like the following after setup for all data so
 
 ```
 APIFY_API_TOKEN="your_apify_token"
-REDDIT_CLIENT_ID="your_reddit_client_id"
-REDDIT_CLIENT_SECRET="your_reddit_client_secret"
-REDDIT_USERNAME="your_reddit_username"
-REDDIT_PASSWORD="your_reddit_password"
-YOUTUBE_API_KEY="your_youtube_api_key"
 ```
 
 Please see docs on [Apify](https://github.com/macrocosm-os/data-universe/blob/main/docs/apify.md), [Reddit](https://github.com/macrocosm-os/data-universe/blob/main/docs/reddit.md), and [Youtube](https://github.com/macrocosm-os/data-universe/blob/main/docs/youtube.md) for more information on the environment variables above.

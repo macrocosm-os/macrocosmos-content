@@ -1,8 +1,4 @@
----
-description: Data Universe API – Social Media Data Skill
----
-
-# OpenClaw Skills
+# Data Universe OpenClaw Skills
 
 Fetch real-time social media data from X (Twitter) and Reddit by keyword, username, date range, and filters with engagement metrics via Macrocosmos SN13 API on Bittensor.
 

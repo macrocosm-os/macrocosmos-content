@@ -1,16 +1,16 @@
 ---
-description: Using Macrocosmos MCP with Claude Desktop or Cursor
+description: Using Data Universe MCP with Claude Desktop or Cursor
 ---
 
-# Macrocosmos MCP
+# Data Universe MCP
 
-## Macrocosmos MCP
+## Data Universe MCP
 
-Using Macrocosmos MCP with Claude Desktop or Cursor
+Using Data Universe MCP with Claude Desktop or Cursor
 
 ***
 
-Macrocosmos MCP (Model Context Protocol) allows you to integrate with Data Universe APIs directly into Claude for Desktop, Cursor, or your custom LLM pipeline. Query **X (Twitter)** and **Reddit** data on demand from your AI environment!
+Data Universe MCP (Model Context Protocol) allows you to integrate with Data Universe APIs directly into Claude for Desktop, Cursor, or your custom LLM pipeline. Query **X (Twitter)** and **Reddit** data on demand from your AI environment!
 
 ### Prerequisites
 

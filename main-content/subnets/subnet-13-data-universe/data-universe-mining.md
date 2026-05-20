@@ -1,10 +1,10 @@
-# Subnet 13 Mining
+# Data Universe Mining
 
 ### Introduction
 
 Miners scrape data from various Data Sources and get rewarded based on how much valuable data they have, see the [Incentive Mechanism](https://github.com/macrocosm-os/data-universe/blob/main/README.md#incentive-mechanism) for the full details. The incentive mechanism does not require a Miner to scrape from all Data Sources, allowing Miners to specialize and choose exactly what kinds of data they want to scrape. However, Miners are scored, in part, based on the total amount of data they have. So Miners should make sure they are scraping sufficient amounts of data.
 
-The Miner stores all scraped data in their local database.
+The Miner stores all scraped data in their local database, and uploads it to a shared S3 bucket.
 
 ### System Requirements
 
