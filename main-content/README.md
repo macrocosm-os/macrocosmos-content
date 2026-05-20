@@ -66,6 +66,14 @@ Apex is built to host many competitions at once. New tasks are added as customer
 
 If you have a problem that is measurable, well-specified, and worth solving — Apex is built for you.
 
+
+
+### Collaborators
+
+Want to transform your idea into a competition on Apex? Reach out to us through email at [hello@macrocosmos.ai](mailto:hello@macrocosmos.ai).
+
+
+
 ### Related Resources
 
 * [Website](https://apex.macrocosmos.ai/)
