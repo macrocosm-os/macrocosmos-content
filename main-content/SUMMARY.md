@@ -40,28 +40,6 @@
   * [Subnet 13 Incentive Mechanism](subnets/subnet-13-data-universe/subnet-13-incentive-mechanism.md)
   * [Subnet 13 Mining](subnets/subnet-13-data-universe/subnet-13-mining.md)
   * [Subnet 13 Validating](subnets/subnet-13-data-universe/subnet-13-validating.md)
-* [Legacy Subnet 25 Mainframe](subnets/subnet-25-mainframe/README.md)
-  * [Subnet 25 Getting Started](subnets/subnet-25-mainframe/subnet-25-getting-started.md)
-  * [Subnet 25 Mainframe API](developers/api-documentation/sn25-mainframe/README.md)
-    * [Running Folding API](developers/api-documentation/sn25-mainframe/running-folding-api.md)
-    * [API Keys](developers/api-documentation/sn25-mainframe/api-keys.md)
-    * [Folding API](developers/api-documentation/sn25-mainframe/folding-api/README.md)
-      * [Running Folding API Server](developers/api-documentation/sn25-mainframe/folding-api/running-folding-api-server.md)
-      * [Endpoints](developers/api-documentation/sn25-mainframe/folding-api/endpoints.md)
-    * [Organic API](developers/api-documentation/sn25-mainframe/organic-api/README.md)
-      * [Endpoints](developers/api-documentation/sn25-mainframe/organic-api/endpoints.md)
-  * [Subnet 25 Incentive Mechanism](subnets/subnet-25-mainframe/subnet-25-incentive-mechanism.md)
-  * [Subnet 25: Roadmap](subnets/subnet-25-mainframe/subnet-25-roadmap.md)
-
-***
-
-* [Subnet 37 Finetuning](subnet-37-finetuning/README.md)
-  * [Subnet 37 Getting Started](subnet-37-finetuning/subnet-37-getting-started.md)
-  * [Subnet 37 Mining Setup Guide](subnet-37-finetuning/subnet-37-miners.md)
-  * [Subnet 37 Validating Setup Guide](subnet-37-finetuning/subnet-37-validators.md)
-  * [Subnet 37 Incentive Mechanism](subnet-37-finetuning/subnet-37-incentive-mechanism.md)
-  * [Subnet 37 Competitions](subnet-37-finetuning/subnet-37-competitions.md)
-  * [Subnet 37: Roadmap](subnet-37-finetuning/subnet-37-roadmap.md)
 
 ## PRODUCT AND SERVICES
 

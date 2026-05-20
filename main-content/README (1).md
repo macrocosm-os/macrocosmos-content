@@ -19,8 +19,8 @@ We run five subnets:
 * [Subnet 1 Apex](/broken/pages/Cm9Js9dVXdFcOhdBb1Am)
 * [Subnet 9 IOTA](subnets/subnet-9-iota/)
 * [Subnet 13 Data-Universe](subnets/subnet-13-data-universe/)
-* [Subnet 25 Mainframe](subnets/subnet-25-mainframe/)
-* [Subnet 37 Finetuning](subnet-37-finetuning/)
+* [Subnet 25 Mainframe](/broken/pages/HjGP9V2PTeMBtyY7D1Wa)
+* [Subnet 37 Finetuning](/broken/pages/RCv8Z2GxuLWbsVGRQ4fc)
 
 Listen to our CEO Will Squires speak about how Macrocosmos shaped the ecosystem - [video link](https://x.com/MacrocosmosAI/status/1889046770233364873).
 
