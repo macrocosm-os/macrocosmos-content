@@ -357,8 +357,8 @@ A losing miner is eliminated from the bracket. Surviving miners are paired up fo
 
 #### Aggregate Stats
 
-* **`eval_raw_score`** = the **sum** of per-match scores across every duel the miner has played this round.
-* **`eval_score`** = the normalized **average** = `eval_raw_score / number_of_duels_played`.
+* **`eval_raw_score`** = the number of rounds this submission has survived.
+* **`eval_score = rounds_survived / total_rounds`**
 
 These numbers do not determine the bracket winner - they are tracking stats. The round winner is the **last surviving miner in the bracket**.
 
