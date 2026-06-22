@@ -1,5 +1,5 @@
 ---
-description: Distributed training optimization
+description: Algorithmic distributed training optimization
 ---
 
 # iota Simulator Competition
