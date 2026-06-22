@@ -63,7 +63,7 @@ This will prompt you to enter the file path to your solution path and competitio
 Or, in one line:&#x20;
 
 ```
-apex submit <Path_To_Solution> -c <Competition_ID>
+apex submit -c <Competition_ID> <Path_To_Solution>
 ```
 
 * View the current \<Competition\_ID> and \<Round\_Number> via the dashboard.
