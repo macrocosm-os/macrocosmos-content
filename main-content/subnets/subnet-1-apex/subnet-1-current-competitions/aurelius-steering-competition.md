@@ -21,7 +21,8 @@ The goal is to explore — at scale and across many independent miners — how w
 1. Each round targets one **concept** (e.g. _positive sentiment_). Prompts are never revealed in advance, but the concept name itself is published so miners know what to steer toward.
 2. A miner crafts a single **steering direction** (a unit vector in the model's hidden space) plus a scalar **alpha** (how hard to push), and submits it as a small `.safetensors` file.
 3. At the **end of the round**, all submissions are scored **in a batch** on GPU: the validator loads the model, adds `alpha × direction` to the residual stream at a fixed layer, generates completions for a held-out prompt sample, and scores how strongly each completion expresses the concept.
-4. Scores are **baseline-adjusted and normalized** so the unsteered model scores 0.0 and a perfect steer scores 1.0. The highest score wins the round (winner-take-all, standard Apex incentive).
+4. A completion only counts if it is also **coherent**: the unsteered base model judges every completion, and incoherent ones score zero (see Coherence gate). Steering so hard that the model degenerates into concept-spam does not pay.
+5. Scores are **baseline-adjusted and normalized** so the unsteered model scores 0.0 and a perfect steer scores 1.0. The highest score wins the round (winner-take-all, standard Apex incentive).
 
 ### The model and the steering mechanism
 
@@ -47,10 +48,6 @@ The scorer is concept-agnostic; each round names one active concept. The four su
 | `positive_sentiment` | Skews strongly positive in tone (AFINN-style net valence)                       |
 | `hedging`            | Uses hedging language — "perhaps", "it might", "arguably", "it depends"         |
 
-{% hint style="info" %}
-The competition title will contain the current concept type being accepted.
-{% endhint %}
-
 Each concept is scored by a deterministic, version-pinned lexicon/detector, so results are reproducible.
 
 **Which concept goes in your file:** every submission declares its target concept in the safetensors `concept` metadata key (one of the four strings above — e.g. `"birthday_cake"`). You must set it to the **round's currently-active concept** — the one published for the round you are submitting into — _not_ whichever concept you happened to train your direction on. The active concept is announced per round and changes manually over time (see Round structure); a direction built for last round's concept must be re-declared (and ideally re-derived) for the new one. A submission whose declared `concept` does not match the round's active concept is **rejected, not scored 0** — and this is now caught at submission time by a screener, so you find out immediately instead of at end-of-round.
@@ -66,13 +63,9 @@ A single `.safetensors` file (\~15 KB) containing exactly one tensor plus three 
 | metadata `layer`   | must equal `32`                                                                                                                                    |
 | metadata `concept` | one of the four concept strings — must equal the **round's active concept** (the published concept for this round), not the concept you trained on |
 
-{% hint style="danger" %}
-Incorrect metadata for the given round—such as an incorrect `concept`—will result in a rejected submission.&#x20;
-{% endhint %}
-
 Every failed check is a _typed rejection_ (bad shape/dtype, non-unit-norm, non-finite, wrong layer, concept mismatch, alpha out of bounds), not a silent zero. The reference generator in scripts/example\_submission\_generator.py documents each rule inline.
 
-> **Tuning `alpha`:** for gemma-3-12b at layer 32 the residual L2 magnitude is \~57k. Empirically, `alpha` below \~16k tends to be inert, the useful band is roughly **12k–16k**, and above \~20k the model degenerates into repetition. Start around `alpha=12000` and sweep from there.
+> **Tuning `alpha`:** for gemma-3-12b at layer 32 the residual L2 magnitude is \~57k. Empirically, `alpha` below \~16k tends to be inert, the useful band is roughly **12k–16k**, and above \~20k the model degenerates into repetition. Start around `alpha=12000` and sweep from there. Over-steering is now doubly punished: degenerate completions are zeroed by the coherence gate, and a larger `alpha` directly shrinks the minimal-intervention `efficiency` multiplier.
 
 ### Evaluation
 
@@ -87,8 +80,8 @@ Unlike per-submission competitions, **evals are done in a batch at the end of th
 #### Baseline and normalization
 
 1. **Baseline:** at round generation, the validator scores an **unsteered** submission (a unit vector with `alpha=0`, so the model output is unaffected) on a freshly drawn round seed. This `baseline_score` is the concept's natural hit rate with no steering.
-2. **Raw score:** each miner's submission is scored as a hit-fraction in `[0, 1]` — the share of completions that express the concept above its detector threshold.
-3.  **Headroom normalization:** the final `eval_score` removes the baseline and rescales by the available headroom, so every concept maps the unsteered model to 0.0 and a perfect steer to 1.0:
+2. **Raw score:** each submission is posted to the scorer, which returns the concept score (a hit-fraction in `[0, 1]`). The eval pipeline takes the returned number as the submission's `raw_score` (stored as `eval_raw_score`) — _raw_ meaning **before normalization**. The coherence gate and the minimal-intervention reward have both already been applied inside the scorer before it returns the number; from the validator's side this is just the score that came back.
+3.  **Headroom normalization:** the `eval_score` we store in the DB removes the baseline and rescales by the available headroom, so every concept maps the unsteered model to 0.0 and a perfect steer to 1.0:
 
     ```
     eval_score = clip((raw_score - baseline_score) / (1 - baseline_score), 0, 1)
@@ -96,9 +89,25 @@ Unlike per-submission competitions, **evals are done in a batch at the end of th
 
     This makes scores comparable across concepts: a hard concept (high baseline) and an easy one (low baseline) are judged purely on how much of the _remaining_ headroom the miner captures.
 
-#### Minimal-intervention reward
+#### Coherence gate (on by default)
 
-As of the **v0.1.4** scorer, a round may optionally reward steering that achieves the concept with a **gentler push** — a smaller total intervention on the residual stream — over brute-forcing the detector with an enormous one. (This replaces the experimental Hoyer-sparsity penalty from v0.1.3, which is gone in v0.1.4.)
+As of the **v0.1.5** scorer, every completion is additionally judged for **coherence**, and incoherent completions contribute **zero** to the concept score — regardless of how strongly they express the concept. This closes the degenerate strategy of pushing `alpha` so hard that the model collapses into on-concept gibberish: the detector would still fire, but the coherence gate zeroes those completions.
+
+How it works, per `/score` call:
+
+1. After the steered completions are generated, the scorer runs a **second, unsteered pass** of the same base model as a judge: for each `(prompt, completion)` pair it asks whether the output coherently follows the instruction, answering `True`/`False`. (An unparseable judge answer counts as coherent — benefit of the doubt.)
+2. The day-score then only credits completions that are both **on-concept and coherent**: in `hit_rate` mode a completion counts as `hit × coherence_hit`; in `graded` mode the clamped intensity is multiplied by the coherence bit.
+
+Consequences worth knowing:
+
+* **`hit_count` in the response stays the raw detector count** (coherence-blind); `coherence_hit_count` reports how many completions the judge passed. The score can therefore be _lower_ than `hit_count / total`. Each completion's own `coherence_hit` is in the history file.
+* **The judge is imperfect.** In observed runs it marks roughly 15–20% of ordinary _unsteered_ completions incoherent, so treat it as a strict gate: a steered completion must read as a genuinely well-formed response to survive.
+* **The baseline is judged too.** The unsteered baseline goes through the same gate, so normalization stays apples-to-apples within a round.
+* The judge pass roughly costs a second (cheaper) generation pass; it is controlled per round by `check_coherence` in the competition's `input_data_generator_args` — stamped onto the round input (`AureliusSteeringInputDataSchema.check_coherence`) and sent on **every** `/score` call, baseline included. It is **on by default**; `false` skips the judge pass entirely and every completion is treated as coherent (pre-v0.1.5 scoring).
+
+#### Minimal-intervention reward (enabled in current rounds)
+
+As of the **v0.1.4** scorer, a round may reward steering that achieves the concept with a **gentler push** — a smaller total intervention on the residual stream — over brute-forcing the detector with an enormous one. (This replaces the experimental Hoyer-sparsity penalty from v0.1.3, which is gone in v0.1.4.) It is off unless configured, but **current rounds run with `push_scale = 555000`** — assume it is on.
 
 This all happens **inside the scorer**, before the eval pipeline sees a number. When enabled, the scorer multiplies its pre-reward concept score by an `efficiency` factor in `(0, 1]`, derived from the submission's total absolute steering `push`, to produce the `score` it returns:
 
@@ -109,7 +118,7 @@ efficiency = exp(-push / push_scale)            # in (0, 1]; larger push_scale =
 
 A bigger `push_scale` tolerates more steering before discounting; as `push_scale → ∞` the factor → 1 (no discount). The day-score gates it (a submission that generates nothing on-concept stays at 0), and `efficiency ∈ (0, 1]` with `raw_score ∈ [0, 1]`, so the product stays in `[0, 1]`.
 
-**It is off by default** and is enabled per round, by precedence **request > per-concept config > off**:
+It is enabled per round, by precedence **request > per-concept config > off**:
 
 * **From the competition (the apex path):** set `push_scale` in the competition's `input_data_generator_args`. Round generation stamps it onto the round input (`AureliusSteeringInputDataSchema.push_scale`) and the eval runner sends it on **every** `/score` call in the round — so the whole round (and its baseline) is scored under one setting. Omit it (or `null`) to leave the reward off. A recommended starting value is **\~555000**.
 * **In the scorer config:** a non-null `push_scale` for a concept in the scorer's `config/competition.yaml` (used when the request omits it).
@@ -119,20 +128,23 @@ A bigger `push_scale` tolerates more steering before discounting; as `push_scale
 | Scorer response field | Meaning                                                                                 |
 | --------------------- | --------------------------------------------------------------------------------------- |
 | `score`               | the concept score the scorer returns, **after** the reward (`= raw_score × efficiency`) |
-| `raw_score`           | the scorer's score **before** the reward                                                |
+| `raw_score`           | the scorer's score **before** the reward — already coherence-gated                      |
 | `push`                | total absolute steering, \`                                                             |
 | `push_scale`          | the scale in effect for this request (`null` = off)                                     |
 | `efficiency`          | the multiplier applied: `exp(-push / push_scale)` (`1.0` when off)                      |
+| `check_coherence`     | whether the coherence judge ran for this request                                        |
+| `coherence_hit_count` | completions the judge passed (`null` when the judge was skipped)                        |
 
-> **⚠️ `raw_score` means two different things across the two layers.** The scorer's `raw_score` is its _pre_-reward score. The eval pipeline's `raw_score` (what we store as `eval_raw_score`) is the scorer's _post_-reward **`score`** field. The full chain:
+> **⚠️ `raw_score` means two different things across the two layers.** The scorer's `raw_score` is its _pre_-reward score (with the coherence gate already applied). The eval pipeline's `raw_score` (what we store as `eval_raw_score`) is the scorer's _post_-reward **`score`** field. The full chain, with both features on:
 >
 > ```
+> raw_score  (scorer)  =  coherence-gated day-score (incoherent completions count 0)
 > score      (scorer)  =  raw_score (scorer) × efficiency
 > raw_score  (eval / eval_raw_score)  =  score (scorer)
 > eval_score (DB)      =  clip((raw_score − baseline_score) / (1 − baseline_score), 0, 1)
 > ```
 >
-> With the reward off (the default), `efficiency = 1.0`, so the scorer's `raw_score` and `score` are equal and the distinction collapses.
+> With the reward off, `efficiency = 1.0`, so the scorer's `raw_score` and `score` are equal and the distinction collapses.
 
 > **Note on the baseline.** The unsteered baseline submission has `alpha = 0`, so `push = 0` and `efficiency = exp(0) = 1` for any `push_scale` — the baseline is never discounted. So even with the reward on, a (discounted) miner score is normalized against an undiscounted `baseline_score`. This is intended — the baseline is the no-steer reference point — but worth being aware of before enabling it.
 
@@ -155,7 +167,7 @@ A bigger `push_scale` tolerates more steering before discounting; as `push_scale
 * A direction is a single unit vector in the model's 3840-dim hidden space at layer 32. A common, effective approach is **diff-of-means**: collect layer-32 activations on text that _does_ express the concept and text that does not, take the difference of the two means, and L2-normalize it. That difference vector points from "not the concept" toward "the concept".
 * Other approaches: probing classifiers (use the learned weight vector as the direction), sparse-autoencoder features, or contrastive activation pairs. Anything that yields a meaningful direction at layer 32 is fair game.
 * **Always work against the canonical config** (gemma-3-12b-it, 4-bit NF4, bf16, layer 32). Directions derived from a differently-quantized or different-layer setup will not transfer cleanly.
-* **Then tune `alpha`** against real steered completions. The direction sets _what_ to push toward; `alpha` sets _how hard_. Sweep `alpha` (≈12k–16k) and watch for the sweet spot before the model degenerates.
+* **Then tune `alpha`** against real steered completions. The direction sets _what_ to push toward; `alpha` sets _how hard_. Sweep `alpha` (≈12k–16k) and watch for the sweet spot before the model degenerates — completions that stop reading as coherent answers score zero, and every extra unit of push also costs `efficiency`. The winning direction is the one that steers convincingly with the _least_ intervention, not the hardest shove.
 * Normalize before submitting: `direction = direction / ||direction||`.
 
 #### Regenerating the baseline and a random steer
@@ -182,22 +194,10 @@ The `--concept` value must be one of the four supported concepts and must equal 
 
 1. Build your `direction` for the round's active concept and tune `alpha`.
 2. Write the `.safetensors` submission (use the generator as a template). Confirm it has the single `direction` tensor (`(3840,)`, `float32`, unit-norm) and the `alpha` / `layer=32` / `concept` metadata.
-3. Embed metadata into the file (see submission format for details).
-4. Submit it through the standard Apex miner flow for the `aurelius_steering` competition before the round closes.
-5. All submissions are scored together when the round ends; your submission's code is revealed after the reveal window, and the history file lets you review the per-prompt completions your direction produced.
-
-#### Miner Submissions
-
-* Default round length: 1 day.
-* Submission Fee: $1.00 USD.
-* Miners code is revealed 1 day after evaluation.
-* 1% `raw_score` threshold to beat current top scorer.
-* There are no logs available for this competition.
-* The submission rate limit is 4 submissions per hotkey within 24 hours, across all competitions.
-* Example safetensors containing baseline (zero steer) and random steer safetensors are provided for each concept type in the competition folder.
+3. Submit it through the standard Apex miner flow for the `aurelius_steering` competition before the round closes.
+4. All submissions are scored together when the round ends; your submission's code is revealed after the reveal window, and the history file lets you review the per-prompt completions your direction produced.
 
 ### References
 
-* Aurelius — [Homepage](http://aureliusaligned.ai/)
-* Aurelius — [Github scorer source](https://github.com/Aurelius-Protocol/concept-competition/tree/main)
 * Anthropic — [Golden Gate Claude](https://www.anthropic.com/news/golden-gate-claude)
+* Aurelius — [concept-competition (scorer source)](https://github.com/Aurelius-Protocol/concept-competition/tree/main)
