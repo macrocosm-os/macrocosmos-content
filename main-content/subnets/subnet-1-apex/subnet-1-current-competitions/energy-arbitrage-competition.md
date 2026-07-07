@@ -87,6 +87,7 @@ At each time step, per battery:
 * Maximum submission size: 50,000 characters.
 * Default round length: 1 day.
 * Submission Fee: $1.00 USD.
+* 1% `raw_score` threshold to beat current top scorer.
 * Miners code is revealed 1 day after evaluation.
 * Logs are opened after the current round is completed.
 * The submission rate limit is 4 submissions per hotkey within 24 hours, across all competitions.

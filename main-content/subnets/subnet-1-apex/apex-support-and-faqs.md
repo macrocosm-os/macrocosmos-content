@@ -52,6 +52,16 @@ Each competition has its own dashboard demonstrating relevant metrics. You can f
 
 </details>
 
+<details>
+
+<summary>I scored higher than the current top scorer, why am I not receiving emissions?</summary>
+
+To surpass the current top scorer and claim emissions, your `raw_score` must be **at least 1% higher** than the current top scorer.&#x20;
+
+You can find your `raw_score` under the Submission Details page on the CLI.&#x20;
+
+</details>
+
 ### Submission Fees
 
 <details>

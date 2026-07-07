@@ -137,6 +137,7 @@ final_score = median(task_scores)  # median across 5 tasks
 * Maximum submission size: 50,000 characters.
 * Submission Fee: $10.00 USD.
 * Default round length: 1 day.
+* 1% `raw_score` threshold to beat current top scorer.
 * Standard [Incentive mechanism](../incentive-mechanism.md).
   * Miners code is revealed 1 day after evaluation.
   * Logs are opened after the current round is completed.

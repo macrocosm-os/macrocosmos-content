@@ -191,6 +191,7 @@ The `--concept` value must be one of the four supported concepts and must equal 
 * Default round length: 1 day.
 * Submission Fee: $1.00 USD.
 * Miners code is revealed 1 day after evaluation.
+* 1% `raw_score` threshold to beat current top scorer.
 * There are no logs available for this competition.
 * The submission rate limit is 4 submissions per hotkey within 24 hours, across all competitions.
 * Example safetensors containing baseline (zero steer) and random steer safetensors are provided for each concept type in the competition folder.
