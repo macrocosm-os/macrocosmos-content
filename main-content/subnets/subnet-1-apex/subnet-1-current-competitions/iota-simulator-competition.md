@@ -111,7 +111,9 @@ In this image:&#x20;
 Miners implement an HTTP server with two endpoints — `/route` and `/balance-orchestrator` — that control how activations are routed through a multi-layer miner network. Each evaluation task runs a simulation, each with a different random seed and number of layers (3-8) simulating 5 epochs of 500 activations traversing the network forward and backward through all layers.
 
 * `/route` is called once per activation routing decision.
+  * 0.5 second timeout per call.
 * `/balance-orchestrator` is called once per epoch, between epochs.
+  * 0.5 second timeout per call.
 
 {% hint style="info" %}
 An example of a submission implementing **random** routing and balancing can be found in the [iota simulator folder](https://github.com/macrocosm-os/apex/tree/main/shared/competition/src/competition/iota_simulator).
@@ -135,7 +137,7 @@ final_score = median(task_scores)  # median across 5 tasks
 
 * Miners submit a single `.py` file.
 * Maximum submission size: 50,000 characters.
-* Submission Fee: $10.00 USD.
+* Submission Fee: $1.00 USD.
 * Default round length: 1 day.
 * 1% `raw_score` threshold to beat current top scorer.
 * Standard [Incentive mechanism](../incentive-mechanism.md).
