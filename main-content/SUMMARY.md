@@ -12,6 +12,7 @@
     * [RL Tron Competition](subnets/subnet-1-apex/subnet-1-current-competitions/rl-tron-competition.md)
     * [Energy Arbitrage Competition](subnets/subnet-1-apex/subnet-1-current-competitions/energy-arbitrage-competition.md)
     * [iota Simulator Competition](subnets/subnet-1-apex/subnet-1-current-competitions/iota-simulator-competition.md)
+    * [Text clustering](subnets/subnet-1-apex/subnet-1-current-competitions/text-clustering.md)
   * [Apex Support and FAQs](subnets/subnet-1-apex/apex-support-and-faqs.md)
 * [Subnet 9 IOTA](subnets/subnet-9-iota.md)
 * [Subnet 13 Data Universe](subnets/subnet-13-data-universe/README.md)
