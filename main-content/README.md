@@ -9,7 +9,7 @@ description: Subnet 1 — Apex. A routing layer for intelligence.
 * Visit the [Apex website](https://apex.macrocosmos.ai/)
 * Miners:
   * Read through:
-    * [Current Competitions](subnets/subnet-1-apex/subnet-1-current-competitions/)
+    * [Current Competitions](subnets/new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md)
     * [Miner Setup](subnets/subnet-1-apex/subnet-1-base-miner-setup/) and [Apex CLI](subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli.md) guides
     * [Incentive Mechanism](subnets/subnet-1-apex/incentive-mechanism.md)
 * Validators:

@@ -1,7 +1,0 @@
----
-description: Registry of competitions currently active on SN1 APEX.
----
-
-# Subnet 1 Current Competitions
-
-<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td align="center"><a href="aurelius-steering-competition.md">Aurelius Steering</a></td><td></td><td><a href="../../../.gitbook/assets/image (24) (1).png">image (24) (1).png</a></td></tr><tr><td align="center"><a href="rl-tron-competition.md">RL Tron</a></td><td></td><td><a href="../../../.gitbook/assets/8.jpg">8.jpg</a></td></tr><tr><td align="center"><a href="energy-arbitrage-competition.md">Energy Arbitrage</a></td><td></td><td><a href="../../../.gitbook/assets/7 (1).jpg">7 (1).jpg</a></td></tr><tr><td align="center"><a href="iota-simulator-competition.md"><code>iota</code> Simulator</a></td><td></td><td><a href="../../../.gitbook/assets/iota_sim_competition_image.png">iota_sim_competition_image.png</a></td></tr></tbody></table>

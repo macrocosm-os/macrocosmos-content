@@ -106,7 +106,7 @@ Bittensor wallet = optional payout address for rewards.
 
 <summary><strong>Do I need to connect a Bittensor wallet to use Train at home?</strong></summary>
 
-No. Connecting the wallet is optional. If you'd like to receive rewards paste your public coldkey. Support for popular wallet managers is coming soon. See the [Rewards](rewards.md) page for payout details.
+No. Connecting the wallet is optional. If you'd like to receive rewards paste your public coldkey. Support for popular wallet managers is coming soon. See the [Rewards](https://github.com/macrocosm-os/macrocosmos-content/blob/main/main-content/product-and-services/tah/rewards.md) page for payout details.
 
 </details>
 

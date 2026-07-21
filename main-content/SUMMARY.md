@@ -7,7 +7,7 @@
   * [Subnet 1 Mining](subnets/subnet-1-apex/subnet-1-base-miner-setup/README.md)
     * [Apex CLI](subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli.md)
   * [Subnet 1 Validating](subnets/subnet-1-apex/validating.md)
-  * [Subnet 1 Current Competitions](subnets/subnet-1-apex/subnet-1-current-competitions/README.md)
+  * [Subnet 1 Current Competitions](subnets/new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md)
     * [Aurelius Steering Competition](subnets/subnet-1-apex/subnet-1-current-competitions/aurelius-steering-competition.md)
     * [RL Tron Competition](subnets/subnet-1-apex/subnet-1-current-competitions/rl-tron-competition.md)
     * [Energy Arbitrage Competition](subnets/subnet-1-apex/subnet-1-current-competitions/energy-arbitrage-competition.md)

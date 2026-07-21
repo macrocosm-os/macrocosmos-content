@@ -8,7 +8,7 @@ description: Frequently asked questions and Apex support channels
 {% column %}
 ![](../../.gitbook/assets/roket-icon.png) **Get started**
 
-[Current Competitions](subnet-1-current-competitions/)
+[Current Competitions](../new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md)
 
 [Mining Guide](subnet-1-base-miner-setup/)
 
@@ -32,7 +32,7 @@ description: Frequently asked questions and Apex support channels
 
 <summary>Where do I start?</summary>
 
-Read the docs related to the [Apex subnet](../../) and [current competitions](subnet-1-current-competitions/). Have a look at the [Subnet 1 Mining](subnet-1-base-miner-setup/) page for setup guidance.&#x20;
+Read the docs related to the [Apex subnet](../../) and [current competitions](../new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md). Have a look at the [Subnet 1 Mining](subnet-1-base-miner-setup/) page for setup guidance.&#x20;
 
 </details>
 
