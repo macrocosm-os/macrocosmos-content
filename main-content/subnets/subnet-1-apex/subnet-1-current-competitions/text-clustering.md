@@ -1,4 +1,4 @@
-# Text clustering
+# Text Clustering
 
 The Text Clustering competition challenges miners to build fast, CPU-only clustering algorithms that approximate industry-standard NLP pipelines (sentence embeddings + UMAP + HDBSCAN) on real social media data from Bittensor Subnet 13's data scraping product, Gravity. Clustering messy real-world text by topic is the engine behind every trend-detection and feedback-analysis pipeline — this competition crowdsources the best version of it.
 
@@ -91,7 +91,7 @@ To surpass the current winner, a miner must earn a raw score at least 1% higher 
 
 * Miners submit a single `.py` file implementing the FastAPI server above.
 * Maximum submission size: 50,000 characters.
-* Submission fee: $1.00 USD.
+* Submission fee: $20.00 USD.
 * Default round length: 1 day.
 * Miner code is revealed 1 day after evaluation.
 * Logs are opened after the current round is completed.

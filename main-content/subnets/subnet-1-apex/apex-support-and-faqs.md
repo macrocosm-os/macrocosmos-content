@@ -70,9 +70,7 @@ You can find your `raw_score` under the Submission Details page on the CLI.&#x20
 
 Submission fees are variable per competition. If a competition is not listed here, then it's free to submit to.
 
-* RL Tron: $1.40 per submission
-* Energy Arbitrage: $1.00 per submission
-* Iota Simulator: $10.00 per submission
+* All active competitions: $20 USD per submission.
 
 </details>
 
