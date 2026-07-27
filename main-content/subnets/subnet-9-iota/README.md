@@ -14,7 +14,7 @@ Here we introduce IOTA (Incentivised Orchestrated Training Architecture), an arc
 
 Various solutions attempt to solve key technical hurdles regarding distributed training but lack an incentive model, while others provide economic incentives but have yet to achieve the training performance of a coordinated cluster. IOTA bridges this gap by combining novel techniques that jointly tackle all three limitations.
 
-<figure><img src="../.gitbook/assets/IOTA-training-subnet9.jpg" alt=""><figcaption><p>Centralised vs decentralised LLM training</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/IOTA-training-subnet9.jpg" alt=""><figcaption><p>Centralised vs decentralised LLM training</p></figcaption></figure>
 
 
 
@@ -25,7 +25,7 @@ The technical primer doc [INCENTIVISED ORCHESTRATED TRAINING ARCHITECTURE\
 
 Have a look at the [Miners Dashboard](https://iota.macrocosmos.ai/) to get the updates on the training process.
 
-<figure><img src="../.gitbook/assets/Miners-dashboard copy 2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Miners-dashboard copy 2.png" alt=""><figcaption></figcaption></figure>
 
 For more details on how to contribute you can have a looks at [**mining instructions**](https://app.gitbook.com/o/eu9Z3qt7ycTIHIJGObFB/s/JDlWdmSC3GnzBPSkAiBM/~/changes/165/subnets/subnet-9-pre-training/subnet-9-iota-mining-setup-guide), and [**validating** **instructions**](https://app.gitbook.com/o/eu9Z3qt7ycTIHIJGObFB/s/JDlWdmSC3GnzBPSkAiBM/~/changes/165/subnets/subnet-9-pre-training/subnet-9-validating).
 
@@ -35,9 +35,9 @@ If you have any questions or require support, please message us in the [Bittenso
 
 ### Training at Home
 
-Have a look at [Training At Home (TAH)](../product-and-services/tah/) application for permissionless contribution to distributed foundational model training.
+Have a look at [Training At Home (TAH)](../../product-and-services/tah/) application for permissionless contribution to distributed foundational model training.
 
-<figure><img src="../.gitbook/assets/Training-at-home.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Training-at-home.png" alt=""><figcaption></figcaption></figure>
 
 Read substack and other articles:
 
