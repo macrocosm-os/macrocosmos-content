@@ -15,6 +15,7 @@
     * [Text Clustering](subnets/subnet-1-apex/subnet-1-current-competitions/text-clustering.md)
   * [Apex Support and FAQs](subnets/subnet-1-apex/apex-support-and-faqs.md)
 * [Subnet 9 IOTA](subnets/subnet-9-iota/README.md)
+  * [Scoring, Rewards & Kicking](subnets/subnet-9-iota/scoring-rewards-and-kicking.md)
   * [Auditor Payout System](subnets/subnet-9-iota/auditor-payout-system.md)
 * [Subnet 13 Data Universe](subnets/subnet-13-data-universe/README.md)
   * [Data Universe MCP](subnets/subnet-13-data-universe/data-universe-mcp.md)
