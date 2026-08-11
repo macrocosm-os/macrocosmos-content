@@ -2,7 +2,7 @@
 description: Algorithmic distributed training optimization
 ---
 
-# iota Simulator Competition
+# Ended: iota Simulator Competition
 
 The `iota` Simulator models a distributed compute network where activations flow through layers of miners. Miners submit routing and load-balancing algorithms to guide activations through the network as fast as possible. The top-performing algorithms from this competition will be considered for use in subnet 9 `iota`'s orchestration layer.
 
@@ -39,23 +39,23 @@ NOTE:&#x20;
 
 In this example, 1 activation is routed between 2 miners in 2 layers from start to finish.
 
-<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption><p>Miner A in Layer 0 receives the red activation in the forward queue. </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Miner A in Layer 0 receives the red activation in the forward queue. </p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption><p>Miner A in Layer 0 is processing the red forward activation.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (25).png" alt=""><figcaption><p>Miner A in Layer 0 is processing the red forward activation.</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (21).png" alt=""><figcaption><p>Miner A in Layer 0 has finished processing the forward activation and passes it to Miner B in Layer 1. Miner A's cache is increased by 1.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (27).png" alt=""><figcaption><p>Miner A in Layer 0 has finished processing the forward activation and passes it to Miner B in Layer 1. Miner A's cache is increased by 1.</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (22).png" alt=""><figcaption><p>Miner B in Layer 1 is processing the forward activation.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (28).png" alt=""><figcaption><p>Miner B in Layer 1 is processing the forward activation.</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Miner B in Layer 1 has finished processing the forward activation, and it moves to its backward queue, as Layer 1 is the final layer. Miner B's cache increments after the forward activation has finished processing.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (30).png" alt=""><figcaption><p>Miner B in Layer 1 has finished processing the forward activation, and it moves to its backward queue, as Layer 1 is the final layer. Miner B's cache increments after the forward activation has finished processing.</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (25).png" alt=""><figcaption><p>Miner B in Layer 1 is processing the backward activation.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (31).png" alt=""><figcaption><p>Miner B in Layer 1 is processing the backward activation.</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (26).png" alt=""><figcaption><p>Miner B in Layer 1 has finished processing the backward activation and sends it back to Miner A at Layer 0, from whom it received the activation. The activation joins Miner A's backward queue.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (32).png" alt=""><figcaption><p>Miner B in Layer 1 has finished processing the backward activation and sends it back to Miner A at Layer 0, from whom it received the activation. The activation joins Miner A's backward queue.</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (27).png" alt=""><figcaption><p>Miner A in Layer 1 is processing the backward activation.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (33).png" alt=""><figcaption><p>Miner A in Layer 1 is processing the backward activation.</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (28).png" alt=""><figcaption><p>Miner A in Layer 1 has finished processing the backward activation, and its cache is then decreased by 1. The activation has completed. </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (34).png" alt=""><figcaption><p>Miner A in Layer 1 has finished processing the backward activation, and its cache is then decreased by 1. The activation has completed. </p></figcaption></figure>
 
 
 

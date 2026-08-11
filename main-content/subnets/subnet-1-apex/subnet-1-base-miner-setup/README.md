@@ -31,7 +31,7 @@ Miners are encouraged to review the baseline solutions for available competition
 
 Keep all function signatures identical to the baseline to ensure that your submission can be evaluated properly.&#x20;
 
-To understand the current competitions and their scoring guidelines visit the  [Current Competitions](../../new-subnet-1-apex/subnet-1-base-miner-setup/current-competitions.md) page.
+To understand the current competitions and their scoring guidelines visit the  [Current Competitions](../subnet-1-current-competitions/) page.
 
 
 
