@@ -1,8 +1,9 @@
 ---
 description: Reinforcement Learning with TRON
+hidden: true
 ---
 
-# RL Tron Competition
+# Ended: RL Tron Competition
 
 In this head-to-head reinforcement learning competition for Apex, miners train RL agents to play Tron on their own machines and submit their models in TorchScript (`.pt` files) for evaluation. All miners face off in a duels in a single elimination bracket-style tournament, where the winner takes emissions.&#x20;
 

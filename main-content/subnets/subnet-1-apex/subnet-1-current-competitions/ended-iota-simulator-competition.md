@@ -1,5 +1,6 @@
 ---
 description: Algorithmic distributed training optimization
+hidden: true
 ---
 
 # Ended: iota Simulator Competition
