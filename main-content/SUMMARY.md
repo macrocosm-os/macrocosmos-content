@@ -13,7 +13,7 @@
     * [Ended: RL Tron Competition](subnets/subnet-1-apex/subnet-1-current-competitions/ended-rl-tron-competition.md)
     * [Energy Arbitrage Competition](subnets/subnet-1-apex/subnet-1-current-competitions/energy-arbitrage-competition.md)
     * [Ended: iota Simulator Competition](subnets/subnet-1-apex/subnet-1-current-competitions/ended-iota-simulator-competition.md)
-    * [Text Clustering](subnets/subnet-1-apex/subnet-1-current-competitions/text-clustering.md)
+    * [Text Clustering Competition](subnets/subnet-1-apex/subnet-1-current-competitions/text-clustering-competition.md)
   * [Apex Support and FAQs](subnets/subnet-1-apex/apex-support-and-faqs.md)
 * [Subnet 9 IOTA](subnets/subnet-9-iota/README.md)
   * [Scoring, Rewards & Kicking](subnets/subnet-9-iota/scoring-rewards-and-kicking.md)
