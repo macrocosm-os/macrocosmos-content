@@ -1,8 +1,9 @@
 ---
 description: Large Language Model Steering
+hidden: true
 ---
 
-# Aurelius Steering Competition
+# Ended: Aurelius Steering Competition
 
 ## Aurelius Steering Competition
 

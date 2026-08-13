@@ -9,7 +9,7 @@
   * [Subnet 1 Validating](subnets/subnet-1-apex/validating.md)
   * [Subnet 1 Current Competitions](subnets/subnet-1-apex/subnet-1-current-competitions/README.md)
     * [Humanoid Parkour Competition](subnets/subnet-1-apex/subnet-1-current-competitions/humanoid-parkour-competition.md)
-    * [Aurelius Steering Competition](subnets/subnet-1-apex/subnet-1-current-competitions/aurelius-steering-competition.md)
+    * [Ended: Aurelius Steering Competition](subnets/subnet-1-apex/subnet-1-current-competitions/ended-aurelius-steering-competition.md)
     * [Ended: RL Tron Competition](subnets/subnet-1-apex/subnet-1-current-competitions/ended-rl-tron-competition.md)
     * [Energy Arbitrage Competition](subnets/subnet-1-apex/subnet-1-current-competitions/energy-arbitrage-competition.md)
     * [Ended: iota Simulator Competition](subnets/subnet-1-apex/subnet-1-current-competitions/ended-iota-simulator-competition.md)
