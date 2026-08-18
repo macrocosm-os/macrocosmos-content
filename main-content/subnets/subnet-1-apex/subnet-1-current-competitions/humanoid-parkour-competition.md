@@ -95,7 +95,7 @@ Per instance, higher is better:
   * all `float32`
 * The **architecture is not constrained**; only the signature is. A feed-forward policy can ignore `state_in` and return zeros, but will struggle to adapt to unobservable conditions.
 * Maximum submission size: **15 MB**. This is a compute limit as well as a storage one — inference cost is linear in artifact size, and the cap pairs with the 3000-step episode to keep the worst case inside the referee's 900 s timeout.
-* Default round length: **2 days**.
+* Default round length: 1 **day**.
 * Submission Fee: $20 USD.
 * 1% `raw_score` threshold to beat current top scorer.
 * Miners' models are revealed **1 day** after evaluation.
