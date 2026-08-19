@@ -122,6 +122,7 @@ The launch preset is deliberately severe — a 24 s 100 m, a 72 s circular 400 m
 * Maximum submission size: **15 MB**. This is a compute limit as well as a storage one — inference cost is linear in artifact size, and the cap pairs with the 40,000-call meet to keep the worst case inside the referee's 900 s timeout.
 * Evaluation runs on **2 CPU / 2 GiB / no GPU**.
 * Default round length: **2 days**.
+* Submission fee: **$20 USD**.
 * 1% `raw_score` threshold to beat the current top scorer.
 * Miners' models are revealed **5 days** after evaluation — longer than a round, so a copy cannot be turned around inside the window it was learned in.
 * Logs are opened after the current round is completed. Every one of the 24 attempts also produces a replayable history file, delivered to the miner post-round.
