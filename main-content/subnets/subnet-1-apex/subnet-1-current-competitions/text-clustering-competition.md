@@ -1,4 +1,6 @@
-# Text Clustering
+# Text Clustering Competition
+
+
 
 The Text Clustering competition challenges miners to build fast, CPU-only clustering algorithms that approximate industry-standard NLP pipelines (sentence embeddings + UMAP + HDBSCAN) on real social media data from Bittensor Subnet 13's data scraping product, Gravity. Clustering messy real-world text by topic is the engine behind every trend-detection and feedback-analysis pipeline — this competition crowdsources the best version of it.
 
@@ -13,10 +15,11 @@ Each round, miners receive fresh slices of real X and Reddit posts collected thr
 
 ### Round Structure
 
-* A round consists of **three clustering tasks (subsets)**, each on a fresh batch of real social media posts; the round score is the mean across the three.
-* Each round, the platform collects texts from X and Reddit through Gravity (SN13 batch collection) and pre-computes ground-truth cluster labels using a sentence-transformer + UMAP + HDBSCAN pipeline. Ground truth is baked in an isolated sandbox — miners never see it, and it never leaves the platform.
-* The miner's task is to receive raw texts via HTTP and return integer cluster assignments — without seeing the ground truth, knowing the number of clusters (it varies per subset), or having internet access at runtime.
-* The miner that produces the clustering closest to ground truth wins and receives all competition emissions, annealing with the burn.
+* A round consists of **four clustering tasks (subsets)**: three on fresh batches of real social media posts and one on a sample of **arXiv paper titles** — a deliberately different domain that rewards algorithms which generalize rather than overfit to social text. The round score is the mean across all four.
+* Each round, the platform samples texts from its sources (X and Reddit via Gravity/SN13, and a curated arXiv-titles pool) and pre-computes ground-truth cluster labels using a sentence-transformer + UMAP + HDBSCAN pipeline. Ground truth is baked in an isolated sandbox — miners never see it, and it never leaves the platform. For the arXiv subset, ground truth comes from the same pipeline on our random sample — **never** from arXiv's public category labels.
+* Round data is disjoint by construction: a text used in a recent round is excluded from sampling, so memorizing revealed rounds does not help.
+* The miner's task is unchanged: receive raw texts via HTTP and return integer cluster assignments — without seeing the ground truth, knowing the number of clusters (it varies per subset), or having internet access at runtime.
+* The miner that produces the clusterings closest to ground truth wins and receives all competition emissions, annealing with the burn.
 
 ### Evaluation
 
@@ -29,14 +32,20 @@ An example of a baseline implementation using TF-IDF + MiniBatchKMeans can be fo
 
 ### Data Source
 
-Texts are real social media posts collected by Bittensor Subnet 13 miners through the Gravity decentralized data network.
+Rounds mix two independent text sources:
+
+**Social media (subsets 1-3).** Real posts collected by Bittensor Subnet 13 miners through the Gravity decentralized data network.
 
 * Platforms: X (Twitter) and Reddit.
-* Topics vary each round: AI, crypto, politics, sports, science, etc.
-* Volume: \~5,000 texts per subset, three subsets per round.
-* Collection: Gravity Tasks run for up to 7 days, crawling specified topics across the SN13 miner network.
+* Topics vary each round: AI, crypto, politics, sports, science, gaming, etc.
+* Quality gates applied before a text can enter a round: a content filter (slurs/obscenity never appear in served data), English-language filter, and a minimum length of \~80 characters (anchorless one-liners are excluded).
 
-You can explore the kind of data your algorithm will cluster using the Macrocosmos Dataverse CLI:
+**arXiv paper titles (subset 4).** Titles of research papers harvested from arXiv's public metadata feed, spanning 150+ scientific categories (ML, physics, math, biology, ...). This is the same domain used by standard academic clustering benchmarks (e.g. MTEB). Each round samples \~5,000 previously-unused titles; the pool is refreshed continuously from arXiv's \~2,000 new papers/day.
+
+* Volume: \~5,000 texts per subset, four subsets per round (may vary).
+* Disjointness: texts are excluded from re-use across recent rounds — every round is new material.
+
+You can explore the kind of social data your algorithm will cluster using the Macrocosmos Dataverse CLI:
 
 ```
 cargo install dataverse-cli
@@ -44,6 +53,8 @@ dv auth                              # key from https://app.macrocosmos.ai/accou
 dv -o json search x -k AI -l 100     # 100 X posts about AI
 dv -o json search reddit -k MachineLearning -l 50
 ```
+
+For the arXiv domain, any public arXiv title listing is representative of the distribution (the exact round sample is never predictable).
 
 ### API Interface
 
@@ -64,7 +75,7 @@ Response: {"cluster_ids": [0, 1, 0, 2, ...]}
 
 ### Scoring
 
-Each subset is scored by comparing the miner's cluster assignments to the pre-computed ground-truth labels using two metrics:
+A round runs 4 subsets; the miner's round score is the mean of the 4 per-subset combined scores (range 0 to 1). Note that the arXiv subset is substantially harder than the social subsets for classical methods — low absolute scores there are expected and affect all miners equally; relative performance is what decides the round.
 
 * **Adjusted Rand Index (ARI)**, range −1 to 1: similarity between the two clusterings, adjusted for chance.
 * **Normalized Mutual Information (NMI)**, range 0 to 1: how much information the miner's assignments and the ground truth share, normalized.
