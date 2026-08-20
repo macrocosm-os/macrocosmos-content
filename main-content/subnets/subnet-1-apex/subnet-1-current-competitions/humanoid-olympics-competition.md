@@ -4,25 +4,31 @@
 
 **Athletics is a breadth test.** A sprinter that cannot corner, a hurdler that cannot jump, or a jumper that cannot run are all narrow controllers; a real athlete is one body under one policy across every discipline. Learned locomotion is usually trained per skill, and the specialisation shows the moment the task changes.
 
-The Humanoid Olympics competition challenges miners to enter a **Unitree G1** humanoid into a six-discipline meet in simulation — sprints, hurdles, and jumps — with **one** submitted policy. Miners submit a trained ONNX controller that outputs joint targets at 50 Hz. The robot has twelve actuated leg joints; its arms and upper body are mass and collision geometry, but are **not actuated**, so every event is solved with the legs. The event geometry is fixed and public, but each attempt runs under its own surface friction and wind, and **neither is observable**. A policy has to feel the slip or the push and adapt, which is why the interface carries recurrent state.
+The Humanoid Olympics competition challenges miners to enter a **Unitree G1** humanoid into a six-discipline meet in simulation — sprints, hurdles, and jumps — with **one** submitted policy. Miners submit a trained ONNX controller that outputs joint targets at 50 Hz. The robot has twelve actuated leg joints; its arms and upper body are mass and collision geometry, but are **not actuated**, so every event is solved with the legs. The event geometry is fixed and public, but each attempt runs under its own surface friction and wind, **neither is observable, and both are re-drawn every round** from a seed you never see. A policy has to feel the slip or the push and adapt rather than memorise a condition set, which is why the interface carries recurrent state.
 
 ### Evaluation Overview <a href="#evaluation" id="evaluation"></a>
 
 Each evaluation runs the miner's policy through a full meet: **four attempts of each of the six events, 24 attempts in total**. Every attempt draws a different point on the same public condition lattice:
 
-| Condition        | Range across the meet                                              |
-| ---------------- | ------------------------------------------------------------------ |
-| Surface friction | µ ∈ \[0.30, 1.25], one stratum per attempt, ±0.076 per-slab jitter |
-| Wind speed       | 0.1–7.4 m/s, steady for the attempt                                |
-| Wind direction   | Uniform over the full circle, horizontal                           |
-| High-jump bar    | 1.00, 1.10, 1.20, 1.30 m above the deck — one per attempt          |
+| Condition        | Range, and whether it moves between rounds                                                                       |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Surface friction | Band µ ∈ \[0.30, 1.25]. Four strata per event, 0.2375 µ apart, ±0.076 per-slab jitter. **Re-drawn every round.** |
+| Wind speed       | Cap 8 m/s. Four strata per event, 2 m/s apart, steady for the attempt. **Re-drawn every round.**                 |
+| Wind direction   | Uniform over the full circle, horizontal. **Re-drawn every round.**                                              |
+| High-jump bar    | 1.00, 1.10, 1.20, 1.30 m above the deck — one per attempt. **Fixed.**                                            |
 
-* Every event samples **four friction strata** spanning the band, so a policy sees near-full grip and a genuinely slippery track within the same meet. Friction is drawn once per attempt and applied to the whole route, with a small per-slab jitter.
+* **Friction and wind are not static. They are re-drawn every round from a seed you never see.** There is no fixed set of 24 conditions to learn: a policy that is tuned to the exact operating points of one round meets different ones in the next. What is stable is the _shape_ of the meet — six events, four attempts each, four strata per event — not the values.
+* Every event samples **four friction strata** in each round, so a policy sees near-full grip and a genuinely slippery track within the same meet. Friction is drawn once per attempt and applied to the whole route, with a small per-slab jitter.
+* The bottom stratum is a **real slip regime**, and how slippery it is depends on the round. Across 3000 round seeds a round's hardest attempt lands anywhere in **µ 0.30–0.48**, and its grippiest in **µ 1.06–1.25**. So some rounds bottom out well below the point where a foot can push hard enough to sprint or convert an approach into a take-off without managing traction, and others do not go as low. Expect the low strata to cost time, and to foul jumps taken as if the track were dry.
 * Wind acts through MuJoCo's fluid model at air density 1.204 kg/m³, so drag scales with the robot's velocity relative to the air — a headwind costs more than a tailwind, and it costs disproportionately more at the top of the wind band.
 * The four strata are paired with **opposing wind directions**, so a lap or a runway is not systematically favoured.
-* The launch meet is **fixed and public**: the same 24 conditions repeat every round, for every submission. The platform round seed is part of the request contract but is deliberately score-neutral in v0.1, which is what makes the absolute score comparable across rounds.
+* The meet's **structure** is fixed and public, but its **conditions are drawn per round**. Every round runs 24 attempts in the same shape — six events, four attempts each, four strata per event — and the platform round seed phase-shifts where in each band those strata land, independently per event, so the six disciplines do not shift together.
+* Be precise about what is equal between rounds: the **spacing** is, the **window** is not. Within an event the four strata are always exactly 0.2375 µ apart (one quarter of the band) and 2 m/s apart in wind, but the whole set slides. Measured over 3000 round seeds, a round covers 0.75–0.95 of the 0.95-wide friction band. Every round is therefore a broad sweep, but not an identically hard one — and a policy tuned to one round's exact 24 conditions does not carry over.
+* Within a round, **every submission faces identical conditions**. The seed is the round's, not the submission's, and the incumbent is re-scored on it alongside the challengers.
+* **The round seed is never published.** It is not in your observations, not in your reset call, not in your result, and not in your history files. Post-round you are told the conditions you actually ran — friction level and µ, wind speed and direction, per attempt — because you need to know what you were scored on. You are not told the value that generated them, and you cannot get the next round's conditions from the ones you were given.
+* Because conditions move, **absolute scores are only comparable within a round**. Measured on the baseline artifact, the same policy spans roughly 4% of its mean score across 20 round seeds (CV \~1.1%) — see the takeover note under Scoring.
 
-### **The Events**
+#### The Events
 
 Six disciplines, equally weighted. All routes are a **1.7 m lane** on a raised deck 0.8 m above the floor — the floor is visible to the terrain scan and to the renderer, but is never a support, so a gap is a real fall.
 
@@ -40,7 +46,7 @@ Six disciplines, equally weighted. All routes are a **1.7 m lane** on a raised d
 * The triple jump's gaps are real: 1.95 m from the board to the hop pad, 2.5 m from hop to step, and 5.5 m from step to sand.
 * Throwing events and the pole vault intentionally belong to a future competition — they need arms.
 
-### **Step by Step**
+#### Step by Step
 
 At each of the 50 Hz control steps, the miner's policy receives a **104-float observation**, in the robot's yaw frame:
 
@@ -54,7 +60,7 @@ At each of the 50 Hz control steps, the miner's policy receives a **104-float ob
 
 Physics runs at 500 Hz (2 ms), ten substeps per control action. Every legality gate — lane boundary, hurdle and bar contact, take-off, flight, and landing — is sampled at **each physics substep**, not once per action, so a fast scrape cannot slip between control frames.
 
-### **Constraints**
+#### Constraints
 
 * Termination gates shared by all events, each surfaced to the miner as a `terminal_reason`:
   * `fell` — pelvis drops below 0.45 m of clearance above the surface below it, or the torso tilts past \~66°.
@@ -72,7 +78,7 @@ Physics runs at 500 Hz (2 ms), ten substeps per control action. Every legality g
   * Referee (scorer) timeout = 900 seconds for the whole 24-attempt meet, with an internal 840-second scheduling budget so a result is always persisted. Any attempt that the budget does not reach is retained as a zero-scored row in the fixed denominator.
   * Player timeout = 1200 seconds, deliberately longer so the policy server outlives the referee.
 
-### **Scoring**
+#### Scoring
 
 Every attempt returns a bounded score in `[0, 1]`. A completed attempt scores from **0.25** upward; an incomplete attempt stays **below 0.25**, so no amount of partial progress can outrank a legal finish.
 
@@ -107,12 +113,12 @@ raw_score = mean(event_mean[100m, 400m, hurdles, high jump, long jump, triple ju
 * Macro-averaging is what keeps the meet balanced: the 400 m has three times the steps of the high jump but exactly the same weight, so a policy cannot buy a rank with one long event.
 * To surpass the current winner, a miner must earn a raw score > 1% higher than the current top raw score.
   * If there is no current winner, the miner must beat the baseline raw score by at least 1%. `baseline_raw_score` is **0.0** by design, so round 1 goes to anything scoring above zero.
-* At the start of each round the incumbent is automatically re-submitted and re-scored, so the comparison is always like-for-like.
+* At the start of each round the incumbent is automatically re-submitted and re-scored, so the comparison is always like-for-like. **This is what makes per-round conditions safe.** The incumbent's stored score from an easier draw is never what a challenger has to beat: both are scored on the same round seed, so the condition draw is common-mode in the comparison. Note the margins involved — cross-round condition spread on a fixed policy is CV \~1.1%, the same order as the 1% takeover threshold, so a _stale_ incumbent score would be roughly a coin flip rather than a bar.
 * The `score_to_beat` is displayed in the Apex CLI dashboard under competition information.
 
 The launch preset is deliberately severe — a 24 s 100 m, a 72 s circular 400 m, hurdles to 1.15 m, bars to 1.30 m, a 6 m long-jump void. **A first complete all-round performance is intended to be a meaningful breakthrough**, and partial credit exists so that the climb toward it is measurable.
 
-### **Miner Submissions**
+#### Miner Submissions
 
 * Miners submit a single **ONNX graph** with this exact tensor signature:
   * inputs — `obs [batch, 104]`, `state_in [batch, 256]`
@@ -121,10 +127,10 @@ The launch preset is deliberately severe — a 24 s 100 m, a 72 s circular 400 m
 * The **architecture is not constrained**; only the signature is. A feed-forward policy can ignore `state_in` and return zeros, but will struggle to adapt to unobservable friction and wind.
 * Maximum submission size: **15 MB**. This is a compute limit as well as a storage one — inference cost is linear in artifact size, and the cap pairs with the 40,000-call meet to keep the worst case inside the referee's 900 s timeout.
 * Evaluation runs on **2 CPU / 2 GiB / no GPU**.
-* Default round length: **2 days**.
+* Default round length: **1 day**.
 * Submission fee: **$20 USD**.
 * 1% `raw_score` threshold to beat the current top scorer.
-* Miners' models are revealed **5 days** after evaluation — longer than a round, so a copy cannot be turned around inside the window it was learned in.
+* Miners' models are revealed **1 day** after evaluation.
 * Logs are opened after the current round is completed. Every one of the 24 attempts also produces a replayable history file, delivered to the miner post-round.
 * The submission rate limit is 4 submissions per hotkey within 24 hours, across all competitions.
 * The full environment — all six events, physics, scoring, and a reference baseline policy — is public at [apex-competition-humanoid-olympics](https://github.com/macrocosm-os/apex-competition-humanoid-olympics). Train against the real referee, not a reimplementation.
