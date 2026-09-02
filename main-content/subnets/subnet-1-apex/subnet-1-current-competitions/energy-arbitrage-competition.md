@@ -1,5 +1,6 @@
 ---
 description: Algorithmic electric grid optimization
+hidden: true
 ---
 
 # Energy Arbitrage Competition

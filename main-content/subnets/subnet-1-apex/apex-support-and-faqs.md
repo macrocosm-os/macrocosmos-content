@@ -70,9 +70,8 @@ You can find your `raw_score` under the Submission Details page on the CLI.&#x20
 
 Submission fees are variable per competition. If a competition is not listed here, then it's free to submit to.
 
-* Energy Arbitrage: $10 USD
 * Text Clustering: $20 USD
-* Humanoid Parkour: $20 USD
+* Humanoid Olympics: $20 USD
 
 </details>
 

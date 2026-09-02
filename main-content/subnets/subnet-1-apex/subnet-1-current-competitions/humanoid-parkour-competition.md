@@ -1,5 +1,6 @@
 ---
 description: Physics-simulated legged locomotion and obstacle traversal
+hidden: true
 ---
 
 # Humanoid Parkour Competition
