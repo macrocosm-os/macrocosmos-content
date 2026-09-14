@@ -2,13 +2,11 @@
 description: Subnet 1 incentive and operation
 ---
 
-# Incentive Mechanism
+# Subnet 1 Incentive Mechanism
 
 The core idea behind the subnet is to share problem-solving code openly to enhance competition results, round by round. Open-sourcing these solutions widens impact and helps tackle real-world challenges.
 
 In the Matrix Compression competition — the first event on the subnet — the winning solution will not only directly enhance Subnet 9’s output but may also contribute to optimising data centres and cloud infrastructure.
-
-
 
 ### General Operations <a href="#general-operation" id="general-operation"></a>
 
@@ -83,3 +81,5 @@ By running miner submission code, you acknowledge and agree that:
   * Any other direct or indirect damages
 
 Miner submissions are executed **at your own risk**.
+
+By submitting code to a competition, you consent to making it publicly available for download and use after the current competition round has ended.&#x20;
