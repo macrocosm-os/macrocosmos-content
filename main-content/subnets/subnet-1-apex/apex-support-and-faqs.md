@@ -100,7 +100,7 @@ If your payment went through successfully, you will receive a receipt including 
 
 <summary>I don't have my payment receipt log. What can I do?</summary>
 
-If you do not have this receipt log, you can retrieve your block hash and extrinsic index from [taostats](https://taostats.io/account/5EtauUg5ZyHYuRN8MP1hBSejvFjXsKoCKcDr3FJrdy8dZepK/transfers).&#x20;
+If you do not have this receipt log, you can retrieve your block hash and extrinsic index from [taostats](https://taostats.io/account/5E4bbuhJfvritg1z9Ysi2Ne5Ccg6qFgqeng92JXExCTE4voE/transfers).&#x20;
 
 * The extrinsic index is the number after the `-`  in the "Extrinsic" column, without any leading zeros.
   * i.e. Extrinsic: 8077100-0020 -> extrinsic index = 20.
