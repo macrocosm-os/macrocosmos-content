@@ -8,6 +8,7 @@
     * [Apex CLI](subnets/subnet-1-apex/subnet-1-base-miner-setup/apex-cli.md)
   * [Subnet 1 Validating](subnets/subnet-1-apex/validating.md)
   * [Subnet 1 Current Competitions](subnets/subnet-1-apex/subnet-1-current-competitions/README.md)
+    * [NIST Assembly Competition](subnets/subnet-1-apex/subnet-1-current-competitions/nist-assembly-competition.md)
     * [Humanoid Box Scramble Competition](subnets/subnet-1-apex/subnet-1-current-competitions/humanoid-box-scramble-competition.md)
     * [Humanoid Olympics Competition](subnets/subnet-1-apex/subnet-1-current-competitions/humanoid-olympics-competition.md)
     * [Ended: Humanoid Parkour Competition](subnets/subnet-1-apex/subnet-1-current-competitions/ended-humanoid-parkour-competition.md)
