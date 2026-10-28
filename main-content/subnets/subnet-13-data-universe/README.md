@@ -13,13 +13,13 @@ Its incentive mechanism rewards miners for gathering content that is desirable, 
 * Source of the data
 * Specific categories of data within that source
 * The age of the data
-* &#x20;Data uniqueness&#x20;
+* Data uniqueness
 
 Currently, miners are incentivized to scrap data from platforms like **Reddit** and **X (Twitter).** Keeping the focus on rapidly shifting trends , because we all know in today’s world, stale data just doesn’t cut it.
 
 API Documentation is available at [Macrocosmos API](readme/).
 
-Data Universe Marketplace and Data Collection <a href="https://app.macrocosmos.ai/gravity/marketplace" class="button primary">sign  up</a>.
+Data Universe Marketplace and Data Collection <a href="https://app.macrocosmos.ai/gravity/marketplace" class="button primary">sign up</a>.
 
 ## Why It Matters
 
@@ -31,7 +31,7 @@ In fast-moving markets, **up-to-date data** is critical. Data provided by subnet
 
 As machine learning becomes more focused on the output, the **quality of training data** will become a key differentiator. SN13 aims to make **data one of Bittensor’s most valuable commodities.**
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-03-05 at 16.57.29 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2025-03-05 at 16.57.29.png" alt=""><figcaption></figcaption></figure>
 
 ## Architecture
 
