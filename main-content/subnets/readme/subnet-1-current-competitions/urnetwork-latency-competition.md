@@ -4,7 +4,7 @@
 
 **Latency is a selection problem.** URnetwork is a user-space network: your traffic leaves through someone else's device — a **provider** — and how quickly the stack finds, trusts and uses the right one is most of what separates a page that loads from a page that stalls. The code doing that work runs in production today, carrying live traffic.
 
-The URnetwork Latency competition asks miners to make it faster. A submission is a **unified Git diff** against one file on the measured connect path, scored by `sim-latency`: a fixed instrument that stands up the whole URnetwork stack — API, exchange, matchmaking, reliability pipeline, accounting, a deterministic fleet of impaired providers and a fake origin site — then drives seeded client traffic through the tunnel and times every request. Your patch changes the product code. It never changes the instrument or its scorer.
+The URnetwork Latency competition asks miners to make it faster. A submission is a **unified Git diff** against URnetwork's source on the measured connect path, scored by `sim-latency`: a fixed instrument that stands up the whole URnetwork stack — API, exchange, matchmaking, reliability pipeline, accounting, a deterministic fleet of impaired providers and a fake origin site — then drives seeded client traffic through the tunnel and times every request. Your patch changes the product code. It never changes the instrument or its scorer.
 
 #### Evaluation Overview <a href="#evaluation" id="evaluation"></a>
 
@@ -13,9 +13,9 @@ Every submission is applied to the source commits frozen for its epoch, built of
 | Item                | Value                                                                          |
 | ------------------- | ------------------------------------------------------------------------------ |
 | Evaluation host     | One 128 GiB-class Ubuntu machine, 12 isolated CPUs                             |
-| Toolchain           | Go 1.27.2 — the compiler and runtime every submission is built and measured on |
+| Toolchain           | Go 1.27.3 — the compiler and runtime every submission is built and measured on |
 | CPU boundary        | 10 evaluation CPUs; 2 reserved for management and cleanup                      |
-| Provider fleet      | 1,800 providers, network impairment enabled                                    |
+| Provider fleet      | 3,600 providers, network impairment enabled                                    |
 | Client load         | 200 client identities, 80 arrivals per minute                                  |
 | Selection           | Quality window 2; 4 exchange hosts; 4 fleet shards                             |
 | Measured window     | 180 seconds                                                                    |
@@ -23,10 +23,12 @@ Every submission is applied to the source commits frozen for its epoch, built of
 | Control sample      | One immutable 9-run control per epoch, shared by every submission              |
 | Evaluation deadline | 3 hours end to end, including retries, scoring and cleanup                     |
 
+The live evaluator publishes its frozen policy at [`/competition/info`](https://api.bringyour.com/competition/info): the fleet, load and margin under `evaluation_policy`, the editable paths under `patch_policy`, and the current epoch under `active_round`. If this page and that endpoint ever disagree, the endpoint is what scores your submission.
+
 * The **hardware is deliberately modest, and everything shares it.** Services, the provider fleet, the client driver and your code all draw on the same 10 evaluation CPUs, so an algorithm that buys latency with heavy compute degrades its own measurement. CPU efficiency is priced into the metric rather than bolted on as a penalty.
 * Iterating on a modern laptop will give you better absolute numbers than the evaluator reports. Only **relative** improvement transfers.
 * The workload is seeded, so two runs of the same fleet file replay the same scenario. But sockets and timing behave the way they do on any busy machine, so runs are never bit-identical — which is why nine replicates and a statistical test both exist.
-* The 1,800-provider point is the competition target. Larger configurations are development stress tests, not an alternative production scale.
+* The 3,600-provider point is the competition target. Larger configurations are development stress tests, not an alternative production scale.
 
 **One Control Per Epoch**
 
@@ -67,7 +69,7 @@ A score is **placeable** only when all six gates pass:
 | Gate | Checks                                                                                    |
 | ---- | ----------------------------------------------------------------------------------------- |
 | G1   | Correctness — request success rate and complete bodies                                    |
-| G2   | Traffic volume — the load was actually served, not starved                                |
+| G2   | Traffic volume — request count and received bytes each within 0.95–1.05× the control's    |
 | G3   | Path integrity — provider egress accounting matches client bytes; no bypassing the tunnel |
 | G4   | Matchmaking — selection samples present and matchmaking cost within budget                |
 | G5   | Stability — no panics, restarts or unclean teardown in any replicate                      |
@@ -90,7 +92,8 @@ The `score_to_beat` is displayed in the Apex CLI dashboard under competition inf
 The season runs **six sequential epochs, each accepting submissions for seven days**. Epochs open and close automatically, and the next one opens on its own once the previous epoch's backlog has drained and the next source and control are prepared — so expect the season to run somewhat longer than six calendar weeks.
 
 * Submissions are evaluated as they arrive, one at a time, and evaluation continues past an epoch's close until every accepted submission finishes.
-* **Epoch 1 starts at a 16.1% required improvement.** That number is calibrated rather than chosen: run-to-run noise on this workload is large enough that a smaller margin would let luck win. Nine replicates plus the Welch test are what bring the detectable improvement down that far.
+* Accepting submissions and grading them are separate switches, shown under `runtime_status` in `/competition/info`. An epoch can accept submissions (`intake_ready: true`) before grading starts (`grading_ready: false`). Accepted submissions keep their place in the queue and are graded in arrival order once grading starts; there is no need to resubmit.
+* **Epoch 1 requires a 26.9% improvement** (`takeover_margin: 0.269`). That number is calibrated rather than chosen: run-to-run noise on this workload is large enough that a smaller margin would let luck win. Nine replicates plus the Welch test are what bring the detectable improvement down that far.
 * When URnetwork approves a winning patch for its codebase, the patch is promoted into the source commits for the following epoch and its measured variance sets that epoch's percentage — never weakening the incumbent margin. Improvements compound, and each epoch is measured against the previous winner's code.
 * Approval for the codebase is a separate decision from winning (see below). Until a winning patch is approved, the following epoch runs on the same source and the same threshold.
 * If nothing is takeover-eligible, or every eligible submission is disqualified in review, the epoch has **no winner** and both the source commits and the threshold carry forward unchanged.
@@ -101,7 +104,7 @@ The season runs **six sequential epochs, each accepting submissions for seven da
 
 **Every winner is then reviewed by hand.** URnetwork, which sponsors and judges this competition, inspects the winning patch against six criteria — is this a genuine routing improvement, or an exploit of the measuring instrument? A winning patch must have:
 
-1. no changes to `connect/sim-latency` or any trusted scoring or evaluator input;
+1. no changes to `server/connect/sim-latency` or any trusted scoring or evaluator input;
 2. no fabricated measurements, disabled checks, special-cased workload data, hidden-seed inference, input gaming or benchmark detection;
 3. no filesystem, network, namespace, Docker-socket, host or secret escape;
 4. no credential access or exfiltration path;
@@ -120,11 +123,12 @@ Closing an epoch stops new submissions; it does not publish results. Results are
 
 #### Constraints
 
-* **One file.** The editable surface is exactly one existing regular file, `connect/resident_contract_manager.go`, which owns the resident-side active-contract lookup and its short-lived cache. No wildcard or directory prefix is accepted.
+* **Editable paths.** A patch may change existing regular files anywhere in the ten repositories of the epoch's source lock — `server`, `connect`, `sdk`, `proxy`, `glog`, `goidenticons`, `userwireguard`, `sn`, `warp` and `gvisor` — at any depth. The one exception is the competition runner, `server/connect/sim-latency/**`. The live list is `patch_policy` in `/competition/info`.
+* **Paths start at the monorepo root** (`path_base: mono_root_v1`): every path begins with its repository's name. The resident-side active-contract manager, for example, is `server/connect/resident_contract_manager.go`; `connect/resident_contract_manager.go` would mean a file in the separate `connect` repository, which does not exist. From a checkout of one repository, `git diff --src-prefix=a/<repo>/ --dst-prefix=b/<repo>/ > submission.patch` writes these paths. To change more than one repository, concatenate each repository's diff in alphabetical order of repository name.
 * **Structural rules.** New files, deletions, renames, copies, mode changes, build constraints, binary patches, symlinks and submodules are rejected before a build begins.
-* **Canonical format.** Your patch is hashed exactly as submitted, with no normalization. It must be nonempty valid UTF-8 with no NUL bytes, **LF-only line endings**, and **exactly one trailing newline** with no extra blank line. Generate it with `git diff > submission.patch` and submit the file — shell command substitution (`patch=$(git diff ...)`) strips the trailing newline and will be rejected.
-* **No new dependencies.** Builds run offline against the frozen module set, on **Go 1.27.2**. Standard library and existing dependencies only — and anything that depends on a different compiler or runtime version will not behave the way it did on your machine.
-* **Everything else is protected**, including `connect/sim-latency` and the scorer, workload code, stats and accounting, migrations, configuration and vault resources, module metadata, vendored dependencies, CI, and every sibling repository in the source lock.
+* **Canonical format.** Your patch is hashed exactly as submitted, with no normalization. It must be nonempty valid UTF-8 with no NUL bytes, **LF-only line endings**, no control characters other than newline and tab, file sections in sorted path order (one per file), and **exactly one trailing newline** with no extra blank line. Write the diff to a file and submit the file with the current Apex CLI. Shell command substitution (`patch=$(git diff ...)`) strips the trailing newline, and so do Apex CLI versions from before 27 October 2026.
+* **No new dependencies.** Builds run offline against the frozen module set, on **Go 1.27.3**. Standard library and existing dependencies only — and anything that depends on a different compiler or runtime version will not behave the way it did on your machine.
+* **The instrument is off-limits.** Beyond the forbidden runner path, a winning patch is reviewed against the criteria above: changing trusted scoring or evaluator inputs, or making unrelated product changes, costs the win.
 * **No network.** Builds run offline, and at runtime your code reaches only the evaluator's own isolated service network — no external egress. It gets read-only configuration and credentials for the simulated environment, and nothing else: no host control material, no control-plane secrets, no Docker socket.
 * Missing, malformed, OOM-killed or incomplete results fail closed: you get an error rather than a score.
 
@@ -170,12 +174,12 @@ cd connect/sim-latency
 
 Measured `run`, `fleet` and fresh `baseline` commands need a configured source epoch — use a clean epoch checkout rather than bypassing the identity check.
 
-Size the local fleet to your machine; the 500-provider example above is a development workload, well below the official 1,800. A single local run is a diagnostic, not a score: only the official evaluator's frozen workload, nine-run candidate sample and shared epoch control produce a competition result.
+Size the local fleet to your machine; the 500-provider example above is a development workload, well below the official 3,600. A single local run is a diagnostic, not a score: only the official evaluator's frozen workload, nine-run candidate sample and shared epoch control produce a competition result.
 
-The instrument, its scorer and the preserved calibration evidence are all public at [urnetwork/server](https://github.com/urnetwork/server/tree/main/connect/sim-latency). Start with the [README](https://github.com/urnetwork/server/blob/main/connect/sim-latency/README.md) for the scoring contract and [evaluator/PATCH-SURFACE.md](https://github.com/urnetwork/server/blob/main/connect/sim-latency/evaluator/PATCH-SURFACE.md) for the exact editable surface and patch format.
+The instrument, its scorer and the preserved calibration evidence are all public at [urnetwork/server](https://github.com/urnetwork/server/tree/main/connect/sim-latency). Start with the [README](https://github.com/urnetwork/server/blob/main/connect/sim-latency/README.md) for the scoring contract and [evaluator/PATCH-SURFACE.md](https://github.com/urnetwork/server/blob/main/connect/sim-latency/evaluator/PATCH-SURFACE.md) for the canonical patch format. Its single-file editable surface predates the season; the live `patch_policy` above is what applies.
 
 **Where to Start Looking**
 
 URnetwork has published a [research seed](https://github.com/urnetwork/server/blob/main/connect/sim-latency/2026-10-13-seed.md) mapping the architecture, performance and correctness work on the measured latency path over the two months to 13 October 2026 — which approaches paid off, which were tried and rejected, and what each one cost.
 
-It is a reading order, not a ranking of score gains, and most of it sits outside the one file you may edit. Read it for the mechanisms and their remaining costs rather than for patches to resubmit: a frozen epoch already contains this work, so re-proposing it measures nothing. The sections on contract allocation and resident authorization are the ones closest to the editable surface.
+It is a reading order, not a ranking of score gains. Read it for the mechanisms and their remaining costs rather than for patches to resubmit: a frozen epoch already contains this work, so re-proposing it measures nothing. The sections on contract allocation and resident authorization cover `server/connect/resident_contract_manager.go`, the file URnetwork's own reference patches change.
