@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Humanoid Olympics Competition
 
 ## Humanoid Olympics Competition

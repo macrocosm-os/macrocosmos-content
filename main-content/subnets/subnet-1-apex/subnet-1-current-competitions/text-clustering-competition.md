@@ -1,6 +1,8 @@
+---
+hidden: true
+---
+
 # Text Clustering Competition
-
-
 
 The Text Clustering competition challenges miners to build fast, CPU-only clustering algorithms that approximate industry-standard NLP pipelines (sentence embeddings + UMAP + HDBSCAN) on real social media data from Bittensor Subnet 13's data scraping product, Gravity. Clustering messy real-world text by topic is the engine behind every trend-detection and feedback-analysis pipeline — this competition crowdsources the best version of it.
 
