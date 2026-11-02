@@ -1,186 +1,137 @@
 # Humanoid Olympics Competition
 
-### URnetwork Latency Competition
+## Humanoid Olympics Competition
 
-**Latency is a selection problem.** URnetwork is a user-space network: your traffic leaves through someone else's device — a **provider** — and how quickly the stack finds, trusts and uses the right one is most of what separates a page that loads from a page that stalls. The code doing that work runs in production today, carrying live traffic.
+**Athletics is a breadth test.** A sprinter that cannot corner, a hurdler that cannot jump, or a jumper that cannot run are all narrow controllers; a real athlete is one body under one policy across every discipline. Learned locomotion is usually trained per skill, and the specialisation shows the moment the task changes.
 
-The URnetwork Latency competition asks miners to make it faster. A submission is a **unified Git diff** against URnetwork's source on the measured connect path, scored by `sim-latency`: a fixed instrument that stands up the whole URnetwork stack — API, exchange, matchmaking, reliability pipeline, accounting, a deterministic fleet of impaired providers and a fake origin site — then drives seeded client traffic through the tunnel and times every request. Your patch changes the product code. It never changes the instrument or its scorer.
+The Humanoid Olympics competition challenges miners to enter a **Unitree G1** humanoid into a six-discipline meet in simulation — sprints, hurdles, and jumps — with **one** submitted policy. Miners submit a trained ONNX controller that outputs joint targets at 50 Hz. The robot has twelve actuated leg joints; its arms and upper body are mass and collision geometry, but are **not actuated**, so every event is solved with the legs. The event geometry is fixed and public, but each attempt runs under its own surface friction and wind, **neither is observable, and both are re-drawn every round** from a seed you never see. A policy has to feel the slip or the push and adapt rather than memorise a condition set, which is why the interface carries recurrent state.
 
-#### Evaluation Overview <a href="#evaluation" id="evaluation"></a>
+### Evaluation Overview <a href="#evaluation" id="evaluation"></a>
 
-Every submission is applied to the source commits frozen for its epoch, built offline into its own content-addressed image, and run against the same workload as every other submission that epoch.
+Each evaluation runs the miner's policy through a full meet: **four attempts of each of the six events, 24 attempts in total**. Every attempt draws a different point on the same public condition lattice:
 
-| Item                | Value                                                                          |
-| ------------------- | ------------------------------------------------------------------------------ |
-| Evaluation host     | One 128 GiB-class Ubuntu machine, 12 isolated CPUs                             |
-| Toolchain           | Go 1.27.3 — the compiler and runtime every submission is built and measured on |
-| CPU boundary        | 10 evaluation CPUs; 2 reserved for management and cleanup                      |
-| Provider fleet      | 3,600 providers, network impairment enabled                                    |
-| Client load         | 200 client identities, 80 arrivals per minute                                  |
-| Selection           | Quality window 2; 4 exchange hosts; 4 fleet shards                             |
-| Measured window     | 180 seconds                                                                    |
-| Aggregation         | 9 independently reset runs per candidate, median                               |
-| Control sample      | One immutable 9-run control per epoch, shared by every submission              |
-| Evaluation deadline | 3 hours end to end, including retries, scoring and cleanup                     |
+| Condition        | Range, and whether it moves between rounds                                                                       |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Surface friction | Band µ ∈ \[0.30, 1.25]. Four strata per event, 0.2375 µ apart, ±0.076 per-slab jitter. **Re-drawn every round.** |
+| Wind speed       | Cap 8 m/s. Four strata per event, 2 m/s apart, steady for the attempt. **Re-drawn every round.**                 |
+| Wind direction   | Uniform over the full circle, horizontal. **Re-drawn every round.**                                              |
+| High-jump bar    | 1.00, 1.10, 1.20, 1.30 m above the deck — one per attempt. **Fixed.**                                            |
 
-The live evaluator publishes its frozen policy at [`/competition/info`](https://api.bringyour.com/competition/info): the fleet, load and margin under `evaluation_policy`, the editable paths under `patch_policy`, and the current epoch under `active_round`. If this page and that endpoint ever disagree, the endpoint is what scores your submission.
+* **Friction and wind are not static. They are re-drawn every round from a seed you never see.** There is no fixed set of 24 conditions to learn: a policy that is tuned to the exact operating points of one round meets different ones in the next. What is stable is the _shape_ of the meet — six events, four attempts each, four strata per event — not the values.
+* Every event samples **four friction strata** in each round, so a policy sees near-full grip and a genuinely slippery track within the same meet. Friction is drawn once per attempt and applied to the whole route, with a small per-slab jitter.
+* The bottom stratum is a **real slip regime**, and how slippery it is depends on the round. Across 3000 round seeds a round's hardest attempt lands anywhere in **µ 0.30–0.48**, and its grippiest in **µ 1.06–1.25**. So some rounds bottom out well below the point where a foot can push hard enough to sprint or convert an approach into a take-off without managing traction, and others do not go as low. Expect the low strata to cost time, and to foul jumps taken as if the track were dry.
+* Wind acts through MuJoCo's fluid model at air density 1.204 kg/m³, so drag scales with the robot's velocity relative to the air — a headwind costs more than a tailwind, and it costs disproportionately more at the top of the wind band.
+* The four strata are paired with **opposing wind directions**, so a lap or a runway is not systematically favoured.
+* The meet's **structure** is fixed and public, but its **conditions are drawn per round**. Every round runs 24 attempts in the same shape — six events, four attempts each, four strata per event — and the platform round seed phase-shifts where in each band those strata land, independently per event, so the six disciplines do not shift together.
+* Be precise about what is equal between rounds: the **spacing** is, the **window** is not. Within an event the four strata are always exactly 0.2375 µ apart (one quarter of the band) and 2 m/s apart in wind, but the whole set slides. Measured over 3000 round seeds, a round covers 0.75–0.95 of the 0.95-wide friction band. Every round is therefore a broad sweep, but not an identically hard one — and a policy tuned to one round's exact 24 conditions does not carry over.
+* Within a round, **every submission faces identical conditions**. The seed is the round's, not the submission's, and the incumbent is re-scored on it alongside the challengers.
+* **The round seed is never published.** It is not in your observations, not in your reset call, not in your result, and not in your history files. Post-round you are told the conditions you actually ran — friction level and µ, wind speed and direction, per attempt — because you need to know what you were scored on. You are not told the value that generated them, and you cannot get the next round's conditions from the ones you were given.
+* Because conditions move, **absolute scores are only comparable within a round**. Measured on the baseline artifact, the same policy spans roughly 4% of its mean score across 20 round seeds (CV \~1.1%) — see the takeover note under Scoring.
 
-* The **hardware is deliberately modest, and everything shares it.** Services, the provider fleet, the client driver and your code all draw on the same 10 evaluation CPUs, so an algorithm that buys latency with heavy compute degrades its own measurement. CPU efficiency is priced into the metric rather than bolted on as a penalty.
-* Iterating on a modern laptop will give you better absolute numbers than the evaluator reports. Only **relative** improvement transfers.
-* The workload is seeded, so two runs of the same fleet file replay the same scenario. But sockets and timing behave the way they do on any busy machine, so runs are never bit-identical — which is why nine replicates and a statistical test both exist.
-* The 3,600-provider point is the competition target. Larger configurations are development stress tests, not an alternative production scale.
+#### The Events
 
-**One Control Per Epoch**
+Six disciplines, equally weighted. All routes are a **1.7 m lane** on a raised deck 0.8 m above the floor — the floor is visible to the terrain scan and to the renderer, but is never a support, so a gap is a real fall.
 
-Before the first submitted build of an epoch, the evaluator measures **one authenticated sample of nine control runs** on the unmodified code, freezes those exact bytes with their SHA-256, and compares every candidate that epoch against them.
+| Event                 | Layout                                                                               | Skill tested                               |
+| --------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------ |
+| 100 m sprint          | Straight lane, finish at 100 m, 24 s cap (≈4.25 m/s average)                         | acceleration and top speed                 |
+| 400 m circular sprint | A true 400 m circle, radius ≈63.66 m, 72 s cap (≈5.56 m/s average)                   | sustained pace, route following, cornering |
+| 100 m hurdles         | 10 barriers 8.5 m apart from 12 m to 88.5 m, rising 0.55 → 1.15 m, 38 s cap          | repeated clearance at speed                |
+| High jump             | Runway, then a physical bar at 12 m, 1.00–1.30 m above the deck, 18 s cap            | one clean vertical clearance and crossing  |
+| Long jump             | Runway, 0.40 m take-off board at 15 m, a **6 m real void**, sand from 21 m, 20 s cap | approach, take-off, flight, safe landing   |
+| Triple jump           | Board at 12 m, hop pad 14.0–15.5 m, step pad 18.0–19.5 m, sand from 25 m, 28 s cap   | an ordered hop, step, and final landing    |
 
-This is a fairness property worth understanding. Measuring a fresh control alongside each submission would give every miner a different denominator, and with normal run-to-run variation two miners could end up ordered by whose control happened to be slower rather than whose patch was faster. One frozen control per epoch makes that variation common to everyone.
+* The 400 m is a **genuine 400 m route**, not a scaled lap. Progress is accumulated forward route distance around the circle, and the lap only completes after 400 m travelled inside the lane, so cornering is part of the task rather than something to be cut.
+* The hurdles form a within-run curriculum: the first barrier is a step, the last is at the frontier of what a legs-only G1 should clear at speed. Each hurdle overhangs the lane, so it cannot be skimmed around the end.
+* The triple jump's gaps are real: 1.95 m from the board to the hop pad, 2.5 m from hop to step, and 5.5 m from step to sand.
+* Throwing events and the pole vault intentionally belong to a future competition — they need arms.
 
-It also means an ordinary submission runs nine replicates rather than eighteen, which roughly halves evaluation time.
+#### Step by Step
 
-**The Measured Path**
+At each of the 50 Hz control steps, the miner's policy receives a **104-float observation**, in the robot's yaw frame:
 
-Measurement does not start immediately. Warm-up connects the fleet, pre-establishes deterministic performance and reliability evidence, propagates selection state through the pipeline, and proves every client exit and parallel HTTP lane. Only then does the measured window open.
+* Proprioception: projected gravity, base angular and linear velocity, 12 joint angles and velocities, previous action.
+* Task: gait clock (sin/cos of a 0.8 s cycle), heading error against the **route tangent**, signed cross-track offset, distance remaining, pelvis height above the surface below.
+* Terrain: a 9 × 5 height scan (45 rays) reaching **6 m ahead**, plus 7 overhead-clearance samples out to 4 m.
+  * Downward channels report **walkable surfaces only** — the high-jump bar and the hurdles appear in the overhead channels and nowhere else.
+  * The 6 m horizon is deliberate: at 6 m/s the inherited 1.6 m scan was only a quarter of a second of warning, which is not enough to set up a hurdle or a take-off.
+* The policy returns **12 floats**: joint position targets as offsets from the default pose, driven by a PD loop. This is a position target, **not** a torque.
+* The policy also threads an opaque **256-float recurrent state**, zeroed at the start of every attempt. Friction and wind are not in the observation, so remembering that you just slipped is the only way to adapt.
 
-* Reliability gating in production takes roughly 8.4 hours of provider uptime before a provider becomes selectable. Warm-up short-circuits that history, so the competition measures **selection and egress among an established fleet**, not onboarding.
-* Seeded churn and impairment schedules begin at the authenticated measurement boundary, so a slow warm-up cannot shift the workload.
-* Each request produces one CSV row:
-
-```
-t_start_ms,client,path,depth,status,bytes,ttfb_ms,total_ms,bytes_per_s
-```
-
-* `status = 0` means the request did not complete correctly. A `200` is emitted only after the declared body arrives exactly — a truncated or mismatched body counts as a failure, not a fast success.
-
-#### Scoring
-
-For each replicate, the raw score is **p95 `total_ms`** over requests starting inside the measured window. Every failure and incomplete body is charged at the frozen request-timeout ceiling before the percentile is taken, so dropping hard requests can never shorten your tail. **Lower is better.**
-
-**Ranking is by absolute median raw score, ascending**, then submission time, then job id. A normalized score is also published:
-
-```
-normalized_score = 100 * control_median / candidate_median   (clamped to 1–200)
-```
-
-so the control shows as 100 — but this is a display value and does **not** affect ranking.
-
-A score is **placeable** only when all six gates pass:
-
-| Gate | Checks                                                                                    |
-| ---- | ----------------------------------------------------------------------------------------- |
-| G1   | Correctness — request success rate and complete bodies                                    |
-| G2   | Traffic volume — request count and received bytes each within 0.95–1.05× the control's    |
-| G3   | Path integrity — provider egress accounting matches client bytes; no bypassing the tunnel |
-| G4   | Matchmaking — selection samples present and matchmaking cost within budget                |
-| G5   | Stability — no panics, restarts or unclean teardown in any replicate                      |
-| G6   | Resources — the run stayed inside the CPU, memory and PID boundary                        |
-
-A placeable submission is **takeover-eligible** only when all three of these also hold:
-
-1. its median raw score sits at or below the epoch's improvement threshold relative to the control;
-2. a **one-sided Welch test** over the run-level raw scores returns `p ≤ 0.05`; and
-3. the winning variance supports a next-epoch threshold inside `(0%, 50%]`.
-
-The highest-ranked takeover-eligible submission is named the epoch's winner automatically when results are published, and then reviewed. See Winner Selection and Review.
-
-Every score records the control SHA-256, control and candidate means, sample variances, observed improvement, the current margin, the minimum statistically significant improvement, the Welch statistic, degrees of freedom and p-value, and the recommended next-epoch margin.
-
-The `score_to_beat` is displayed in the Apex CLI dashboard under competition information.
-
-#### Epochs and the Moving Threshold
-
-The season runs **six sequential epochs, each accepting submissions for seven days**. Epochs open and close automatically, and the next one opens on its own once the previous epoch's backlog has drained and the next source and control are prepared — so expect the season to run somewhat longer than six calendar weeks.
-
-* Submissions are evaluated as they arrive, one at a time, and evaluation continues past an epoch's close until every accepted submission finishes.
-* Accepting submissions and grading them are separate switches, shown under `runtime_status` in `/competition/info`. An epoch can accept submissions (`intake_ready: true`) before grading starts (`grading_ready: false`). Accepted submissions keep their place in the queue and are graded in arrival order once grading starts; there is no need to resubmit.
-* **Epoch 1 requires a 26.9% improvement** (`takeover_margin: 0.269`). That number is calibrated rather than chosen: run-to-run noise on this workload is large enough that a smaller margin would let luck win. Nine replicates plus the Welch test are what bring the detectable improvement down that far.
-* When URnetwork approves a winning patch for its codebase, the patch is promoted into the source commits for the following epoch and its measured variance sets that epoch's percentage — never weakening the incumbent margin. Improvements compound, and each epoch is measured against the previous winner's code.
-* Approval for the codebase is a separate decision from winning (see below). Until a winning patch is approved, the following epoch runs on the same source and the same threshold.
-* If nothing is takeover-eligible, or every eligible submission is disqualified in review, the epoch has **no winner** and both the source commits and the threshold carry forward unchanged.
-
-**Winner Selection and Review**
-
-**The winner is selected automatically.** When an epoch's results are published, URnetwork's evaluator names the highest-ranked takeover-eligible submission as the winner, and Apex promotes it to top scorer straight away. Nobody has to approve it first.
-
-**Every winner is then reviewed by hand.** URnetwork, which sponsors and judges this competition, inspects the winning patch against six criteria — is this a genuine routing improvement, or an exploit of the measuring instrument? A winning patch must have:
-
-1. no changes to `server/connect/sim-latency` or any trusted scoring or evaluator input;
-2. no fabricated measurements, disabled checks, special-cased workload data, hidden-seed inference, input gaming or benchmark detection;
-3. no filesystem, network, namespace, Docker-socket, host or secret escape;
-4. no credential access or exfiltration path;
-5. no unsafe behavior, persistence, denial of service or unrelated product change; and
-6. a plausible causal connection between the allowed Go change and the measured improvement.
-
-**A winner that fails any criterion has its winning position revoked.** The win passes to the next eligible submission in the original ranking, and if none remain, the epoch has no winner. Scores, ranks and eligibility never change in review — it only decides who holds the win. Because the review follows publication, a revocation can land after the winner has already been promoted.
-
-Separately, URnetwork decides whether to merge the winning patch into its codebase. Winning, and passing review, do not by themselves promote a patch into the next epoch's source; that is its own approval.
-
-The criteria are URnetwork's own, published in [RUN-MAIN.md](https://github.com/urnetwork/server/blob/main/connect/sim-latency/RUN-MAIN.md). Apex runs submission, fees, evaluation and publication, promotes whoever currently holds the win and reflects any revocation. It does not choose the winner and cannot overturn a review.
-
-Rankings and everyone else's results stay sealed until the epoch's results are published. Your own results don't: once URnetwork finishes grading one of your submissions, `apex result <submission id>` shows you, and only you, its score, its raw latency, each gate (G1–G6) with its numbers, and the improvement it achieved against the epoch's required improvement, marked _private until the round reveals_. It usually appears within a few minutes of grading finishing. A private score is feedback, not publication: it doesn't rank you, name a winner or mean you passed review. Full error detail stays sealed until publication. Update the Apex CLI to see the score lines; older versions show the score only in the Evaluation Metadata panel.
-
-Closing an epoch stops new submissions; it does not publish results. Results are published once every accepted submission has finished evaluating, the evaluation is sealed and the reveal time has passed — not after review. At that point the leaderboard, detailed results, revealed seed and authenticated provider workload become public, so any run can be reproduced.
+Physics runs at 500 Hz (2 ms), ten substeps per control action. Every legality gate — lane boundary, hurdle and bar contact, take-off, flight, and landing — is sampled at **each physics substep**, not once per action, so a fast scrape cannot slip between control frames.
 
 #### Constraints
 
-* **Editable paths.** A patch may modify, create or delete regular text files anywhere in the ten repositories of the epoch's source lock — `server`, `connect`, `sdk`, `proxy`, `glog`, `goidenticons`, `userwireguard`, `sn`, `warp` and `gvisor` — at any depth. The one exception is the competition runner, `server/connect/sim-latency/**`. The live list is `patch_policy` in `/competition/info`.
-* **Paths start at the monorepo root** (`path_base: mono_root_v1`): every path begins with its repository's name. The resident-side active-contract manager, for example, is `server/connect/resident_contract_manager.go`; `connect/resident_contract_manager.go` would mean a file in the separate `connect` repository, which does not exist. From a checkout of one repository, `git diff --src-prefix=a/<repo>/ --dst-prefix=b/<repo>/ > submission.patch` writes these paths. A patch can touch any one repository or several; there is no requirement to change `server`. A `connect`-only patch, for example, has headers like `diff --git a/connect/example.go b/connect/example.go`. To change more than one repository, concatenate each repository's diff in alphabetical order of repository name.
-* **File operations.** Regular text files (mode 100644 or 100755) may be modified, created or deleted, and an existing file keeps its execute mode. Renames, copies, mode changes, binary patches, symlinks and submodules are refused. Git reports a deleted file plus a similar new one as a rename by default, so generate the diff with `git diff --no-renames`.
-* **Canonical format.** Your patch is hashed exactly as submitted, with no normalization. It must be nonempty valid UTF-8 with no NUL bytes, **LF-only line endings**, no control characters other than newline and tab, file sections in sorted path order (one per file), and **exactly one trailing newline** with no extra blank line. Write the diff to a file and submit the file with the current Apex CLI. Shell command substitution (`patch=$(git diff ...)`) strips the trailing newline, and so do Apex CLI versions from before 27 October 2026.
-* **No whitespace errors.** The evaluator applies your patch with `git apply --whitespace=error-all`, so an added line with trailing whitespace, a space before a tab in its indentation, or blank lines added at the end of a file make it fail to apply. `git diff --check` must print nothing.
-* **No new dependencies.** Builds run offline against the frozen module set, on **Go 1.27.3**. Standard library and existing dependencies only — and anything that depends on a different compiler or runtime version will not behave the way it did on your machine.
-* **The instrument is off-limits.** Beyond the forbidden runner path, a winning patch is reviewed against the criteria above: changing trusted scoring or evaluator inputs, or making unrelated product changes, costs the win.
-* **No network.** Builds run offline, and at runtime your code reaches only the evaluator's own isolated service network — no external egress. It gets read-only configuration and credentials for the simulated environment, and nothing else: no host control material, no control-plane secrets, no Docker socket.
-* Missing, malformed, OOM-killed or incomplete results fail closed: you get an error rather than a score.
+* Termination gates shared by all events, each surfaced to the miner as a `terminal_reason`:
+  * `fell` — pelvis drops below 0.45 m of clearance above the surface below it, or the torso tilts past \~66°.
+  * `out_of_bounds` — cross-track offset from the route centreline exceeds **0.85 m**, half the lane width. No running around the obstacles.
+  * `physics_glitch` — NaN/Inf state or |qvel| > 100. Glitch-surfing scores 0.
+  * `timeout` — the event's step budget elapsed.
+* Event-specific outcomes:
+  * Races: `completed` at the finish line; `hurdle_hit` if the robot touches any barrier.
+  * High jump: `cleared` requires the pelvis to cross the bar plane at least 0.08 m above the bar after both feet have been unsupported for 40 ms, without touching the bar, followed by a supported landing 0.75 m past it. Otherwise `bar_hit`, `bar_missed`, or `high_foul`.
+  * Long and triple jump: `landed` requires a one-foot take-off from the 0.40 m board (0.35 m before the line to 0.05 m after), a real flight, and sustained first foot support on sand. Triple jump additionally requires a same-foot hop landing and an opposite-foot step landing, in order, each with its own flight. Anything else — a side scrape, a non-foot contact, a premature pad contact, a body-first landing, overrunning the board — is a `jump_foul`.
+  * Only **top-face foot contacts** count as support, classified by contact normal and impulse. Landing distance is latched from the first legal sand contact point, not from a later pose.
+* Episode length, per attempt: **1,200** control steps for the 100 m, **3,600** for the 400 m, **1,900** for the hurdles, **900** for the high jump, **1,000** for the long jump, and **1,400** for the triple jump — at most 40,000 control calls for a full meet.
+* Timeouts:
+  * Per-`/act` deadline = 500 ms.
+  * Referee (scorer) timeout = 900 seconds for the whole 24-attempt meet, with an internal 840-second scheduling budget so a result is always persisted. Any attempt that the budget does not reach is retained as a zero-scored row in the fixed denominator.
+  * Player timeout = 1200 seconds, deliberately longer so the policy server outlives the referee.
 
-#### Licensing
+#### Scoring
 
-[`urnetwork/server`](https://github.com/urnetwork/server) is published under the **Mozilla Public License 2.0**, and a winning patch that URnetwork approves for its codebase is merged into it. By submitting, you license your patch under MPL-2.0 and confirm it is yours to contribute on those terms.
+Every attempt returns a bounded score in `[0, 1]`. A completed attempt scores from **0.25** upward; an incomplete attempt stays **below 0.25**, so no amount of partial progress can outrank a legal finish.
 
-A merged patch becomes part of the public URnetwork codebase, keeps your authorship, and is redistributed under the same license as the file it changes. MPL-2.0 is file-level copyleft — it covers that file, not anything else you write. Only an approved winning patch is promoted into the source for the next epoch.
+```
+  races (100 m, 400 m, hurdles)
+    completed                      0.25 + 0.75 * (1 - steps / max_steps)   -> (0.25, 1.0]
+    fell / timeout / hurdle hit    0.24 * progress                         -> [0.0, 0.24]
+
+  high jump
+    cleared                        0.25 + 0.75 * (bar - 1.00) / 0.30       -> [0.25, 1.0]
+    bar hit / missed / fell        0.24 * best_clearance / bar             -> [0.0, 0.24]
+
+  long jump / triple jump
+    landed                         0.25 + 0.75 * (distance - min) / (target - min)
+                                     long jump    min  6 m, target 12 m
+                                     triple jump  min 13 m, target 18 m
+    no legal landing               0.20 * progress                         -> [0.0, 0.20]
+
+  foul, out of bounds, physics glitch, invalid action, player fault    0.0
+
+  Where progress is the furthest route distance reached, as a fraction of the event's finish.
+```
+
+* Quality within a legal result is **pace** for races, **selected bar height** for the high jump, and **legal distance** for the horizontal jumps.
+* Partial progress still scores, so a policy that does not finish an event gets a training gradient and a meaningful ranking — but a foul does not. Invalid contacts earn exactly nothing.
+* The round result is the **mean of the six event means**, each event mean taken over its four attempts:
+
+```
+raw_score = mean(event_mean[100m, 400m, hurdles, high jump, long jump, triple jump])
+```
+
+* Macro-averaging is what keeps the meet balanced: the 400 m has three times the steps of the high jump but exactly the same weight, so a policy cannot buy a rank with one long event.
+* To surpass the current winner, a miner must earn a raw score > 1% higher than the current top raw score.
+  * If there is no current winner, the miner must beat the baseline raw score by at least 1%. `baseline_raw_score` is **0.0** by design, so round 1 goes to anything scoring above zero.
+* At the start of each round the incumbent is automatically re-submitted and re-scored, so the comparison is always like-for-like. **This is what makes per-round conditions safe.** The incumbent's stored score from an easier draw is never what a challenger has to beat: both are scored on the same round seed, so the condition draw is common-mode in the comparison. Note the margins involved — cross-round condition spread on a fixed policy is CV \~1.1%, the same order as the 1% takeover threshold, so a _stale_ incumbent score would be roughly a coin flip rather than a bar.
+* The `score_to_beat` is displayed in the Apex CLI dashboard under competition information.
+
+The launch preset is deliberately severe — a 24 s 100 m, a 72 s circular 400 m, hurdles to 1.15 m, bars to 1.30 m, a 6 m long-jump void. **A first complete all-round performance is intended to be a meaningful breakthrough**, and partial credit exists so that the climb toward it is measurable.
 
 #### Miner Submissions
 
-* Miners submit a single **unified Git diff** against the source commits frozen for the **current epoch**: the patch file itself, not a commit, branch or `git format-patch` email. The evaluator applies your diff to each repository's pinned commit and commits the result itself; that is the "candidate commit" URnetwork's evaluator documentation refers to. The base commit moves whenever an approved winning patch is promoted, and stays put when it isn't — so check the base published for the current epoch before you start, rather than assuming either the previous epoch's or the season's opening commit still applies.
-* Maximum submission size: **262,144 bytes**.
-* Submission fee: **$20.00 USD**. Within the same epoch, resubmitting identical patch bytes reuses the existing evaluation and is not charged again. The same bytes in a _later_ epoch are a new submission — different source, different workload — and are charged.
-* There is no cap on how many submissions an epoch will accept, but Apex rate-limits admissions to 4 submissions per hotkey in any 24-hour window, across all competitions.
-* Epoch length: **7 days**, six epochs in the season. Each epoch opens automatically.
-* Public scores, ranks and error detail are revealed when the epoch's results are published, not when it closes. Your own submissions' scores are visible to you earlier, as described above.
-* The highest-ranked eligible submission is named winner automatically when results are published. URnetwork then reviews it by hand, and a winner found to have failed the competition criteria has its winning position revoked.
-
-**Iterating Locally**
-
-`sim-latency` is public and runs on a developer machine. It needs two terminals: the backing services stay in the foreground streaming logs, so they cannot share a shell with the simulator.
-
-**Terminal 1** — leave this running:
-
-```bash
-cd server/local
-./run-local.sh
-```
-
-**Terminal 2** — from a checkout matching a configured source epoch:
-
-```bash
-cd connect/sim-latency
-./run-local.sh init \
-  --count 500 --clients 100 --rate 40 --quality-window 2 \
-  --seed 1 --out providers.yml
-./run-local.sh run \
-  --epoch 0 --reset --providers providers.yml \
-  --meta results.run.json > results.csv
-./run-local.sh analyze --run results.csv
-```
-
-Measured `run`, `fleet` and fresh `baseline` commands need a configured source epoch — use a clean epoch checkout rather than bypassing the identity check.
-
-Size the local fleet to your machine; the 500-provider example above is a development workload, well below the official 3,600. A single local run is a diagnostic, not a score: only the official evaluator's frozen workload, nine-run candidate sample and shared epoch control produce a competition result.
-
-The instrument, its scorer and the preserved calibration evidence are all public at [urnetwork/server](https://github.com/urnetwork/server/tree/main/connect/sim-latency). Start with the [README](https://github.com/urnetwork/server/blob/main/connect/sim-latency/README.md) for the scoring contract and [evaluator/PATCH-SURFACE.md](https://github.com/urnetwork/server/blob/main/connect/sim-latency/evaluator/PATCH-SURFACE.md) for the canonical patch format. Its single-file editable surface predates the season; the live `patch_policy` above is what applies.
-
-**Where to Start Looking**
-
-URnetwork has published a [research seed](https://github.com/urnetwork/server/blob/main/connect/sim-latency/2026-10-13-seed.md) mapping the architecture, performance and correctness work on the measured latency path over the two months to 13 October 2026 — which approaches paid off, which were tried and rejected, and what each one cost.
-
-It is a reading order, not a ranking of score gains. Read it for the mechanisms and their remaining costs rather than for patches to resubmit: a frozen epoch already contains this work, so re-proposing it measures nothing. The sections on contract allocation and resident authorization cover `server/connect/resident_contract_manager.go`, the file URnetwork's own reference patches change.
+* Miners submit a single **ONNX graph** with this exact tensor signature:
+  * inputs — `obs [batch, 104]`, `state_in [batch, 256]`
+  * outputs — `action [batch, 12]`, `state_out [batch, 256]`
+  * all `float32`
+* The **architecture is not constrained**; only the signature is. A feed-forward policy can ignore `state_in` and return zeros, but will struggle to adapt to unobservable friction and wind.
+* Maximum submission size: **15 MB**. This is a compute limit as well as a storage one — inference cost is linear in artifact size, and the cap pairs with the 40,000-call meet to keep the worst case inside the referee's 900 s timeout.
+* Evaluation runs on **2 CPU / 2 GiB / no GPU**.
+* Default round length: **1 day**.
+* Submission fee: **$20 USD**.
+* 1% `raw_score` threshold to beat the current top scorer.
+* Miners' models are revealed **1 day** after evaluation.
+* Logs are opened after the current round is completed. Every one of the 24 attempts also produces a replayable history file, delivered to the miner post-round.
+* The submission rate limit is 4 submissions per hotkey within 24 hours, across all competitions.
+* The full environment — all six events, physics, scoring, and a reference baseline policy — is public at [apex-competition-humanoid-olympics](https://github.com/macrocosm-os/apex-competition-humanoid-olympics). Train against the real referee, not a reimplementation.
+* Local tools in that repo: `tools/local_eval.py` scores a policy across the meet in-process, `tools/preview.py` renders or films a single event, and `tools/replay.py` films a recorded run. A complete seed-1 baseline meet is committed under `docs/example-histories/` as a worked example.
