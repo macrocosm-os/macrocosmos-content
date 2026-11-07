@@ -8,10 +8,16 @@ The NIST Assembly competition asks miners to drive a **parallel 2-finger gripper
 
 Since v0.7 ("Assembly III"), every episode is a random assembly graph of seven kinds of step. Most of the score sits in three hard kinds: **keys, stacks and rework**. Scoring gives weighted credit per step so that a ranked competition has a gradient. An evaluation's cost is bounded by the simulation horizon only, so the same policy and seed always score the same, however busy the machine is.
 
+**What changed in v0.7.2**
+
+* **Stacks can be completed.** Stack rings are now a slight interference fit, so a ring placed on a peg top can rest there. A stack completes through a place-and-release latch (see the step table). In v0.7.1, no policy could complete a stack through its own actions.
+* **Twist and screw steps now appear.** Each eligible round peg gets a twist or screw with the tier's probability. In v0.7.1 their counts rounded to zero.
+* **Harder weights and tolerances.** The weights move further to the hard steps (key 5.20, rework 3.60, stack 1.70; every other kind 0.10 or less). The key tolerance is tighter (0.05 – 0.09 rad), as is the stack mate zone (3 mm), and rework pegs sit deeper.
+* **Retuned tiers.** There are more rework, stack and key steps, fewer collars, denser precedence, more events and reveals, and less time slack (see the tier table).
+
 **What changed in v0.7.1**
 
 * **Fixes to v0.7.0**, which never went live: the referee image now runs the v0.7 task (`nist_profile: v07` in every result and record), and there are no wall-clock cuts inside the referee. Stack hold counting, key yaw sampling and the completion latch were also fixed, so a completed hard step stays completed.
-* **Twist and screw steps are almost never drawn in v0.7.1.** Their per-episode counts round to zero on the few round pegs. The author plans to fix this in a later release. Their weights are small (0.25 and 0.40).
 
 **What changed in v0.7.0 (Assembly III, breaking)**
 
@@ -29,26 +35,28 @@ Each live evaluation runs **64 episodes**: 8 strata (number of pegs K ∈ {3, 4,
 
 | Kind | What it takes | Weight |
 | --- | --- | --- |
-| `insert` | Seat a peg in its own hole. | 0.30 |
-| `collar` | Drop a ring over a peg that is already seated, so it rests on the slot block. | 0.25 |
-| `twist` | Turn a seated round peg past a target angle in a given direction. | 0.25 |
-| `screw` | A twist that only counts while the gripper presses down on the peg; done at 80% of a target of 0.30 – 0.55 rad. | 0.40 |
-| `rework` | A peg starts seated in the wrong empty slot. Pull it out, then seat it in its own hole. | 2.10 |
-| `stack` | A second-level ring that must rest on the top of a seated peg, not on the block. | 2.60 |
-| `key` | A seated peg only counts while its yaw is inside a key window (tolerance 0.08 – 0.13 rad), relative to the slot. | 3.40 |
+| `insert` | Seat a peg in its own hole. | 0.07 |
+| `collar` | Drop a ring over a peg that is already seated, so it rests on the slot block. | 0.07 |
+| `twist` | Turn a seated round peg past a target angle in a given direction. | 0.07 |
+| `screw` | A twist that only counts while the gripper presses down on the peg; done at 80% of a target of 0.30 – 0.55 rad. | 0.10 |
+| `rework` | A peg starts seated 4.5 mm deep in the wrong empty slot. Pull it out, then seat it in its own hole. | 3.60 |
+| `stack` | A second-level ring that must end up on the top of a seated peg, not on the block. Bring the ring, still gripped, to within 3 mm of the peg top for at least 2 control steps. Then release it (open the jaws or lift clear) and let it stay there for 5 more steps. | 1.70 |
+| `key` | A seated peg only counts while its yaw is inside a key window (tolerance 0.05 – 0.09 rad), relative to the slot. | 5.20 |
 
 | Per tier | c1 | c2 | c3 | c4 |
 | --- | --- | --- | --- | --- |
 | Extra pegs | 0 | 0 | +1 | +1 |
-| Rework / stack / key share | 22% / 28% / 28% | 26% / 32% / 32% | 26% / 30% / 36% | 28% / 32% / 40% |
-| Keys per episode (max) | 1 | 1 | 2 | 2 |
+| Rework / stack / key share | 28% / 32% / 34% | 30% / 34% / 36% | 32% / 34% / 40% | 34% / 36% / 44% |
+| Keys per episode (max) | 1 | 2 | 2 | 2 |
+| Collar share | 10% | 10% | 8% | 8% |
+| Screw / twist chance per round peg | 6% / 3% | 8% / 3% | 8% / 2% | 6% / 2% |
 | Waves | 1 | 1 – 2 | 1 – 2 | 2 |
-| Extra precedence edges | 10% | 14% | 14% | 16% |
-| Between-step event chance | 14% | 20% | 20% | 24% |
-| Hidden-parameter reveals | 35% | 45% | 45% | 50% |
-| Time slack | × 1.60 | × 1.45 | × 1.40 | × 1.28 |
+| Extra precedence edges | 12% | 16% | 16% | 18% |
+| Between-step event chance | 18% | 22% | 24% | 28% |
+| Hidden-parameter reveals | 40% | 50% | 55% | 60% |
+| Time slack | × 1.55 | × 1.40 | × 1.35 | × 1.25 |
 
-Collars are rarer than on v0.6 (10 – 12% of pegs). A key never shares a peg with a twist or screw.
+A key never shares a peg with a twist or screw.
 
 | Condition | Live range |
 | --- | --- |
@@ -143,25 +151,28 @@ S_e       = sum_k w_k c_k / sum_k w_k
 raw_score = mean of S_e over all episodes      -> [0.0, 1.0]
 ```
 
-* **Keys, stacks and rework dominate.** Together they carry about three quarters of a typical episode's weight.
+* **Keys, rework and stacks are almost the whole score.** Every other kind weighs 0.10 or less.
 * **Order matters.** Doing a step early earns 0.30; the blocked flags say what is open.
 * The denominator is fixed: every episode counts, including ones ended by a fault.
 * To take the lead, a challenger must beat the current top raw score by more than 1%. The incumbent is re-scored at the start of each round on the same episodes, so the comparison is like-for-like; results that finish before the incumbent's re-score are re-judged against the new bar once it lands. `baseline_raw_score` is 0.0.
 * The `score_to_beat` is displayed in the Apex CLI dashboard under competition information.
 * Per-step `step_results[].credit` in the records shows raw partial progress even for key, stack and rework steps, which score 0 unless done. Use `score` for the episode's actual result.
 
-**Reference numbers (v0.7.1)**
+**Reference numbers (v0.7.2)**
 
 | Policy | Score |
 | --- | --- |
-| zero (no-op), live images | 0.002 – 0.004 |
-| observation-only scripted controller | about 0.005 |
-| v0.6-style scripted controller (insert / collar / twist only) | about 0.16 |
-| leading v0.6 policies, run on v0.7.1 | about 0.18 – 0.22 |
+| zero (no-op), live images | about 0.001 |
+| leading v0.6 policies, run on v0.7.2 | about 0.14 – 0.22 |
+| leading v0.7.1 policies (round 22), run on v0.7.2 | about 0.33 – 0.45 |
+| the author's privileged reference, using the same stack latch as miners | about 0.50 |
 
-The leading v0.6 policy (0.753 on v0.6.3) scored **0.194** on the live v0.7.1 images. Playing only through its own actions, it completed 160 of 235 inserts, 26 of 69 rework steps and 24 of 78 keys, but **none of 72 stacks**.
+On the live v0.7.2 images, a leading round-22 policy (0.448 on v0.7.1) scored **0.404**. It completed:
+* 179 of 220 inserts, 56 of 92 keys and 51 of 84 rework steps;
+* 10 of 77 stacks;
+* all 3 twists and all 3 screws.
 
-The author's privileged reference scores about 0.53, but it corrects the simulator state along the way (nudging parts into place and advancing screw progress). It is not a demonstrated ceiling for a policy. In particular, **no policy has yet completed a stack through its own actions**; the author is checking this.
+So every step kind has now been completed by a policy acting on its own.
 
 **Miner Submissions**
 
@@ -187,7 +198,7 @@ The author's privileged reference scores about 0.53, but it corrects the simulat
 **Tips for Miners**
 
 * **The hard steps are where the score is.** An insert is worth 0.30; a key is worth 3.40. A policy that only inserts pegs, however well, scores about 0.2.
-* **Keys and rework are reachable.** A v0.6 policy that was never trained for them already completes about a third of each. Hold a keyed peg's yaw inside its window, and pull a mis-seated peg before re-seating it.
+* **Every kind is reachable.** Leading v0.7.1 policies complete well over half of keys and rework steps, and some stacks. Hold a keyed peg's yaw inside its window, pull a mis-seated peg before re-seating it, and for a stack, hold the ring on the peg top before letting go.
 * **Watch for reveals and misseats.** A 0 in the twist/key channels can mean "not revealed yet"; a peg you seated can be lifted by a `misseat` event and needs re-seating.
 * **Expect the physics to change mid-episode.** After a step completes, friction, gain, mass, latency or the estimate bias may shift. Force/torque and the effect of your own actions are the only signals.
 * **Train against the real simulator.** `referee/nist_sim` imports directly; with `NIST_PROFILE=v07`, `nist_sim.compound_v07.sample_compound_v07(seed, per_stratum)` draws a round's episodes, and the episode class in the same module is the exact simulator used for scoring.
